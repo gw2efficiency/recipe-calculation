@@ -32,6 +32,7 @@ This module can be used for Node.js as well as browsers using [Browserify](https
 - Generate a available materials map of a list of API items
 - Generate a short overview about crafting cost & profits
 - Generate a short overview about used daily cooldowns
+- Generate a short overview about needed professions
 
 ## Tests
 
