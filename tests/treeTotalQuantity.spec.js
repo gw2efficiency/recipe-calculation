@@ -1,20 +1,20 @@
 /* eslint-env node, mocha */
 const expect = require('chai').expect
 
-const adjustQuantity = require('../src/adjustQuantity.js')
+const treeTotalQuantity = require('../src/treeTotalQuantity.js')
 
-describe('adjustQuantity', () => {
-  it('adjusts the correct quantity for recipes without components', () => {
+describe('treeTotalQuantity', () => {
+  it('calculates the correct quantity for recipes without components', () => {
     let recipeTree = {quantity: 1}
 
-    let adjustedTree = adjustQuantity(1, recipeTree)
+    let adjustedTree = treeTotalQuantity(1, recipeTree)
     expect(adjustedTree).to.be.deep.equal({quantity: 1, output: 1, totalQuantity: 1})
   })
 
-  it('adjusts the correct quantity for recipes with components', () => {
+  it('calculates the correct quantity for recipes with components', () => {
     let recipeTree = {quantity: 1, components: [{quantity: 1}, {quantity: 5}]}
 
-    let adjustedTree = adjustQuantity(1, recipeTree)
+    let adjustedTree = treeTotalQuantity(1, recipeTree)
     expect(adjustedTree).to.be.deep.equal({
       quantity: 1,
       output: 1,
@@ -29,7 +29,7 @@ describe('adjustQuantity', () => {
   it('does not modify the initial recipe tree', () => {
     let recipeTree = {quantity: 1, components: [{quantity: 1}, {quantity: 5}]}
 
-    let adjustedTree = adjustQuantity(1, recipeTree)
+    let adjustedTree = treeTotalQuantity(1, recipeTree)
     expect(recipeTree).to.be.deep.equal({quantity: 1, components: [{quantity: 1}, {quantity: 5}]})
     expect(adjustedTree).to.be.deep.equal({
       quantity: 1,
@@ -42,10 +42,10 @@ describe('adjustQuantity', () => {
     })
   })
 
-  it('adjusts the correct quantity if an amount is set', () => {
+  it('calculates the correct quantity if an amount is set', () => {
     let recipeTree = {quantity: 1, components: [{quantity: 1}, {quantity: 5}]}
 
-    let adjustedTree = adjustQuantity(2, recipeTree)
+    let adjustedTree = treeTotalQuantity(2, recipeTree)
     expect(adjustedTree).to.be.deep.equal({
       quantity: 1,
       output: 1,
@@ -57,9 +57,9 @@ describe('adjustQuantity', () => {
     })
   })
 
-  it('adjusts the correct quantity if an recipe has a output > 0', () => {
+  it('calculates the correct quantity if an recipe has a output > 0', () => {
     let recipeTree = {quantity: 1, output: 5, components: [{quantity: 1}, {quantity: 5}]}
-    let adjustedTreeOne = adjustQuantity(1, recipeTree)
+    let adjustedTreeOne = treeTotalQuantity(1, recipeTree)
     expect(adjustedTreeOne, 'Craft a single item').to.be.deep.equal({
       quantity: 1,
       output: 5,
@@ -70,7 +70,7 @@ describe('adjustQuantity', () => {
       ]
     })
 
-    let adjustedTreeTwo = adjustQuantity(4, recipeTree)
+    let adjustedTreeTwo = treeTotalQuantity(4, recipeTree)
     expect(adjustedTreeTwo, 'Craft multiple items in the same batch').to.be.deep.equal({
       quantity: 1,
       output: 5,
@@ -81,7 +81,7 @@ describe('adjustQuantity', () => {
       ]
     })
 
-    let adjustedTreeThree = adjustQuantity(25, recipeTree)
+    let adjustedTreeThree = treeTotalQuantity(25, recipeTree)
     expect(adjustedTreeThree, 'Craft multiple batches').to.be.deep.equal({
       quantity: 1,
       output: 5,
@@ -93,9 +93,9 @@ describe('adjustQuantity', () => {
     })
   })
 
-  it('adjusts the correct quantity if an sub-recipe has a output > 0', () => {
+  it('calculates the correct quantity if an sub-recipe has a output > 0', () => {
     let recipeTree = {quantity: 1, output: 2, components: [{quantity: 1, output: 10}, {quantity: 7, output: 5}]}
-    let adjustedTreeOne = adjustQuantity(1, recipeTree)
+    let adjustedTreeOne = treeTotalQuantity(1, recipeTree)
     expect(adjustedTreeOne, 'Craft a single item').to.be.deep.equal({
       quantity: 1,
       output: 2,
@@ -106,7 +106,7 @@ describe('adjustQuantity', () => {
       ]
     })
 
-    let adjustedTreeTwo = adjustQuantity(3, recipeTree)
+    let adjustedTreeTwo = treeTotalQuantity(3, recipeTree)
     expect(adjustedTreeTwo, 'Craft multiple batches').to.be.deep.equal({
       quantity: 1,
       output: 2,
@@ -129,7 +129,7 @@ describe('adjustQuantity', () => {
       ]
     }
 
-    let adjustedTree = adjustQuantity(7, recipeTree)
+    let adjustedTree = treeTotalQuantity(7, recipeTree)
     expect(adjustedTree).to.deep.equal({
       output: 5,
       quantity: 1,
@@ -161,7 +161,7 @@ describe('adjustQuantity', () => {
       ]
     }
 
-    let adjustedTree = adjustQuantity(2, recipeTree)
+    let adjustedTree = treeTotalQuantity(2, recipeTree)
     expect(adjustedTree).to.deep.equal({
       quantity: 1,
       output: 1,
@@ -186,7 +186,7 @@ describe('adjustQuantity', () => {
   it('rounds correctly if the output is percentage based', () => {
     let recipeTree = {quantity: 1, components: [{quantity: 77, output: 0.31}]}
 
-    let adjustedTree = adjustQuantity(1, recipeTree)
+    let adjustedTree = treeTotalQuantity(1, recipeTree)
     expect(adjustedTree).to.be.deep.equal({
       quantity: 1,
       output: 1,

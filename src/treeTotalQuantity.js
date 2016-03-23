@@ -1,6 +1,6 @@
 // Go through a recipe tree and set 'totalQuantity' based on the
 // wanted amount and the output of recipes and sub-recipes
-function adjustQuantity (amount, tree) {
+function treeTotalQuantity (amount, tree) {
   tree = {...tree}
   tree.output = tree.output || 1
 
@@ -18,8 +18,8 @@ function adjustQuantity (amount, tree) {
   // Get the amount of components that need to be crafted
   // e.g. a recipe outputs 10 and we need 20 -> 2x components
   let componentAmount = tree.totalQuantity / tree.output
-  tree.components = tree.components.map(component => adjustQuantity(componentAmount, component))
+  tree.components = tree.components.map(component => treeTotalQuantity(componentAmount, component))
   return tree
 }
 
-module.exports = adjustQuantity
+module.exports = treeTotalQuantity
