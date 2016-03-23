@@ -1,6 +1,5 @@
 /* eslint-env node, mocha */
 const expect = require('chai').expect
-const sinon = require('sinon')
 
 const adjustQuantity = require('../src/adjustQuantity.js')
 
