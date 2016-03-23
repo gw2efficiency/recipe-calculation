@@ -25,6 +25,10 @@ This module can be used for Node.js as well as browsers using [Browserify](https
 	- Takes `recipeTree`, `itemPrices` and `availableItems`
 	- Go through the tree and adjust the quantities based on `availableItems` for nodes with `craft` set
 	- Recalculate the tree price
+- **Adjust amount**
+	- Recalculate the needed quantities for each tree step based on amounts and outputs
+	- Go through the tree and adjust the quantities based on `availableItems` for nodes with `craft` set
+	- Recalculate the tree price
 - **Get a list of used items (own / have to buy)**
 - **Get crafting steps**
 - Get all item ids from a recipe tree
