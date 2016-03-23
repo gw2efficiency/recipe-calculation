@@ -8,7 +8,8 @@ function adjustQuantity (amount, tree) {
   let treeQuantity = amount * tree.quantity
 
   // Round amount to nearest multiple of the tree output
-  tree.totalQuantity = Math.ceil(treeQuantity / tree.output) * tree.output
+  treeQuantity = Math.ceil(treeQuantity / tree.output) * tree.output
+  tree.totalQuantity = Math.round(treeQuantity)
 
   if (!tree.components) {
     return tree

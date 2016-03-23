@@ -182,4 +182,18 @@ describe('adjustQuantity', () => {
       ]
     })
   })
+
+  it('rounds correctly if the output is percentage based', () => {
+    let recipeTree = {quantity: 1, components: [{quantity: 77, output: 0.31}]}
+
+    let adjustedTree = adjustQuantity(1, recipeTree)
+    expect(adjustedTree).to.be.deep.equal({
+      quantity: 1,
+      output: 1,
+      totalQuantity: 1,
+      components: [
+        {quantity: 77, output: 0.31, totalQuantity: 77}
+      ]
+    })
+  })
 })
