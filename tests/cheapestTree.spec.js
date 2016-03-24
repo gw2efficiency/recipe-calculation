@@ -25,12 +25,12 @@ describe('cheapestTree', () => {
       output: 1,
       quantity: 1,
       totalQuantity: 2,
-      bestPrice: 20,
+      decisionPrice: 20,
       buyPrice: 20,
       buyPriceEach: 10,
       components: [
         {
-          bestPrice: 84,
+          decisionPrice: 84,
           buyPrice: 84,
           buyPriceEach: 42,
           craft: false,
@@ -40,7 +40,7 @@ describe('cheapestTree', () => {
           totalQuantity: 2
         },
         {
-          bestPrice: 100,
+          decisionPrice: 100,
           buyPrice: 100,
           buyPriceEach: 10,
           craft: false,
@@ -51,7 +51,7 @@ describe('cheapestTree', () => {
           totalQuantity: 10,
           components: [
             {
-              bestPrice: 200,
+              decisionPrice: 200,
               buyPrice: 200,
               buyPriceEach: 10,
               craft: false,
@@ -63,7 +63,7 @@ describe('cheapestTree', () => {
           ]
         },
         {
-          bestPrice: 200,
+          decisionPrice: 200,
           buyPrice: 10000,
           buyPriceEach: 1000,
           craft: true,
@@ -74,7 +74,7 @@ describe('cheapestTree', () => {
           totalQuantity: 10,
           components: [
             {
-              bestPrice: 200,
+              decisionPrice: 200,
               buyPrice: 200,
               buyPriceEach: 10,
               craft: false,
@@ -108,12 +108,12 @@ describe('cheapestTree', () => {
       output: 1,
       quantity: 1,
       totalQuantity: 2,
-      bestPrice: 20,
+      decisionPrice: 20,
       buyPrice: 20,
       buyPriceEach: 10,
       components: [
         {
-          bestPrice: 1000,
+          decisionPrice: 1000,
           buyPrice: 1000,
           buyPriceEach: 100,
           craft: false,
@@ -124,7 +124,7 @@ describe('cheapestTree', () => {
           totalQuantity: 10,
           components: [
             {
-              bestPrice: 200,
+              decisionPrice: 200,
               buyPrice: 200,
               buyPriceEach: 10,
               craft: false,

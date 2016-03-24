@@ -20,19 +20,19 @@ describe('treePrices', () => {
       craftPrice: 5,
       id: 1,
       totalQuantity: 1,
-      bestPrice: 5,
+      decisionPrice: 5,
       buyPrice: 123,
       buyPriceEach: 123,
       components: [
         {
-          bestPrice: 1,
+          decisionPrice: 1,
           buyPrice: 1,
           buyPriceEach: 1,
           id: 2,
           totalQuantity: 1
         },
         {
-          bestPrice: 4,
+          decisionPrice: 4,
           buyPrice: 4,
           buyPriceEach: 2,
           id: 3,
@@ -58,19 +58,19 @@ describe('treePrices', () => {
       craftPrice: 1,
       id: 1,
       usedQuantity: 1,
-      bestPrice: 1,
+      decisionPrice: 1,
       buyPrice: 123,
       buyPriceEach: 123,
       components: [
         {
-          bestPrice: 1,
+          decisionPrice: 1,
           buyPrice: 1,
           buyPriceEach: 1,
           id: 2,
           usedQuantity: 1
         },
         {
-          bestPrice: 0,
+          decisionPrice: 0,
           buyPrice: 0,
           buyPriceEach: 2000,
           id: 3,
@@ -98,19 +98,19 @@ describe('treePrices', () => {
       id: 1,
       totalQuantity: 1,
       craft: false,
-      bestPrice: 123,
+      decisionPrice: 123,
       buyPrice: 123,
       buyPriceEach: 123,
       components: [
         {
-          bestPrice: 1,
+          decisionPrice: 1,
           buyPrice: 1,
           buyPriceEach: 1,
           id: 2,
           totalQuantity: 1
         },
         {
-          bestPrice: 4,
+          decisionPrice: 4,
           buyPrice: 4,
           buyPriceEach: 2,
           id: 3,
@@ -143,33 +143,33 @@ describe('treePrices', () => {
       craftPrice: 5,
       id: 1,
       totalQuantity: 1,
-      bestPrice: 5,
+      decisionPrice: 5,
       buyPrice: 123,
       buyPriceEach: 123,
       components: [
         {
-          bestPrice: 1,
+          decisionPrice: 1,
           buyPrice: 1,
           buyPriceEach: 1,
           id: 2,
           totalQuantity: 1
         },
         {
-          bestPrice: 4,
+          decisionPrice: 4,
           buyPrice: 4,
           buyPriceEach: 2,
           id: 3,
           totalQuantity: 2,
           components: [
             {
-              bestPrice: false,
+              decisionPrice: false,
               buyPrice: false,
               buyPriceEach: false,
               id: 4,
               totalQuantity: 50
             },
             {
-              bestPrice: 20,
+              decisionPrice: 20,
               buyPrice: 20,
               buyPriceEach: 10,
               id: 5,

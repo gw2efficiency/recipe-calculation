@@ -9,7 +9,7 @@ function treePrices (tree, itemPrices) {
   // Calculate the buy prices
   tree.buyPriceEach = itemPrices[tree.id] || false
   tree.buyPrice = tree.buyPriceEach ? quantity * tree.buyPriceEach : false
-  tree.bestPrice = tree.buyPrice
+  tree.decisionPrice = tree.buyPrice
 
   if (!tree.components) {
     return tree
@@ -19,7 +19,7 @@ function treePrices (tree, itemPrices) {
   tree.components = tree.components.map(component => treePrices(component, itemPrices))
 
   // Calculate the craft price out of the best prices
-  tree.craftPrice = tree.components.map(c => c.bestPrice).reduce((a, b) => a + b)
+  tree.craftPrice = tree.components.map(c => c.decisionPrice).reduce((a, b) => a + b)
 
   // If we explicitly don't craft this, keep the buy price as the best price
   if (tree.craft === false) {
@@ -29,7 +29,7 @@ function treePrices (tree, itemPrices) {
   // Update the best price of this tree segment, used to
   // determine the craft price of the higher-up recipe
   if (!tree.buyPrice || tree.craftPrice < tree.buyPrice) {
-    tree.bestPrice = tree.craftPrice
+    tree.decisionPrice = tree.craftPrice
   }
 
   return tree
