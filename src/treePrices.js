@@ -19,7 +19,7 @@ function treePrices (tree, itemPrices) {
   tree.components = tree.components.map(component => treePrices(component, itemPrices))
 
   // Calculate the craft price out of the best prices
-  tree.craftPrice = tree.components.reduce((a, b) => a.bestPrice + b.bestPrice)
+  tree.craftPrice = tree.components.map(c => c.bestPrice).reduce((a, b) => a + b)
 
   // If we explicitly don't craft this, keep the buy price as the best price
   if (tree.craft === false) {
