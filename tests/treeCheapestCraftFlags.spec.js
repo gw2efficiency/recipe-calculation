@@ -12,11 +12,12 @@ describe('treeCheapestCraftFlags', () => {
       components: [
         {id: 2, totalQuantity: 1, craftPrice: 123, buyPrice: 1},
         {id: 3, totalQuantity: 2, craftPrice: 123},
-        {id: 4, totalQuantity: 2, craftPrice: 123, buyPrice: 555}
+        {id: 4, totalQuantity: 2, craftPrice: 123, buyPrice: 555},
+        {id: 5, totalQuantity: 2, craftPrice: 1, buyPrice: 555}
       ]
     }
 
-    let calculatedTree = treeCheapestCraftFlags(recipeTree)
+    let calculatedTree = treeCheapestCraftFlags(recipeTree, [5])
     expect(calculatedTree).to.deep.equal({
       craft: true,
       craftPrice: 123,
@@ -42,8 +43,31 @@ describe('treeCheapestCraftFlags', () => {
           craftPrice: 123,
           id: 4,
           totalQuantity: 2
+        },
+        {
+          buyPrice: 555,
+          craft: false,
+          craftPrice: 1,
+          id: 5,
+          totalQuantity: 2
         }
       ]
+    })
+  })
+
+  it('sets the cheapest craft flags without force buy items', () => {
+    let recipeTree = {
+      id: 1,
+      totalQuantity: 1,
+      craftPrice: 123
+    }
+
+    let calculatedTree = treeCheapestCraftFlags(recipeTree)
+    expect(calculatedTree).to.deep.equal({
+      craft: true,
+      craftPrice: 123,
+      id: 1,
+      totalQuantity: 1
     })
   })
 })
