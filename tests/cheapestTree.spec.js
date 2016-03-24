@@ -88,4 +88,54 @@ describe('cheapestTree', () => {
       ]
     })
   })
+
+  it('can calculate the cheapest tree correctly with force buy items', () => {
+    let recipeTree = {
+      id: 1,
+      quantity: 1,
+      output: 1,
+      components: [
+        {id: 3, quantity: 5, components: [{id: 4, quantity: 2}]}
+      ]
+    }
+    let prices = {1: 10, 3: 100, 4: 10}
+
+    let calculatedTree = cheapestTree(2, recipeTree, prices, {}, [3])
+    expect(calculatedTree).to.deep.equal({
+      craft: true,
+      craftPrice: 1000,
+      id: 1,
+      output: 1,
+      quantity: 1,
+      totalQuantity: 2,
+      bestPrice: 20,
+      buyPrice: 20,
+      buyPriceEach: 10,
+      components: [
+        {
+          bestPrice: 1000,
+          buyPrice: 1000,
+          buyPriceEach: 100,
+          craft: false,
+          craftPrice: 200,
+          id: 3,
+          output: 1,
+          quantity: 5,
+          totalQuantity: 10,
+          components: [
+            {
+              bestPrice: 200,
+              buyPrice: 200,
+              buyPriceEach: 10,
+              craft: false,
+              id: 4,
+              output: 1,
+              quantity: 2,
+              totalQuantity: 20
+            }
+          ]
+        }
+      ]
+    })
+  })
 })
