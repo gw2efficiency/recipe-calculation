@@ -1,5 +1,5 @@
 // Set the craft flags based on the cheapest price
-function treeCheapestCraftFlags (tree, forceBuyItems = []) {
+function treeCheapestCraftFlags (tree, forceBuyItems) {
   tree = {...tree}
 
   // Craft the item if it can't be bought or it is cheaper to craft

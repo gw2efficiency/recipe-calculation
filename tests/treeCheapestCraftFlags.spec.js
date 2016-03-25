@@ -54,20 +54,4 @@ describe('treeCheapestCraftFlags', () => {
       ]
     })
   })
-
-  it('sets the cheapest craft flags without force buy items', () => {
-    let recipeTree = {
-      id: 1,
-      totalQuantity: 1,
-      craftPrice: 123
-    }
-
-    let calculatedTree = treeCheapestCraftFlags(recipeTree)
-    expect(calculatedTree).to.deep.equal({
-      craft: true,
-      craftPrice: 123,
-      id: 1,
-      totalQuantity: 1
-    })
-  })
 })
