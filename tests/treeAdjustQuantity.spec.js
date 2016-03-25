@@ -3,7 +3,7 @@ const expect = require('chai').expect
 
 const treeAdjustQuantity = require('../src/treeAdjustQuantity.js')
 
-describe('treeAdjustQuantity', () => {
+describe('treeAdjustQuantity (total quantity)', () => {
   it('calculates the correct quantity for recipes without components', () => {
     let recipeTree = {quantity: 1}
 
@@ -230,6 +230,190 @@ describe('treeAdjustQuantity', () => {
       components: [
         {quantity: 77, output: 0.31, totalQuantity: 77, usedQuantity: 77}
       ]
+    })
+  })
+})
+
+describe('treeAdjustQuantity (used quantity)', () => {
+  it('sets correct used quantity without available items', () => {
+    let recipeTree = {
+      id: 1,
+      quantity: 1,
+      output: 1,
+      components: [
+        {id: 2, quantity: 1, output: 1},
+        {id: 3, quantity: 5, output: 1}
+      ]
+    }
+    let availableItems = {}
+
+    expect(treeAdjustQuantity(1, recipeTree, availableItems)).to.deep.equal({
+      id: 1,
+      quantity: 1,
+      output: 1,
+      totalQuantity: 1,
+      usedQuantity: 1,
+      components: [
+        {id: 2, quantity: 1, output: 1, totalQuantity: 1, usedQuantity: 1},
+        {id: 3, quantity: 5, output: 1, totalQuantity: 5, usedQuantity: 5}
+      ]
+    })
+  })
+
+  it('sets correct used quantity with available items', () => {
+    let recipeTree = {
+      id: 1,
+      quantity: 1,
+      output: 1,
+      components: [
+        {id: 2, quantity: 1, output: 1},
+        {id: 3, quantity: 5, output: 1},
+        {id: 3, quantity: 5, output: 1},
+        {id: 2, quantity: 1, output: 1}
+      ]
+    }
+    let availableItems = {2: 2, 3: 2}
+
+    expect(treeAdjustQuantity(1, recipeTree, availableItems)).to.deep.equal({
+      id: 1,
+      quantity: 1,
+      output: 1,
+      totalQuantity: 1,
+      usedQuantity: 1,
+      components: [
+        {id: 2, quantity: 1, output: 1, totalQuantity: 1, usedQuantity: 0},
+        {id: 3, quantity: 5, output: 1, totalQuantity: 5, usedQuantity: 3},
+        {id: 3, quantity: 5, output: 1, totalQuantity: 5, usedQuantity: 5},
+        {id: 2, quantity: 1, output: 1, totalQuantity: 1, usedQuantity: 0}
+      ]
+    })
+    expect(availableItems, 'Does not modify passed in availableItems object').to.deep.equal({2: 2, 3: 2})
+  })
+
+  it('doesn\'t use tree components if the tree result is available or not crafted', () => {
+    let recipeTree = {
+      id: 1,
+      quantity: 1,
+      output: 1,
+      components: [
+        {id: 2, quantity: 1, output: 1},
+        {
+          id: 3,
+          quantity: 1,
+          output: 1,
+          components: [{id: 4, quantity: 5, output: 1}]
+        },
+        {
+          id: 6,
+          quantity: 1,
+          output: 1,
+          craft: false,
+          components: [{id: 4, quantity: 5, output: 1}]
+        },
+        {
+          id: 5,
+          quantity: 1,
+          output: 1,
+          components: [{id: 4, quantity: 5, output: 1}]
+        }
+      ]
+    }
+    let availableItems = {2: 3, 3: 1, 4: 5}
+
+    expect(treeAdjustQuantity(1, recipeTree, availableItems)).to.deep.equal({
+      id: 1,
+      quantity: 1,
+      output: 1,
+      totalQuantity: 1,
+      usedQuantity: 1,
+      components: [
+        {id: 2, quantity: 1, output: 1, totalQuantity: 1, usedQuantity: 0},
+        {
+          id: 3,
+          quantity: 1,
+          output: 1,
+          totalQuantity: 1,
+          usedQuantity: 0,
+          components: [{id: 4, quantity: 5, output: 1, totalQuantity: 0, usedQuantity: 0}]
+        },
+        {
+          id: 6,
+          quantity: 1,
+          output: 1,
+          totalQuantity: 1,
+          usedQuantity: 1,
+          craft: false,
+          components: [{id: 4, quantity: 5, output: 1, totalQuantity: 5, usedQuantity: 5}]
+        },
+        {
+          id: 5,
+          quantity: 1,
+          output: 1,
+          totalQuantity: 1,
+          usedQuantity: 1,
+          components: [{id: 4, quantity: 5, output: 1, totalQuantity: 5, usedQuantity: 0}]
+        }
+      ]
+    })
+  })
+
+  it('does only craft part of the items if the tree result if partially available', () => {
+    let recipeTree = {
+      id: 0,
+      quantity: 1,
+      output: 1,
+      components: [
+        {
+          id: 1,
+          quantity: 1,
+          output: 1,
+          components: [{id: 2, quantity: 1, output: 1}]
+        }
+      ]
+    }
+    let availableItems = {1: 5, 2: 3}
+
+    expect(treeAdjustQuantity(10, recipeTree, availableItems)).to.deep.equal({
+      id: 0,
+      quantity: 1,
+      output: 1,
+      totalQuantity: 10,
+      usedQuantity: 10,
+      components: [
+        {
+          id: 1,
+          quantity: 1,
+          output: 1,
+          totalQuantity: 10,
+          usedQuantity: 5,
+          components: [
+            {
+              id: 2,
+              quantity: 1,
+              output: 1,
+              totalQuantity: 5,
+              usedQuantity: 2
+            }
+          ]
+        }
+      ]
+    })
+  })
+
+  it('always crafts the root node even if it is available', () => {
+    let recipeTree = {
+      id: 1,
+      quantity: 1,
+      output: 1
+    }
+    let availableItems = {1: 500}
+
+    expect(treeAdjustQuantity(1, recipeTree, availableItems)).to.deep.equal({
+      id: 1,
+      quantity: 1,
+      output: 1,
+      totalQuantity: 1,
+      usedQuantity: 1
     })
   })
 })

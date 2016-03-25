@@ -4,6 +4,7 @@ function treeCheapestCraftFlags (tree, forceBuyItems) {
 
   // Craft the item if it can't be bought or it is cheaper to craft
   tree.craft = forceBuyItems.indexOf(tree.id) === -1 &&
+    tree.usedQuantity !== 0 &&
     (!tree.buyPrice || tree.craftPrice < tree.buyPrice)
 
   if (!tree.components) {
