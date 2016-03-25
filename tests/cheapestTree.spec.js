@@ -25,6 +25,7 @@ describe('cheapestTree', () => {
       output: 1,
       quantity: 1,
       totalQuantity: 2,
+      usedQuantity: 2,
       decisionPrice: 20,
       buyPrice: 20,
       buyPriceEach: 10,
@@ -37,7 +38,8 @@ describe('cheapestTree', () => {
           id: 2,
           output: 1,
           quantity: 1,
-          totalQuantity: 2
+          totalQuantity: 2,
+          usedQuantity: 2
         },
         {
           decisionPrice: 100,
@@ -49,6 +51,7 @@ describe('cheapestTree', () => {
           output: 1,
           quantity: 5,
           totalQuantity: 10,
+          usedQuantity: 10,
           components: [
             {
               decisionPrice: 200,
@@ -58,7 +61,8 @@ describe('cheapestTree', () => {
               id: 4,
               output: 1,
               quantity: 2,
-              totalQuantity: 20
+              totalQuantity: 20,
+              usedQuantity: 20
             }
           ]
         },
@@ -72,6 +76,7 @@ describe('cheapestTree', () => {
           output: 1,
           quantity: 5,
           totalQuantity: 10,
+          usedQuantity: 10,
           components: [
             {
               decisionPrice: 200,
@@ -81,7 +86,8 @@ describe('cheapestTree', () => {
               id: 6,
               output: 1,
               quantity: 2,
-              totalQuantity: 20
+              totalQuantity: 20,
+              usedQuantity: 20
             }
           ]
         }
@@ -108,6 +114,7 @@ describe('cheapestTree', () => {
       output: 1,
       quantity: 1,
       totalQuantity: 2,
+      usedQuantity: 2,
       decisionPrice: 20,
       buyPrice: 20,
       buyPriceEach: 10,
@@ -122,6 +129,7 @@ describe('cheapestTree', () => {
           output: 1,
           quantity: 5,
           totalQuantity: 10,
+          usedQuantity: 10,
           components: [
             {
               decisionPrice: 200,
@@ -131,7 +139,8 @@ describe('cheapestTree', () => {
               id: 4,
               output: 1,
               quantity: 2,
-              totalQuantity: 20
+              totalQuantity: 20,
+              usedQuantity: 20
             }
           ]
         }
