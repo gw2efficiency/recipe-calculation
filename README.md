@@ -36,12 +36,11 @@ let recipeTree = {
 // The item prices, as a map of item id => price
 let itemPrices = {1: 123, 2: 42, 3: 1337}
 
-// (Optional) The available items, e.g. from the user's material
-// storage, bank and characters
+// (Optional) The available items, e.g. from the material storage, bank and characters
 let availableItems = {1: 1, 2: 250, 3: 5}
 
 // (Optional) A list of item ids for which crafting is *disabled* when generating the
-// best tree (e.g. for excluding precursor crafting or daily cooldowns)
+// cheapest tree (e.g. for excluding precursor crafting or daily cooldowns)
 let craftingDisabled = [1337, 42]
 
 // Calculate!
@@ -54,17 +53,17 @@ let tree = calc.cheapestTree(amount, recipeTree, itemPrices, availableItems, cra
   output: 1,
   components: [/* ... */],
   
-  // The following keys get set for the top level
-  // and all sub-components:
+  // The following keys get set for the top level and all sub-components:
   
-  // The total quantity that is needed to craft this component
+  // The total quantity of this component
   totalQuantity: 5,
   
-  // The total quantity that this item needs to be created
-  // If this is 0 then the user already owns all components
+  // The total used quantity of this component. This is after
+  // subtracting the available items of the user. If this is 0
+  // then the user owns all items already.
   usedQuantity: 5,
   
-  // The flag if the component should be crafted or bought
+  // The flag if the component should be crafted ("true") or bought ("false")
   craft: true,
   
   // Total buy price of the component
@@ -76,6 +75,9 @@ let tree = calc.cheapestTree(amount, recipeTree, itemPrices, availableItems, cra
   // Total price to craft this component
   craftPrice: 42
 }
+
+// To only get the craft price of the item:
+let craftPrice = tree.craftPrice
 ```
 
 ### TODO
