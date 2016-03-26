@@ -80,6 +80,17 @@ let tree = calc.cheapestTree(amount, recipeTree, itemPrices, availableItems, cra
 let craftPrice = tree.craftPrice
 ```
 
+### Helpers
+
+```js
+const calc = require('gw2e-recipe-calculation')
+
+// Get all item ids of a recipe tree
+let recipeTree = { /* ... */ }
+let ids = calc.recipeItems(ids)
+// -> [1, 2, 3, 4]
+```
+
 ### TODO
 
 - **Flip "craft/buy" toggle**
@@ -92,7 +103,6 @@ let craftPrice = tree.craftPrice
 	- Recalculate the tree price
 - **Get a list of used items (own / have to buy)**
 - **Get crafting steps**
-- Get all item ids from a recipe tree
 - Generate a item price map of a list of items and a map of vendor items
 - Generate a available materials map of a list of API items
 - Generate a short overview about crafting cost & profits
