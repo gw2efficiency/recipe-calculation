@@ -96,7 +96,7 @@ const calc = require('gw2e-recipe-calculation')
 let amount = 1
 
 // The already calculated tree (from "cheapestTree") that got changed
-let calculatedTree = { /* ... */ }
+let calculatedTree = {/* ... */}
 
 // The item prices, as a map of item id => price
 let itemPrices = {1: 123, 2: 42, 3: 1337}
@@ -108,20 +108,35 @@ let availableItems = {1: 1, 2: 250, 3: 5}
 let updatedTree = calc.updateTree(amount, calculatedTree, itemPrices, availableItems)
 ```
 
+### Generate list of items to buy & used available items
+
+```js
+const calc = require('gw2e-recipe-calculation')
+
+// Get all item ids of a calculated recipe tree (after "cheapestTree")
+let tree = {/* ... */}
+let usedItems = calc.usedItems(tree)
+
+// Generates a object with maps of id => count:
+{
+  buy: {1: 5, 3: 10, /* ... */},
+  available: {1: 10, 2: 5, /* ... */}
+}
+```
+
 ### Helpers
 
 ```js
 const calc = require('gw2e-recipe-calculation')
 
-// Get all item ids of a recipe tree
-let recipeTree = { /* ... */ }
-let ids = calc.recipeItems(ids)
+// Get all item ids of a recipe tree (before or after "cheapestTree")
+let recipeTree = {/* ... */}
+let ids = calc.recipeItems(recipeTree)
 // -> [1, 2, 3, 4]
 ```
 
 ### TODO
 
-- **Get a list of used items (own / have to buy)**
 - **Get crafting steps**
 - Generate a item price map of a list of items and a map of vendor items
 - Generate a available materials map of a list of API items
