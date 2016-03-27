@@ -22,9 +22,9 @@ function treePrices (tree, itemPrices) {
     return tree
   }
 
-  // Update the best price of this tree segment, used to
-  // determine the craft price of the higher-up recipe
-  if (!tree.buyPrice || tree.craftPrice < tree.buyPrice) {
+  // Update the decision price of this tree segment to the craft price,
+  // used to determine the craft price of the higher-up recipe
+  if (tree.craft === true || !tree.buyPrice || tree.craftPrice < tree.buyPrice) {
     tree.decisionPrice = tree.craftPrice
   }
 

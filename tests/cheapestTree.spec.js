@@ -26,7 +26,7 @@ describe('cheapestTree', () => {
       quantity: 1,
       totalQuantity: 2,
       usedQuantity: 2,
-      decisionPrice: 20,
+      decisionPrice: 384,
       buyPrice: 20,
       buyPriceEach: 10,
       components: [
@@ -118,7 +118,7 @@ describe('cheapestTree', () => {
       quantity: 1,
       totalQuantity: 2,
       usedQuantity: 2,
-      decisionPrice: 20,
+      decisionPrice: 36,
       buyPrice: 20,
       buyPriceEach: 10,
       components: [
@@ -221,7 +221,7 @@ describe('cheapestTree', () => {
       quantity: 1,
       totalQuantity: 2,
       usedQuantity: 2,
-      decisionPrice: 20,
+      decisionPrice: 1000,
       buyPrice: 20,
       buyPriceEach: 10,
       components: [

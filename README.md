@@ -80,6 +80,34 @@ let tree = calc.cheapestTree(amount, recipeTree, itemPrices, availableItems, cra
 let craftPrice = tree.craftPrice
 ```
 
+### Update the tree
+
+If you ever want to update the tree, for example because the `amount`, `availableItems` or `itemPrices` changed
+or the user flipped a `craft` flag, you should use this method. This updates the following keys: `totalQuantity`, 
+`usedQuantity`, `buyPrice`, `buyPriceEach` and `craftPrice`
+
+**This method does not change any `craft` flags (= uses the
+pre-calculated best tree). If you want to recalculate the best tree, just use `cheapestTree`!**
+
+```js
+const calc = require('gw2e-recipe-calculation')
+
+// How many times do we want to craft this item
+let amount = 1
+
+// The already calculated tree (from "cheapestTree") that got changed
+let calculatedTree = { /* ... */ }
+
+// The item prices, as a map of item id => price
+let itemPrices = {1: 123, 2: 42, 3: 1337}
+
+// (Optional) The available items, e.g. from the material storage, bank and characters
+let availableItems = {1: 1, 2: 250, 3: 5}
+
+// Update!
+let updatedTree = calc.updateTree(amount, calculatedTree, itemPrices, availableItems)
+```
+
 ### Helpers
 
 ```js
@@ -93,14 +121,6 @@ let ids = calc.recipeItems(ids)
 
 ### TODO
 
-- **Flip "craft/buy" toggle**
-	- Takes `recipeTree`, `itemPrices` and `availableItems`
-	- Go through the tree and adjust the quantities based on `availableItems` for nodes with `craft` set
-	- Recalculate the tree price
-- **Adjust amount**
-	- Recalculate the needed quantities for each tree step based on amounts and outputs
-	- Go through the tree and adjust the quantities based on `availableItems` for nodes with `craft` set
-	- Recalculate the tree price
 - **Get a list of used items (own / have to buy)**
 - **Get crafting steps**
 - Generate a item price map of a list of items and a map of vendor items
