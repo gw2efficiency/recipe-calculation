@@ -3,7 +3,7 @@
 [![Build Status](https://img.shields.io/travis/gw2efficiency/recipe-calculation.svg?style=flat-square)](https://travis-ci.org/gw2efficiency/recipe-calculation)
 [![Coverage Status](https://img.shields.io/codecov/c/github/gw2efficiency/recipe-calculation/master.svg?style=flat-square)](https://codecov.io/github/gw2efficiency/recipe-calculation)
 
-> Calculate the best tree traversal, price and used items of crafting recipes.
+> Calculate the cheapest tree traversal, price and used items of crafting recipes.
 
 ## Install
 
@@ -15,7 +15,7 @@ This module can be used for Node.js as well as browsers using [Browserify](https
 
 ## Usage
 
-### Calculate the initial cheapest tree
+### Calculate the cheapest tree
 
 ```js
 const calc = require('gw2e-recipe-calculation')
@@ -80,14 +80,14 @@ let tree = calc.cheapestTree(amount, recipeTree, itemPrices, availableItems, cra
 let craftPrice = tree.craftPrice
 ```
 
-### Update the tree
+### Update tree quantites & prices
 
-If you ever want to update the tree, for example because the `amount`, `availableItems` or `itemPrices` changed
+If you want to update the tree, because the `amount`, `availableItems` or `itemPrices` changed
 or the user flipped a `craft` flag, you should use this method. This updates the following keys: `totalQuantity`, 
 `usedQuantity`, `buyPrice`, `buyPriceEach` and `craftPrice`
 
 **This method does not change any `craft` flags (= uses the
-pre-calculated best tree). If you want to recalculate the best tree, just use `cheapestTree`!**
+precalculated best tree). If you want to recalculate the cheapest tree, just use `cheapestTree` again!**
 
 ```js
 const calc = require('gw2e-recipe-calculation')
