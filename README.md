@@ -166,7 +166,7 @@ let vendorItems = calc.static.vendorItems
 // Returns an object like this:
 {
   20798: {
-    type: 'spirit-shard', // can be gold, spirit shards, karma or keys for dungeon currency
+    type: 'spirit-shard', // can be gold, spirit shards, karma or dungeon currency
     quantity: 1, // quantity the vendor sells
     cost: 1, // copper the vendor sells the quantity for
     npcs: [
@@ -191,16 +191,13 @@ let ids = calc.recipeItems(recipeTree)
 let recipeTree = {/* ... */}
 let ids = calc.dailyCooldowns(recipeTree)
 // -> {46740: 3, 66913: 4}
+
+// Overwrite and add all vendor prices to a price array
+// To show the users more information afterwards use "calc.static.vendorItems"
+let prices = {1: 1233, 19750: 50000}
+prices = calc.useVendorPrices(prices)
+// -> {1: 1233, 19750: 16, 19924: 48, /* ... */}
 ```
-
-### TODO
-
-- Static content:
-  - Vendor items
-  - Daily cooldowns
-  - Buyable daily cooldowns (the crafting result of refining daily cooldown)
-- Generate a short overview about crafting cost & profits 
-- Generate a short overview about used daily cooldowns
 
 ## Tests
 
