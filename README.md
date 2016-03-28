@@ -186,6 +186,11 @@ const calc = require('gw2e-recipe-calculation')
 let recipeTree = {/* ... */}
 let ids = calc.recipeItems(recipeTree)
 // -> [1, 2, 3, 4]
+
+// Get a list of all needed daily cooldowns (after "cheapestTree")
+let recipeTree = {/* ... */}
+let ids = calc.dailyCooldowns(recipeTree)
+// -> {46740: 3, 66913: 4}
 ```
 
 ### TODO
