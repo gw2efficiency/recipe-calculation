@@ -2,7 +2,9 @@ const cheapestTree = require('./cheapestTree.js')
 const usedItems = require('./usedItems.js')
 const craftingSteps = require('./craftingSteps.js')
 const recipeItems = require('./helpers/recipeItems.js')
-const {dailyCooldowns, buyableDailyCooldowns} = require('./static/dailyCooldowns.js')
+const dailyCooldowns = require('./helpers/dailyCooldowns.js')
+const useVendorPrices = require('./helpers/useVendorPrices.js')
+const staticDailyCooldowns = require('./static/dailyCooldowns.js')
 const vendorItems = require('./static/vendorItems.js')
 
 module.exports = {
@@ -10,9 +12,11 @@ module.exports = {
   usedItems,
   craftingSteps,
   recipeItems,
+  dailyCooldowns,
+  useVendorPrices,
   static: {
-    dailyCooldowns,
-    buyableDailyCooldowns,
+    dailyCooldowns: staticDailyCooldowns.dailyCooldowns,
+    buyableDailyCooldowns: staticDailyCooldowns.buyableDailyCooldowns,
     vendorItems
   }
 }

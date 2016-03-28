@@ -10,6 +10,8 @@ describe('module', () => {
       'usedItems',
       'craftingSteps',
       'recipeItems',
+      'dailyCooldowns',
+      'useVendorPrices',
       'static'
     ])
 
