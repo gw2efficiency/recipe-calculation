@@ -9,7 +9,14 @@ describe('module', () => {
       'cheapestTree',
       'usedItems',
       'craftingSteps',
-      'recipeItems'
+      'recipeItems',
+      'static'
+    ])
+
+    expect(Object.keys(module.static)).to.deep.equal([
+      'dailyCooldowns',
+      'buyableDailyCooldowns',
+      'vendorItems'
     ])
   })
 })

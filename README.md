@@ -147,6 +147,36 @@ let craftingSteps = calc.craftingSteps(tree)
 ]
 ```
 
+### Static content
+
+```js
+const calc = require('gw2e-recipe-calculation')
+
+// Get all item ids of items that can only be crafted once a day
+let dailyCooldowns = calc.static.dailyCooldowns
+// -> [1, 2, 3, 4]
+
+// Get all item ids of items that can be bought, where the item or the immediate component 
+// (e.g. Deldrimor Steel Ingot-> Lump of Mithrillium) is a daily cooldown
+let buyableDailyCooldowns = calc.static.buyableDailyCooldowns
+// -> [1, 2, 3, 4]
+
+// Get an object with item ids as keys of all vendor-buyable items
+let vendorItems = calc.static.vendorItems
+// Returns an object like this:
+{
+  20798: {
+    type: 'spirit-shard', // can be gold, spirit shards, karma or keys for dungeon currency
+    quantity: 1, // quantity the vendor sells
+    cost: 1, // copper the vendor sells the quantity for
+    npcs: [
+      {name: 'Miyani / Mystic Forge Attendant', position: 'Mystic Forge'}
+    ]
+  },
+  // ...
+}
+```
+
 ### Helpers
 
 ```js
