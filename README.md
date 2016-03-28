@@ -124,6 +124,29 @@ let usedItems = calc.usedItems(tree)
 }
 ```
 
+### Generate list of crafting steps
+
+```js
+const calc = require('gw2e-recipe-calculation')
+
+// Get the crafting steps of a calculated recipe tree (after "cheapestTree")
+let tree = {/* ... */}
+let craftingSteps = calc.craftingSteps(tree)
+
+// Generates an array with the crafting steps in correct order
+[
+  {
+    id: 1,
+    quantity: 10,
+    components: [
+      {id: 2, quantity: 20},
+      {id: 3, quantity: 10}
+    ]
+  },
+  // ...
+]
+```
+
 ### Helpers
 
 ```js
@@ -137,12 +160,10 @@ let ids = calc.recipeItems(recipeTree)
 
 ### TODO
 
-- **Get crafting steps**
-- Generate a item price map of a list of items and a map of vendor items
-- Generate a available materials map of a list of API items
+- Generate a item price map of a list of items and a map of vendor items (static!)
 - Generate a short overview about crafting cost & profits
 - Generate a short overview about used daily cooldowns
-- Generate a short overview about needed professions
+- Generate a short overview about needed professions (1.1)
 
 ## Tests
 
