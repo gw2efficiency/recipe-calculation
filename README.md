@@ -195,10 +195,12 @@ let ids = calc.dailyCooldowns(recipeTree)
 
 ### TODO
 
-- Generate a item price map of a list of items and a map of vendor items (static!)
-- Generate a short overview about crafting cost & profits
+- Static content:
+  - Vendor items
+  - Daily cooldowns
+  - Buyable daily cooldowns (the crafting result of refining daily cooldown)
+- Generate a short overview about crafting cost & profits 
 - Generate a short overview about used daily cooldowns
-- Generate a short overview about needed professions (1.1)
 
 ## Tests
 
