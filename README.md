@@ -11,7 +11,8 @@
 npm install gw2e-recipe-calculation
 ```
 
-This module can be used for Node.js as well as browsers using [Browserify](https://github.com/substack/browserify-handbook#how-node_modules-works).
+This module can be used for Node.js as well as browsers using [Browserify](https://github.com/substack/browserify-handbook#how-node_modules-works). Be aware that you will probably
+want to use [`gw2e-recipe-nesting`](https://github.com/gw2efficiency/recipe-nesting) with this.
 
 ## Usage
 
