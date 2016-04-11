@@ -7,6 +7,7 @@ describe('module', () => {
   it('exports the correct functions', () => {
     expect(Object.keys(module)).to.deep.equal([
       'cheapestTree',
+      'updateTree',
       'usedItems',
       'craftingSteps',
       'recipeItems',
