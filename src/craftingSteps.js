@@ -1,3 +1,15 @@
+function craftingStepsWrapper (tree) {
+  let steps = craftingSteps(tree)
+
+  // Calculate how many times you actually have to click on "craft"
+  // for items with output > 1
+  return steps.map(step => {
+    step.crafts = Math.ceil(step.quantity / step.output)
+    delete step.output
+    return step
+  })
+}
+
 // Generate an ordered list of crafting steps
 function craftingSteps (tree, steps = []) {
   // Skip any tree parts where nothing needs to be crafted
@@ -29,6 +41,7 @@ function craftingSteps (tree, steps = []) {
   // We don't have a step like this yet, push a new one
   steps.push({
     id: tree.id,
+    output: tree.output,
     quantity: tree.usedQuantity,
     components: tree.components.map(component => {
       return {id: component.id, quantity: component.totalQuantity}
@@ -38,4 +51,4 @@ function craftingSteps (tree, steps = []) {
   return steps
 }
 
-module.exports = craftingSteps
+module.exports = craftingStepsWrapper
