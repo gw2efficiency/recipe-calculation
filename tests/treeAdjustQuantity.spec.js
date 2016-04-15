@@ -357,6 +357,130 @@ describe('treeAdjustQuantity (used quantity)', () => {
     })
   })
 
+  it('doesn\'t use tree sub-components if the tree result is not crafted or available', () => {
+    let recipeTree = {
+      id: 1,
+      quantity: 1,
+      output: 1,
+      components: [
+        {
+          id: 2,
+          quantity: 1,
+          output: 1,
+          craft: false,
+          components: [
+            {
+              id: 3,
+              quantity: 5,
+              output: 1,
+              craft: true,
+              components: [{id: 4, quantity: 5, output: 1}]
+            }
+          ]
+        },
+        {
+          id: 99,
+          quantity: 1,
+          output: 1,
+          components: [
+            {
+              id: 3,
+              quantity: 5,
+              output: 1,
+              components: [{id: 4, quantity: 5, output: 1}]
+            }
+          ]
+        },
+        {
+          id: 5,
+          quantity: 1,
+          output: 1,
+          craft: true,
+          components: [
+            {
+              id: 6,
+              quantity: 5,
+              output: 1,
+              craft: true,
+              components: [{id: 4, quantity: 5, output: 1}]
+            }
+          ]
+        }
+      ]
+    }
+    let availableItems = {99: 1000, 4: 20}
+
+    expect(treeAdjustQuantity(1, recipeTree, availableItems)).to.deep.equal({
+      id: 1,
+      quantity: 1,
+      output: 1,
+      totalQuantity: 1,
+      usedQuantity: 1,
+      components: [
+        {
+          id: 2,
+          quantity: 1,
+          output: 1,
+          craft: false,
+          totalQuantity: 1,
+          usedQuantity: 1,
+          components: [
+            {
+              id: 3,
+              quantity: 5,
+              output: 1,
+              craft: true,
+              totalQuantity: 5,
+              usedQuantity: 5,
+              components: [
+                {id: 4, quantity: 5, output: 1, totalQuantity: 25, usedQuantity: 25}
+              ]
+            }
+          ]
+        },
+        {
+          id: 99,
+          quantity: 1,
+          output: 1,
+          totalQuantity: 1,
+          usedQuantity: 0,
+          components: [
+            {
+              id: 3,
+              quantity: 5,
+              output: 1,
+              totalQuantity: 0,
+              usedQuantity: 0,
+              components: [
+                {id: 4, quantity: 5, output: 1, totalQuantity: 0, usedQuantity: 0}
+              ]
+            }
+          ]
+        },
+        {
+          id: 5,
+          quantity: 1,
+          output: 1,
+          craft: true,
+          totalQuantity: 1,
+          usedQuantity: 1,
+          components: [
+            {
+              id: 6,
+              quantity: 5,
+              output: 1,
+              craft: true,
+              totalQuantity: 5,
+              usedQuantity: 5,
+              components: [
+                {id: 4, quantity: 5, output: 1, totalQuantity: 25, usedQuantity: 5}
+              ]
+            }
+          ]
+        }]
+    })
+  })
+
   it('does only craft part of the items if the tree result if partially available', () => {
     let recipeTree = {
       id: 0,

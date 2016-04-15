@@ -8,7 +8,7 @@ function treeAdjustQuantityWrapper (amount, tree, availableItems) {
 
 // Go through a recipe tree and set 'totalQuantity' based on the
 // wanted amount and the output of recipes and sub-recipes
-function treeAdjustQuantity (amount, tree, availableItems, ignoreAvailable = true, level = 0) {
+function treeAdjustQuantity (amount, tree, availableItems, ignoreAvailable = false, nesting = 0) {
   tree = {...tree}
   tree.output = tree.output || 1
 
@@ -23,7 +23,7 @@ function treeAdjustQuantity (amount, tree, availableItems, ignoreAvailable = tru
   // bought or already available get as many items of it as possible
   // (This ignores the root node, because we *always* want to craft all of these)
   let availableQuantity = 0
-  if (!ignoreAvailable && availableItems[tree.id]) {
+  if (nesting > 0 && !ignoreAvailable && availableItems[tree.id]) {
     availableQuantity = Math.min(availableItems[tree.id], tree.totalQuantity)
     availableItems[tree.id] -= availableQuantity
   }
@@ -39,10 +39,10 @@ function treeAdjustQuantity (amount, tree, availableItems, ignoreAvailable = tru
 
   // Ignore available items in components if the tree
   // doesn't get crafted or is completely available anyway
-  ignoreAvailable = tree.craft === false || tree.usedQuantity === 0
+  ignoreAvailable = tree.craft === false || tree.usedQuantity === 0 || ignoreAvailable
 
   tree.components = tree.components.map(component => {
-    return treeAdjustQuantity(componentAmount, component, availableItems, ignoreAvailable, ++level)
+    return treeAdjustQuantity(componentAmount, component, availableItems, ignoreAvailable, ++nesting)
   })
   return tree
 }
