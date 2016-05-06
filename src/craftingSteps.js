@@ -3,11 +3,22 @@ function craftingStepsWrapper (tree) {
 
   // Calculate how many times you actually have to click on "craft"
   // for items with output > 1
-  return steps.map(step => {
+  steps = steps.map(step => {
     step.crafts = Math.ceil(step.quantity / step.output)
     delete step.output
     return step
   })
+
+  // Make sure that "Mystic Clovers" get crafted as the first step,
+  // since they generate items that are always useful for crafting the other steps
+  let mysticCloverId = 19675
+  let clovers = steps.find(step => step.id === mysticCloverId)
+  if (clovers) {
+    steps = steps.filter(step => step.id !== mysticCloverId)
+    steps.unshift(clovers)
+  }
+
+  return steps
 }
 
 // Generate an ordered list of crafting steps
