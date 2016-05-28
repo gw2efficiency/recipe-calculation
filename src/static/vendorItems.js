@@ -736,5 +736,30 @@ module.exports = {
     npcs: [
       {name: 'Master Craftsmen', position: 'Crafting Station'}
     ]
-  }
+  },
+
+  // Guild merchants: commendations
+  76689: {type: 'guild-commendation', quantity: 1, cost: 1, npcs: [{name: 'Guild Trader', position: 'Guild Hall'}]},
+  72169: {type: 'guild-commendation', quantity: 1, cost: 1, npcs: [{name: 'Guild Trader', position: 'Guild Hall'}]},
+  76151: {type: 'guild-commendation', quantity: 1, cost: 1, npcs: [{name: 'Guild Trader', position: 'Guild Hall'}]},
+  75793: {type: 'guild-commendation', quantity: 1, cost: 1, npcs: [{name: 'Guild Trader', position: 'Guild Hall'}]},
+  75659: {type: 'guild-commendation', quantity: 1, cost: 1, npcs: [{name: 'Guild Trader', position: 'Guild Hall'}]},
+
+  // Guild merchants: gold
+  71077: {type: 'gold', quantity: 1, cost: 2400, npcs: [{name: 'Guild Decorations Merchant', position: 'Guild Hall'}]},
+  73098: {type: 'gold', quantity: 1, cost: 2400, npcs: [{name: 'Guild Decorations Merchant', position: 'Guild Hall'}]},
+  75396: {type: 'gold', quantity: 1, cost: 2400, npcs: [{name: 'Guild Decorations Merchant', position: 'Guild Hall'}]},
+  71438: {type: 'gold', quantity: 1, cost: 2400, npcs: [{name: 'Guild Decorations Merchant', position: 'Guild Hall'}]},
+  74615: {type: 'gold', quantity: 1, cost: 2400, npcs: [{name: 'Guild Decorations Merchant', position: 'Guild Hall'}]},
+  71681: {type: 'gold', quantity: 1, cost: 2400, npcs: [{name: 'Guild Decorations Merchant', position: 'Guild Hall'}]},
+  76345: {type: 'gold', quantity: 1, cost: 2400, npcs: [{name: 'Guild Decorations Merchant', position: 'Guild Hall'}]},
+  70689: {type: 'gold', quantity: 1, cost: 2400, npcs: [{name: 'Guild Decorations Merchant', position: 'Guild Hall'}]},
+  73282: {type: 'gold', quantity: 1, cost: 2400, npcs: [{name: 'Guild Decorations Merchant', position: 'Guild Hall'}]},
+  71662: {type: 'gold', quantity: 1, cost: 2400, npcs: [{name: 'Guild Decorations Merchant', position: 'Guild Hall'}]},
+  73657: {type: 'gold', quantity: 1, cost: 2400, npcs: [{name: 'Guild Decorations Merchant', position: 'Guild Hall'}]},
+  74705: {type: 'gold', quantity: 1, cost: 2400, npcs: [{name: 'Guild Decorations Merchant', position: 'Guild Hall'}]},
+  71278: {type: 'gold', quantity: 1, cost: 2400, npcs: [{name: 'Guild Decorations Merchant', position: 'Guild Hall'}]},
+  72103: {type: 'gold', quantity: 1, cost: 2400, npcs: [{name: 'Guild Decorations Merchant', position: 'Guild Hall'}]},
+  71255: {type: 'gold', quantity: 1, cost: 2400, npcs: [{name: 'Guild Decorations Merchant', position: 'Guild Hall'}]},
+  73093: {type: 'gold', quantity: 1, cost: 2400, npcs: [{name: 'Guild Decorations Merchant', position: 'Guild Hall'}]}
 }
