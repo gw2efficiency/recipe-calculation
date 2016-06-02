@@ -285,4 +285,127 @@ describe('craftingSteps', () => {
       }
     ])
   })
+
+  it('gets the correct crafting steps when merging components', () => {
+    let tree = {
+      id: 1,
+      craft: true,
+      totalQuantity: 1,
+      usedQuantity: 1,
+      output: 1,
+      components: [
+        {
+          id: 2,
+          craft: true,
+          totalQuantity: 1,
+          usedQuantity: 1,
+          output: 1,
+          components: [
+            {
+              id: 3,
+              craft: false,
+              totalQuantity: 1,
+              usedQuantity: 0,
+              output: 1,
+              components: [
+                {
+                  id: 4,
+                  craft: false,
+                  totalQuantity: 1,
+                  usedQuantity: 1,
+                  output: 1
+                }
+              ]
+            },
+            {
+              id: 5,
+              craft: true,
+              totalQuantity: 1,
+              usedQuantity: 1,
+              output: 1,
+              components: [
+                {
+                  id: 6,
+                  craft: false,
+                  totalQuantity: 1,
+                  usedQuantity: 1,
+                  output: 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: 2,
+          craft: true,
+          totalQuantity: 1,
+          usedQuantity: 1,
+          output: 1,
+          components: [
+            {
+              id: 3,
+              craft: true,
+              totalQuantity: 1,
+              usedQuantity: 1,
+              output: 1,
+              components: [
+                {
+                  id: 4,
+                  craft: false,
+                  totalQuantity: 1,
+                  usedQuantity: 1,
+                  output: 1
+                }
+              ]
+            },
+            {
+              id: 5,
+              craft: true,
+              totalQuantity: 1,
+              usedQuantity: 1,
+              output: 1,
+              components: [
+                {
+                  id: 6,
+                  craft: false,
+                  totalQuantity: 1,
+                  usedQuantity: 1,
+                  output: 1
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+
+    let usedItemObject = craftingSteps(tree)
+
+    expect(usedItemObject).to.deep.equal([
+      {
+        id: 5,
+        quantity: 2,
+        components: [{id: 6, quantity: 2}],
+        crafts: 2
+      },
+      {
+        id: 3,
+        quantity: 1,
+        components: [{id: 4, quantity: 1}],
+        crafts: 1
+      },
+      {
+        id: 2,
+        quantity: 2,
+        components: [{id: 3, quantity: 2}, {id: 5, quantity: 2}],
+        crafts: 2
+      },
+      {
+        id: 1,
+        quantity: 1,
+        components: [{id: 2, quantity: 1}, {id: 2, quantity: 1}],
+        crafts: 1
+      }
+    ])
+  })
 })

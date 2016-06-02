@@ -1,5 +1,5 @@
 function craftingStepsWrapper (tree) {
-  let steps = craftingSteps(tree)
+  let steps = craftingSteps(tree).reverse()
 
   // Calculate how many times you actually have to click on "craft"
   // for items with output > 1
@@ -22,43 +22,40 @@ function craftingStepsWrapper (tree) {
 }
 
 // Generate an ordered list of crafting steps
-function craftingSteps (tree, steps = []) {
+function craftingSteps (tree, steps = [], index = 0) {
   // Skip any tree parts where nothing needs to be crafted
   if (!tree.components || tree.craft === false) {
     return steps
   }
 
-  // Go through the components first, they have to be crafted before crafting the result
-  tree.components.map(component => craftingSteps(component, steps))
-
   // Go through the existing steps, and if we already have a step
   // with this id, just add up the quantities
-  for (let i = 0; i !== steps.length; i++) {
-    let step = steps[i]
-
-    if (step.id !== tree.id) {
-      continue
-    }
-
-    step.quantity += tree.usedQuantity
-    step.components = step.components.map(component => {
-      let treeComponent = tree.components.find(tC => tC.id === component.id)
-      component.quantity += treeComponent.totalQuantity
-      return component
-    })
-    return steps
+  let stepIndex = steps.findIndex(step => step.id === tree.id)
+  if (stepIndex !== -1) {
+    steps[stepIndex].quantity += tree.usedQuantity
+    steps[stepIndex].components = steps[stepIndex].components
+      .map(component => {
+        let treeComponent = tree.components.find(tC => tC.id === component.id)
+        component.quantity += treeComponent.totalQuantity
+        return component
+      })
+    index = stepIndex
   }
 
-  // We don't have a step like this yet, push a new one
-  steps.push({
-    id: tree.id,
-    output: tree.output,
-    quantity: tree.usedQuantity,
-    components: tree.components.map(component => {
-      return {id: component.id, quantity: component.totalQuantity}
+  // We don't have a step like this yet, push a new one at the given index
+  if (stepIndex === -1) {
+    steps.splice(index, 0, {
+      id: tree.id,
+      output: tree.output,
+      quantity: tree.usedQuantity,
+      components: tree.components.map(component => {
+        return {id: component.id, quantity: component.totalQuantity}
+      })
     })
-  })
+  }
 
+  // Go through the components and push them after the index of their parent
+  tree.components.map(component => craftingSteps(component, steps, index + 1))
   return steps
 }
 
