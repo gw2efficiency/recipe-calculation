@@ -761,5 +761,10 @@ module.exports = {
   71278: {type: 'gold', quantity: 1, cost: 2400, npcs: [{name: 'Guild Decorations Merchant', position: 'Guild Hall'}]},
   72103: {type: 'gold', quantity: 1, cost: 2400, npcs: [{name: 'Guild Decorations Merchant', position: 'Guild Hall'}]},
   71255: {type: 'gold', quantity: 1, cost: 2400, npcs: [{name: 'Guild Decorations Merchant', position: 'Guild Hall'}]},
-  73093: {type: 'gold', quantity: 1, cost: 2400, npcs: [{name: 'Guild Decorations Merchant', position: 'Guild Hall'}]}
+  73093: {type: 'gold', quantity: 1, cost: 2400, npcs: [{name: 'Guild Decorations Merchant', position: 'Guild Hall'}]},
+
+  // Master scribe
+  70647: {type: 'gold', quantity: 1, cost: 32, npcs: [{name: 'Master Scribe', position: 'Guild Hall'}]},
+  75762: {type: 'gold', quantity: 1, cost: 104, npcs: [{name: 'Master Scribe', position: 'Guild Hall'}]},
+  75087: {type: 'gold', quantity: 1, cost: 5000, npcs: [{name: 'Master Scribe', position: 'Guild Hall'}]}
 }
