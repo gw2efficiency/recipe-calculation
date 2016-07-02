@@ -121,7 +121,6 @@ module.exports = {
 
   // Random single merchants
   19676: {type: 'gold', quantity: 1, cost: 10000, npcs: [{name: 'Rojan the Penitent', position: 'Frostgorge Sound [C]'}]},
-  19678: {type: 'badge-of-honor', quantity: 1, cost: 500, npcs: [{name: 'Battle Master', position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds'}]},
   66902: {type: 'geode', quantity: 1, cost: 9, npcs: [{name: 'Geode merchant (Dusk, Gleam, Kiena, Moonglow)', position: 'Dry Top'}]},
   67007: {type: 'pristine-fractal-relic', quantity: 1, cost: 5, npcs: [{name: 'BUY-4373', position: 'Mistlock Observatory'}]},
   37050: {type: 'fractal-relic', quantity: 1, cost: 1350, npcs: [{name: 'BUY-4373', position: 'Mistlock Observatory'}]},
