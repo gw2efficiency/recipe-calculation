@@ -42,6 +42,7 @@ module.exports = {
   20796: {type: 'spirit-shard', quantity: 10, cost: 1, npcs: [{name: 'Miyani / Mystic Forge Attendant', position: 'Mystic Forge'}]},
   20798: {type: 'spirit-shard', quantity: 1, cost: 1, npcs: [{name: 'Miyani / Mystic Forge Attendant', position: 'Mystic Forge'}]},
   19663: {type: 'gold', quantity: 1, cost: 2504, npcs: [{name: 'Miyani / Mystic Forge Attendant', position: 'Mystic Forge'}]},
+  79418: {type: 'gold', quantity: 1, cost: 10000, npcs: [{name: 'Miyani / Mystic Forge Attendant', position: 'Mystic Forge'}]},
 
   // Dungeon vendor
   19664: {type: 'ascalonian-catacombs', quantity: 1, cost: 500, npcs: [{name: 'Dungeon Armor and Weapons', position: 'Lions Arch [S]'}]},
