@@ -1,7 +1,6 @@
 /* eslint-env node, mocha */
-const expect = require('chai').expect
-
-const craftingSteps = require('../src/craftingSteps.js')
+import {expect} from 'chai'
+import craftingSteps from '../src/craftingSteps.js'
 
 describe('craftingSteps', () => {
   it('gets the correct crafting steps', () => {

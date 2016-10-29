@@ -1,7 +1,6 @@
 /* eslint-env node, mocha */
-const expect = require('chai').expect
-
-const treeCheapestCraftFlags = require('../src/treeCheapestCraftFlags.js')
+import {expect} from 'chai'
+import treeCheapestCraftFlags from '../src/treeCheapestCraftFlags.js'
 
 describe('treeCheapestCraftFlags', () => {
   it('sets the cheapest craft flags', () => {

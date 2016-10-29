@@ -1,5 +1,5 @@
 // Generate a list of items to buy and used available items
-function usedItems (tree, breakdown = {buy: {}, available: {}}) {
+export default function usedItems (tree, breakdown = {buy: {}, available: {}}) {
   // Add up the used available items
   let available = tree.totalQuantity - tree.usedQuantity
   if (available > 0) {
@@ -19,5 +19,3 @@ function usedItems (tree, breakdown = {buy: {}, available: {}}) {
   tree.components.map(component => usedItems(component, breakdown))
   return breakdown
 }
-
-module.exports = usedItems

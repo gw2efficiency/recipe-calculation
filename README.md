@@ -21,7 +21,7 @@ want to use [`gw2e-recipe-nesting`](https://github.com/gw2efficiency/recipe-nest
 ### Calculate the cheapest tree
 
 ```js
-const calc = require('gw2e-recipe-calculation')
+import {cheapestTree} from 'gw2e-recipe-calculation'
 
 // How many times do we want to craft this item
 // Note: If you want to craft a item 5 times and the output of the
@@ -47,7 +47,7 @@ let availableItems = {1: 1, 2: 250, 3: 5}
 let craftingDisabled = [1337, 42]
 
 // Calculate!
-let tree = calc.cheapestTree(amount, recipeTree, itemPrices, availableItems, craftingDisabled)
+let tree = cheapestTree(amount, recipeTree, itemPrices, availableItems, craftingDisabled)
 
 // The tree now looks like this:
 {
@@ -93,7 +93,7 @@ or the user flipped a `craft` flag, you should use this method. This updates the
 precalculated best tree). If you want to recalculate the cheapest tree, just use `cheapestTree` again!**
 
 ```js
-const calc = require('gw2e-recipe-calculation')
+import {updateTree} from 'gw2e-recipe-calculation'
 
 // How many times do we want to craft this item
 let amount = 1
@@ -108,17 +108,17 @@ let itemPrices = {1: 123, 2: 42, 3: 1337}
 let availableItems = {1: 1, 2: 250, 3: 5}
 
 // Update!
-let updatedTree = calc.updateTree(amount, calculatedTree, itemPrices, availableItems)
+let updatedTree = updateTree(amount, calculatedTree, itemPrices, availableItems)
 ```
 
 ### Generate list of items to buy & used available items
 
 ```js
-const calc = require('gw2e-recipe-calculation')
+import {usedItems} from 'gw2e-recipe-calculation'
 
 // Get all item ids of a calculated recipe tree (after "cheapestTree")
 let tree = {/* ... */}
-let usedItems = calc.usedItems(tree)
+let usedItems = usedItems(tree)
 
 // Generates a object with maps of id => count:
 {
@@ -130,11 +130,11 @@ let usedItems = calc.usedItems(tree)
 ### Generate list of crafting steps
 
 ```js
-const calc = require('gw2e-recipe-calculation')
+import {craftingSteps} from 'gw2e-recipe-calculation'
 
 // Get the crafting steps of a calculated recipe tree (after "cheapestTree")
 let tree = {/* ... */}
-let craftingSteps = calc.craftingSteps(tree)
+let craftingSteps = craftingSteps(tree)
 
 // Generates an array with the crafting steps in correct order
 [
@@ -153,19 +153,19 @@ let craftingSteps = calc.craftingSteps(tree)
 ### Static content
 
 ```js
-const calc = require('gw2e-recipe-calculation')
+import {staticItems} from 'gw2e-recipe-calculation'
 
 // Get all item ids of items that can only be crafted once a day
-let dailyCooldowns = calc.static.dailyCooldowns
+let dailyCooldowns = staticItems.dailyCooldowns
 // -> [1, 2, 3, 4]
 
 // Get all item ids of items that can be bought, where the item or the immediate component 
 // (e.g. Deldrimor Steel Ingot-> Lump of Mithrillium) is a daily cooldown
-let buyableDailyCooldowns = calc.static.buyableDailyCooldowns
+let buyableDailyCooldowns = staticItems.buyableDailyCooldowns
 // -> [1, 2, 3, 4]
 
 // Get an object with item ids as keys of all vendor-buyable items
-let vendorItems = calc.static.vendorItems
+let vendorItems = staticItems.vendorItems
 // Returns an object like this:
 {
   20798: {
@@ -183,22 +183,22 @@ let vendorItems = calc.static.vendorItems
 ### Helpers
 
 ```js
-const calc = require('gw2e-recipe-calculation')
+import {recipeItems, dailyCooldowns, useVendorPrices} from 'gw2e-recipe-calculation'
 
 // Get all item ids of a recipe tree (before or after "cheapestTree")
 let recipeTree = {/* ... */}
-let ids = calc.recipeItems(recipeTree)
+let ids = recipeItems(recipeTree)
 // -> [1, 2, 3, 4]
 
 // Get a list of all needed daily cooldowns (after "cheapestTree")
 let recipeTree = {/* ... */}
-let ids = calc.dailyCooldowns(recipeTree)
+let ids = dailyCooldowns(recipeTree)
 // -> {46740: 3, 66913: 4}
 
 // Overwrite and add all vendor prices to a price array
-// To show the users more information afterwards use "calc.static.vendorItems"
+// To show the users more information afterwards use "staticItems.vendorItems"
 let prices = {1: 1233, 19750: 50000}
-prices = calc.useVendorPrices(prices)
+prices = useVendorPrices(prices)
 // -> {1: 1233, 19750: 16, 19924: 48, /* ... */}
 ```
 

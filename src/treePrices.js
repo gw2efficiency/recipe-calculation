@@ -1,5 +1,5 @@
 // Update the tree prices
-function treePrices (tree, itemPrices) {
+export default function treePrices (tree, itemPrices) {
   tree = {...tree}
 
   // Calculate the buy prices
@@ -30,5 +30,3 @@ function treePrices (tree, itemPrices) {
 
   return tree
 }
-
-module.exports = treePrices

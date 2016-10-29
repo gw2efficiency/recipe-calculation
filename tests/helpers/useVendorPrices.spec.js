@@ -1,7 +1,6 @@
 /* eslint-env node, mocha */
-const expect = require('chai').expect
-
-const useVendorPrices = require('../../src/helpers/useVendorPrices.js')
+import {expect} from 'chai'
+import useVendorPrices from '../../src/helpers/useVendorPrices.js'
 
 describe('helpers > useVendorPrices', () => {
   it('overwrites and adds vendor prices to the price object', () => {

@@ -1,7 +1,6 @@
 /* eslint-env node, mocha */
-const expect = require('chai').expect
-
-const usedItems = require('../src/usedItems.js')
+import {expect} from 'chai'
+import usedItems from '../src/usedItems.js'
 
 describe('usedItems', () => {
   it('gets the correct items to buy and used available items', () => {

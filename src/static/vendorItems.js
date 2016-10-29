@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   // Heart vendors
   12337: {type: 'karma', quantity: 25, cost: 77, npcs: [{name: 'Disa', position: 'Snowslide Ravine, Dredgehaunt Cliffs [N]'}, {name: 'Lieutenant Pickins', position: 'Greystone Rise, Harathi Hinterlands [W]'}]},
   12165: {type: 'karma', quantity: 25, cost: 35, npcs: [{name: 'Milton Book', position: 'Cornucopian Fields, Gendarran Fields [S]'}]},

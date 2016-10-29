@@ -1,7 +1,6 @@
 /* eslint-env node, mocha */
-const expect = require('chai').expect
-
-const treePrices = require('../src/treePrices.js')
+import {expect} from 'chai'
+import treePrices from '../src/treePrices.js'
 
 describe('treePrices', () => {
   it('updates the prices for a tree', () => {

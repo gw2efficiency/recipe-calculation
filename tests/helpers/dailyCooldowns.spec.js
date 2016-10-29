@@ -1,10 +1,9 @@
 /* eslint-env node, mocha */
-const expect = require('chai').expect
-
-const dailyCooldowns = require('../../src/helpers/dailyCooldowns.js')
+import {expect} from 'chai'
+import dailyCooldowns from '../../src/helpers/dailyCooldowns.js'
 
 describe('helpers > dailyCooldowns', () => {
-  it('gets all daily cooldowns fro a recipe tree', () => {
+  it('gets all daily cooldowns from a recipe tree', () => {
     let tree = {
       id: 1,
       craft: true,

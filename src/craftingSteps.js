@@ -1,4 +1,4 @@
-function craftingStepsWrapper (tree) {
+export default function craftingStepsWrapper (tree) {
   let steps = craftingSteps(tree).reverse()
 
   // Calculate how many times you actually have to click on "craft"
@@ -58,5 +58,3 @@ function craftingSteps (tree, steps = [], index = 0) {
   tree.components.map(component => craftingSteps(component, steps, index + 1))
   return steps
 }
-
-module.exports = craftingStepsWrapper

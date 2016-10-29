@@ -1,7 +1,6 @@
 /* eslint-env node, mocha */
-const expect = require('chai').expect
-
-const treeAdjustQuantity = require('../src/treeAdjustQuantity.js')
+import {expect} from 'chai'
+import treeAdjustQuantity from '../src/treeAdjustQuantity.js'
 
 describe('treeAdjustQuantity (total quantity)', () => {
   it('calculates the correct quantity for recipes without components', () => {

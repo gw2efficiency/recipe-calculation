@@ -1,7 +1,6 @@
 /* eslint-env node, mocha */
-const expect = require('chai').expect
-
-const recipeItems = require('../../src/helpers/recipeItems.js')
+import {expect} from 'chai'
+import recipeItems from '../../src/helpers/recipeItems.js'
 
 describe('helpers > recipeItems', () => {
   it('gets all unique item ids of a recipe tree', () => {

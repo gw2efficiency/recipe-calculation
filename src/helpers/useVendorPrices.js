@@ -1,4 +1,4 @@
-const vendorItems = require('../static/vendorItems.js')
+import vendorItems from '../static/vendorItems.js'
 
 // Go through the vendor items and generate a map of vendor prices
 let vendorPrices = {}
@@ -12,8 +12,6 @@ for (let id in vendorItems) {
 }
 
 // Overwrite and add all vendor prices to a price array
-function useVendorPrices (prices) {
+export default function useVendorPrices (prices) {
   return {...prices, ...vendorPrices}
 }
-
-module.exports = useVendorPrices

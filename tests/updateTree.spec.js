@@ -1,8 +1,7 @@
 /* eslint-env node, mocha */
-const expect = require('chai').expect
-const clone = require('clone')
-
-const updateTree = require('../src/updateTree.js')
+import {expect} from 'chai'
+import clone from 'clone'
+import updateTree from '../src/updateTree.js'
 
 describe('updateTree', () => {
   let calculatedTree = {

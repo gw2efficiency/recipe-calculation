@@ -1,7 +1,6 @@
 /* eslint-env node, mocha */
-const expect = require('chai').expect
-
-const cheapestTree = require('../src/cheapestTree.js')
+import {expect} from 'chai'
+import cheapestTree from '../src/cheapestTree.js'
 
 describe('cheapestTree', () => {
   it('can calculate the cheapest tree correctly', () => {

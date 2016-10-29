@@ -1,5 +1,5 @@
 // Find all unique item ids used in a recipe tree
-function recipeItems (tree) {
+export default function recipeItems (tree) {
   let ids = [tree.id]
 
   if (!tree.components) {
@@ -14,5 +14,3 @@ function recipeItems (tree) {
 
   return ids
 }
-
-module.exports = recipeItems

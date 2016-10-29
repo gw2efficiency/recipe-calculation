@@ -1,7 +1,6 @@
 /* eslint-env node, mocha */
-const expect = require('chai').expect
-
-const module = require('../src/index.js')
+import {expect} from 'chai'
+import module from '../src/index.js'
 
 describe('module', () => {
   it('exports the correct functions', () => {
@@ -13,10 +12,10 @@ describe('module', () => {
       'recipeItems',
       'dailyCooldowns',
       'useVendorPrices',
-      'static'
+      'staticItems'
     ])
 
-    expect(Object.keys(module.static)).to.deep.equal([
+    expect(Object.keys(module.staticItems)).to.deep.equal([
       'dailyCooldowns',
       'buyableDailyCooldowns',
       'vendorItems'

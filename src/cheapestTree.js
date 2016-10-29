@@ -1,8 +1,8 @@
-const treeAdjustQuantity = require('./treeAdjustQuantity.js')
-const treePrices = require('./treePrices.js')
-const treeCheapestCraftFlags = require('./treeCheapestCraftFlags.js')
+import treeAdjustQuantity from './treeAdjustQuantity.js'
+import treePrices from './treePrices.js'
+import treeCheapestCraftFlags from './treeCheapestCraftFlags.js'
 
-function cheapestTree (amount, tree, itemPrices, availableItems = {}, forceBuyItems = []) {
+export default function cheapestTree (amount, tree, itemPrices, availableItems = {}, forceBuyItems = []) {
   // Adjust the tree total and used quantities
   tree = treeAdjustQuantity(amount, tree, availableItems)
 
@@ -22,5 +22,3 @@ function cheapestTree (amount, tree, itemPrices, availableItems = {}, forceBuyIt
 
   return tree
 }
-
-module.exports = cheapestTree

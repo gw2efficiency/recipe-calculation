@@ -1,7 +1,7 @@
-const staticDailyCooldowns = require('../static/dailyCooldowns.js').dailyCooldowns
+import {dailyCooldowns as staticDailyCooldowns} from '../static/dailyCooldowns.js'
 
 // Get a list of daily cooldowns used in the recipe
-function dailyCooldowns (tree, breakdown = {}) {
+export default function dailyCooldowns (tree, breakdown = {}) {
   if (!tree.components || tree.craft === false) {
     return breakdown
   }
@@ -13,5 +13,3 @@ function dailyCooldowns (tree, breakdown = {}) {
   tree.components.map(component => dailyCooldowns(component, breakdown))
   return breakdown
 }
-
-module.exports = dailyCooldowns

@@ -1,7 +1,7 @@
-const treeAdjustQuantity = require('./treeAdjustQuantity.js')
-const treePrices = require('./treePrices.js')
+import treeAdjustQuantity from './treeAdjustQuantity.js'
+import treePrices from './treePrices.js'
 
-function updateTree (amount, tree, itemPrices, availableItems = {}) {
+export default function updateTree (amount, tree, itemPrices, availableItems = {}) {
   // Update the tree total and used quantities
   tree = treeAdjustQuantity(amount, tree, availableItems)
 
@@ -10,5 +10,3 @@ function updateTree (amount, tree, itemPrices, availableItems = {}) {
 
   return tree
 }
-
-module.exports = updateTree
