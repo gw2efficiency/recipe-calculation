@@ -11,6 +11,7 @@ export default function treeCheapestCraftFlags (tree, forceBuyItems) {
     return tree
   }
 
+  // Adjust the flags for all tree's subcomponents
   tree.components = tree.components.map(component => treeCheapestCraftFlags(component, forceBuyItems))
   return tree
 }

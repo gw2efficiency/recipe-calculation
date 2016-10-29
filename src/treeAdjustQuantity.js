@@ -41,8 +41,10 @@ function treeAdjustQuantity (amount, tree, availableItems, ignoreAvailable = fal
   // doesn't get crafted or is completely available anyway
   ignoreAvailable = tree.craft === false || tree.usedQuantity === 0 || ignoreAvailable
 
+  // Adjust the quantity for all tree's subcomponents
   tree.components = tree.components.map(component => {
     return treeAdjustQuantity(componentAmount, component, availableItems, ignoreAvailable, ++nesting)
   })
+
   return tree
 }
