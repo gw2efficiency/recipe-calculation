@@ -1,6 +1,10 @@
 export default function craftingStepsWrapper (tree) {
   let steps = craftingSteps(tree).reverse()
 
+  // We don't care about steps where we have to craft "0" of something
+  // This can happen when a crafting tree is updated after the initial calculation
+  steps = steps.filter(step => step.quantity > 0)
+
   // Calculate how many times you actually have to click on "craft"
   // for items with output > 1
   steps = steps.map(step => {

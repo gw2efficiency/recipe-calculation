@@ -97,6 +97,22 @@ describe('craftingSteps', () => {
               ]
             }
           ]
+        },
+        {
+          id: 1337,
+          craft: true,
+          totalQuantity: 1,
+          usedQuantity: 0,
+          output: 1,
+          components: [
+            {
+              id: 42,
+              craft: true,
+              totalQuantity: 6,
+              usedQuantity: 6,
+              output: 1
+            }
+          ]
         }
       ]
     }
@@ -135,7 +151,8 @@ describe('craftingSteps', () => {
           {id: 7, quantity: 6},
           {id: 3, quantity: 10},
           {id: 5, quantity: 4},
-          {id: 15, quantity: 1}
+          {id: 15, quantity: 1},
+          {id: 1337, quantity: 1}
         ]
       }
     ])
