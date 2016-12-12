@@ -1,6 +1,6 @@
 /* eslint-env node, mocha */
 import {expect} from 'chai'
-import clone from 'clone'
+import clone from 'fast-clone'
 import updateTree from '../src/updateTree.js'
 
 describe('updateTree', () => {

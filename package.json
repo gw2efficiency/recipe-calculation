@@ -16,6 +16,6 @@
   },
   "devDependencies": {
     "abc-environment": "^1.0.12",
-    "clone": "^2.0.0"
+    "fast-clone": "^1.4.2"
   }
 }
