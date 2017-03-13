@@ -1,5 +1,5 @@
 /* eslint-env node, mocha */
-import {expect} from 'chai'
+import { expect } from 'chai'
 import module from '../src/index.js'
 
 describe('module', () => {
@@ -20,5 +20,9 @@ describe('module', () => {
       'buyableDailyCooldowns',
       'vendorItems'
     ])
+
+    expect(module.staticItems.dailyCooldowns).to.not.equal(undefined)
+    expect(module.staticItems.buyableDailyCooldowns).to.not.equal(undefined)
+    expect(module.staticItems.vendorItems).to.not.equal(undefined)
   })
 })
