@@ -15,7 +15,7 @@
     "url": "https://github.com/gw2efficiency/recipe-calculation"
   },
   "devDependencies": {
-    "abc-environment": "^1.0.12",
+    "abc-environment": "^2.0.0",
     "fast-clone": "^1.4.2"
   }
 }
