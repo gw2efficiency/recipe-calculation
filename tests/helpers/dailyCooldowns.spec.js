@@ -1,5 +1,5 @@
 /* eslint-env node, mocha */
-import {expect} from 'chai'
+import { expect } from 'chai'
 import dailyCooldowns from '../../src/helpers/dailyCooldowns.js'
 
 describe('helpers > dailyCooldowns', () => {
@@ -89,6 +89,12 @@ describe('helpers > dailyCooldowns', () => {
               ]
             }
           ]
+        },
+        {
+          id: 46736,
+          craft: true,
+          totalQuantity: 1,
+          usedQuantity: 1
         }
       ]
     }
