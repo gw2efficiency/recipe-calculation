@@ -124,7 +124,7 @@ export default {
   // Random single merchants
   19676: {type: 'gold', quantity: 1, cost: 10000, npcs: [{name: 'Rojan the Penitent', position: 'Frostgorge Sound [C]'}]},
   66902: {type: 'geode', quantity: 1, cost: 9, npcs: [{name: 'Geode merchant (Dusk, Gleam, Kiena, Moonglow)', position: 'Dry Top'}]},
-  67007: {type: 'pristine-fractal-relic', quantity: 1, cost: 5, npcs: [{name: 'BUY-4373', position: 'Mistlock Observatory'}]},
+  67007: {type: 'pristine-fractal-relic', quantity: 1, cost: 5, npcs: [{name: 'BUY-2046 PFR', position: 'Mistlock Observatory'}]},
   37050: {type: 'fractal-relic', quantity: 1, cost: 1350, npcs: [{name: 'BUY-4373', position: 'Mistlock Observatory'}]},
   37070: {type: 'fractal-relic', quantity: 1, cost: 500, npcs: [{name: 'BUY-4373', position: 'Mistlock Observatory'}]},
   43244: {type: 'wvw-tournament-claim-ticket', quantity: 1, cost: 200, npcs: [{name: 'Battle Master', position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds'}]}
