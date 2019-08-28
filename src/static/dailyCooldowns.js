@@ -18,5 +18,10 @@ export default [
   {id: 66917, tradable: true, craftInterval: 'daily'}, // Plate of Meaty Plant Food
   {id: 66923, tradable: true, craftInterval: 'daily'}, // Plate of Piquant Plant Food
   {id: 67377, tradable: true, craftInterval: 'daily'}, // Vial of Maize Balm
-  {id: 67015, tradable: true, craftInterval: 'daily'} // Heat Stone
+  {id: 67015, tradable: true, craftInterval: 'daily'}, // Heat Stone
+  {id: 91701, tradable: true, craftInterval: 'daily'}, // Cultivated Sesame Seed
+  {id: 91715, tradable: true, craftInterval: 'daily'}, // Cultivated Cilantro Leaf
+  {id: 91793, tradable: true, craftInterval: 'daily'}, // Cultivated Mint Leaf
+  {id: 91796, tradable: true, craftInterval: 'daily'}, // Cultivated Clove
+  {id: 91869, tradable: true, craftInterval: 'daily'} // Cultivated Peppercorn
 ]
