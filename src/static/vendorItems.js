@@ -41,6 +41,7 @@ export default {
   20799: {type: 'spirit-shard', quantity: 5, cost: 3, npcs: [{name: 'Miyani / Mystic Forge Attendant', position: 'Mystic Forge'}]},
   20796: {type: 'spirit-shard', quantity: 10, cost: 1, npcs: [{name: 'Miyani / Mystic Forge Attendant', position: 'Mystic Forge'}]},
   20798: {type: 'spirit-shard', quantity: 1, cost: 1, npcs: [{name: 'Miyani / Mystic Forge Attendant', position: 'Mystic Forge'}]},
+  83082: {type: 'spirit-shard', quantity: 1, cost: 100, npcs: [{name: 'Miyani / Mystic Forge Attendant', position: 'Mystic Forge'}]},
   19663: {type: 'gold', quantity: 1, cost: 2504, npcs: [{name: 'Miyani / Mystic Forge Attendant', position: 'Mystic Forge'}]},
   79418: {type: 'gold', quantity: 1, cost: 10000, npcs: [{name: 'Miyani / Mystic Forge Attendant', position: 'Mystic Forge'}]},
 
@@ -90,6 +91,7 @@ export default {
   62942: {type: 'gold', quantity: 1, cost: 8, npcs: [{name: 'Master Craftsmen', position: 'Crafting Station'}]},
   76839: {type: 'gold', quantity: 1, cost: 56, npcs: [{name: 'Master Craftsmen', position: 'Crafting Station'}]},
   23001: {type: 'gold', quantity: 1, cost: 400, npcs: [{name: 'Master Craftsmen', position: 'Crafting Station'}]},
+  91702: {type: 'gold', quantity: 5, cost: 100, npcs: [{name: 'Master Chefs', position: 'Crafting Station'}]},
 
   // Guild Trader
   76689: {type: 'guild-commendation', quantity: 1, cost: 1, npcs: [{name: 'Guild Trader', position: 'Guild Hall'}]},
@@ -127,5 +129,8 @@ export default {
   67007: {type: 'pristine-fractal-relic', quantity: 1, cost: 5, npcs: [{name: 'BUY-2046 PFR', position: 'Mistlock Observatory'}]},
   37050: {type: 'fractal-relic', quantity: 1, cost: 1350, npcs: [{name: 'BUY-4373', position: 'Mistlock Observatory'}]},
   37070: {type: 'fractal-relic', quantity: 1, cost: 500, npcs: [{name: 'BUY-4373', position: 'Mistlock Observatory'}]},
-  43244: {type: 'wvw-tournament-claim-ticket', quantity: 1, cost: 200, npcs: [{name: 'Battle Master', position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds'}]}
+  43244: {type: 'wvw-tournament-claim-ticket', quantity: 1, cost: 200, npcs: [{name: 'Battle Master', position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds'}]},
+  83584: {type: 'wvw-tournament-claim-ticket', quantity: 1, cost: 1095, npcs: [{name: 'Legendary Commander War Razor', position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds'}]},
+  83620: {type: 'badge-of-honor', quantity: 1, cost: 500, npcs: [{name: 'Legendary Commander War Razor', position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds'}]},
+  84099: {type: 'proof-of-heroics', quantity: 1, cost: 250, npcs: [{name: 'Legendary Commander War Razor', position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds'}]}
 }
