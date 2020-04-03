@@ -133,5 +133,6 @@ export default {
   83584: {type: 'wvw-tournament-claim-ticket', quantity: 1, cost: 1095, npcs: [{name: 'Legendary Commander War Razor', position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds'}]},
   83620: {type: 'badge-of-honor', quantity: 1, cost: 500, npcs: [{name: 'Legendary Commander War Razor', position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds'}]},
   84099: {type: 'proof-of-heroics', quantity: 1, cost: 250, npcs: [{name: 'Legendary Commander War Razor', position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds'}]},
-  80516: {type: 'gold', quantity: 1, cost: 50000, npcs: [{name: 'Scholar Glenna', position: 'Raid Entrance'}]}
+  80516: {type: 'gold', quantity: 1, cost: 50000, npcs: [{name: 'Scholar Glenna', position: 'Raid Entrance'}]},
+  91739: {type: 'gold', quantity: 10, cost: 1496, npcs: [{name: 'Master Chef', position: 'Crafting Station'}]}
 }
