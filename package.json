@@ -1,6 +1,6 @@
 {
   "name": "gw2e-recipe-calculation",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "Calculate the cheapest tree traversal, price and used items of crafting recipes.",
   "main": "./build/index.js",
   "scripts": {
