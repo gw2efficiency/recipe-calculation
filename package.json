@@ -4,9 +4,9 @@
   "description": "Calculate the cheapest tree traversal, price and used items of crafting recipes.",
   "main": "./build/index.js",
   "scripts": {
-    "preversion": "abc build",
     "build": "abc build",
-    "test": "abc test && abc lint"
+    "test": "abc test && abc lint",
+    "preversion": "abc build"
   },
   "author": "queicherius@gmail.com",
   "license": "MIT",
