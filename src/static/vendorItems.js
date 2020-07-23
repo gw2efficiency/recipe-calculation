@@ -41,7 +41,6 @@ export default {
   20799: {type: 'spirit-shard', quantity: 5, cost: 3, npcs: [{name: 'Miyani / Mystic Forge Attendant', position: 'Mystic Forge'}]},
   20796: {type: 'spirit-shard', quantity: 10, cost: 1, npcs: [{name: 'Miyani / Mystic Forge Attendant', position: 'Mystic Forge'}]},
   20798: {type: 'spirit-shard', quantity: 1, cost: 1, npcs: [{name: 'Miyani / Mystic Forge Attendant', position: 'Mystic Forge'}]},
-  83082: {type: 'spirit-shard', quantity: 1, cost: 100, npcs: [{name: 'Miyani / Mystic Forge Attendant', position: 'Mystic Forge'}, {name: 'Legendary Commander War Razor', position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds'}, {name: 'Legendary Retired Commander Burn Razor', position: 'Armistice Bastion'}, {name: 'Ascended Armor League Vendor', position: 'Hall of Memories'}, {name: 'League Armor Vendor', position: 'Champion\'s Rest'}]},
   19663: {type: 'gold', quantity: 1, cost: 2504, npcs: [{name: 'Miyani / Mystic Forge Attendant', position: 'Mystic Forge'}]},
   79418: {type: 'gold', quantity: 1, cost: 10000, npcs: [{name: 'Miyani / Mystic Forge Attendant', position: 'Mystic Forge'}]},
 
@@ -212,6 +211,7 @@ export default {
   83584: {type: 'wvw-tournament-claim-ticket', quantity: 1, cost: 1095, npcs: [{name: 'Legendary Commander War Razor', position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds'}, {name: 'Legendary Retired Commander Burn Razor', position: 'Armistice Bastion'}]},
   83620: {type: 'badge-of-honor', quantity: 1, cost: 500, npcs: [{name: 'Legendary Commander War Razor', position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds'}, {name: 'Legendary Retired Commander Burn Razor', position: 'Armistice Bastion'}]},
   84099: {type: 'proof-of-heroics', quantity: 1, cost: 250, npcs: [{name: 'Legendary Commander War Razor', position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds'}, {name: 'Legendary Retired Commander Burn Razor', position: 'Armistice Bastion'}]},
+  83082: {type: 'spirit-shard', quantity: 1, cost: 100, npcs: [{name: 'Legendary Commander War Razor', position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds'}, {name: 'Legendary Retired Commander Burn Razor', position: 'Armistice Bastion'}, {name: 'Ascended Armor League Vendor', position: 'Hall of Memories'}, {name: 'League Armor Vendor', position: 'Champion\'s Rest'}]},
   67323: {type: 'pvp-tournament-voucher', quantity: 1, cost: 10, npcs: [{name: 'Lambdin the Latish', position: 'Hall of Memories'}, {name: 'Harald', position: 'Champion\'s Rest'}]},
   80516: {type: 'gold', quantity: 1, cost: 50000, npcs: [{name: 'Scholar Glenna', position: 'Raid Entrance'}]},
   91739: {type: 'gold', quantity: 10, cost: 1496, npcs: [{name: 'Master Chef', position: 'Crafting Station'}]}
