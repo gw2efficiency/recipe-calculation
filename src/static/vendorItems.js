@@ -90,7 +90,7 @@ export default {
   62942: {type: 'gold', quantity: 1, cost: 8, npcs: [{name: 'Master Craftsmen', position: 'Crafting Station'}]},
   76839: {type: 'gold', quantity: 1, cost: 56, npcs: [{name: 'Master Craftsmen', position: 'Crafting Station'}]},
   23001: {type: 'gold', quantity: 1, cost: 400, npcs: [{name: 'Master Craftsmen', position: 'Crafting Station'}]},
-  91702: {type: 'gold', quantity: 5, cost: 100, npcs: [{name: 'Master Chefs', position: 'Crafting Station'}]},
+  91702: {type: 'gold', quantity: 5, cost: 1000, npcs: [{name: 'Master Chefs', position: 'Crafting Station'}]},
 
   // Guild Trader
   76689: {type: 'guild-commendation', quantity: 1, cost: 1, npcs: [{name: 'Guild Trader', position: 'Guild Hall'}]},
