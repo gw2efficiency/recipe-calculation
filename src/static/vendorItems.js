@@ -41,7 +41,6 @@ export default {
   20799: {type: 'spirit-shard', quantity: 5, cost: 3, npcs: [{name: 'Miyani / Mystic Forge Attendant', position: 'Mystic Forge'}]},
   20796: {type: 'spirit-shard', quantity: 10, cost: 1, npcs: [{name: 'Miyani / Mystic Forge Attendant', position: 'Mystic Forge'}]},
   20798: {type: 'spirit-shard', quantity: 1, cost: 1, npcs: [{name: 'Miyani / Mystic Forge Attendant', position: 'Mystic Forge'}]},
-  83082: {type: 'spirit-shard', quantity: 1, cost: 100, npcs: [{name: 'Miyani / Mystic Forge Attendant', position: 'Mystic Forge'}, {name: 'Legendary Commander War Razor', position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds'}, {name: 'Legendary Retired Commander Burn Razor', position: 'Armistice Bastion'}, {name: 'Ascended Armor League Vendor', position: 'Hall of Memories'}, {name: 'League Armor Vendor', position: 'Champion\'s Rest'}]},
   19663: {type: 'gold', quantity: 1, cost: 2504, npcs: [{name: 'Miyani / Mystic Forge Attendant', position: 'Mystic Forge'}]},
   79418: {type: 'gold', quantity: 1, cost: 10000, npcs: [{name: 'Miyani / Mystic Forge Attendant', position: 'Mystic Forge'}]},
 
@@ -91,7 +90,7 @@ export default {
   62942: {type: 'gold', quantity: 1, cost: 8, npcs: [{name: 'Master Craftsmen', position: 'Crafting Station'}]},
   76839: {type: 'gold', quantity: 1, cost: 56, npcs: [{name: 'Master Craftsmen', position: 'Crafting Station'}]},
   23001: {type: 'gold', quantity: 1, cost: 400, npcs: [{name: 'Master Craftsmen', position: 'Crafting Station'}]},
-  91702: {type: 'gold', quantity: 5, cost: 100, npcs: [{name: 'Master Chefs', position: 'Crafting Station'}]},
+  91702: {type: 'gold', quantity: 5, cost: 1000, npcs: [{name: 'Master Chefs', position: 'Crafting Station'}]},
 
   // Guild Trader
   76689: {type: 'guild-commendation', quantity: 1, cost: 1, npcs: [{name: 'Guild Trader', position: 'Guild Hall'}]},
@@ -212,7 +211,12 @@ export default {
   83584: {type: 'wvw-tournament-claim-ticket', quantity: 1, cost: 1095, npcs: [{name: 'Legendary Commander War Razor', position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds'}, {name: 'Legendary Retired Commander Burn Razor', position: 'Armistice Bastion'}]},
   83620: {type: 'badge-of-honor', quantity: 1, cost: 500, npcs: [{name: 'Legendary Commander War Razor', position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds'}, {name: 'Legendary Retired Commander Burn Razor', position: 'Armistice Bastion'}]},
   84099: {type: 'proof-of-heroics', quantity: 1, cost: 250, npcs: [{name: 'Legendary Commander War Razor', position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds'}, {name: 'Legendary Retired Commander Burn Razor', position: 'Armistice Bastion'}]},
+  83082: {type: 'spirit-shard', quantity: 1, cost: 100, npcs: [{name: 'Legendary Commander War Razor', position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds'}, {name: 'Legendary Retired Commander Burn Razor', position: 'Armistice Bastion'}, {name: 'Ascended Armor League Vendor', position: 'Hall of Memories'}, {name: 'League Armor Vendor', position: 'Champion\'s Rest'}]},
   67323: {type: 'pvp-tournament-voucher', quantity: 1, cost: 10, npcs: [{name: 'Lambdin the Latish', position: 'Hall of Memories'}, {name: 'Harald', position: 'Champion\'s Rest'}]},
   80516: {type: 'gold', quantity: 1, cost: 50000, npcs: [{name: 'Scholar Glenna', position: 'Raid Entrance'}]},
-  91739: {type: 'gold', quantity: 10, cost: 1496, npcs: [{name: 'Master Chef', position: 'Crafting Station'}]}
+  91739: {type: 'gold', quantity: 10, cost: 1496, npcs: [{name: 'Master Chef', position: 'Crafting Station'}]},
+  75612: {type: 'lump-of-aurillium', quantity: 1, cost: 5, npcs: [{name: 'Exalted Mastery Vendor', position: 'Noble Ledges, Verdant Brink [SW]'}, {name: 'Exalted Mastery Vendor', position: 'Tarir, the Forgotten City, Auric Basin [C]'}]},
+  73469: {type: 'airship-part', quantity: 1, cost: 500, npcs: [{name: 'Itzel Mastery Vendor', position: 'Jaka Itzel, Verdant Brink [NE]'}, {name: 'Itzel Mastery Vendor', position: 'Maguuma\'s Breach, Verdant Brink [E]'}, {name: 'Itzel Mastery Vendor', position: 'Tarir, the Forgotten City, Auric Basin [C]'}, {name: 'Xochitl', position: 'Teku Nuhoch, Tangled Depths [N]'}]},
+  76767: {type: 'ley-line-crystal', quantity: 1, cost: 500, npcs: [{name: 'Nuhoch Mastery Vendor', position: 'Jaka Itzel, Verdant Brink [NE]'}, {name: 'Nuhoch Mastery Vendor', position: 'Tarir, the Forgotten City, Auric Basin [C]'}, {name: 'Nuhoch Mastery Vendor', position: 'Tangled Descent, Tangled Depths [W]'}, {name: 'Nuhoch Mastery Vendor', position: 'Teku Nuhoch, Tangled Depths [N]'}, {name: 'Tenoch', position: 'Teku Nuhoch, Tangled Depths [N]'}]},
+  76636: {type: 'lump-of-aurillium', quantity: 1, cost: 500, npcs: [{name: 'Exalted Mastery Vendor', position: 'Noble Ledges, Verdant Brink [SW]'}, {name: 'Exalted Mastery Vendor', position: 'Tarir, the Forgotten City, Auric Basin [C]'}]}
 }
