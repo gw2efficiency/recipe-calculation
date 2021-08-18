@@ -118,6 +118,18 @@ export default {
   71255: {type: 'gold', quantity: 1, cost: 2400, npcs: [{name: 'Guild Decorations Merchant', position: 'Guild Hall'}]},
   73093: {type: 'gold', quantity: 1, cost: 2400, npcs: [{name: 'Guild Decorations Merchant', position: 'Guild Hall'}]},
 
+  // Legendary Commander War Razor / Legendary Retired Commander Burn Razor
+  83584: {name: 'Legendary War Insight', type: 'wvw-tournament-claim-ticket', quantity: 1, cost: 1095, npcs: [{name: 'Legendary Commander War Razor', position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds'}, {name: 'Legendary Retired Commander Burn Razor', position: 'Armistice Bastion'}]},
+  83620: {name: 'Certificate of Honor', type: 'badge-of-honor', quantity: 1, cost: 500, npcs: [{name: 'Legendary Commander War Razor', position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds'}, {name: 'Legendary Retired Commander Burn Razor', position: 'Armistice Bastion'}]},
+  84099: {name: 'Certificate of Heroics', type: 'proof-of-heroics', quantity: 1, cost: 250, npcs: [{name: 'Legendary Commander War Razor', position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds'}, {name: 'Legendary Retired Commander Burn Razor', position: 'Armistice Bastion'}]},
+  81320: {name: 'Essence of Annihilation', type: 'wvw-tournament-claim-ticket', quantity: 1, cost: 350, npcs: [{name: 'Legendary Commander War Razor', position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds'}, {name: 'Legendary Retired Commander Burn Razor', position: 'Armistice Bastion'}]},
+  81522: {name: 'Essence of Animosity', type: 'proof-of-heroics', quantity: 1, cost: 500, npcs: [{name: 'Legendary Commander War Razor', position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds'}, {name: 'Legendary Retired Commander Burn Razor', position: 'Armistice Bastion'}]},
+  81326: {name: 'Essence of Strategy', type: 'badge-of-honor', quantity: 1, cost: 1000, npcs: [{name: 'Legendary Commander War Razor', position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds'}, {name: 'Legendary Retired Commander Burn Razor', position: 'Armistice Bastion'}]},
+  81455: {name: 'Recruit\'s Wings of War', type: 'wvw-tournament-claim-ticket', quantity: 1, cost: 350, npcs: [{name: 'Legendary Commander War Razor', position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds'}, {name: 'Legendary Retired Commander Burn Razor', position: 'Armistice Bastion'}]},
+  81356: {name: 'Soldier\'s Wings of War', type: 'wvw-tournament-claim-ticket', quantity: 1, cost: 525, npcs: [{name: 'Legendary Commander War Razor', position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds'}, {name: 'Legendary Retired Commander Burn Razor', position: 'Armistice Bastion'}]},
+  81288: {name: 'General\'s Wings of War', type: 'wvw-tournament-claim-ticket', quantity: 1, cost: 700, npcs: [{name: 'Legendary Commander War Razor', position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds'}, {name: 'Legendary Retired Commander Burn Razor', position: 'Armistice Bastion'}]},
+  81294: {name: 'Commander\'s Wings of War', type: 'wvw-tournament-claim-ticket', quantity: 1, cost: 875, npcs: [{name: 'Legendary Commander War Razor', position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds'}, {name: 'Legendary Retired Commander Burn Razor', position: 'Armistice Bastion'}]},
+
   // Skirmish Supervisor
   81476: {name: 'Triumphant Hero\'s Masque', type: 'wvw-tournament-claim-ticket', quantity: 1, cost: 175, npcs: [{name: 'Skirmish Supervisor', position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds'}, {name: 'Mercenary', position: 'Armistice Bastion'}]},
   81315: {name: 'Triumphant Hero\'s Faceguard', type: 'wvw-tournament-claim-ticket', quantity: 1, cost: 175, npcs: [{name: 'Skirmish Supervisor', position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds'}, {name: 'Mercenary', position: 'Armistice Bastion'}]},
@@ -209,9 +221,6 @@ export default {
   37050: {type: 'fractal-relic', quantity: 1, cost: 1350, npcs: [{name: 'BUY-4373', position: 'Mistlock Observatory'}]},
   37070: {type: 'fractal-relic', quantity: 1, cost: 500, npcs: [{name: 'BUY-4373', position: 'Mistlock Observatory'}]},
   43244: {type: 'wvw-tournament-claim-ticket', quantity: 1, cost: 200, npcs: [{name: 'Battle Master', position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds'}]},
-  83584: {type: 'wvw-tournament-claim-ticket', quantity: 1, cost: 1095, npcs: [{name: 'Legendary Commander War Razor', position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds'}, {name: 'Legendary Retired Commander Burn Razor', position: 'Armistice Bastion'}]},
-  83620: {type: 'badge-of-honor', quantity: 1, cost: 500, npcs: [{name: 'Legendary Commander War Razor', position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds'}, {name: 'Legendary Retired Commander Burn Razor', position: 'Armistice Bastion'}]},
-  84099: {type: 'proof-of-heroics', quantity: 1, cost: 250, npcs: [{name: 'Legendary Commander War Razor', position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds'}, {name: 'Legendary Retired Commander Burn Razor', position: 'Armistice Bastion'}]},
   83082: {type: 'spirit-shard', quantity: 1, cost: 100, npcs: [{name: 'Legendary Commander War Razor', position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds'}, {name: 'Legendary Retired Commander Burn Razor', position: 'Armistice Bastion'}, {name: 'Ascended Armor League Vendor', position: 'Hall of Memories'}, {name: 'League Armor Vendor', position: 'Champion\'s Rest'}]},
   67323: {type: 'pvp-tournament-voucher', quantity: 1, cost: 10, npcs: [{name: 'Lambdin the Latish', position: 'Hall of Memories'}, {name: 'Harald', position: 'Champion\'s Rest'}]},
   80516: {type: 'gold', quantity: 1, cost: 50000, npcs: [{name: 'Scholar Glenna', position: 'Raid Entrance'}]},
