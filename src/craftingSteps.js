@@ -52,6 +52,9 @@ function craftingSteps (tree, steps = [], index = 0) {
       id: tree.id,
       output: tree.output,
       quantity: tree.usedQuantity,
+      minRating: tree.min_rating,
+      disciplines: tree.disciplines,
+      recipeId: tree.recipe_id,
       components: tree.components.map(component => {
         return {id: component.id, quantity: component.totalQuantity}
       })
