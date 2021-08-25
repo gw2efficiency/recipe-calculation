@@ -11,7 +11,7 @@ describe('cheapestTree', () => {
       components: [
         {id: 2, quantity: 1},
         {id: 3, quantity: 5, components: [{id: 4, quantity: 2}]},
-        {id: 5, quantity: 5, components: [{id: 6, quantity: 2}]}
+        {id: 5, quantity: 5, components: [{id: 6, quantity: 2}], recipe_id: 123}
       ]
     }
     let prices = {1: 10, 2: 42, 3: 10, 4: 10, 5: 1000, 6: 10}
@@ -88,7 +88,8 @@ describe('cheapestTree', () => {
               totalQuantity: 20,
               usedQuantity: 20
             }
-          ]
+          ],
+          recipe_id: 123
         }
       ]
     })
