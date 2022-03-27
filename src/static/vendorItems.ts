@@ -1,0 +1,1019 @@
+export const VENDOR_ITEMS = {
+  // Heart vendors
+  12337: {
+    type: 'karma',
+    quantity: 25,
+    cost: 77,
+    npcs: [
+      { name: 'Disa', position: 'Snowslide Ravine, Dredgehaunt Cliffs [N]' },
+      { name: 'Lieutenant Pickins', position: 'Greystone Rise, Harathi Hinterlands [W]' },
+    ],
+  },
+  12165: {
+    type: 'karma',
+    quantity: 25,
+    cost: 35,
+    npcs: [{ name: 'Milton Book', position: 'Cornucopian Fields, Gendarran Fields [S]' }],
+  },
+  12340: {
+    type: 'karma',
+    quantity: 25,
+    cost: 77,
+    npcs: [
+      { name: 'Fallen Angel Makayla', position: 'Stronghold of Ebonhawke, Fields of Ruin [SW]' },
+    ],
+  },
+  12251: {
+    type: 'karma',
+    quantity: 25,
+    cost: 49,
+    npcs: [
+      { name: 'Deputy Jenks', position: "Giant's Passage, Kessex Hills [S]" },
+      { name: 'Sangdo Swiftwing', position: 'Cereboth Canyon, Kessex Hills [SE]' },
+      { name: 'Security Captain Vejj', position: 'Almuten Estates, Gendarran Fields [SE]' },
+      { name: 'Seraph Soldier Goran', position: 'The Wendon Steps, Bisban Wildlands [NE]' },
+    ],
+  },
+  12245: {
+    type: 'karma',
+    quantity: 25,
+    cost: 49,
+    npcs: [{ name: 'Master Chef', position: 'Crafting Station' }],
+  },
+  12235: {
+    type: 'karma',
+    quantity: 25,
+    cost: 49,
+    npcs: [{ name: 'Master Chef', position: 'Crafting Station' }],
+  },
+  12237: {
+    type: 'karma',
+    quantity: 25,
+    cost: 49,
+    npcs: [
+      { name: 'Deputy Jenks', position: "Giant's Passage, Kessex Hills [S]" },
+      { name: 'Field Medic Leius', position: "Guardian's Pass, Gendarran Fields [W]" },
+    ],
+  },
+  12325: {
+    type: 'karma',
+    quantity: 25,
+    cost: 77,
+    npcs: [{ name: 'Master Chef', position: 'Crafting Station' }],
+  },
+  12240: {
+    type: 'karma',
+    quantity: 25,
+    cost: 35,
+    npcs: [{ name: 'Milton Book', position: 'Cornucopian Fields, Gendarran Fields [S]' }],
+  },
+  12159: {
+    type: 'karma',
+    quantity: 25,
+    cost: 35,
+    npcs: [{ name: 'Master Chef', position: 'Crafting Station' }],
+  },
+  12338: {
+    type: 'karma',
+    quantity: 25,
+    cost: 77,
+    npcs: [
+      { name: 'Disa', position: 'Snowslide Ravine, Dredgehaunt Cliffs [N]' },
+      { name: 'Lieutenant Summers', position: 'Nightguard Beach, Harathi Hinterlands [S]' },
+    ],
+  },
+  12515: {
+    type: 'karma',
+    quantity: 25,
+    cost: 112,
+    npcs: [{ name: 'Naknar', position: 'Ebbing Heart Run, Iron Marches [NE]' }],
+  },
+  12350: {
+    type: 'karma',
+    quantity: 25,
+    cost: 112,
+    npcs: [{ name: 'Lionscout Tunnira', position: 'Archen Foreland, Bloodtide Coast [N]' }],
+  },
+  12256: {
+    type: 'karma',
+    quantity: 25,
+    cost: 35,
+    npcs: [
+      { name: 'Milton Book', position: 'Cornucopian Fields, Gendarran Fields [S]' },
+      { name: 'Sagum Relicseeker', position: 'The Toppled Wall, Plains of Ashford [N]' },
+    ],
+  },
+  12502: {
+    type: 'karma',
+    quantity: 25,
+    cost: 154,
+    npcs: [
+      {
+        name: 'Environmental Activist Jenrys',
+        position: 'Benthic Kelp Beds, Mount Maelstrom [SE]',
+      },
+    ],
+  },
+  12328: {
+    type: 'karma',
+    quantity: 25,
+    cost: 77,
+    npcs: [{ name: 'Master Chef', position: 'Crafting Station' }],
+  },
+  12137: {
+    type: 'karma',
+    quantity: 25,
+    cost: 35,
+    npcs: [{ name: 'Master Chef', position: 'Crafting Station' }],
+  },
+  12232: {
+    type: 'karma',
+    quantity: 25,
+    cost: 35,
+    npcs: [{ name: 'Milton Book', position: 'Cornucopian Fields, Gendarran Fields [S]' }],
+  },
+  12518: {
+    type: 'karma',
+    quantity: 25,
+    cost: 112,
+    npcs: [
+      { name: 'Laudren', position: 'Thundertroll Swamp, Sparkfly Fen [SE]' },
+      { name: 'Wupwup Chief', position: 'Apostate Wastes, Fireheart Rise [SW]' },
+    ],
+  },
+  12239: {
+    type: 'karma',
+    quantity: 25,
+    cost: 49,
+    npcs: [
+      { name: 'Hune', position: "The Thunderhorns, Lornar's Pass [N]" },
+      { name: 'Kastaz Strongpaw', position: 'Noxin Dells, Diessa Plateau [S]' },
+      { name: 'Seraph Archer Brian', position: 'Ossencrest Climb, Snowden Drifts [NW]' },
+    ],
+  },
+  12252: {
+    type: 'karma',
+    quantity: 25,
+    cost: 35,
+    npcs: [
+      { name: 'Milton Book', position: 'Cornucopian Fields, Gendarran Fields [S]' },
+      { name: 'Researcher Hrappa', position: 'Voloxian Passage, Metrica Province [C]' },
+      { name: 'Yoal', position: 'Quetzal Bay, Caledon Forest [NE]' },
+    ],
+  },
+  12339: {
+    type: 'karma',
+    quantity: 25,
+    cost: 77,
+    npcs: [{ name: 'Shelp', position: 'Degun Shun, Blazeridge Steppes [E]' }],
+  },
+  12543: {
+    type: 'karma',
+    quantity: 25,
+    cost: 203,
+    npcs: [{ name: 'Agent Crandle', position: 'Fort Trinity, Straits of Devastation [E]' }],
+  },
+  12249: {
+    type: 'karma',
+    quantity: 25,
+    cost: 35,
+    npcs: [
+      { name: 'Milton Book', position: 'Cornucopian Fields, Gendarran Fields [S]' },
+      { name: 'Deputy Jenks', position: "Giant's Passage, Kessex Hills [S]" },
+    ],
+  },
+  12152: {
+    type: 'karma',
+    quantity: 25,
+    cost: 35,
+    npcs: [{ name: 'Master Chef', position: 'Crafting Station' }],
+  },
+  12503: {
+    type: 'karma',
+    quantity: 25,
+    cost: 154,
+    npcs: [{ name: 'Nrocroc Chief', position: 'Apostate Wastes, Fireheart Rise [SW]' }],
+  },
+  12514: {
+    type: 'karma',
+    quantity: 25,
+    cost: 112,
+    npcs: [{ name: 'Braxa Scalehunter', position: "Champion's Shield, Iron Marches [SW]" }],
+  },
+  12516: {
+    type: 'karma',
+    quantity: 25,
+    cost: 112,
+    npcs: [{ name: 'Scholar Tholin', position: 'Krongar Pass, Timberline Falls [NW]' }],
+  },
+  12145: {
+    type: 'karma',
+    quantity: 25,
+    cost: 49,
+    npcs: [{ name: 'Master Chef', position: 'Crafting Station' }],
+  },
+  12517: {
+    type: 'karma',
+    quantity: 25,
+    cost: 112,
+    npcs: [{ name: 'Ichtaca', position: 'Hunting Banks, Timberline Falls [C]' }],
+  },
+  12141: {
+    type: 'karma',
+    quantity: 25,
+    cost: 35,
+    npcs: [{ name: 'Master Chef', position: 'Crafting Station' }],
+  },
+  19925: {
+    type: 'karma',
+    quantity: 1,
+    cost: 2100,
+    npcs: [
+      {
+        name: 'Tactician Deathstrider',
+        position: 'Cathedral of Glorious Victory, Straits of Devastation [SW]',
+      },
+    ],
+  },
+
+  // Mystic Forge Attendant
+  69953: {
+    type: 'spirit-shard',
+    quantity: 1,
+    cost: 10,
+    npcs: [{ name: 'Miyani / Mystic Forge Attendant', position: 'Mystic Forge' }],
+  },
+  46752: {
+    type: 'spirit-shard',
+    quantity: 1,
+    cost: 20,
+    npcs: [{ name: 'Miyani / Mystic Forge Attendant', position: 'Mystic Forge' }],
+  },
+  20797: {
+    type: 'spirit-shard',
+    quantity: 1,
+    cost: 200,
+    npcs: [{ name: 'Miyani / Mystic Forge Attendant', position: 'Mystic Forge' }],
+  },
+  20852: {
+    type: 'spirit-shard',
+    quantity: 1,
+    cost: 50,
+    npcs: [{ name: 'Miyani / Mystic Forge Attendant', position: 'Mystic Forge' }],
+  },
+  20799: {
+    type: 'spirit-shard',
+    quantity: 5,
+    cost: 3,
+    npcs: [{ name: 'Miyani / Mystic Forge Attendant', position: 'Mystic Forge' }],
+  },
+  20796: {
+    type: 'spirit-shard',
+    quantity: 10,
+    cost: 1,
+    npcs: [{ name: 'Miyani / Mystic Forge Attendant', position: 'Mystic Forge' }],
+  },
+  20798: {
+    type: 'spirit-shard',
+    quantity: 1,
+    cost: 1,
+    npcs: [{ name: 'Miyani / Mystic Forge Attendant', position: 'Mystic Forge' }],
+  },
+  19663: {
+    type: 'gold',
+    quantity: 1,
+    cost: 2504,
+    npcs: [{ name: 'Miyani / Mystic Forge Attendant', position: 'Mystic Forge' }],
+  },
+  79418: {
+    type: 'gold',
+    quantity: 1,
+    cost: 10000,
+    npcs: [{ name: 'Miyani / Mystic Forge Attendant', position: 'Mystic Forge' }],
+  },
+  71311: {
+    type: 'airship-part',
+    quantity: 1,
+    cost: 300,
+    npcs: [{ name: 'Miyani / Mystic Forge Attendant', position: 'Mystic Forge' }],
+  },
+
+  // Dungeon vendor
+  19664: {
+    type: 'ascalonian-catacombs',
+    quantity: 1,
+    cost: 500,
+    npcs: [{ name: 'Dungeon Armor and Weapons', position: 'Lions Arch [S]' }],
+  },
+  44537: {
+    type: 'ascalonian-catacombs',
+    quantity: 1,
+    cost: 200,
+    npcs: [{ name: 'Dungeon Armor and Weapons', position: 'Lions Arch [S]' }],
+  },
+  19665: {
+    type: 'caudecuss-manor',
+    quantity: 1,
+    cost: 500,
+    npcs: [{ name: 'Dungeon Armor and Weapons', position: 'Lions Arch [S]' }],
+  },
+  44539: {
+    type: 'caudecuss-manor',
+    quantity: 1,
+    cost: 200,
+    npcs: [{ name: 'Dungeon Armor and Weapons', position: 'Lions Arch [S]' }],
+  },
+  19667: {
+    type: 'twilight-arbor',
+    quantity: 1,
+    cost: 500,
+    npcs: [{ name: 'Dungeon Armor and Weapons', position: 'Lions Arch [S]' }],
+  },
+  44541: {
+    type: 'twilight-arbor',
+    quantity: 1,
+    cost: 200,
+    npcs: [{ name: 'Dungeon Armor and Weapons', position: 'Lions Arch [S]' }],
+  },
+  19666: {
+    type: 'sorrows-embrace',
+    quantity: 1,
+    cost: 500,
+    npcs: [{ name: 'Dungeon Armor and Weapons', position: 'Lions Arch [S]' }],
+  },
+  44540: {
+    type: 'sorrows-embrace',
+    quantity: 1,
+    cost: 200,
+    npcs: [{ name: 'Dungeon Armor and Weapons', position: 'Lions Arch [S]' }],
+  },
+  19668: {
+    type: 'citadel-of-flame',
+    quantity: 1,
+    cost: 500,
+    npcs: [{ name: 'Dungeon Armor and Weapons', position: 'Lions Arch [S]' }],
+  },
+  44543: {
+    type: 'citadel-of-flame',
+    quantity: 1,
+    cost: 200,
+    npcs: [{ name: 'Dungeon Armor and Weapons', position: 'Lions Arch [S]' }],
+  },
+  19670: {
+    type: 'honor-of-the-waves',
+    quantity: 1,
+    cost: 500,
+    npcs: [{ name: 'Dungeon Armor and Weapons', position: 'Lions Arch [S]' }],
+  },
+  44542: {
+    type: 'honor-of-the-waves',
+    quantity: 1,
+    cost: 200,
+    npcs: [{ name: 'Dungeon Armor and Weapons', position: 'Lions Arch [S]' }],
+  },
+  19671: {
+    type: 'crucible-of-eternity',
+    quantity: 1,
+    cost: 500,
+    npcs: [{ name: 'Dungeon Armor and Weapons', position: 'Lions Arch [S]' }],
+  },
+  44544: {
+    type: 'crucible-of-eternity',
+    quantity: 1,
+    cost: 200,
+    npcs: [{ name: 'Dungeon Armor and Weapons', position: 'Lions Arch [S]' }],
+  },
+  19669: {
+    type: 'the-ruined-city-of-arah',
+    quantity: 1,
+    cost: 500,
+    npcs: [{ name: 'Dungeon Armor and Weapons', position: 'Lions Arch [S]' }],
+  },
+  44538: {
+    type: 'the-ruined-city-of-arah',
+    quantity: 1,
+    cost: 200,
+    npcs: [{ name: 'Dungeon Armor and Weapons', position: 'Lions Arch [S]' }],
+  },
+
+  // Master Craftsmen
+  12157: {
+    type: 'gold',
+    quantity: 10,
+    cost: 80,
+    npcs: [{ name: 'Master Craftsmen', position: 'Crafting Station' }],
+  },
+  12151: {
+    type: 'gold',
+    quantity: 10,
+    cost: 80,
+    npcs: [{ name: 'Master Craftsmen', position: 'Crafting Station' }],
+  },
+  12158: {
+    type: 'gold',
+    quantity: 10,
+    cost: 80,
+    npcs: [{ name: 'Master Craftsmen', position: 'Crafting Station' }],
+  },
+  12153: {
+    type: 'gold',
+    quantity: 10,
+    cost: 80,
+    npcs: [{ name: 'Master Craftsmen', position: 'Crafting Station' }],
+  },
+  12155: {
+    type: 'gold',
+    quantity: 10,
+    cost: 80,
+    npcs: [{ name: 'Master Craftsmen', position: 'Crafting Station' }],
+  },
+  12156: {
+    type: 'gold',
+    quantity: 10,
+    cost: 80,
+    npcs: [{ name: 'Master Craftsmen', position: 'Crafting Station' }],
+  },
+  12324: {
+    type: 'gold',
+    quantity: 10,
+    cost: 80,
+    npcs: [{ name: 'Master Craftsmen', position: 'Crafting Station' }],
+  },
+  12136: {
+    type: 'gold',
+    quantity: 10,
+    cost: 80,
+    npcs: [{ name: 'Master Craftsmen', position: 'Crafting Station' }],
+  },
+  12271: {
+    type: 'gold',
+    quantity: 10,
+    cost: 80,
+    npcs: [{ name: 'Master Craftsmen', position: 'Crafting Station' }],
+  },
+  19704: {
+    type: 'gold',
+    quantity: 10,
+    cost: 80,
+    npcs: [{ name: 'Master Craftsmen', position: 'Crafting Station' }],
+  },
+  19750: {
+    type: 'gold',
+    quantity: 10,
+    cost: 160,
+    npcs: [{ name: 'Master Craftsmen', position: 'Crafting Station' }],
+  },
+  19924: {
+    type: 'gold',
+    quantity: 10,
+    cost: 480,
+    npcs: [{ name: 'Master Craftsmen', position: 'Crafting Station' }],
+  },
+  19792: {
+    type: 'gold',
+    quantity: 10,
+    cost: 80,
+    npcs: [{ name: 'Master Craftsmen', position: 'Crafting Station' }],
+  },
+  19789: {
+    type: 'gold',
+    quantity: 10,
+    cost: 160,
+    npcs: [{ name: 'Master Craftsmen', position: 'Crafting Station' }],
+  },
+  19794: {
+    type: 'gold',
+    quantity: 10,
+    cost: 240,
+    npcs: [{ name: 'Master Craftsmen', position: 'Crafting Station' }],
+  },
+  19793: {
+    type: 'gold',
+    quantity: 10,
+    cost: 320,
+    npcs: [{ name: 'Master Craftsmen', position: 'Crafting Station' }],
+  },
+  19791: {
+    type: 'gold',
+    quantity: 10,
+    cost: 480,
+    npcs: [{ name: 'Master Craftsmen', position: 'Crafting Station' }],
+  },
+  19790: {
+    type: 'gold',
+    quantity: 10,
+    cost: 640,
+    npcs: [{ name: 'Master Craftsmen', position: 'Crafting Station' }],
+  },
+  46747: {
+    type: 'gold',
+    quantity: 10,
+    cost: 1496,
+    npcs: [{ name: 'Master Craftsmen', position: 'Crafting Station' }],
+  },
+  13010: {
+    type: 'gold',
+    quantity: 1,
+    cost: 496,
+    npcs: [{ name: 'Master Craftsmen', position: 'Crafting Station' }],
+  },
+  13006: {
+    type: 'gold',
+    quantity: 1,
+    cost: 1480,
+    npcs: [{ name: 'Master Craftsmen', position: 'Crafting Station' }],
+  },
+  13007: {
+    type: 'gold',
+    quantity: 1,
+    cost: 5000,
+    npcs: [{ name: 'Master Craftsmen', position: 'Crafting Station' }],
+  },
+  13008: {
+    type: 'gold',
+    quantity: 1,
+    cost: 20000,
+    npcs: [{ name: 'Master Craftsmen', position: 'Crafting Station' }],
+  },
+  13009: {
+    type: 'gold',
+    quantity: 1,
+    cost: 100000,
+    npcs: [{ name: 'Master Craftsmen', position: 'Crafting Station' }],
+  },
+  62942: {
+    type: 'gold',
+    quantity: 1,
+    cost: 8,
+    npcs: [{ name: 'Master Craftsmen', position: 'Crafting Station' }],
+  },
+  76839: {
+    type: 'gold',
+    quantity: 1,
+    cost: 56,
+    npcs: [{ name: 'Master Craftsmen', position: 'Crafting Station' }],
+  },
+  23001: {
+    type: 'gold',
+    quantity: 1,
+    cost: 400,
+    npcs: [{ name: 'Master Craftsmen', position: 'Crafting Station' }],
+  },
+  91702: {
+    type: 'gold',
+    quantity: 5,
+    cost: 1000,
+    npcs: [{ name: 'Master Chefs', position: 'Crafting Station' }],
+  },
+
+  // Guild Trader
+  76689: {
+    type: 'guild-commendation',
+    quantity: 1,
+    cost: 1,
+    npcs: [{ name: 'Guild Trader', position: 'Guild Hall' }],
+  },
+  72169: {
+    type: 'guild-commendation',
+    quantity: 1,
+    cost: 1,
+    npcs: [{ name: 'Guild Trader', position: 'Guild Hall' }],
+  },
+  76151: {
+    type: 'guild-commendation',
+    quantity: 1,
+    cost: 1,
+    npcs: [{ name: 'Guild Trader', position: 'Guild Hall' }],
+  },
+  75793: {
+    type: 'guild-commendation',
+    quantity: 1,
+    cost: 1,
+    npcs: [{ name: 'Guild Trader', position: 'Guild Hall' }],
+  },
+  75659: {
+    type: 'guild-commendation',
+    quantity: 1,
+    cost: 1,
+    npcs: [{ name: 'Guild Trader', position: 'Guild Hall' }],
+  },
+
+  // Guild Decorations Merchant
+  71077: {
+    type: 'gold',
+    quantity: 1,
+    cost: 2400,
+    npcs: [{ name: 'Guild Decorations Merchant', position: 'Guild Hall' }],
+  },
+  73098: {
+    type: 'gold',
+    quantity: 1,
+    cost: 2400,
+    npcs: [{ name: 'Guild Decorations Merchant', position: 'Guild Hall' }],
+  },
+  75396: {
+    type: 'gold',
+    quantity: 1,
+    cost: 2400,
+    npcs: [{ name: 'Guild Decorations Merchant', position: 'Guild Hall' }],
+  },
+  71438: {
+    type: 'gold',
+    quantity: 1,
+    cost: 2400,
+    npcs: [{ name: 'Guild Decorations Merchant', position: 'Guild Hall' }],
+  },
+  74615: {
+    type: 'gold',
+    quantity: 1,
+    cost: 2400,
+    npcs: [{ name: 'Guild Decorations Merchant', position: 'Guild Hall' }],
+  },
+  71681: {
+    type: 'gold',
+    quantity: 1,
+    cost: 2400,
+    npcs: [{ name: 'Guild Decorations Merchant', position: 'Guild Hall' }],
+  },
+  76345: {
+    type: 'gold',
+    quantity: 1,
+    cost: 2400,
+    npcs: [{ name: 'Guild Decorations Merchant', position: 'Guild Hall' }],
+  },
+  70689: {
+    type: 'gold',
+    quantity: 1,
+    cost: 2400,
+    npcs: [{ name: 'Guild Decorations Merchant', position: 'Guild Hall' }],
+  },
+  73282: {
+    type: 'gold',
+    quantity: 1,
+    cost: 2400,
+    npcs: [{ name: 'Guild Decorations Merchant', position: 'Guild Hall' }],
+  },
+  71662: {
+    type: 'gold',
+    quantity: 1,
+    cost: 2400,
+    npcs: [{ name: 'Guild Decorations Merchant', position: 'Guild Hall' }],
+  },
+  73657: {
+    type: 'gold',
+    quantity: 1,
+    cost: 2400,
+    npcs: [{ name: 'Guild Decorations Merchant', position: 'Guild Hall' }],
+  },
+  74705: {
+    type: 'gold',
+    quantity: 1,
+    cost: 2400,
+    npcs: [{ name: 'Guild Decorations Merchant', position: 'Guild Hall' }],
+  },
+  71278: {
+    type: 'gold',
+    quantity: 1,
+    cost: 2400,
+    npcs: [{ name: 'Guild Decorations Merchant', position: 'Guild Hall' }],
+  },
+  72103: {
+    type: 'gold',
+    quantity: 1,
+    cost: 2400,
+    npcs: [{ name: 'Guild Decorations Merchant', position: 'Guild Hall' }],
+  },
+  71255: {
+    type: 'gold',
+    quantity: 1,
+    cost: 2400,
+    npcs: [{ name: 'Guild Decorations Merchant', position: 'Guild Hall' }],
+  },
+  73093: {
+    type: 'gold',
+    quantity: 1,
+    cost: 2400,
+    npcs: [{ name: 'Guild Decorations Merchant', position: 'Guild Hall' }],
+  },
+
+  // Legendary Commander War Razor / Legendary Retired Commander Burn Razor
+  83584: {
+    name: 'Legendary War Insight',
+    type: 'wvw-tournament-claim-ticket',
+    quantity: 1,
+    cost: 1095,
+    npcs: [
+      {
+        name: 'Legendary Commander War Razor',
+        position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds',
+      },
+      { name: 'Legendary Retired Commander Burn Razor', position: 'Armistice Bastion' },
+    ],
+  },
+  83620: {
+    name: 'Certificate of Honor',
+    type: 'badge-of-honor',
+    quantity: 1,
+    cost: 500,
+    npcs: [
+      {
+        name: 'Legendary Commander War Razor',
+        position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds',
+      },
+      { name: 'Legendary Retired Commander Burn Razor', position: 'Armistice Bastion' },
+    ],
+  },
+  84099: {
+    name: 'Certificate of Heroics',
+    type: 'proof-of-heroics',
+    quantity: 1,
+    cost: 250,
+    npcs: [
+      {
+        name: 'Legendary Commander War Razor',
+        position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds',
+      },
+      { name: 'Legendary Retired Commander Burn Razor', position: 'Armistice Bastion' },
+    ],
+  },
+  81320: {
+    name: 'Essence of Annihilation',
+    type: 'wvw-tournament-claim-ticket',
+    quantity: 1,
+    cost: 350,
+    npcs: [
+      {
+        name: 'Legendary Commander War Razor',
+        position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds',
+      },
+      { name: 'Legendary Retired Commander Burn Razor', position: 'Armistice Bastion' },
+    ],
+  },
+  81522: {
+    name: 'Essence of Animosity',
+    type: 'proof-of-heroics',
+    quantity: 1,
+    cost: 500,
+    npcs: [
+      {
+        name: 'Legendary Commander War Razor',
+        position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds',
+      },
+      { name: 'Legendary Retired Commander Burn Razor', position: 'Armistice Bastion' },
+    ],
+  },
+  81326: {
+    name: 'Essence of Strategy',
+    type: 'badge-of-honor',
+    quantity: 1,
+    cost: 1000,
+    npcs: [
+      {
+        name: 'Legendary Commander War Razor',
+        position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds',
+      },
+      { name: 'Legendary Retired Commander Burn Razor', position: 'Armistice Bastion' },
+    ],
+  },
+  81455: {
+    name: "Recruit's Wings of War",
+    type: 'wvw-tournament-claim-ticket',
+    quantity: 1,
+    cost: 350,
+    npcs: [
+      {
+        name: 'Legendary Commander War Razor',
+        position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds',
+      },
+      { name: 'Legendary Retired Commander Burn Razor', position: 'Armistice Bastion' },
+    ],
+  },
+  81356: {
+    name: "Soldier's Wings of War",
+    type: 'wvw-tournament-claim-ticket',
+    quantity: 1,
+    cost: 525,
+    npcs: [
+      {
+        name: 'Legendary Commander War Razor',
+        position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds',
+      },
+      { name: 'Legendary Retired Commander Burn Razor', position: 'Armistice Bastion' },
+    ],
+  },
+  81288: {
+    name: "General's Wings of War",
+    type: 'wvw-tournament-claim-ticket',
+    quantity: 1,
+    cost: 700,
+    npcs: [
+      {
+        name: 'Legendary Commander War Razor',
+        position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds',
+      },
+      { name: 'Legendary Retired Commander Burn Razor', position: 'Armistice Bastion' },
+    ],
+  },
+  81294: {
+    name: "Commander's Wings of War",
+    type: 'wvw-tournament-claim-ticket',
+    quantity: 1,
+    cost: 875,
+    npcs: [
+      {
+        name: 'Legendary Commander War Razor',
+        position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds',
+      },
+      { name: 'Legendary Retired Commander Burn Razor', position: 'Armistice Bastion' },
+    ],
+  },
+
+  // Ascended Armor League Vendor
+  82700: {
+    name: 'Record of League Victories',
+    type: 'pvp-league-ticket',
+    quantity: 1,
+    cost: 30,
+    npcs: [
+      { name: 'Ascended Armor League Vendor', position: 'Hall of Memories' },
+      { name: 'League Armor Vendor', position: "Champion's Rest" },
+    ],
+  },
+  82471: {
+    name: 'Record of League Participation',
+    type: 'pvp-league-ticket',
+    quantity: 1,
+    cost: 20,
+    npcs: [
+      { name: 'Ascended Armor League Vendor', position: 'Hall of Memories' },
+      { name: 'League Armor Vendor', position: "Champion's Rest" },
+    ],
+  },
+  83872: {
+    name: 'Star of Glory',
+    type: 'ascended-shards-of-glory',
+    quantity: 1,
+    cost: 400,
+    npcs: [
+      { name: 'Ascended Armor League Vendor', position: 'Hall of Memories' },
+      { name: 'League Armor Vendor', position: "Champion's Rest" },
+    ],
+  },
+
+  // Master scribe
+  70647: {
+    type: 'gold',
+    quantity: 1,
+    cost: 32,
+    npcs: [{ name: 'Master Scribe', position: 'Guild Hall' }],
+  },
+  75762: {
+    type: 'gold',
+    quantity: 1,
+    cost: 104,
+    npcs: [{ name: 'Master Scribe', position: 'Guild Hall' }],
+  },
+  75087: {
+    type: 'gold',
+    quantity: 1,
+    cost: 5000,
+    npcs: [{ name: 'Master Scribe', position: 'Guild Hall' }],
+  },
+
+  // Random single merchants
+  19676: {
+    type: 'gold',
+    quantity: 1,
+    cost: 10000,
+    npcs: [{ name: 'Rojan the Penitent', position: 'Frostgorge Sound [C]' }],
+  },
+  66902: {
+    type: 'geode',
+    quantity: 1,
+    cost: 9,
+    npcs: [{ name: 'Geode merchant (Dusk, Gleam, Kiena, Moonglow)', position: 'Dry Top' }],
+  },
+  67007: {
+    type: 'pristine-fractal-relic',
+    quantity: 1,
+    cost: 5,
+    npcs: [{ name: 'BUY-2046 PFR', position: 'Mistlock Observatory' }],
+  },
+  37050: {
+    type: 'fractal-relic',
+    quantity: 1,
+    cost: 1350,
+    npcs: [{ name: 'BUY-4373', position: 'Mistlock Observatory' }],
+  },
+  37070: {
+    type: 'fractal-relic',
+    quantity: 1,
+    cost: 500,
+    npcs: [{ name: 'BUY-4373', position: 'Mistlock Observatory' }],
+  },
+  43244: {
+    type: 'wvw-tournament-claim-ticket',
+    quantity: 1,
+    cost: 200,
+    npcs: [
+      { name: 'Battle Master', position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds' },
+    ],
+  },
+  83082: {
+    type: 'spirit-shard',
+    quantity: 1,
+    cost: 100,
+    npcs: [
+      {
+        name: 'Legendary Commander War Razor',
+        position: 'Red/Green/Blue Borderlands, Eternal Battlegrounds',
+      },
+      { name: 'Legendary Retired Commander Burn Razor', position: 'Armistice Bastion' },
+      { name: 'Ascended Armor League Vendor', position: 'Hall of Memories' },
+      { name: 'League Armor Vendor', position: "Champion's Rest" },
+    ],
+  },
+  67323: {
+    type: 'pvp-tournament-voucher',
+    quantity: 1,
+    cost: 10,
+    npcs: [
+      { name: 'Lambdin the Latish', position: 'Hall of Memories' },
+      { name: 'Harald', position: "Champion's Rest" },
+    ],
+  },
+  80516: {
+    type: 'gold',
+    quantity: 1,
+    cost: 50000,
+    npcs: [{ name: 'Scholar Glenna', position: 'Raid Entrance' }],
+  },
+  91739: {
+    type: 'gold',
+    quantity: 10,
+    cost: 1496,
+    npcs: [{ name: 'Master Chef', position: 'Crafting Station' }],
+  },
+  75612: {
+    type: 'lump-of-aurillium',
+    quantity: 1,
+    cost: 5,
+    npcs: [
+      { name: 'Exalted Mastery Vendor', position: 'Noble Ledges, Verdant Brink [SW]' },
+      { name: 'Exalted Mastery Vendor', position: 'Tarir, the Forgotten City, Auric Basin [C]' },
+    ],
+  },
+  73469: {
+    type: 'airship-part',
+    quantity: 1,
+    cost: 500,
+    npcs: [
+      { name: 'Itzel Mastery Vendor', position: 'Jaka Itzel, Verdant Brink [NE]' },
+      { name: 'Itzel Mastery Vendor', position: "Maguuma's Breach, Verdant Brink [E]" },
+      { name: 'Itzel Mastery Vendor', position: 'Tarir, the Forgotten City, Auric Basin [C]' },
+      { name: 'Xochitl', position: 'Teku Nuhoch, Tangled Depths [N]' },
+    ],
+  },
+  76767: {
+    type: 'ley-line-crystal',
+    quantity: 1,
+    cost: 500,
+    npcs: [
+      { name: 'Nuhoch Mastery Vendor', position: 'Jaka Itzel, Verdant Brink [NE]' },
+      { name: 'Nuhoch Mastery Vendor', position: 'Tarir, the Forgotten City, Auric Basin [C]' },
+      { name: 'Nuhoch Mastery Vendor', position: 'Tangled Descent, Tangled Depths [W]' },
+      { name: 'Nuhoch Mastery Vendor', position: 'Teku Nuhoch, Tangled Depths [N]' },
+      { name: 'Tenoch', position: 'Teku Nuhoch, Tangled Depths [N]' },
+    ],
+  },
+  76636: {
+    type: 'lump-of-aurillium',
+    quantity: 1,
+    cost: 500,
+    npcs: [
+      { name: 'Exalted Mastery Vendor', position: 'Noble Ledges, Verdant Brink [SW]' },
+      { name: 'Exalted Mastery Vendor', position: 'Tarir, the Forgotten City, Auric Basin [C]' },
+    ],
+  },
+  87153: {
+    type: 'volatile-magic',
+    quantity: 1,
+    cost: 250,
+    npcs: [
+      { name: 'Ethall', position: 'Atholma, Sandswept Isles' },
+      {
+        name: 'Some other LWS4 Volatile Magic Collectors, but for 300 Volatile Magic instead of 250',
+        position: 'Please refer to the Wiki',
+      },
+    ],
+  },
+  77711: {
+    type: 'gold',
+    quantity: 1,
+    cost: 88800,
+    npcs: [
+      { name: 'Lunar New Year Vendor', position: "Hooligan's Route, Lion's Arch" },
+      { name: 'New Year Vendor', position: "The Crown Pavilion, Divinity's Reach" },
+    ],
+  },
+}

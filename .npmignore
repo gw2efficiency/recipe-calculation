@@ -1,22 +1,10 @@
-# Logs
-npm-debug.log*
-
-# Coverage directories
+# Tests
 coverage/
-.nyc_output/
-
-# Source code
-src/
 
 # Dependencies
 node_modules/
+yarn-debug.log*
+yarn-error.log*
 
-# Optional npm cache directory
-.npm/
-
-# Webflow
-.idea/
-
-# Operating System
-.DS_Store
-Thumbs.db
+# Development Environments
+.history/

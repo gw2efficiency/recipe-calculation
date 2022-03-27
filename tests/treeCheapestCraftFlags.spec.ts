@@ -1,6 +1,4 @@
-/* eslint-env node, mocha */
-import {expect} from 'chai'
-import treeCheapestCraftFlags from '../src/treeCheapestCraftFlags.js'
+import treeCheapestCraftFlags from '../src/treeCheapestCraftFlags'
 
 describe('treeCheapestCraftFlags', () => {
   it('sets the cheapest craft flags', () => {
@@ -9,15 +7,15 @@ describe('treeCheapestCraftFlags', () => {
       totalQuantity: 1,
       craftPrice: 123,
       components: [
-        {id: 2, totalQuantity: 1, craftPrice: 123, buyPrice: 1},
-        {id: 3, totalQuantity: 2, craftPrice: 123},
-        {id: 4, totalQuantity: 2, craftPrice: 123, buyPrice: 555},
-        {id: 5, totalQuantity: 2, craftPrice: 1, buyPrice: 555}
-      ]
+        { id: 2, totalQuantity: 1, craftPrice: 123, buyPrice: 1 },
+        { id: 3, totalQuantity: 2, craftPrice: 123 },
+        { id: 4, totalQuantity: 2, craftPrice: 123, buyPrice: 555 },
+        { id: 5, totalQuantity: 2, craftPrice: 1, buyPrice: 555 },
+      ],
     }
 
     let calculatedTree = treeCheapestCraftFlags(recipeTree, [5])
-    expect(calculatedTree).to.deep.equal({
+    expect(calculatedTree).toEqual({
       craft: true,
       craftPrice: 123,
       id: 1,
@@ -28,29 +26,29 @@ describe('treeCheapestCraftFlags', () => {
           craft: false,
           craftPrice: 123,
           id: 2,
-          totalQuantity: 1
+          totalQuantity: 1,
         },
         {
           craft: true,
           craftPrice: 123,
           id: 3,
-          totalQuantity: 2
+          totalQuantity: 2,
         },
         {
           buyPrice: 555,
           craft: true,
           craftPrice: 123,
           id: 4,
-          totalQuantity: 2
+          totalQuantity: 2,
         },
         {
           buyPrice: 555,
           craft: false,
           craftPrice: 1,
           id: 5,
-          totalQuantity: 2
-        }
-      ]
+          totalQuantity: 2,
+        },
+      ],
     })
   })
 })

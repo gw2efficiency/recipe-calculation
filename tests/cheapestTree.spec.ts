@@ -1,6 +1,4 @@
-/* eslint-env node, mocha */
-import {expect} from 'chai'
-import cheapestTree from '../src/cheapestTree.js'
+import cheapestTree from '../src/cheapestTree'
 
 describe('cheapestTree', () => {
   it('can calculate the cheapest tree correctly', () => {
@@ -9,15 +7,15 @@ describe('cheapestTree', () => {
       quantity: 1,
       output: 1,
       components: [
-        {id: 2, quantity: 1},
-        {id: 3, quantity: 5, components: [{id: 4, quantity: 2}]},
-        {id: 5, quantity: 5, components: [{id: 6, quantity: 2}], recipe_id: 123}
-      ]
+        { id: 2, quantity: 1 },
+        { id: 3, quantity: 5, components: [{ id: 4, quantity: 2 }] },
+        { id: 5, quantity: 5, components: [{ id: 6, quantity: 2 }], recipe_id: 123 },
+      ],
     }
-    let prices = {1: 10, 2: 42, 3: 10, 4: 10, 5: 1000, 6: 10}
+    let prices = { 1: 10, 2: 42, 3: 10, 4: 10, 5: 1000, 6: 10 }
 
     let calculatedTree = cheapestTree(2, recipeTree, prices)
-    expect(calculatedTree).to.deep.equal({
+    expect(calculatedTree).toEqual({
       craft: true,
       craftPrice: 384,
       id: 1,
@@ -38,7 +36,7 @@ describe('cheapestTree', () => {
           output: 1,
           quantity: 1,
           totalQuantity: 2,
-          usedQuantity: 2
+          usedQuantity: 2,
         },
         {
           decisionPrice: 100,
@@ -61,9 +59,9 @@ describe('cheapestTree', () => {
               output: 1,
               quantity: 2,
               totalQuantity: 20,
-              usedQuantity: 20
-            }
-          ]
+              usedQuantity: 20,
+            },
+          ],
         },
         {
           decisionPrice: 200,
@@ -86,12 +84,12 @@ describe('cheapestTree', () => {
               output: 1,
               quantity: 2,
               totalQuantity: 20,
-              usedQuantity: 20
-            }
+              usedQuantity: 20,
+            },
           ],
-          recipe_id: 123
-        }
-      ]
+          recipe_id: 123,
+        },
+      ],
     })
   })
 
@@ -101,16 +99,16 @@ describe('cheapestTree', () => {
       quantity: 1,
       output: 1,
       components: [
-        {id: 7, quantity: 3, components: [{id: 4, quantity: 1}]},
-        {id: 3, quantity: 5, components: [{id: 4, quantity: 2}]},
-        {id: 5, quantity: 2, components: [{id: 6, quantity: 100}]}
-      ]
+        { id: 7, quantity: 3, components: [{ id: 4, quantity: 1 }] },
+        { id: 3, quantity: 5, components: [{ id: 4, quantity: 2 }] },
+        { id: 5, quantity: 2, components: [{ id: 6, quantity: 100 }] },
+      ],
     }
-    let prices = {1: 10, 3: 100, 4: 10, 5: 25, 6: 1, 7: 1}
-    let availableItems = {1: 100, 3: 7, 4: 3, 5: 4}
+    let prices = { 1: 10, 3: 100, 4: 10, 5: 25, 6: 1, 7: 1 }
+    let availableItems = { 1: 100, 3: 7, 4: 3, 5: 4 }
 
     let calculatedTree = cheapestTree(2, recipeTree, prices, availableItems, [])
-    expect(calculatedTree).to.deep.equal({
+    expect(calculatedTree).toEqual({
       craft: true,
       craftPrice: 36,
       id: 1,
@@ -143,9 +141,9 @@ describe('cheapestTree', () => {
               output: 1,
               quantity: 1,
               totalQuantity: 6,
-              usedQuantity: 6
-            }
-          ]
+              usedQuantity: 6,
+            },
+          ],
         },
         {
           decisionPrice: 30,
@@ -168,9 +166,9 @@ describe('cheapestTree', () => {
               output: 1,
               quantity: 2,
               totalQuantity: 6,
-              usedQuantity: 3
-            }
-          ]
+              usedQuantity: 3,
+            },
+          ],
         },
         {
           craft: false,
@@ -193,11 +191,11 @@ describe('cheapestTree', () => {
               output: 1,
               quantity: 100,
               totalQuantity: 0,
-              usedQuantity: 0
-            }
-          ]
-        }
-      ]
+              usedQuantity: 0,
+            },
+          ],
+        },
+      ],
     })
   })
 
@@ -206,14 +204,12 @@ describe('cheapestTree', () => {
       id: 1,
       quantity: 1,
       output: 1,
-      components: [
-        {id: 3, quantity: 5, components: [{id: 4, quantity: 2}]}
-      ]
+      components: [{ id: 3, quantity: 5, components: [{ id: 4, quantity: 2 }] }],
     }
-    let prices = {1: 10, 3: 100, 4: 10}
+    let prices = { 1: 10, 3: 100, 4: 10 }
 
     let calculatedTree = cheapestTree(2, recipeTree, prices, {}, [3])
-    expect(calculatedTree).to.deep.equal({
+    expect(calculatedTree).toEqual({
       craft: true,
       craftPrice: 1000,
       id: 1,
@@ -246,11 +242,11 @@ describe('cheapestTree', () => {
               output: 1,
               quantity: 2,
               totalQuantity: 20,
-              usedQuantity: 20
-            }
-          ]
-        }
-      ]
+              usedQuantity: 20,
+            },
+          ],
+        },
+      ],
     })
   })
 })

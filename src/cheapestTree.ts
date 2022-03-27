@@ -1,8 +1,14 @@
-import treeAdjustQuantity from './treeAdjustQuantity.js'
-import treePrices from './treePrices.js'
-import treeCheapestCraftFlags from './treeCheapestCraftFlags.js'
+import treeAdjustQuantity from './treeAdjustQuantity'
+import treePrices from './treePrices'
+import treeCheapestCraftFlags from './treeCheapestCraftFlags'
 
-export default function cheapestTree (amount, tree, itemPrices, availableItems = {}, forceBuyItems = []) {
+export default function cheapestTree(
+  amount: any,
+  tree: any,
+  itemPrices: any,
+  availableItems: any = {},
+  forceBuyItems: any = []
+) {
   // Adjust the tree total and used quantities
   tree = treeAdjustQuantity(amount, tree, availableItems)
 

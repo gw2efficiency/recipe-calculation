@@ -1,7 +1,5 @@
-/* eslint-env node, mocha */
-import {expect} from 'chai'
-import clone from 'fast-clone'
-import updateTree from '../src/updateTree.js'
+import { clone } from '@devoxa/flocky'
+import updateTree from '../src/updateTree'
 
 describe('updateTree', () => {
   let calculatedTree = {
@@ -25,7 +23,7 @@ describe('updateTree', () => {
         output: 1,
         quantity: 1,
         totalQuantity: 2,
-        usedQuantity: 2
+        usedQuantity: 2,
       },
       {
         decisionPrice: 100,
@@ -48,9 +46,9 @@ describe('updateTree', () => {
             output: 1,
             quantity: 2,
             totalQuantity: 20,
-            usedQuantity: 20
-          }
-        ]
+            usedQuantity: 20,
+          },
+        ],
       },
       {
         decisionPrice: 200,
@@ -73,26 +71,26 @@ describe('updateTree', () => {
             output: 1,
             quantity: 2,
             totalQuantity: 20,
-            usedQuantity: 20
-          }
-        ]
-      }
-    ]
+            usedQuantity: 20,
+          },
+        ],
+      },
+    ],
   }
 
   it('keeps the tree the same if nothing changed', () => {
     let tree = clone(calculatedTree)
-    let prices = {1: 10, 2: 42, 3: 10, 4: 10, 5: 1000, 6: 10}
+    let prices = { 1: 10, 2: 42, 3: 10, 4: 10, 5: 1000, 6: 10 }
     let updatedTree = updateTree(2, tree, prices)
-    expect(updatedTree).to.deep.equal(calculatedTree)
+    expect(updatedTree).toEqual(calculatedTree)
   })
 
   it('updates a tree correctly if the amount, prices or craft flags changed', () => {
     let tree = clone(calculatedTree)
     tree.components[1].craft = true
-    let prices = {1: 10, 2: 42, 3: 10, 4: 10, 5: 1000, 6: 11}
+    let prices = { 1: 10, 2: 42, 3: 10, 4: 10, 5: 1000, 6: 11 }
     let updatedTree = updateTree(5, tree, prices)
-    expect(updatedTree).to.deep.equal({
+    expect(updatedTree).toEqual({
       craft: true,
       craftPrice: 1260,
       decisionPrice: 1260,
@@ -113,7 +111,7 @@ describe('updateTree', () => {
           output: 1,
           quantity: 1,
           totalQuantity: 5,
-          usedQuantity: 5
+          usedQuantity: 5,
         },
         {
           craft: true,
@@ -136,9 +134,9 @@ describe('updateTree', () => {
               output: 1,
               quantity: 2,
               totalQuantity: 50,
-              usedQuantity: 50
-            }
-          ]
+              usedQuantity: 50,
+            },
+          ],
         },
         {
           craft: true,
@@ -161,20 +159,20 @@ describe('updateTree', () => {
               output: 1,
               quantity: 2,
               totalQuantity: 50,
-              usedQuantity: 50
-            }
-          ]
-        }
-      ]
+              usedQuantity: 50,
+            },
+          ],
+        },
+      ],
     })
   })
 
   it('updates a tree correctly if the available items changed', () => {
     let tree = clone(calculatedTree)
     tree.components[1].craft = true
-    let prices = {1: 10, 2: 42, 3: 10, 4: 10, 5: 1000, 6: 11}
-    let updatedTree = updateTree(5, tree, prices, {2: 1000})
-    expect(updatedTree).to.deep.equal({
+    let prices = { 1: 10, 2: 42, 3: 10, 4: 10, 5: 1000, 6: 11 }
+    let updatedTree = updateTree(5, tree, prices, { 2: 1000 })
+    expect(updatedTree).toEqual({
       craft: true,
       craftPrice: 1050,
       decisionPrice: 1050,
@@ -195,7 +193,7 @@ describe('updateTree', () => {
           output: 1,
           quantity: 1,
           totalQuantity: 5,
-          usedQuantity: 0
+          usedQuantity: 0,
         },
         {
           craft: true,
@@ -218,9 +216,9 @@ describe('updateTree', () => {
               output: 1,
               quantity: 2,
               totalQuantity: 50,
-              usedQuantity: 50
-            }
-          ]
+              usedQuantity: 50,
+            },
+          ],
         },
         {
           craft: true,
@@ -243,11 +241,11 @@ describe('updateTree', () => {
               output: 1,
               quantity: 2,
               totalQuantity: 50,
-              usedQuantity: 50
-            }
-          ]
-        }
-      ]
+              usedQuantity: 50,
+            },
+          ],
+        },
+      ],
     })
   })
 })

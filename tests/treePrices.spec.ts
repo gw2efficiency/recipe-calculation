@@ -1,6 +1,4 @@
-/* eslint-env node, mocha */
-import {expect} from 'chai'
-import treePrices from '../src/treePrices.js'
+import treePrices from '../src/treePrices'
 
 describe('treePrices', () => {
   it('updates the prices for a tree', () => {
@@ -8,14 +6,14 @@ describe('treePrices', () => {
       id: 1,
       usedQuantity: 1,
       components: [
-        {id: 2, usedQuantity: 1},
-        {id: 3, usedQuantity: 2}
-      ]
+        { id: 2, usedQuantity: 1 },
+        { id: 3, usedQuantity: 2 },
+      ],
     }
-    let prices = {1: 123, 2: 1, 3: 2}
+    let prices = { 1: 123, 2: 1, 3: 2 }
 
     let calculatedTree = treePrices(recipeTree, prices)
-    expect(calculatedTree).to.deep.equal({
+    expect(calculatedTree).toEqual({
       craftPrice: 5,
       id: 1,
       usedQuantity: 1,
@@ -28,16 +26,16 @@ describe('treePrices', () => {
           buyPrice: 1,
           buyPriceEach: 1,
           id: 2,
-          usedQuantity: 1
+          usedQuantity: 1,
         },
         {
           decisionPrice: 4,
           buyPrice: 4,
           buyPriceEach: 2,
           id: 3,
-          usedQuantity: 2
-        }
-      ]
+          usedQuantity: 2,
+        },
+      ],
     })
   })
 
@@ -47,14 +45,14 @@ describe('treePrices', () => {
       usedQuantity: 1,
       craft: false,
       components: [
-        {id: 2, usedQuantity: 1},
-        {id: 3, usedQuantity: 2}
-      ]
+        { id: 2, usedQuantity: 1 },
+        { id: 3, usedQuantity: 2 },
+      ],
     }
-    let prices = {1: 123, 2: 1, 3: 2}
+    let prices = { 1: 123, 2: 1, 3: 2 }
 
     let calculatedTree = treePrices(recipeTree, prices)
-    expect(calculatedTree).to.deep.equal({
+    expect(calculatedTree).toEqual({
       craftPrice: 5,
       id: 1,
       usedQuantity: 1,
@@ -68,16 +66,16 @@ describe('treePrices', () => {
           buyPrice: 1,
           buyPriceEach: 1,
           id: 2,
-          usedQuantity: 1
+          usedQuantity: 1,
         },
         {
           decisionPrice: 4,
           buyPrice: 4,
           buyPriceEach: 2,
           id: 3,
-          usedQuantity: 2
-        }
-      ]
+          usedQuantity: 2,
+        },
+      ],
     })
   })
 
@@ -86,21 +84,21 @@ describe('treePrices', () => {
       id: 1,
       usedQuantity: 1,
       components: [
-        {id: 2, usedQuantity: 1},
+        { id: 2, usedQuantity: 1 },
         {
           id: 3,
           usedQuantity: 2,
           components: [
-            {id: 4, usedQuantity: 50},
-            {id: 5, usedQuantity: 2}
-          ]
-        }
-      ]
+            { id: 4, usedQuantity: 50 },
+            { id: 5, usedQuantity: 2 },
+          ],
+        },
+      ],
     }
-    let prices = {1: 123, 2: 1, 3: 2, 5: 10}
+    let prices = { 1: 123, 2: 1, 3: 2, 5: 10 }
 
     let calculatedTree = treePrices(recipeTree, prices)
-    expect(calculatedTree).to.deep.equal({
+    expect(calculatedTree).toEqual({
       craftPrice: 5,
       id: 1,
       usedQuantity: 1,
@@ -113,7 +111,7 @@ describe('treePrices', () => {
           buyPrice: 1,
           buyPriceEach: 1,
           id: 2,
-          usedQuantity: 1
+          usedQuantity: 1,
         },
         {
           decisionPrice: 4,
@@ -127,19 +125,19 @@ describe('treePrices', () => {
               buyPrice: false,
               buyPriceEach: false,
               id: 4,
-              usedQuantity: 50
+              usedQuantity: 50,
             },
             {
               decisionPrice: 20,
               buyPrice: 20,
               buyPriceEach: 10,
               id: 5,
-              usedQuantity: 2
-            }
+              usedQuantity: 2,
+            },
           ],
-          craftPrice: 20
-        }
-      ]
+          craftPrice: 20,
+        },
+      ],
     })
   })
 })

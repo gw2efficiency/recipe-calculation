@@ -1,15 +1,25 @@
 // Make sure that we don't modify the passed-in object
 // We still want to work with a reference in the actual calculation
 // since the availableItems are a shared state for all sub-recipes
-export default function treeAdjustQuantityWrapper (amount, tree, availableItems) {
-  availableItems = {...availableItems}
+export default function treeAdjustQuantityWrapper(
+  amount: any,
+  tree: any,
+  availableItems: any = {}
+) {
+  availableItems = { ...availableItems }
   return treeAdjustQuantity(amount, tree, availableItems)
 }
 
 // Go through a recipe tree and set 'totalQuantity' based on the
 // wanted amount and the output of recipes and sub-recipes
-function treeAdjustQuantity (amount, tree, availableItems, ignoreAvailable = false, nesting = 0) {
-  tree = {...tree}
+function treeAdjustQuantity(
+  amount: any,
+  tree: any,
+  availableItems: any,
+  ignoreAvailable = false,
+  nesting = 0
+) {
+  tree = { ...tree }
   tree.output = tree.output || 1
 
   // Calculate the total quantity needed
@@ -42,8 +52,14 @@ function treeAdjustQuantity (amount, tree, availableItems, ignoreAvailable = fal
   ignoreAvailable = tree.craft === false || tree.usedQuantity === 0 || ignoreAvailable
 
   // Adjust the quantity for all tree's subcomponents
-  tree.components = tree.components.map(component => {
-    return treeAdjustQuantity(componentAmount, component, availableItems, ignoreAvailable, ++nesting)
+  tree.components = tree.components.map((component: any) => {
+    return treeAdjustQuantity(
+      componentAmount,
+      component,
+      availableItems,
+      ignoreAvailable,
+      ++nesting
+    )
   })
 
   return tree

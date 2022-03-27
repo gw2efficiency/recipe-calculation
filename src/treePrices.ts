@@ -1,6 +1,6 @@
 // Update the tree prices
-export default function treePrices (tree, itemPrices) {
-  tree = {...tree}
+export default function treePrices(tree: any, itemPrices: any) {
+  tree = { ...tree }
 
   // Calculate the buy prices
   tree.buyPriceEach = itemPrices[tree.id] || false
@@ -12,10 +12,10 @@ export default function treePrices (tree, itemPrices) {
   }
 
   // Calculate the tree prices traversal for the sub-components
-  tree.components = tree.components.map(component => treePrices(component, itemPrices))
+  tree.components = tree.components.map((component: any) => treePrices(component, itemPrices))
 
   // Calculate the craft price out of the best prices
-  tree.craftPrice = tree.components.map(c => c.decisionPrice).reduce((a, b) => a + b)
+  tree.craftPrice = tree.components.map((c: any) => c.decisionPrice).reduce((a: any, b: any) => a + b)
 
   // If we explicitly don't craft this, keep the buy price as the best price
   if (tree.craft === false) {

@@ -1,5 +1,5 @@
 // Generate a list of items to buy and used available items
-export default function usedItems (tree, breakdown = {buy: {}, available: {}}) {
+export default function usedItems(tree: any, breakdown: any = { buy: {}, available: {} }) {
   // Add up the used available items
   let available = tree.totalQuantity - tree.usedQuantity
   if (available > 0) {
@@ -16,6 +16,6 @@ export default function usedItems (tree, breakdown = {buy: {}, available: {}}) {
   }
 
   // This tree part is getting crafted -> get used items from components
-  tree.components.map(component => usedItems(component, breakdown))
+  tree.components.map((component: any) => usedItems(component, breakdown))
   return breakdown
 }

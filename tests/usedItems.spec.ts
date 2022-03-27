@@ -1,6 +1,4 @@
-/* eslint-env node, mocha */
-import {expect} from 'chai'
-import usedItems from '../src/usedItems.js'
+import usedItems from '../src/usedItems'
 
 describe('usedItems', () => {
   it('gets the correct items to buy and used available items', () => {
@@ -37,9 +35,9 @@ describe('usedItems', () => {
               output: 1,
               quantity: 1,
               totalQuantity: 6,
-              usedQuantity: 6
-            }
-          ]
+              usedQuantity: 6,
+            },
+          ],
         },
         {
           decisionPrice: 30,
@@ -62,9 +60,9 @@ describe('usedItems', () => {
               output: 1,
               quantity: 2,
               totalQuantity: 6,
-              usedQuantity: 3
-            }
-          ]
+              usedQuantity: 3,
+            },
+          ],
         },
         {
           craft: false,
@@ -87,17 +85,17 @@ describe('usedItems', () => {
               output: 1,
               quantity: 100,
               totalQuantity: 0,
-              usedQuantity: 0
-            }
-          ]
-        }
-      ]
+              usedQuantity: 0,
+            },
+          ],
+        },
+      ],
     }
 
     let usedItemObject = usedItems(tree)
-    expect(usedItemObject).to.deep.equal({
-      buy: {4: 3, 7: 6},
-      available: {3: 7, 4: 3, 5: 4}
+    expect(usedItemObject).toEqual({
+      buy: { 4: 3, 7: 6 },
+      available: { 3: 7, 4: 3, 5: 4 },
     })
   })
 })

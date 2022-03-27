@@ -1,126 +1,169 @@
-# recipe-calculation
+<!-- Title -->
+<h1 align="center">
+  recipe-calculation
+</h1>
 
-[![Build Status](https://img.shields.io/travis/gw2efficiency/recipe-calculation.svg?style=flat-square)](https://travis-ci.org/gw2efficiency/recipe-calculation)
-[![Coverage Status](https://img.shields.io/codecov/c/github/gw2efficiency/recipe-calculation/master.svg?style=flat-square)](https://codecov.io/github/gw2efficiency/recipe-calculation)
+<!-- Description -->
+<h4 align="center">
+  Calculate the cheapest tree traversal, price and used items of crafting recipes.
+</h4>
 
-> Calculate the cheapest tree traversal, price and used items of crafting recipes.
+<!-- Badges -->
+<p align="center">
+  <a href="https://www.npmjs.com/package/@gw2efficiency/recipe-calculation">
+    <img
+      src="https://img.shields.io/npm/v/@gw2efficiency/recipe-calculation?style=flat-square"
+      alt="Package Version"
+    />
+  </a>
 
-*This is part of [gw2efficiency](https://gw2efficiency.com). Please report all issues in [the central repository](https://github.com/gw2efficiency/issues/issues).*
+  <a href="https://github.com/gw2efficiency/recipe-calculation/actions?query=branch%3Amaster+workflow%3A%22Continuous+Integration%22">
+    <img
+      src="https://img.shields.io/github/workflow/status/gw2efficiency/recipe-calculation/Continuous%20Integration?style=flat-square"
+      alt="Build Status"
+    />
+  </a>
 
-## Install
+  <a href="https://codecov.io/github/gw2efficiency/recipe-calculation">
+    <img
+      src="https://img.shields.io/codecov/c/github/gw2efficiency/recipe-calculation/master?style=flat-square"
+      alt="Code Coverage"
+    />
+  </a>
+</p>
 
+<!-- Issues -->
+<p align="center">
+  <i>
+    This is part of <a href="https://gw2efficiency.com">gw2efficiency</a>. Please report all issues in <a href="https://github.com/gw2efficiency/issues/issues">the central repository</a>.
+  </i>
+</p>
+
+<!-- Quicklinks -->
+<p align="center">
+  <a href="#installation">Installation</a> •
+  <a href="#usage">Usage</a> •
+  <a href="#contributors">Contributors</a> •
+  <a href="#license">License</a>
+</p>
+
+<br>
+
+## Installation
+
+```bash
+yarn add @gw2efficiency/recipe-calculation
 ```
-npm install gw2e-recipe-calculation
-```
 
-This module can be used for Node.js as well as browsers using [Browserify](https://github.com/substack/browserify-handbook#how-node_modules-works). Be aware that you will probably
-want to use [`gw2e-recipe-nesting`](https://github.com/gw2efficiency/recipe-nesting) with this.
+The recipe trees this package consumes are generated via
+[`@gw2efficiency/recipe-nesting`](https://github.com/gw2efficiency/recipe-nesting).
 
 ## Usage
 
 ### Calculate the cheapest tree
 
-```js
-import {cheapestTree} from 'gw2e-recipe-calculation'
+```ts
+import {cheapestTree} from '@gw2efficiency/recipe-calculation'
 
 // How many times do we want to craft this item
 // Note: If you want to craft a item 5 times and the output of the
 // recipe is 5, it will calculate 1 craft if you pass in amount = 5
-let amount = 1
+const amount = 1
 
-// A nested recipe tree, as generated from "gw2e-recipe-nesting"
-let recipeTree = {
+// A nested recipe tree, as generated from "@gw2efficiency/recipe-nesting"
+const recipeTree = {
   id: 13243,
   quantity: 5,
   output: 1,
   components: [/* ... */]
 }
 
-// The item prices, as a map of item id => price
-let itemPrices = {1: 123, 2: 42, 3: 1337}
+// The item prices, as a map of item id -> price
+const itemPrices = {1: 123, 2: 42, 3: 1337}
 
-// (Optional) The available items, e.g. from the material storage, bank and characters
-let availableItems = {1: 1, 2: 250, 3: 5}
+// (Optional) The available items, e.g. from the material storage, bank and characters,
+// as a map of item id -> amount
+const availableItems = {1: 1, 2: 250, 3: 5}
 
 // (Optional) A list of item ids for which crafting is *disabled* when generating the
 // cheapest tree (e.g. for excluding precursor crafting or daily cooldowns)
-let craftingDisabled = [1337, 42]
+const craftingDisabled = [1337, 42]
 
-// Calculate!
-let tree = cheapestTree(amount, recipeTree, itemPrices, availableItems, craftingDisabled)
+// Calculate the tree
+const calculatedTree = cheapestTree(amount, recipeTree, itemPrices, availableItems, craftingDisabled)
 
-// The tree now looks like this:
+// The result looks like this:
 {
   id: 13243,
   quantity: 5,
   output: 1,
   components: [/* ... */],
-  
-  // The following keys get set for the top level and all sub-components:
-  
+
+  // (The following keys get set for the top level and all sub-components)
+
   // The total quantity of this component
   totalQuantity: 5,
-  
+
   // The total used quantity of this component. This is after
   // subtracting the available items of the user. If this is 0
   // then the user owns all items already.
   usedQuantity: 5,
-  
-  // The flag if the component should be crafted ("true") or bought ("false")
+
+  // The flag if the component should be crafted (true) or bought (false)
   craft: true,
-  
+
   // Total buy price of the component
   buyPrice: 50,
-  
+
   // Buy price for one of the components
   buyPriceEach: 10,
-  
+
   // Total price to craft this component
   craftPrice: 42
 }
-
-// To only get the craft price of the item:
-let craftPrice = tree.craftPrice
 ```
 
-### Update tree quantites & prices
+### Update tree quantities & prices
 
-If you want to update the tree, because the `amount`, `availableItems` or `itemPrices` changed
-or the user flipped a `craft` flag, you should use this method. This updates the following keys: `totalQuantity`, 
-`usedQuantity`, `buyPrice`, `buyPriceEach` and `craftPrice`
+If you want to update the tree, because the `amount`, `availableItems` or `itemPrices` changed or
+the user flipped a `craft` flag, you should use this method. This updates the following keys:
+`totalQuantity`, `usedQuantity`, `buyPrice`, `buyPriceEach` and `craftPrice`
 
-**This method does not change any `craft` flags (= uses the
-precalculated best tree). If you want to recalculate the cheapest tree, just use `cheapestTree` again!**
+**This method does not change any `craft` flags (= uses the pre-calculated best tree). If you want
+to recalculate the cheapest tree, just use `cheapestTree` again!**
 
-```js
-import {updateTree} from 'gw2e-recipe-calculation'
+```ts
+import { updateTree } from '@gw2efficiency/recipe-calculation'
 
 // How many times do we want to craft this item
-let amount = 1
+const amount = 1
 
 // The already calculated tree (from "cheapestTree") that got changed
-let calculatedTree = {/* ... */}
+const calculatedTree = {
+  /* ... */
+}
 
-// The item prices, as a map of item id => price
-let itemPrices = {1: 123, 2: 42, 3: 1337}
+// The item prices, as a map of item id -> price
+const itemPrices = { 1: 123, 2: 42, 3: 1337 }
 
-// (Optional) The available items, e.g. from the material storage, bank and characters
-let availableItems = {1: 1, 2: 250, 3: 5}
+// (Optional) The available items, e.g. from the material storage, bank and characters,
+// as a map of item id -> amount
+const availableItems = { 1: 1, 2: 250, 3: 5 }
 
-// Update!
-let updatedTree = updateTree(amount, calculatedTree, itemPrices, availableItems)
+// Update the tree
+const updatedTree = updateTree(amount, calculatedTree, itemPrices, availableItems)
 ```
 
 ### Generate list of items to buy & used available items
 
-```js
-import {usedItems} from 'gw2e-recipe-calculation'
+```ts
+import {usedItems} from '@gw2efficiency/recipe-calculation'
 
 // Get all item ids of a calculated recipe tree (after "cheapestTree")
-let tree = {/* ... */}
-let usedItems = usedItems(tree)
+const calculatedTree = {/* ... */}
+const usedItemsMap = usedItems(calculatedTree)
 
-// Generates a object with maps of id => count:
+// Generates a object with maps of item id -> amount
 {
   buy: {1: 5, 3: 10, /* ... */},
   available: {1: 10, 2: 5, /* ... */}
@@ -129,12 +172,12 @@ let usedItems = usedItems(tree)
 
 ### Generate list of crafting steps
 
-```js
-import {craftingSteps} from 'gw2e-recipe-calculation'
+```ts
+import {craftingSteps} from '@gw2efficiency/recipe-calculation'
 
 // Get the crafting steps of a calculated recipe tree (after "cheapestTree")
-let tree = {/* ... */}
-let craftingSteps = craftingSteps(tree)
+const calculatedTree = {/* ... */}
+const craftingStepsArray = craftingSteps(calculatedTree)
 
 // Generates an array with the crafting steps in correct order
 [
@@ -152,20 +195,20 @@ let craftingSteps = craftingSteps(tree)
 
 ### Static content
 
-```js
-import {staticItems} from 'gw2e-recipe-calculation'
+```ts
+import {staticItems} from '@gw2efficiency/recipe-calculation'
 
 // Get all item ids of items that can only be crafted once a day
-let dailyCooldowns = staticItems.dailyCooldowns
+const dailyCooldowns = staticItems.dailyCooldowns
 // -> [1, 2, 3, 4]
 
-// Get all item ids of items that can be bought, where the item or the immediate component 
+// Get all item ids of items that can be bought, where the item or the immediate component
 // (e.g. Deldrimor Steel Ingot-> Lump of Mithrillium) is a daily cooldown
-let buyableDailyCooldowns = staticItems.buyableDailyCooldowns
+const buyableDailyCooldowns = staticItems.buyableDailyCooldowns
 // -> [1, 2, 3, 4]
 
 // Get an object with item ids as keys of all vendor-buyable items
-let vendorItems = staticItems.vendorItems
+const vendorItems = staticItems.vendorItems
 // Returns an object like this:
 {
   20798: {
@@ -182,32 +225,50 @@ let vendorItems = staticItems.vendorItems
 
 ### Helpers
 
-```js
-import {recipeItems, dailyCooldowns, useVendorPrices} from 'gw2e-recipe-calculation'
+```ts
+import { recipeItems, dailyCooldowns, useVendorPrices } from '@gw2efficiency/recipe-calculation'
 
 // Get all item ids of a recipe tree (before or after "cheapestTree")
-let recipeTree = {/* ... */}
-let ids = recipeItems(recipeTree)
+const recipeTree = {
+  /* ... */
+}
+const itemIds = recipeItems(recipeTree)
 // -> [1, 2, 3, 4]
 
-// Get a list of all needed daily cooldowns (after "cheapestTree")
-let recipeTree = {/* ... */}
-let ids = dailyCooldowns(recipeTree)
+// Get a map of item id -> count of all needed daily cooldowns (after "cheapestTree")
+const calculatedTree = {
+  /* ... */
+}
+const cooldownItemsMap = dailyCooldowns(calculatedTree)
 // -> {46740: 3, 66913: 4}
 
 // Overwrite and add all vendor prices to a price array
 // To show the users more information afterwards use "staticItems.vendorItems"
-let prices = {1: 1233, 19750: 50000}
-prices = useVendorPrices(prices)
+const prices = useVendorPrices({ 1: 1233, 19750: 50000 })
 // -> {1: 1233, 19750: 16, 19924: 48, /* ... */}
 ```
 
-## Tests
+## Contributors
 
-```
-npm test
-```
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
-## Licence
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://www.david-reess.de"><img src="https://avatars3.githubusercontent.com/u/4615516?v=4" width="75px;" alt=""/><br /><sub><b>David Reeß</b></sub></a><br /><a href="https://github.com/gw2efficiency/recipe-calculation/commits?author=queicherius" title="Code">💻</a> <a href="https://github.com/gw2efficiency/recipe-calculation/commits?author=queicherius" title="Documentation">📖</a> <a href="https://github.com/gw2efficiency/recipe-calculation/commits?author=queicherius" title="Tests">⚠️</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors)
+specification. Contributions of any kind welcome!
+
+## License
 
 MIT

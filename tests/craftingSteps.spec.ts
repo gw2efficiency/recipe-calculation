@@ -1,6 +1,4 @@
-/* eslint-env node, mocha */
-import {expect} from 'chai'
-import craftingSteps from '../src/craftingSteps.js'
+import craftingSteps from '../src/craftingSteps'
 
 describe('craftingSteps', () => {
   it('gets the correct crafting steps', () => {
@@ -25,9 +23,9 @@ describe('craftingSteps', () => {
               id: 4,
               craft: false,
               totalQuantity: 12,
-              usedQuantity: 12
-            }
-          ]
+              usedQuantity: 12,
+            },
+          ],
         },
         {
           id: 3,
@@ -54,13 +52,13 @@ describe('craftingSteps', () => {
                       id: 4,
                       craft: false,
                       totalQuantity: 6,
-                      usedQuantity: 6
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
+                      usedQuantity: 6,
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
         },
         {
           id: 5,
@@ -73,9 +71,9 @@ describe('craftingSteps', () => {
               id: 6,
               craft: false,
               totalQuantity: 0,
-              usedQuantity: 0
-            }
-          ]
+              usedQuantity: 0,
+            },
+          ],
         },
         {
           id: 15,
@@ -95,11 +93,11 @@ describe('craftingSteps', () => {
                   id: 4,
                   craft: false,
                   totalQuantity: 12,
-                  usedQuantity: 12
-                }
-              ]
-            }
-          ]
+                  usedQuantity: 12,
+                },
+              ],
+            },
+          ],
         },
         {
           id: 1337,
@@ -113,15 +111,15 @@ describe('craftingSteps', () => {
               craft: true,
               totalQuantity: 6,
               usedQuantity: 6,
-              output: 1
-            }
-          ]
-        }
-      ]
+              output: 1,
+            },
+          ],
+        },
+      ],
     }
 
     let usedItemObject = craftingSteps(tree)
-    expect(usedItemObject).to.deep.equal([
+    expect(usedItemObject).toEqual([
       {
         id: 7,
         crafts: 15,
@@ -129,7 +127,7 @@ describe('craftingSteps', () => {
         minRating: 400,
         disciplines: ['Armorsmith'],
         recipeId: 123,
-        components: [{id: 4, quantity: 30}]
+        components: [{ id: 4, quantity: 30 }],
       },
       {
         id: 19,
@@ -138,7 +136,7 @@ describe('craftingSteps', () => {
         minRating: undefined,
         disciplines: undefined,
         recipeId: undefined,
-        components: [{id: 7, quantity: 3}]
+        components: [{ id: 7, quantity: 3 }],
       },
       {
         id: 3,
@@ -147,7 +145,7 @@ describe('craftingSteps', () => {
         minRating: undefined,
         disciplines: undefined,
         recipeId: undefined,
-        components: [{id: 19, quantity: 3}]
+        components: [{ id: 19, quantity: 3 }],
       },
       {
         id: 15,
@@ -156,7 +154,7 @@ describe('craftingSteps', () => {
         minRating: undefined,
         disciplines: undefined,
         recipeId: undefined,
-        components: [{id: 7, quantity: 6}]
+        components: [{ id: 7, quantity: 6 }],
       },
       {
         id: 1,
@@ -166,13 +164,13 @@ describe('craftingSteps', () => {
         disciplines: undefined,
         recipeId: undefined,
         components: [
-          {id: 7, quantity: 6},
-          {id: 3, quantity: 10},
-          {id: 5, quantity: 4},
-          {id: 15, quantity: 1},
-          {id: 1337, quantity: 1}
-        ]
-      }
+          { id: 7, quantity: 6 },
+          { id: 3, quantity: 10 },
+          { id: 5, quantity: 4 },
+          { id: 15, quantity: 1 },
+          { id: 1337, quantity: 1 },
+        ],
+      },
     ])
   })
 
@@ -195,9 +193,9 @@ describe('craftingSteps', () => {
               id: 4,
               craft: false,
               totalQuantity: 12,
-              usedQuantity: 12
-            }
-          ]
+              usedQuantity: 12,
+            },
+          ],
         },
         {
           id: 3,
@@ -224,13 +222,13 @@ describe('craftingSteps', () => {
                       id: 99999,
                       craft: false,
                       totalQuantity: 6,
-                      usedQuantity: 6
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
+                      usedQuantity: 6,
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
         },
         {
           id: 5,
@@ -243,9 +241,9 @@ describe('craftingSteps', () => {
               id: 6,
               craft: false,
               totalQuantity: 0,
-              usedQuantity: 0
-            }
-          ]
+              usedQuantity: 0,
+            },
+          ],
         },
         {
           id: 15,
@@ -265,17 +263,17 @@ describe('craftingSteps', () => {
                   id: 4,
                   craft: false,
                   totalQuantity: 12,
-                  usedQuantity: 12
-                }
-              ]
-            }
-          ]
-        }
-      ]
+                  usedQuantity: 12,
+                },
+              ],
+            },
+          ],
+        },
+      ],
     }
 
     let usedItemObject = craftingSteps(tree)
-    expect(usedItemObject).to.deep.equal([
+    expect(usedItemObject).toEqual([
       {
         id: 19675,
         crafts: 3,
@@ -283,7 +281,7 @@ describe('craftingSteps', () => {
         minRating: undefined,
         disciplines: undefined,
         recipeId: undefined,
-        components: [{id: 99999, quantity: 6}]
+        components: [{ id: 99999, quantity: 6 }],
       },
       {
         id: 7,
@@ -292,7 +290,7 @@ describe('craftingSteps', () => {
         minRating: undefined,
         disciplines: undefined,
         recipeId: undefined,
-        components: [{id: 4, quantity: 24}]
+        components: [{ id: 4, quantity: 24 }],
       },
       {
         id: 19,
@@ -301,7 +299,7 @@ describe('craftingSteps', () => {
         minRating: undefined,
         disciplines: undefined,
         recipeId: undefined,
-        components: [{id: 19675, quantity: 3}]
+        components: [{ id: 19675, quantity: 3 }],
       },
       {
         id: 3,
@@ -310,7 +308,7 @@ describe('craftingSteps', () => {
         minRating: undefined,
         disciplines: undefined,
         recipeId: undefined,
-        components: [{id: 19, quantity: 3}]
+        components: [{ id: 19, quantity: 3 }],
       },
       {
         id: 15,
@@ -319,7 +317,7 @@ describe('craftingSteps', () => {
         minRating: undefined,
         disciplines: undefined,
         recipeId: undefined,
-        components: [{id: 7, quantity: 6}]
+        components: [{ id: 7, quantity: 6 }],
       },
       {
         id: 1,
@@ -329,12 +327,12 @@ describe('craftingSteps', () => {
         disciplines: undefined,
         recipeId: undefined,
         components: [
-          {id: 7, quantity: 6},
-          {id: 3, quantity: 10},
-          {id: 5, quantity: 4},
-          {id: 15, quantity: 1}
-        ]
-      }
+          { id: 7, quantity: 6 },
+          { id: 3, quantity: 10 },
+          { id: 5, quantity: 4 },
+          { id: 15, quantity: 1 },
+        ],
+      },
     ])
   })
 
@@ -365,9 +363,9 @@ describe('craftingSteps', () => {
                   craft: false,
                   totalQuantity: 1,
                   usedQuantity: 1,
-                  output: 1
-                }
-              ]
+                  output: 1,
+                },
+              ],
             },
             {
               id: 5,
@@ -381,11 +379,11 @@ describe('craftingSteps', () => {
                   craft: false,
                   totalQuantity: 1,
                   usedQuantity: 1,
-                  output: 1
-                }
-              ]
-            }
-          ]
+                  output: 1,
+                },
+              ],
+            },
+          ],
         },
         {
           id: 2,
@@ -406,9 +404,9 @@ describe('craftingSteps', () => {
                   craft: false,
                   totalQuantity: 1,
                   usedQuantity: 1,
-                  output: 1
-                }
-              ]
+                  output: 1,
+                },
+              ],
             },
             {
               id: 5,
@@ -422,26 +420,26 @@ describe('craftingSteps', () => {
                   craft: false,
                   totalQuantity: 1,
                   usedQuantity: 1,
-                  output: 1
-                }
-              ]
-            }
-          ]
-        }
-      ]
+                  output: 1,
+                },
+              ],
+            },
+          ],
+        },
+      ],
     }
 
     let usedItemObject = craftingSteps(tree)
 
-    expect(usedItemObject).to.deep.equal([
+    expect(usedItemObject).toEqual([
       {
         id: 5,
         quantity: 2,
         minRating: undefined,
         disciplines: undefined,
         recipeId: undefined,
-        components: [{id: 6, quantity: 2}],
-        crafts: 2
+        components: [{ id: 6, quantity: 2 }],
+        crafts: 2,
       },
       {
         id: 3,
@@ -449,8 +447,8 @@ describe('craftingSteps', () => {
         minRating: undefined,
         disciplines: undefined,
         recipeId: undefined,
-        components: [{id: 4, quantity: 1}],
-        crafts: 1
+        components: [{ id: 4, quantity: 1 }],
+        crafts: 1,
       },
       {
         id: 2,
@@ -458,8 +456,11 @@ describe('craftingSteps', () => {
         minRating: undefined,
         disciplines: undefined,
         recipeId: undefined,
-        components: [{id: 3, quantity: 2}, {id: 5, quantity: 2}],
-        crafts: 2
+        components: [
+          { id: 3, quantity: 2 },
+          { id: 5, quantity: 2 },
+        ],
+        crafts: 2,
       },
       {
         id: 1,
@@ -467,9 +468,12 @@ describe('craftingSteps', () => {
         minRating: undefined,
         disciplines: undefined,
         recipeId: undefined,
-        components: [{id: 2, quantity: 1}, {id: 2, quantity: 1}],
-        crafts: 1
-      }
+        components: [
+          { id: 2, quantity: 1 },
+          { id: 2, quantity: 1 },
+        ],
+        crafts: 1,
+      },
     ])
   })
 })

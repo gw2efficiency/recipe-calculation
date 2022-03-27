@@ -1,6 +1,4 @@
-/* eslint-env node, mocha */
-import { expect } from 'chai'
-import dailyCooldowns from '../../src/helpers/dailyCooldowns.js'
+import dailyCooldowns from '../../src/helpers/dailyCooldowns'
 
 describe('helpers > dailyCooldowns', () => {
   it('gets all daily cooldowns from a recipe tree', () => {
@@ -20,9 +18,9 @@ describe('helpers > dailyCooldowns', () => {
               id: 4,
               craft: false,
               totalQuantity: 12,
-              usedQuantity: 12
-            }
-          ]
+              usedQuantity: 12,
+            },
+          ],
         },
         {
           id: 46740,
@@ -46,13 +44,13 @@ describe('helpers > dailyCooldowns', () => {
                       id: 4,
                       craft: false,
                       totalQuantity: 6,
-                      usedQuantity: 6
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
+                      usedQuantity: 6,
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
         },
         {
           id: 5,
@@ -64,9 +62,9 @@ describe('helpers > dailyCooldowns', () => {
               id: 6,
               craft: false,
               totalQuantity: 0,
-              usedQuantity: 0
-            }
-          ]
+              usedQuantity: 0,
+            },
+          ],
         },
         {
           id: 66913,
@@ -84,24 +82,24 @@ describe('helpers > dailyCooldowns', () => {
                   id: 4,
                   craft: false,
                   totalQuantity: 12,
-                  usedQuantity: 12
-                }
-              ]
-            }
-          ]
+                  usedQuantity: 12,
+                },
+              ],
+            },
+          ],
         },
         {
           id: 46736,
           craft: true,
           totalQuantity: 1,
-          usedQuantity: 1
-        }
-      ]
+          usedQuantity: 1,
+        },
+      ],
     }
 
-    expect(dailyCooldowns(tree)).to.deep.equal({
+    expect(dailyCooldowns(tree)).toEqual({
       46740: 3,
-      66913: 4
+      66913: 4,
     })
   })
 })
