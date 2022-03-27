@@ -1,3 +1,4 @@
+// @ts-nocheck
 import usedItems from '../src/usedItems'
 
 describe('usedItems', () => {

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import craftingSteps from '../src/craftingSteps'
 
 describe('craftingSteps', () => {

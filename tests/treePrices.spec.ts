@@ -1,3 +1,4 @@
+// @ts-nocheck
 import treePrices from '../src/treePrices'
 
 describe('treePrices', () => {

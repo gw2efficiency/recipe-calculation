@@ -1,3 +1,4 @@
+// @ts-nocheck
 import cheapestTree from '../src/cheapestTree'
 
 describe('cheapestTree', () => {

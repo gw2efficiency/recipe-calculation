@@ -1,19 +1,21 @@
-import treeAdjustQuantity from './treeAdjustQuantity'
+// @ts-nocheck
+import { treeAdjustQuantity } from './treeAdjustQuantity'
 import treePrices from './treePrices'
 import treeCheapestCraftFlags from './treeCheapestCraftFlags'
+import { AvailableItems, ForceBuyItems, ItemPrices, RecipeTree } from './types'
 
 export default function cheapestTree(
-  amount: any,
-  tree: any,
-  itemPrices: any,
-  availableItems: any = {},
-  forceBuyItems: any = []
+  amount: number,
+  _tree: RecipeTree,
+  itemPrices: ItemPrices,
+  availableItems: AvailableItems = {},
+  forceBuyItems: ForceBuyItems = []
 ) {
   // Adjust the tree total and used quantities
-  tree = treeAdjustQuantity(amount, tree, availableItems)
+  const treeWithQuantity = treeAdjustQuantity(amount, _tree, availableItems)
 
   // Set the initial craft flags based on the subtree prices
-  tree = treePrices(tree, itemPrices)
+  let tree = treePrices(treeWithQuantity, itemPrices)
   tree = treeCheapestCraftFlags(tree, forceBuyItems)
 
   // Force the root to be crafted

@@ -1,32 +1,33 @@
-// Update the tree prices
-export default function treePrices(tree: any, itemPrices: any) {
-  tree = { ...tree }
+import { ItemPrices, RecipeTreeWithPrices, RecipeTreeWithQuantity } from './types'
 
+// Update the tree prices
+export default function treePrices(
+  tree: RecipeTreeWithQuantity | (RecipeTreeWithQuantity & { craft: boolean }),
+  itemPrices: ItemPrices
+): RecipeTreeWithPrices {
   // Calculate the buy prices
-  tree.buyPriceEach = itemPrices[tree.id] || false
-  tree.buyPrice = tree.buyPriceEach ? tree.usedQuantity * tree.buyPriceEach : false
-  tree.decisionPrice = tree.buyPrice
+  const buyPriceEach = itemPrices[tree.id] || false
+  const buyPrice = buyPriceEach ? tree.usedQuantity * buyPriceEach : false
+  let decisionPrice = buyPrice
 
   if (!tree.components) {
-    return tree
+    return { ...tree, components: undefined, buyPriceEach, buyPrice, decisionPrice }
   }
 
   // Calculate the tree prices traversal for the sub-components
-  tree.components = tree.components.map((component: any) => treePrices(component, itemPrices))
+  const components = tree.components.map((component) => treePrices(component, itemPrices))
 
   // Calculate the craft price out of the best prices
-  tree.craftPrice = tree.components.map((c: any) => c.decisionPrice).reduce((a: any, b: any) => a + b)
-
-  // If we explicitly don't craft this, keep the buy price as the best price
-  if (tree.craft === false) {
-    return tree
-  }
+  const craftPrice = components.map((c) => c.decisionPrice || 0).reduce((a, b) => a + b, 0)
 
   // Update the decision price of this tree segment to the craft price,
   // used to determine the craft price of the higher-up recipe
-  if (tree.craft === true || !tree.buyPrice || tree.craftPrice < tree.buyPrice) {
-    tree.decisionPrice = tree.craftPrice
+  if (
+    !('craft' in tree && tree.craft === false) &&
+    (('craft' in tree && tree.craft === true) || !buyPrice || craftPrice < buyPrice)
+  ) {
+    decisionPrice = craftPrice
   }
 
-  return tree
+  return { ...tree, components, buyPriceEach, buyPrice, decisionPrice, craftPrice }
 }

@@ -1,4 +1,5 @@
-import treeAdjustQuantity from '../src/treeAdjustQuantity'
+// @ts-nocheck
+import { treeAdjustQuantity } from '../src/treeAdjustQuantity'
 
 describe('treeAdjustQuantity (total quantity)', () => {
   it('calculates the correct quantity for recipes without components', () => {
@@ -244,6 +245,7 @@ describe('treeAdjustQuantity (total quantity)', () => {
   })
 })
 
+// @ts-nocheck
 describe('treeAdjustQuantity (used quantity)', () => {
   it('sets correct used quantity without available items', () => {
     let recipeTree = {

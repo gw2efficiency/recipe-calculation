@@ -1,3 +1,4 @@
+// @ts-nocheck
 import dailyCooldowns from '../../src/helpers/dailyCooldowns'
 
 describe('helpers > dailyCooldowns', () => {

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import recipeItems from '../../src/helpers/recipeItems'
 
 describe('helpers > recipeItems', () => {

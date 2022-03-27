@@ -1,7 +1,12 @@
-import treeAdjustQuantity from './treeAdjustQuantity'
+import { treeAdjustQuantity } from './treeAdjustQuantity'
 import treePrices from './treePrices'
 
-export default function updateTree(amount: any, tree: any, itemPrices: any, availableItems: any = {}) {
+export default function updateTree(
+  amount: any,
+  tree: any,
+  itemPrices: any,
+  availableItems: any = {}
+) {
   // Update the tree total and used quantities
   tree = treeAdjustQuantity(amount, tree, availableItems)
 

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import treeCheapestCraftFlags from '../src/treeCheapestCraftFlags'
 
 describe('treeCheapestCraftFlags', () => {

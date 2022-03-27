@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { clone } from '@devoxa/flocky'
 import updateTree from '../src/updateTree'
 
