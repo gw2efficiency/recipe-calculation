@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`treeCheapestCraftFlags sets the cheapest craft flags 1`] = `
+Object {
+  "components": Array [
+    Object {
+      "buyPrice": 1,
+      "components": undefined,
+      "craft": false,
+      "craftPrice": 123,
+      "id": 2,
+      "totalQuantity": 1,
+    },
+    Object {
+      "components": undefined,
+      "craft": true,
+      "craftPrice": 123,
+      "id": 3,
+      "totalQuantity": 2,
+    },
+    Object {
+      "buyPrice": 555,
+      "components": undefined,
+      "craft": true,
+      "craftPrice": 123,
+      "id": 4,
+      "totalQuantity": 2,
+    },
+    Object {
+      "buyPrice": 555,
+      "components": undefined,
+      "craft": false,
+      "craftPrice": 1,
+      "id": 5,
+      "totalQuantity": 2,
+    },
+  ],
+  "craft": true,
+  "craftPrice": 123,
+  "id": 1,
+  "totalQuantity": 1,
+}
+`;

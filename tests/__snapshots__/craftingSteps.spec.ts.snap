@@ -1,0 +1,279 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`craftingSteps gets the correct crafting steps 1`] = `
+Array [
+  Object {
+    "components": Array [
+      Object {
+        "id": 4,
+        "quantity": 30,
+      },
+    ],
+    "crafts": 15,
+    "disciplines": Array [
+      "Armorsmith",
+    ],
+    "id": 7,
+    "minRating": 400,
+    "output": undefined,
+    "quantity": 15,
+    "recipeId": 123,
+  },
+  Object {
+    "components": Array [
+      Object {
+        "id": 7,
+        "quantity": 3,
+      },
+    ],
+    "crafts": 3,
+    "disciplines": undefined,
+    "id": 19,
+    "minRating": undefined,
+    "output": undefined,
+    "quantity": 3,
+    "recipeId": undefined,
+  },
+  Object {
+    "components": Array [
+      Object {
+        "id": 19,
+        "quantity": 3,
+      },
+    ],
+    "crafts": 3,
+    "disciplines": undefined,
+    "id": 3,
+    "minRating": undefined,
+    "output": undefined,
+    "quantity": 3,
+    "recipeId": undefined,
+  },
+  Object {
+    "components": Array [
+      Object {
+        "id": 7,
+        "quantity": 6,
+      },
+    ],
+    "crafts": 1,
+    "disciplines": undefined,
+    "id": 15,
+    "minRating": undefined,
+    "output": undefined,
+    "quantity": 1,
+    "recipeId": undefined,
+  },
+  Object {
+    "components": Array [
+      Object {
+        "id": 7,
+        "quantity": 6,
+      },
+      Object {
+        "id": 3,
+        "quantity": 10,
+      },
+      Object {
+        "id": 5,
+        "quantity": 4,
+      },
+      Object {
+        "id": 15,
+        "quantity": 1,
+      },
+      Object {
+        "id": 1337,
+        "quantity": 1,
+      },
+    ],
+    "crafts": 1,
+    "disciplines": undefined,
+    "id": 1,
+    "minRating": undefined,
+    "output": undefined,
+    "quantity": 2,
+    "recipeId": undefined,
+  },
+]
+`;
+
+exports[`craftingSteps gets the correct crafting steps when merging components 1`] = `
+Array [
+  Object {
+    "components": Array [
+      Object {
+        "id": 6,
+        "quantity": 2,
+      },
+    ],
+    "crafts": 2,
+    "disciplines": undefined,
+    "id": 5,
+    "minRating": undefined,
+    "output": undefined,
+    "quantity": 2,
+    "recipeId": undefined,
+  },
+  Object {
+    "components": Array [
+      Object {
+        "id": 4,
+        "quantity": 1,
+      },
+    ],
+    "crafts": 1,
+    "disciplines": undefined,
+    "id": 3,
+    "minRating": undefined,
+    "output": undefined,
+    "quantity": 1,
+    "recipeId": undefined,
+  },
+  Object {
+    "components": Array [
+      Object {
+        "id": 3,
+        "quantity": 2,
+      },
+      Object {
+        "id": 5,
+        "quantity": 2,
+      },
+    ],
+    "crafts": 2,
+    "disciplines": undefined,
+    "id": 2,
+    "minRating": undefined,
+    "output": undefined,
+    "quantity": 2,
+    "recipeId": undefined,
+  },
+  Object {
+    "components": Array [
+      Object {
+        "id": 2,
+        "quantity": 1,
+      },
+      Object {
+        "id": 2,
+        "quantity": 1,
+      },
+    ],
+    "crafts": 1,
+    "disciplines": undefined,
+    "id": 1,
+    "minRating": undefined,
+    "output": undefined,
+    "quantity": 1,
+    "recipeId": undefined,
+  },
+]
+`;
+
+exports[`craftingSteps gets the correct crafting steps with mystic clovers 1`] = `
+Array [
+  Object {
+    "components": Array [
+      Object {
+        "id": 99999,
+        "quantity": 6,
+      },
+    ],
+    "crafts": 3,
+    "disciplines": undefined,
+    "id": 19675,
+    "minRating": undefined,
+    "output": undefined,
+    "quantity": 3,
+    "recipeId": undefined,
+  },
+  Object {
+    "components": Array [
+      Object {
+        "id": 4,
+        "quantity": 24,
+      },
+    ],
+    "crafts": 12,
+    "disciplines": undefined,
+    "id": 7,
+    "minRating": undefined,
+    "output": undefined,
+    "quantity": 12,
+    "recipeId": undefined,
+  },
+  Object {
+    "components": Array [
+      Object {
+        "id": 19675,
+        "quantity": 3,
+      },
+    ],
+    "crafts": 3,
+    "disciplines": undefined,
+    "id": 19,
+    "minRating": undefined,
+    "output": undefined,
+    "quantity": 3,
+    "recipeId": undefined,
+  },
+  Object {
+    "components": Array [
+      Object {
+        "id": 19,
+        "quantity": 3,
+      },
+    ],
+    "crafts": 3,
+    "disciplines": undefined,
+    "id": 3,
+    "minRating": undefined,
+    "output": undefined,
+    "quantity": 3,
+    "recipeId": undefined,
+  },
+  Object {
+    "components": Array [
+      Object {
+        "id": 7,
+        "quantity": 6,
+      },
+    ],
+    "crafts": 1,
+    "disciplines": undefined,
+    "id": 15,
+    "minRating": undefined,
+    "output": undefined,
+    "quantity": 1,
+    "recipeId": undefined,
+  },
+  Object {
+    "components": Array [
+      Object {
+        "id": 7,
+        "quantity": 6,
+      },
+      Object {
+        "id": 3,
+        "quantity": 10,
+      },
+      Object {
+        "id": 5,
+        "quantity": 4,
+      },
+      Object {
+        "id": 15,
+        "quantity": 1,
+      },
+    ],
+    "crafts": 1,
+    "disciplines": undefined,
+    "id": 1,
+    "minRating": undefined,
+    "output": undefined,
+    "quantity": 2,
+    "recipeId": undefined,
+  },
+]
+`;

@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`treePrices updates the prices for a tree 1`] = `
+Object {
+  "buyPrice": 123,
+  "buyPriceEach": 123,
+  "components": Array [
+    Object {
+      "buyPrice": 1,
+      "buyPriceEach": 1,
+      "components": undefined,
+      "decisionPrice": 1,
+      "id": 2,
+      "usedQuantity": 1,
+    },
+    Object {
+      "buyPrice": 4,
+      "buyPriceEach": 2,
+      "components": undefined,
+      "decisionPrice": 4,
+      "id": 3,
+      "usedQuantity": 2,
+    },
+  ],
+  "craftPrice": 5,
+  "decisionPrice": 5,
+  "id": 1,
+  "usedQuantity": 1,
+}
+`;
+
+exports[`treePrices updates the prices for a tree with flags correctly 1`] = `
+Object {
+  "buyPrice": 123,
+  "buyPriceEach": 123,
+  "components": Array [
+    Object {
+      "buyPrice": 1,
+      "buyPriceEach": 1,
+      "components": undefined,
+      "decisionPrice": 1,
+      "id": 2,
+      "usedQuantity": 1,
+    },
+    Object {
+      "buyPrice": 4,
+      "buyPriceEach": 2,
+      "components": undefined,
+      "decisionPrice": 4,
+      "id": 3,
+      "usedQuantity": 2,
+    },
+  ],
+  "craft": false,
+  "craftPrice": 5,
+  "decisionPrice": 123,
+  "id": 1,
+  "usedQuantity": 1,
+}
+`;
+
+exports[`treePrices updates the prices for a tree with missing buy prices 1`] = `
+Object {
+  "buyPrice": 123,
+  "buyPriceEach": 123,
+  "components": Array [
+    Object {
+      "buyPrice": 1,
+      "buyPriceEach": 1,
+      "components": undefined,
+      "decisionPrice": 1,
+      "id": 2,
+      "usedQuantity": 1,
+    },
+    Object {
+      "buyPrice": 4,
+      "buyPriceEach": 2,
+      "components": Array [
+        Object {
+          "buyPrice": false,
+          "buyPriceEach": false,
+          "components": undefined,
+          "decisionPrice": false,
+          "id": 4,
+          "usedQuantity": 50,
+        },
+        Object {
+          "buyPrice": 20,
+          "buyPriceEach": 10,
+          "components": undefined,
+          "decisionPrice": 20,
+          "id": 5,
+          "usedQuantity": 2,
+        },
+      ],
+      "craftPrice": 20,
+      "decisionPrice": 4,
+      "id": 3,
+      "usedQuantity": 2,
+    },
+  ],
+  "craftPrice": 5,
+  "decisionPrice": 5,
+  "id": 1,
+  "usedQuantity": 1,
+}
+`;

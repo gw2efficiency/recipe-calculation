@@ -1,0 +1,639 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`treeAdjustQuantity (total quantity) calculates the correct quantity for recipes with components 1`] = `
+Object {
+  "components": Array [
+    Object {
+      "components": undefined,
+      "output": 1,
+      "quantity": 1,
+      "totalQuantity": 1,
+      "usedQuantity": 1,
+    },
+    Object {
+      "components": undefined,
+      "output": 1,
+      "quantity": 5,
+      "totalQuantity": 5,
+      "usedQuantity": 5,
+    },
+  ],
+  "output": 1,
+  "quantity": 1,
+  "totalQuantity": 1,
+  "usedQuantity": 1,
+}
+`;
+
+exports[`treeAdjustQuantity (total quantity) calculates the correct quantity for recipes without components 1`] = `
+Object {
+  "components": undefined,
+  "output": 1,
+  "quantity": 1,
+  "totalQuantity": 1,
+  "usedQuantity": 1,
+}
+`;
+
+exports[`treeAdjustQuantity (total quantity) calculates the correct quantity if an amount is set 1`] = `
+Object {
+  "components": Array [
+    Object {
+      "components": undefined,
+      "output": 1,
+      "quantity": 1,
+      "totalQuantity": 2,
+      "usedQuantity": 2,
+    },
+    Object {
+      "components": undefined,
+      "output": 1,
+      "quantity": 5,
+      "totalQuantity": 10,
+      "usedQuantity": 10,
+    },
+  ],
+  "output": 1,
+  "quantity": 1,
+  "totalQuantity": 2,
+  "usedQuantity": 2,
+}
+`;
+
+exports[`treeAdjustQuantity (total quantity) calculates the correct quantity if an recipe has a output > 0 1`] = `
+Object {
+  "components": Array [
+    Object {
+      "components": undefined,
+      "output": 1,
+      "quantity": 1,
+      "totalQuantity": 1,
+      "usedQuantity": 1,
+    },
+    Object {
+      "components": undefined,
+      "output": 1,
+      "quantity": 5,
+      "totalQuantity": 5,
+      "usedQuantity": 5,
+    },
+  ],
+  "output": 5,
+  "quantity": 1,
+  "totalQuantity": 5,
+  "usedQuantity": 5,
+}
+`;
+
+exports[`treeAdjustQuantity (total quantity) calculates the correct quantity if an recipe has a output > 0 2`] = `
+Object {
+  "components": Array [
+    Object {
+      "components": undefined,
+      "output": 1,
+      "quantity": 1,
+      "totalQuantity": 1,
+      "usedQuantity": 1,
+    },
+    Object {
+      "components": undefined,
+      "output": 1,
+      "quantity": 5,
+      "totalQuantity": 5,
+      "usedQuantity": 5,
+    },
+  ],
+  "output": 5,
+  "quantity": 1,
+  "totalQuantity": 5,
+  "usedQuantity": 5,
+}
+`;
+
+exports[`treeAdjustQuantity (total quantity) calculates the correct quantity if an recipe has a output > 0 3`] = `
+Object {
+  "components": Array [
+    Object {
+      "components": undefined,
+      "output": 1,
+      "quantity": 1,
+      "totalQuantity": 5,
+      "usedQuantity": 5,
+    },
+    Object {
+      "components": undefined,
+      "output": 1,
+      "quantity": 5,
+      "totalQuantity": 25,
+      "usedQuantity": 25,
+    },
+  ],
+  "output": 5,
+  "quantity": 1,
+  "totalQuantity": 25,
+  "usedQuantity": 25,
+}
+`;
+
+exports[`treeAdjustQuantity (total quantity) calculates the correct quantity if an sub-recipe has a output > 0 1`] = `
+Object {
+  "components": Array [
+    Object {
+      "components": undefined,
+      "output": 10,
+      "quantity": 1,
+      "totalQuantity": 10,
+      "usedQuantity": 10,
+    },
+    Object {
+      "components": undefined,
+      "output": 5,
+      "quantity": 7,
+      "totalQuantity": 10,
+      "usedQuantity": 10,
+    },
+  ],
+  "output": 2,
+  "quantity": 1,
+  "totalQuantity": 2,
+  "usedQuantity": 2,
+}
+`;
+
+exports[`treeAdjustQuantity (total quantity) calculates the correct quantity if an sub-recipe has a output > 0 2`] = `
+Object {
+  "components": Array [
+    Object {
+      "components": undefined,
+      "output": 10,
+      "quantity": 1,
+      "totalQuantity": 10,
+      "usedQuantity": 10,
+    },
+    Object {
+      "components": undefined,
+      "output": 5,
+      "quantity": 7,
+      "totalQuantity": 15,
+      "usedQuantity": 15,
+    },
+  ],
+  "output": 2,
+  "quantity": 1,
+  "totalQuantity": 4,
+  "usedQuantity": 4,
+}
+`;
+
+exports[`treeAdjustQuantity (total quantity) does not modify the initial recipe tree 1`] = `
+Object {
+  "components": Array [
+    Object {
+      "quantity": 1,
+    },
+    Object {
+      "quantity": 5,
+    },
+  ],
+  "quantity": 1,
+}
+`;
+
+exports[`treeAdjustQuantity (total quantity) does not modify the initial recipe tree 2`] = `
+Object {
+  "components": Array [
+    Object {
+      "components": undefined,
+      "output": 1,
+      "quantity": 1,
+      "totalQuantity": 1,
+      "usedQuantity": 1,
+    },
+    Object {
+      "components": undefined,
+      "output": 1,
+      "quantity": 5,
+      "totalQuantity": 5,
+      "usedQuantity": 5,
+    },
+  ],
+  "output": 1,
+  "quantity": 1,
+  "totalQuantity": 1,
+  "usedQuantity": 1,
+}
+`;
+
+exports[`treeAdjustQuantity (total quantity) rounds correctly if the output is percentage based 1`] = `
+Object {
+  "components": Array [
+    Object {
+      "components": undefined,
+      "output": 0.31,
+      "quantity": 77,
+      "totalQuantity": 77,
+      "usedQuantity": 77,
+    },
+  ],
+  "output": 1,
+  "quantity": 1,
+  "totalQuantity": 1,
+  "usedQuantity": 1,
+}
+`;
+
+exports[`treeAdjustQuantity (total quantity) works with a complex real recipe 1`] = `
+Object {
+  "components": Array [
+    Object {
+      "components": undefined,
+      "output": 1,
+      "quantity": 5,
+      "totalQuantity": 10,
+      "usedQuantity": 10,
+    },
+    Object {
+      "components": undefined,
+      "output": 1,
+      "quantity": 5,
+      "totalQuantity": 10,
+      "usedQuantity": 10,
+    },
+    Object {
+      "components": Array [
+        Object {
+          "components": undefined,
+          "output": 1,
+          "quantity": 25,
+          "totalQuantity": 50,
+          "usedQuantity": 50,
+        },
+        Object {
+          "components": Array [
+            Object {
+              "components": undefined,
+              "output": 1,
+              "quantity": 3,
+              "totalQuantity": 60,
+              "usedQuantity": 60,
+            },
+          ],
+          "output": 1,
+          "quantity": 10,
+          "totalQuantity": 20,
+          "usedQuantity": 20,
+        },
+        Object {
+          "components": Array [
+            Object {
+              "components": undefined,
+              "output": 1,
+              "quantity": 2,
+              "totalQuantity": 16,
+              "usedQuantity": 16,
+            },
+          ],
+          "output": 1,
+          "quantity": 4,
+          "totalQuantity": 8,
+          "usedQuantity": 8,
+        },
+      ],
+      "output": 5,
+      "quantity": 5,
+      "totalQuantity": 10,
+      "usedQuantity": 10,
+    },
+  ],
+  "output": 1,
+  "quantity": 1,
+  "totalQuantity": 2,
+  "usedQuantity": 2,
+}
+`;
+
+exports[`treeAdjustQuantity (total quantity) works with a simple real recipe 1`] = `
+Object {
+  "components": Array [
+    Object {
+      "components": undefined,
+      "output": 1,
+      "quantity": 25,
+      "totalQuantity": 50,
+      "usedQuantity": 50,
+    },
+    Object {
+      "components": Array [
+        Object {
+          "components": undefined,
+          "output": 1,
+          "quantity": 3,
+          "totalQuantity": 60,
+          "usedQuantity": 60,
+        },
+      ],
+      "output": 1,
+      "quantity": 10,
+      "totalQuantity": 20,
+      "usedQuantity": 20,
+    },
+    Object {
+      "components": Array [
+        Object {
+          "components": undefined,
+          "output": 1,
+          "quantity": 2,
+          "totalQuantity": 16,
+          "usedQuantity": 16,
+        },
+      ],
+      "output": 1,
+      "quantity": 4,
+      "totalQuantity": 8,
+      "usedQuantity": 8,
+    },
+  ],
+  "output": 5,
+  "quantity": 1,
+  "totalQuantity": 10,
+  "usedQuantity": 10,
+}
+`;
+
+exports[`treeAdjustQuantity (used quantity) always crafts the root node even if it is available 1`] = `
+Object {
+  "components": undefined,
+  "id": 1,
+  "output": 1,
+  "quantity": 1,
+  "totalQuantity": 1,
+  "usedQuantity": 1,
+}
+`;
+
+exports[`treeAdjustQuantity (used quantity) does only craft part of the items if the tree result if partially available 1`] = `
+Object {
+  "components": Array [
+    Object {
+      "components": Array [
+        Object {
+          "components": undefined,
+          "id": 2,
+          "output": 1,
+          "quantity": 1,
+          "totalQuantity": 5,
+          "usedQuantity": 2,
+        },
+      ],
+      "id": 1,
+      "output": 1,
+      "quantity": 1,
+      "totalQuantity": 10,
+      "usedQuantity": 5,
+    },
+  ],
+  "id": 0,
+  "output": 1,
+  "quantity": 1,
+  "totalQuantity": 10,
+  "usedQuantity": 10,
+}
+`;
+
+exports[`treeAdjustQuantity (used quantity) doesn't use tree components if the tree result is available or not crafted 1`] = `
+Object {
+  "components": Array [
+    Object {
+      "components": undefined,
+      "id": 2,
+      "output": 1,
+      "quantity": 1,
+      "totalQuantity": 1,
+      "usedQuantity": 0,
+    },
+    Object {
+      "components": Array [
+        Object {
+          "components": undefined,
+          "id": 4,
+          "output": 1,
+          "quantity": 5,
+          "totalQuantity": 0,
+          "usedQuantity": 0,
+        },
+      ],
+      "id": 3,
+      "output": 1,
+      "quantity": 1,
+      "totalQuantity": 1,
+      "usedQuantity": 0,
+    },
+    Object {
+      "components": Array [
+        Object {
+          "components": undefined,
+          "id": 4,
+          "output": 1,
+          "quantity": 5,
+          "totalQuantity": 5,
+          "usedQuantity": 5,
+        },
+      ],
+      "craft": false,
+      "id": 6,
+      "output": 1,
+      "quantity": 1,
+      "totalQuantity": 1,
+      "usedQuantity": 1,
+    },
+    Object {
+      "components": Array [
+        Object {
+          "components": undefined,
+          "id": 4,
+          "output": 1,
+          "quantity": 5,
+          "totalQuantity": 5,
+          "usedQuantity": 0,
+        },
+      ],
+      "id": 5,
+      "output": 1,
+      "quantity": 1,
+      "totalQuantity": 1,
+      "usedQuantity": 1,
+    },
+  ],
+  "id": 1,
+  "output": 1,
+  "quantity": 1,
+  "totalQuantity": 1,
+  "usedQuantity": 1,
+}
+`;
+
+exports[`treeAdjustQuantity (used quantity) doesn't use tree sub-components if the tree result is not crafted or available 1`] = `
+Object {
+  "components": Array [
+    Object {
+      "components": Array [
+        Object {
+          "components": Array [
+            Object {
+              "components": undefined,
+              "id": 4,
+              "output": 1,
+              "quantity": 5,
+              "totalQuantity": 25,
+              "usedQuantity": 25,
+            },
+          ],
+          "craft": true,
+          "id": 3,
+          "output": 1,
+          "quantity": 5,
+          "totalQuantity": 5,
+          "usedQuantity": 5,
+        },
+      ],
+      "craft": false,
+      "id": 2,
+      "output": 1,
+      "quantity": 1,
+      "totalQuantity": 1,
+      "usedQuantity": 1,
+    },
+    Object {
+      "components": Array [
+        Object {
+          "components": Array [
+            Object {
+              "components": undefined,
+              "id": 4,
+              "output": 1,
+              "quantity": 5,
+              "totalQuantity": 0,
+              "usedQuantity": 0,
+            },
+          ],
+          "id": 3,
+          "output": 1,
+          "quantity": 5,
+          "totalQuantity": 0,
+          "usedQuantity": 0,
+        },
+      ],
+      "id": 99,
+      "output": 1,
+      "quantity": 1,
+      "totalQuantity": 1,
+      "usedQuantity": 0,
+    },
+    Object {
+      "components": Array [
+        Object {
+          "components": Array [
+            Object {
+              "components": undefined,
+              "id": 4,
+              "output": 1,
+              "quantity": 5,
+              "totalQuantity": 25,
+              "usedQuantity": 5,
+            },
+          ],
+          "craft": true,
+          "id": 6,
+          "output": 1,
+          "quantity": 5,
+          "totalQuantity": 5,
+          "usedQuantity": 5,
+        },
+      ],
+      "craft": true,
+      "id": 5,
+      "output": 1,
+      "quantity": 1,
+      "totalQuantity": 1,
+      "usedQuantity": 1,
+    },
+  ],
+  "id": 1,
+  "output": 1,
+  "quantity": 1,
+  "totalQuantity": 1,
+  "usedQuantity": 1,
+}
+`;
+
+exports[`treeAdjustQuantity (used quantity) sets correct used quantity with available items 1`] = `
+Object {
+  "components": Array [
+    Object {
+      "components": undefined,
+      "id": 2,
+      "output": 1,
+      "quantity": 1,
+      "totalQuantity": 1,
+      "usedQuantity": 0,
+    },
+    Object {
+      "components": undefined,
+      "id": 3,
+      "output": 1,
+      "quantity": 5,
+      "totalQuantity": 5,
+      "usedQuantity": 3,
+    },
+    Object {
+      "components": undefined,
+      "id": 3,
+      "output": 1,
+      "quantity": 5,
+      "totalQuantity": 5,
+      "usedQuantity": 5,
+    },
+    Object {
+      "components": undefined,
+      "id": 2,
+      "output": 1,
+      "quantity": 1,
+      "totalQuantity": 1,
+      "usedQuantity": 0,
+    },
+  ],
+  "id": 1,
+  "output": 1,
+  "quantity": 1,
+  "totalQuantity": 1,
+  "usedQuantity": 1,
+}
+`;
+
+exports[`treeAdjustQuantity (used quantity) sets correct used quantity without available items 1`] = `
+Object {
+  "components": Array [
+    Object {
+      "components": undefined,
+      "id": 2,
+      "output": 1,
+      "quantity": 1,
+      "totalQuantity": 1,
+      "usedQuantity": 1,
+    },
+    Object {
+      "components": undefined,
+      "id": 3,
+      "output": 1,
+      "quantity": 5,
+      "totalQuantity": 5,
+      "usedQuantity": 5,
+    },
+  ],
+  "id": 1,
+  "output": 1,
+  "quantity": 1,
+  "totalQuantity": 1,
+  "usedQuantity": 1,
+}
+`;

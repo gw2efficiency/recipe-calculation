@@ -120,59 +120,7 @@ describe('craftingSteps', () => {
     }
 
     const usedItemObject = craftingSteps(tree)
-    expect(usedItemObject).toEqual([
-      {
-        id: 7,
-        crafts: 15,
-        quantity: 15,
-        minRating: 400,
-        disciplines: ['Armorsmith'],
-        recipeId: 123,
-        components: [{ id: 4, quantity: 30 }],
-      },
-      {
-        id: 19,
-        crafts: 3,
-        quantity: 3,
-        minRating: undefined,
-        disciplines: undefined,
-        recipeId: undefined,
-        components: [{ id: 7, quantity: 3 }],
-      },
-      {
-        id: 3,
-        crafts: 3,
-        quantity: 3,
-        minRating: undefined,
-        disciplines: undefined,
-        recipeId: undefined,
-        components: [{ id: 19, quantity: 3 }],
-      },
-      {
-        id: 15,
-        crafts: 1,
-        quantity: 1,
-        minRating: undefined,
-        disciplines: undefined,
-        recipeId: undefined,
-        components: [{ id: 7, quantity: 6 }],
-      },
-      {
-        id: 1,
-        crafts: 1,
-        quantity: 2,
-        minRating: undefined,
-        disciplines: undefined,
-        recipeId: undefined,
-        components: [
-          { id: 7, quantity: 6 },
-          { id: 3, quantity: 10 },
-          { id: 5, quantity: 4 },
-          { id: 15, quantity: 1 },
-          { id: 1337, quantity: 1 },
-        ],
-      },
-    ])
+    expect(usedItemObject).toMatchSnapshot()
   })
 
   it('gets the correct crafting steps with mystic clovers', () => {
@@ -274,67 +222,7 @@ describe('craftingSteps', () => {
     }
 
     const usedItemObject = craftingSteps(tree)
-    expect(usedItemObject).toEqual([
-      {
-        id: 19675,
-        crafts: 3,
-        quantity: 3,
-        minRating: undefined,
-        disciplines: undefined,
-        recipeId: undefined,
-        components: [{ id: 99999, quantity: 6 }],
-      },
-      {
-        id: 7,
-        crafts: 12,
-        quantity: 12,
-        minRating: undefined,
-        disciplines: undefined,
-        recipeId: undefined,
-        components: [{ id: 4, quantity: 24 }],
-      },
-      {
-        id: 19,
-        crafts: 3,
-        quantity: 3,
-        minRating: undefined,
-        disciplines: undefined,
-        recipeId: undefined,
-        components: [{ id: 19675, quantity: 3 }],
-      },
-      {
-        id: 3,
-        crafts: 3,
-        quantity: 3,
-        minRating: undefined,
-        disciplines: undefined,
-        recipeId: undefined,
-        components: [{ id: 19, quantity: 3 }],
-      },
-      {
-        id: 15,
-        crafts: 1,
-        quantity: 1,
-        minRating: undefined,
-        disciplines: undefined,
-        recipeId: undefined,
-        components: [{ id: 7, quantity: 6 }],
-      },
-      {
-        id: 1,
-        crafts: 1,
-        quantity: 2,
-        minRating: undefined,
-        disciplines: undefined,
-        recipeId: undefined,
-        components: [
-          { id: 7, quantity: 6 },
-          { id: 3, quantity: 10 },
-          { id: 5, quantity: 4 },
-          { id: 15, quantity: 1 },
-        ],
-      },
-    ])
+    expect(usedItemObject).toMatchSnapshot()
   })
 
   it('gets the correct crafting steps when merging components', () => {
@@ -432,49 +320,6 @@ describe('craftingSteps', () => {
 
     const usedItemObject = craftingSteps(tree)
 
-    expect(usedItemObject).toEqual([
-      {
-        id: 5,
-        quantity: 2,
-        minRating: undefined,
-        disciplines: undefined,
-        recipeId: undefined,
-        components: [{ id: 6, quantity: 2 }],
-        crafts: 2,
-      },
-      {
-        id: 3,
-        quantity: 1,
-        minRating: undefined,
-        disciplines: undefined,
-        recipeId: undefined,
-        components: [{ id: 4, quantity: 1 }],
-        crafts: 1,
-      },
-      {
-        id: 2,
-        quantity: 2,
-        minRating: undefined,
-        disciplines: undefined,
-        recipeId: undefined,
-        components: [
-          { id: 3, quantity: 2 },
-          { id: 5, quantity: 2 },
-        ],
-        crafts: 2,
-      },
-      {
-        id: 1,
-        quantity: 1,
-        minRating: undefined,
-        disciplines: undefined,
-        recipeId: undefined,
-        components: [
-          { id: 2, quantity: 1 },
-          { id: 2, quantity: 1 },
-        ],
-        crafts: 1,
-      },
-    ])
+    expect(usedItemObject).toMatchSnapshot()
   })
 })
