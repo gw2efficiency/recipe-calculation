@@ -1,21 +1,15 @@
 import { treeAdjustQuantity } from './treeAdjustQuantity'
 import { treePrices } from './treePrices'
 import { treeCheapestCraftFlags } from './treeCheapestCraftFlags'
-import {
-  AvailableItems,
-  ForceBuyItems,
-  ItemPrices,
-  RecipeTree,
-  RecipeTreeWithCraftFlags,
-} from './types'
+import { RecipeTree, RecipeTreeWithCraftFlags } from './types'
 import { NestedRecipe } from '@gw2efficiency/recipe-nesting'
 
 export function cheapestTree(
   amount: number,
   tree: NestedRecipe,
-  itemPrices: ItemPrices,
-  availableItems: AvailableItems = {},
-  forceBuyItems: ForceBuyItems = []
+  itemPrices: Record<string, number>,
+  availableItems: Record<string, number> = {},
+  forceBuyItems: Array<number> = []
 ): RecipeTreeWithCraftFlags {
   // Adjust the tree total and used quantities
   const treeWithQuantity = treeAdjustQuantity(amount, tree as RecipeTree, availableItems)

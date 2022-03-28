@@ -1,8 +1,8 @@
 import { RecipeTreeWithCraftFlags } from './types'
 
 export interface UsedItemsBreakdown {
-  buy: Record<number, number>
-  available: Record<number, number>
+  buy: Record<string, number>
+  available: Record<string, number>
 }
 
 // Generate a list of items to buy and used available items

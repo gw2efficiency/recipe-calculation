@@ -1,22 +1,17 @@
-import {
-  RecipeTreeWithCraftFlags,
-  ItemPrices,
-  RecipeTreeWithPrices,
-  RecipeTreeWithQuantity,
-} from './types'
+import { RecipeTreeWithCraftFlags, RecipeTreeWithPrices, RecipeTreeWithQuantity } from './types'
 
 // Update the tree prices
 export function treePrices(
   tree: RecipeTreeWithCraftFlags,
-  itemPrices: ItemPrices
+  itemPrices: Record<string, number>
 ): RecipeTreeWithCraftFlags
 export function treePrices(
   tree: RecipeTreeWithQuantity,
-  itemPrices: ItemPrices
+  itemPrices: Record<string, number>
 ): RecipeTreeWithPrices
 export function treePrices(
   tree: RecipeTreeWithQuantity | RecipeTreeWithCraftFlags,
-  itemPrices: ItemPrices
+  itemPrices: Record<string, number>
 ): RecipeTreeWithPrices | RecipeTreeWithCraftFlags {
   // Calculate the buy prices
   const buyPriceEach = itemPrices[tree.id] || false

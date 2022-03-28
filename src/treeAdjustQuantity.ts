@@ -1,9 +1,4 @@
-import {
-  AvailableItems,
-  RecipeTreeWithCraftFlags,
-  RecipeTree,
-  RecipeTreeWithQuantity,
-} from './types'
+import { RecipeTreeWithCraftFlags, RecipeTree, RecipeTreeWithQuantity } from './types'
 
 // Make sure that we don't modify the passed-in object
 // We still want to work with a reference in the actual calculation
@@ -11,17 +6,17 @@ import {
 export function treeAdjustQuantity(
   amount: number,
   tree: RecipeTreeWithCraftFlags,
-  availableItems?: AvailableItems
+  availableItems?: Record<string, number>
 ): RecipeTreeWithCraftFlags
 export function treeAdjustQuantity(
   amount: number,
   tree: RecipeTree,
-  availableItems?: AvailableItems
+  availableItems?: Record<string, number>
 ): RecipeTreeWithQuantity
 export function treeAdjustQuantity(
   amount: number,
   tree: RecipeTree | RecipeTreeWithCraftFlags,
-  availableItems: AvailableItems = {}
+  availableItems: Record<string, number> = {}
 ) {
   return treeAdjustQuantityInner(amount, tree, { ...availableItems })
 }
@@ -31,7 +26,7 @@ export function treeAdjustQuantity(
 function treeAdjustQuantityInner(
   amount: number,
   tree: RecipeTree | RecipeTreeWithCraftFlags,
-  availableItems: AvailableItems,
+  availableItems: Record<string, number>,
   ignoreAvailable = false,
   nesting = 0
 ): RecipeTreeWithCraftFlags | RecipeTreeWithQuantity {

@@ -1,11 +1,11 @@
-import { NestedRecipe } from '@gw2efficiency/recipe-nesting'
+import type { NestedRecipe as NestedRecipeTree } from '@gw2efficiency/recipe-nesting'
 
-export type ExtendRecipeTree<TBase, TExtend> = Omit<TBase, 'type' | 'components'> & {
+type ExtendRecipeTree<TBaseTree, TProperties> = Omit<TBaseTree, 'type' | 'components'> & {
   type: 'Recipe' | 'Item' | 'Currency'
-  components?: Array<ExtendRecipeTree<TBase, TExtend>>
-} & TExtend
+  components?: Array<ExtendRecipeTree<TBaseTree, TProperties>>
+} & TProperties
 
-export type RecipeTree = ExtendRecipeTree<NestedRecipe, { __never: never }>
+export type RecipeTree = ExtendRecipeTree<NestedRecipeTree, { __never: never }>
 
 export type RecipeTreeWithQuantity = ExtendRecipeTree<
   RecipeTree,
@@ -32,9 +32,3 @@ export type RecipeTreeWithCraftFlags = ExtendRecipeTree<
     craft: boolean
   }
 >
-
-export type ItemPrices = Record<string, number>
-
-export type AvailableItems = Record<string, number>
-
-export type ForceBuyItems = Array<number>

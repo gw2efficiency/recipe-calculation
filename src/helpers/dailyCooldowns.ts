@@ -3,7 +3,7 @@ import { RecipeTreeWithCraftFlags } from '../types'
 
 const dailyCooldownIds = DAILY_COOLDOWNS.filter((x) => x.craftInterval === 'daily').map((x) => x.id)
 
-export type DailyCooldownsBreakdown = Record<number, number>
+export type DailyCooldownsBreakdown = Record<string, number>
 
 // Get a list of daily cooldowns used in the recipe
 export function dailyCooldowns(

@@ -1,9 +1,9 @@
-import { RecipeTreeWithCraftFlags, ForceBuyItems, RecipeTreeWithPrices } from './types'
+import { RecipeTreeWithCraftFlags, RecipeTreeWithPrices } from './types'
 
 // Set the craft flags based on the cheapest price
 export function treeCheapestCraftFlags(
   tree: RecipeTreeWithPrices,
-  forceBuyItems: ForceBuyItems
+  forceBuyItems: Array<number>
 ): RecipeTreeWithCraftFlags {
   // Craft the item if it can't be bought or it is cheaper to craft
   const shouldForceBuy = forceBuyItems.indexOf(tree.id) !== -1
