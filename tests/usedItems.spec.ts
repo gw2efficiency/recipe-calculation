@@ -1,9 +1,9 @@
-// @ts-nocheck
+
 import usedItems from '../src/usedItems'
 
 describe('usedItems', () => {
   it('gets the correct items to buy and used available items', () => {
-    const tree = {
+    const tree: any = {
       craft: true,
       craftPrice: 36,
       id: 1,

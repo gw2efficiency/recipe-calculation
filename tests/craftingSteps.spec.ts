@@ -1,9 +1,8 @@
-// @ts-nocheck
 import craftingSteps from '../src/craftingSteps'
 
 describe('craftingSteps', () => {
   it('gets the correct crafting steps', () => {
-    const tree = {
+    const tree: any = {
       id: 1,
       craft: true,
       totalQuantity: 2,
@@ -124,7 +123,7 @@ describe('craftingSteps', () => {
   })
 
   it('gets the correct crafting steps with mystic clovers', () => {
-    const tree = {
+    const tree: any = {
       id: 1,
       craft: true,
       totalQuantity: 2,
@@ -226,7 +225,7 @@ describe('craftingSteps', () => {
   })
 
   it('gets the correct crafting steps when merging components', () => {
-    const tree = {
+    const tree: any = {
       id: 1,
       craft: true,
       totalQuantity: 1,

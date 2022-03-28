@@ -1,9 +1,9 @@
-// @ts-nocheck
+
 import treeCheapestCraftFlags from '../src/treeCheapestCraftFlags'
 
 describe('treeCheapestCraftFlags', () => {
   it('sets the cheapest craft flags', () => {
-    const recipeTree = {
+    const recipeTree: any = {
       id: 1,
       totalQuantity: 1,
       craftPrice: 123,

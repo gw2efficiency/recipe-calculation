@@ -1,4 +1,4 @@
-// @ts-nocheck
+
 import { clone } from '@devoxa/flocky'
 import updateTree from '../src/updateTree'
 
@@ -80,14 +80,14 @@ describe('updateTree', () => {
   }
 
   it('keeps the tree the same if nothing changed', () => {
-    const tree = clone(calculatedTree)
+    const tree: any = clone(calculatedTree)
     const prices = { 1: 10, 2: 42, 3: 10, 4: 10, 5: 1000, 6: 10 }
     const updatedTree = updateTree(2, tree, prices)
     expect(updatedTree).toEqual(calculatedTree)
   })
 
   it('updates a tree correctly if the amount, prices or craft flags changed', () => {
-    const tree = clone(calculatedTree)
+    const tree: any = clone(calculatedTree)
     tree.components[1].craft = true
     const prices = { 1: 10, 2: 42, 3: 10, 4: 10, 5: 1000, 6: 11 }
     const updatedTree = updateTree(5, tree, prices)
@@ -95,7 +95,7 @@ describe('updateTree', () => {
   })
 
   it('updates a tree correctly if the available items changed', () => {
-    const tree = clone(calculatedTree)
+    const tree: any = clone(calculatedTree)
     tree.components[1].craft = true
     const prices = { 1: 10, 2: 42, 3: 10, 4: 10, 5: 1000, 6: 11 }
     const updatedTree = updateTree(5, tree, prices, { 2: 1000 })

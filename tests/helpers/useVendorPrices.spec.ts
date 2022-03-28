@@ -1,4 +1,4 @@
-// @ts-nocheck
+
 import useVendorPrices from '../../src/helpers/useVendorPrices'
 
 describe('helpers > useVendorPrices', () => {

@@ -1,9 +1,8 @@
-// @ts-nocheck
 import cheapestTree from '../src/cheapestTree'
 
 describe('cheapestTree', () => {
   it('can calculate the cheapest tree correctly', () => {
-    const recipeTree = {
+    const recipeTree: any = {
       id: 1,
       quantity: 1,
       output: 1,
@@ -20,7 +19,7 @@ describe('cheapestTree', () => {
   })
 
   it('can calculate the cheapest tree correctly with available items', () => {
-    const recipeTree = {
+    const recipeTree: any = {
       id: 1,
       quantity: 1,
       output: 1,
@@ -38,7 +37,7 @@ describe('cheapestTree', () => {
   })
 
   it('can calculate the cheapest tree correctly with force buy items', () => {
-    const recipeTree = {
+    const recipeTree: any = {
       id: 1,
       quantity: 1,
       output: 1,

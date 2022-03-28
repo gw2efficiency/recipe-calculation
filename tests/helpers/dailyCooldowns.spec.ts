@@ -1,9 +1,8 @@
-// @ts-nocheck
 import dailyCooldowns from '../../src/helpers/dailyCooldowns'
 
 describe('helpers > dailyCooldowns', () => {
   it('gets all daily cooldowns from a recipe tree', () => {
-    const tree = {
+    const tree: any = {
       id: 1,
       craft: true,
       totalQuantity: 2,

@@ -1,4 +1,4 @@
-// @ts-nocheck
+
 import module from '../src/index'
 
 describe('module', () => {

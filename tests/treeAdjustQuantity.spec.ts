@@ -1,23 +1,23 @@
-// @ts-nocheck
+
 import { treeAdjustQuantity } from '../src/treeAdjustQuantity'
 
 describe('treeAdjustQuantity (total quantity)', () => {
   it('calculates the correct quantity for recipes without components', () => {
-    const recipeTree = { quantity: 1 }
+    const recipeTree: any = { quantity: 1 }
 
     const adjustedTree = treeAdjustQuantity(1, recipeTree)
     expect(adjustedTree).toMatchSnapshot()
   })
 
   it('calculates the correct quantity for recipes with components', () => {
-    const recipeTree = { quantity: 1, components: [{ quantity: 1 }, { quantity: 5 }] }
+    const recipeTree: any = { quantity: 1, components: [{ quantity: 1 }, { quantity: 5 }] }
 
     const adjustedTree = treeAdjustQuantity(1, recipeTree)
     expect(adjustedTree).toMatchSnapshot()
   })
 
   it('does not modify the initial recipe tree', () => {
-    const recipeTree = { quantity: 1, components: [{ quantity: 1 }, { quantity: 5 }] }
+    const recipeTree: any = { quantity: 1, components: [{ quantity: 1 }, { quantity: 5 }] }
 
     const adjustedTree = treeAdjustQuantity(1, recipeTree)
     expect(recipeTree).toMatchSnapshot()
@@ -25,14 +25,14 @@ describe('treeAdjustQuantity (total quantity)', () => {
   })
 
   it('calculates the correct quantity if an amount is set', () => {
-    const recipeTree = { quantity: 1, components: [{ quantity: 1 }, { quantity: 5 }] }
+    const recipeTree: any = { quantity: 1, components: [{ quantity: 1 }, { quantity: 5 }] }
 
     const adjustedTree = treeAdjustQuantity(2, recipeTree)
     expect(adjustedTree).toMatchSnapshot()
   })
 
   it('calculates the correct quantity if an recipe has a output > 0', () => {
-    const recipeTree = { quantity: 1, output: 5, components: [{ quantity: 1 }, { quantity: 5 }] }
+    const recipeTree: any = { quantity: 1, output: 5, components: [{ quantity: 1 }, { quantity: 5 }] }
     const adjustedTreeOne = treeAdjustQuantity(1, recipeTree)
     expect(adjustedTreeOne).toMatchSnapshot()
 
@@ -44,7 +44,7 @@ describe('treeAdjustQuantity (total quantity)', () => {
   })
 
   it('calculates the correct quantity if an sub-recipe has a output > 0', () => {
-    const recipeTree = {
+    const recipeTree: any = {
       quantity: 1,
       output: 2,
       components: [
@@ -52,6 +52,7 @@ describe('treeAdjustQuantity (total quantity)', () => {
         { quantity: 7, output: 5 },
       ],
     }
+
     const adjustedTreeOne = treeAdjustQuantity(1, recipeTree)
     expect(adjustedTreeOne).toMatchSnapshot()
 
@@ -60,7 +61,7 @@ describe('treeAdjustQuantity (total quantity)', () => {
   })
 
   it('works with a simple real recipe', () => {
-    const recipeTree = {
+    const recipeTree: any = {
       output: 5,
       quantity: 1,
       components: [
@@ -75,7 +76,7 @@ describe('treeAdjustQuantity (total quantity)', () => {
   })
 
   it('works with a complex real recipe', () => {
-    const recipeTree = {
+    const recipeTree: any = {
       quantity: 1,
       output: 1,
       components: [
@@ -98,7 +99,7 @@ describe('treeAdjustQuantity (total quantity)', () => {
   })
 
   it('rounds correctly if the output is percentage based', () => {
-    const recipeTree = { quantity: 1, components: [{ quantity: 77, output: 0.31 }] }
+    const recipeTree: any = { quantity: 1, components: [{ quantity: 77, output: 0.31 }] }
 
     const adjustedTree = treeAdjustQuantity(1, recipeTree)
     expect(adjustedTree).toMatchSnapshot()
@@ -107,7 +108,7 @@ describe('treeAdjustQuantity (total quantity)', () => {
 
 describe('treeAdjustQuantity (used quantity)', () => {
   it('sets correct used quantity without available items', () => {
-    const recipeTree = {
+    const recipeTree: any = {
       id: 1,
       quantity: 1,
       output: 1,
@@ -122,7 +123,7 @@ describe('treeAdjustQuantity (used quantity)', () => {
   })
 
   it('sets correct used quantity with available items', () => {
-    const recipeTree = {
+    const recipeTree: any = {
       id: 1,
       quantity: 1,
       output: 1,
@@ -140,7 +141,7 @@ describe('treeAdjustQuantity (used quantity)', () => {
   })
 
   it("doesn't use tree components if the tree result is available or not crafted", () => {
-    const recipeTree = {
+    const recipeTree: any = {
       id: 1,
       quantity: 1,
       output: 1,
@@ -173,7 +174,7 @@ describe('treeAdjustQuantity (used quantity)', () => {
   })
 
   it("doesn't use tree sub-components if the tree result is not crafted or available", () => {
-    const recipeTree = {
+    const recipeTree: any = {
       id: 1,
       quantity: 1,
       output: 1,
@@ -229,7 +230,7 @@ describe('treeAdjustQuantity (used quantity)', () => {
   })
 
   it('does only craft part of the items if the tree result if partially available', () => {
-    const recipeTree = {
+    const recipeTree: any = {
       id: 0,
       quantity: 1,
       output: 1,
@@ -248,7 +249,7 @@ describe('treeAdjustQuantity (used quantity)', () => {
   })
 
   it('always crafts the root node even if it is available', () => {
-    const recipeTree = {
+    const recipeTree: any = {
       id: 1,
       quantity: 1,
       output: 1,

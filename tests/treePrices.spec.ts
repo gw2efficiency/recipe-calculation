@@ -1,9 +1,9 @@
-// @ts-nocheck
+
 import treePrices from '../src/treePrices'
 
 describe('treePrices', () => {
   it('updates the prices for a tree', () => {
-    const recipeTree = {
+    const recipeTree: any = {
       id: 1,
       usedQuantity: 1,
       components: [
@@ -18,7 +18,7 @@ describe('treePrices', () => {
   })
 
   it('updates the prices for a tree with flags correctly', () => {
-    const recipeTree = {
+    const recipeTree: any = {
       id: 1,
       usedQuantity: 1,
       craft: false,
@@ -34,7 +34,7 @@ describe('treePrices', () => {
   })
 
   it('updates the prices for a tree with missing buy prices', () => {
-    const recipeTree = {
+    const recipeTree: any = {
       id: 1,
       usedQuantity: 1,
       components: [
