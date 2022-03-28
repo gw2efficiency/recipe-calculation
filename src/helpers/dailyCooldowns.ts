@@ -6,10 +6,7 @@ const dailyCooldownIds = DAILY_COOLDOWNS.filter((x) => x.craftInterval === 'dail
 export type DailyCooldownsBreakdown = Record<number, number>
 
 // Get a list of daily cooldowns used in the recipe
-export default function dailyCooldowns(
-  tree: CheapestRecipeTree,
-  breakdown: DailyCooldownsBreakdown = {}
-) {
+export function dailyCooldowns(tree: CheapestRecipeTree, breakdown: DailyCooldownsBreakdown = {}) {
   if (!tree.components || tree.craft === false) {
     return breakdown
   }

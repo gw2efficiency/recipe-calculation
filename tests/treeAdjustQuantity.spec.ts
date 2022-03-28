@@ -1,4 +1,3 @@
-
 import { treeAdjustQuantity } from '../src/treeAdjustQuantity'
 
 describe('treeAdjustQuantity (total quantity)', () => {
@@ -32,7 +31,11 @@ describe('treeAdjustQuantity (total quantity)', () => {
   })
 
   it('calculates the correct quantity if an recipe has a output > 0', () => {
-    const recipeTree: any = { quantity: 1, output: 5, components: [{ quantity: 1 }, { quantity: 5 }] }
+    const recipeTree: any = {
+      quantity: 1,
+      output: 5,
+      components: [{ quantity: 1 }, { quantity: 5 }],
+    }
     const adjustedTreeOne = treeAdjustQuantity(1, recipeTree)
     expect(adjustedTreeOne).toMatchSnapshot()
 

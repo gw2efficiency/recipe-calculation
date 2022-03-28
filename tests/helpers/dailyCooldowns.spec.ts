@@ -1,4 +1,4 @@
-import dailyCooldowns from '../../src/helpers/dailyCooldowns'
+import { dailyCooldowns } from '../../src/helpers/dailyCooldowns'
 
 describe('helpers > dailyCooldowns', () => {
   it('gets all daily cooldowns from a recipe tree', () => {

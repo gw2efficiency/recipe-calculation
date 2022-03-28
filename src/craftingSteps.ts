@@ -1,7 +1,7 @@
 import { CheapestRecipeTree } from './types'
 
-export default function craftingStepsWrapper(tree: CheapestRecipeTree) {
-  let steps = craftingSteps(tree).reverse()
+export function craftingSteps(tree: CheapestRecipeTree) {
+  let steps = craftingStepsInner(tree).reverse()
 
   // We don't care about steps where we have to craft "0" of something
   // This can happen when a crafting tree is updated after the initial calculation
@@ -36,7 +36,7 @@ interface CraftingStep {
 }
 
 // Generate an ordered list of crafting steps
-function craftingSteps(tree: CheapestRecipeTree, steps: Array<CraftingStep> = [], index = 0) {
+function craftingStepsInner(tree: CheapestRecipeTree, steps: Array<CraftingStep> = [], index = 0) {
   const treeComponents = tree.components
 
   // Skip any tree parts where nothing needs to be crafted
@@ -76,6 +76,6 @@ function craftingSteps(tree: CheapestRecipeTree, steps: Array<CraftingStep> = []
   }
 
   // Go through the components and push them after the index of their parent
-  treeComponents.map((component) => craftingSteps(component, steps, index + 1))
+  treeComponents.map((component) => craftingStepsInner(component, steps, index + 1))
   return steps
 }

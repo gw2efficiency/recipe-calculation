@@ -1,4 +1,4 @@
-import recipeItems from '../../src/helpers/recipeItems'
+import { recipeItems } from '../../src/helpers/recipeItems'
 
 describe('helpers > recipeItems', () => {
   it('gets all unique item ids of a recipe tree', () => {

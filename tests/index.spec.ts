@@ -1,9 +1,8 @@
+import * as recipeCalculation from '../src/index'
 
-import module from '../src/index'
-
-describe('module', () => {
+describe('recipeCalculation', () => {
   it('exports the correct functions', () => {
-    expect(Object.keys(module)).toEqual([
+    expect(Object.keys(recipeCalculation)).toEqual([
       'cheapestTree',
       'updateTree',
       'usedItems',
@@ -14,14 +13,14 @@ describe('module', () => {
       'staticItems',
     ])
 
-    expect(Object.keys(module.staticItems)).toEqual([
+    expect(Object.keys(recipeCalculation.staticItems)).toEqual([
       'dailyCooldowns',
       'buyableDailyCooldowns',
       'vendorItems',
     ])
 
-    expect(module.staticItems.dailyCooldowns).toBeDefined()
-    expect(module.staticItems.buyableDailyCooldowns).toBeDefined()
-    expect(module.staticItems.vendorItems).toBeDefined()
+    expect(recipeCalculation.staticItems.dailyCooldowns).toBeDefined()
+    expect(recipeCalculation.staticItems.buyableDailyCooldowns).toBeDefined()
+    expect(recipeCalculation.staticItems.vendorItems).toBeDefined()
   })
 })

@@ -14,6 +14,6 @@ for (const _id in VENDOR_ITEMS) {
 }
 
 // Overwrite and add all vendor prices to the price map
-export default function useVendorPrices(priceMap: Record<number, number>): Record<number, number> {
+export function useVendorPrices(priceMap: Record<number, number>): Record<number, number> {
   return { ...priceMap, ...vendorPrices }
 }

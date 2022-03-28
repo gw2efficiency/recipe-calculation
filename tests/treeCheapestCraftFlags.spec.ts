@@ -1,5 +1,4 @@
-
-import treeCheapestCraftFlags from '../src/treeCheapestCraftFlags'
+import { treeCheapestCraftFlags } from '../src/treeCheapestCraftFlags'
 
 describe('treeCheapestCraftFlags', () => {
   it('sets the cheapest craft flags', () => {

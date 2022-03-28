@@ -1,4 +1,4 @@
-import cheapestTree from '../src/cheapestTree'
+import { cheapestTree } from '../src/cheapestTree'
 
 describe('cheapestTree', () => {
   it('can calculate the cheapest tree correctly', () => {

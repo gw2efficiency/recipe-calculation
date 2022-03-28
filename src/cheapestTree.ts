@@ -1,9 +1,9 @@
 import { treeAdjustQuantity } from './treeAdjustQuantity'
-import treePrices from './treePrices'
-import treeCheapestCraftFlags from './treeCheapestCraftFlags'
+import { treePrices } from './treePrices'
+import { treeCheapestCraftFlags } from './treeCheapestCraftFlags'
 import { AvailableItems, ForceBuyItems, ItemPrices, RecipeTree } from './types'
 
-export default function cheapestTree(
+export function cheapestTree(
   amount: number,
   _tree: RecipeTree,
   itemPrices: ItemPrices,

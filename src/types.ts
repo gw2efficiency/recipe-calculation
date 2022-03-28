@@ -2,14 +2,14 @@ import { NestedRecipe } from '@gw2efficiency/recipe-nesting'
 
 export type RecipeTree = NestedRecipe
 
-export interface RecipeTreeWithQuantity extends RecipeTree {
+export interface RecipeTreeWithQuantity extends Omit<RecipeTree, 'components'> {
   totalQuantity: number
   usedQuantity: number
 
   components?: Array<RecipeTreeWithQuantity>
 }
 
-export interface RecipeTreeWithPrices extends RecipeTree {
+export interface RecipeTreeWithPrices extends Omit<RecipeTree, 'components'> {
   totalQuantity: number
   usedQuantity: number
 
@@ -21,7 +21,7 @@ export interface RecipeTreeWithPrices extends RecipeTree {
   components?: Array<RecipeTreeWithPrices>
 }
 
-export interface CheapestRecipeTree extends RecipeTree {
+export interface CheapestRecipeTree extends Omit<RecipeTree, 'components'> {
   totalQuantity: number
   usedQuantity: number
 

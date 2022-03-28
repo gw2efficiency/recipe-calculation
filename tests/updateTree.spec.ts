@@ -1,6 +1,5 @@
-
 import { clone } from '@devoxa/flocky'
-import updateTree from '../src/updateTree'
+import { updateTree } from '../src/updateTree'
 
 describe('updateTree', () => {
   const calculatedTree = {

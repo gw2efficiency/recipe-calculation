@@ -1,5 +1,4 @@
-
-import treePrices from '../src/treePrices'
+import { treePrices } from '../src/treePrices'
 
 describe('treePrices', () => {
   it('updates the prices for a tree', () => {

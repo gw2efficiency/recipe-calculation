@@ -6,7 +6,7 @@ export interface UsedItemsBreakdown {
 }
 
 // Generate a list of items to buy and used available items
-export default function usedItems(
+export function usedItems(
   tree: CheapestRecipeTree,
   breakdown: UsedItemsBreakdown = { buy: {}, available: {} }
 ) {

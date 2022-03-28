@@ -1,4 +1,4 @@
-import craftingSteps from '../src/craftingSteps'
+import { craftingSteps } from '../src/craftingSteps'
 
 describe('craftingSteps', () => {
   it('gets the correct crafting steps', () => {

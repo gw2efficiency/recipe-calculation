@@ -1,5 +1,4 @@
-
-import usedItems from '../src/usedItems'
+import { usedItems } from '../src/usedItems'
 
 describe('usedItems', () => {
   it('gets the correct items to buy and used available items', () => {

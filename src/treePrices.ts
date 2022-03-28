@@ -6,7 +6,7 @@ import {
 } from './types'
 
 // Update the tree prices
-export default function treePrices(
+export function treePrices(
   tree: RecipeTreeWithQuantity | CheapestRecipeTree,
   itemPrices: ItemPrices
 ): RecipeTreeWithPrices {

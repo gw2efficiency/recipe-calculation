@@ -1,8 +1,8 @@
 import { treeAdjustQuantity } from './treeAdjustQuantity'
-import treePrices from './treePrices'
+import { treePrices } from './treePrices'
 import { AvailableItems, CheapestRecipeTree, ItemPrices } from './types'
 
-export default function updateTree(
+export function updateTree(
   amount: number,
   tree: CheapestRecipeTree,
   itemPrices: ItemPrices,
