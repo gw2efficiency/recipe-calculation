@@ -3,7 +3,7 @@ import cheapestTree from '../src/cheapestTree'
 
 describe('cheapestTree', () => {
   it('can calculate the cheapest tree correctly', () => {
-    let recipeTree = {
+    const recipeTree = {
       id: 1,
       quantity: 1,
       output: 1,
@@ -13,9 +13,9 @@ describe('cheapestTree', () => {
         { id: 5, quantity: 5, components: [{ id: 6, quantity: 2 }], recipe_id: 123 },
       ],
     }
-    let prices = { 1: 10, 2: 42, 3: 10, 4: 10, 5: 1000, 6: 10 }
+    const prices = { 1: 10, 2: 42, 3: 10, 4: 10, 5: 1000, 6: 10 }
 
-    let calculatedTree = cheapestTree(2, recipeTree, prices)
+    const calculatedTree = cheapestTree(2, recipeTree, prices)
     expect(calculatedTree).toEqual({
       craft: true,
       craftPrice: 384,
@@ -95,7 +95,7 @@ describe('cheapestTree', () => {
   })
 
   it('can calculate the cheapest tree correctly with available items', () => {
-    let recipeTree = {
+    const recipeTree = {
       id: 1,
       quantity: 1,
       output: 1,
@@ -105,10 +105,10 @@ describe('cheapestTree', () => {
         { id: 5, quantity: 2, components: [{ id: 6, quantity: 100 }] },
       ],
     }
-    let prices = { 1: 10, 3: 100, 4: 10, 5: 25, 6: 1, 7: 1 }
-    let availableItems = { 1: 100, 3: 7, 4: 3, 5: 4 }
+    const prices = { 1: 10, 3: 100, 4: 10, 5: 25, 6: 1, 7: 1 }
+    const availableItems = { 1: 100, 3: 7, 4: 3, 5: 4 }
 
-    let calculatedTree = cheapestTree(2, recipeTree, prices, availableItems, [])
+    const calculatedTree = cheapestTree(2, recipeTree, prices, availableItems, [])
     expect(calculatedTree).toEqual({
       craft: true,
       craftPrice: 36,
@@ -201,15 +201,15 @@ describe('cheapestTree', () => {
   })
 
   it('can calculate the cheapest tree correctly with force buy items', () => {
-    let recipeTree = {
+    const recipeTree = {
       id: 1,
       quantity: 1,
       output: 1,
       components: [{ id: 3, quantity: 5, components: [{ id: 4, quantity: 2 }] }],
     }
-    let prices = { 1: 10, 3: 100, 4: 10 }
+    const prices = { 1: 10, 3: 100, 4: 10 }
 
-    let calculatedTree = cheapestTree(2, recipeTree, prices, {}, [3])
+    const calculatedTree = cheapestTree(2, recipeTree, prices, {}, [3])
     expect(calculatedTree).toEqual({
       craft: true,
       craftPrice: 1000,

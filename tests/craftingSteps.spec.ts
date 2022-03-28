@@ -3,7 +3,7 @@ import craftingSteps from '../src/craftingSteps'
 
 describe('craftingSteps', () => {
   it('gets the correct crafting steps', () => {
-    let tree = {
+    const tree = {
       id: 1,
       craft: true,
       totalQuantity: 2,
@@ -119,7 +119,7 @@ describe('craftingSteps', () => {
       ],
     }
 
-    let usedItemObject = craftingSteps(tree)
+    const usedItemObject = craftingSteps(tree)
     expect(usedItemObject).toEqual([
       {
         id: 7,
@@ -176,7 +176,7 @@ describe('craftingSteps', () => {
   })
 
   it('gets the correct crafting steps with mystic clovers', () => {
-    let tree = {
+    const tree = {
       id: 1,
       craft: true,
       totalQuantity: 2,
@@ -273,7 +273,7 @@ describe('craftingSteps', () => {
       ],
     }
 
-    let usedItemObject = craftingSteps(tree)
+    const usedItemObject = craftingSteps(tree)
     expect(usedItemObject).toEqual([
       {
         id: 19675,
@@ -338,7 +338,7 @@ describe('craftingSteps', () => {
   })
 
   it('gets the correct crafting steps when merging components', () => {
-    let tree = {
+    const tree = {
       id: 1,
       craft: true,
       totalQuantity: 1,
@@ -430,7 +430,7 @@ describe('craftingSteps', () => {
       ],
     }
 
-    let usedItemObject = craftingSteps(tree)
+    const usedItemObject = craftingSteps(tree)
 
     expect(usedItemObject).toEqual([
       {

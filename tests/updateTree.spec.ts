@@ -3,7 +3,7 @@ import { clone } from '@devoxa/flocky'
 import updateTree from '../src/updateTree'
 
 describe('updateTree', () => {
-  let calculatedTree = {
+  const calculatedTree = {
     craft: true,
     craftPrice: 384,
     id: 1,
@@ -80,17 +80,17 @@ describe('updateTree', () => {
   }
 
   it('keeps the tree the same if nothing changed', () => {
-    let tree = clone(calculatedTree)
-    let prices = { 1: 10, 2: 42, 3: 10, 4: 10, 5: 1000, 6: 10 }
-    let updatedTree = updateTree(2, tree, prices)
+    const tree = clone(calculatedTree)
+    const prices = { 1: 10, 2: 42, 3: 10, 4: 10, 5: 1000, 6: 10 }
+    const updatedTree = updateTree(2, tree, prices)
     expect(updatedTree).toEqual(calculatedTree)
   })
 
   it('updates a tree correctly if the amount, prices or craft flags changed', () => {
-    let tree = clone(calculatedTree)
+    const tree = clone(calculatedTree)
     tree.components[1].craft = true
-    let prices = { 1: 10, 2: 42, 3: 10, 4: 10, 5: 1000, 6: 11 }
-    let updatedTree = updateTree(5, tree, prices)
+    const prices = { 1: 10, 2: 42, 3: 10, 4: 10, 5: 1000, 6: 11 }
+    const updatedTree = updateTree(5, tree, prices)
     expect(updatedTree).toEqual({
       craft: true,
       craftPrice: 1260,
@@ -169,10 +169,10 @@ describe('updateTree', () => {
   })
 
   it('updates a tree correctly if the available items changed', () => {
-    let tree = clone(calculatedTree)
+    const tree = clone(calculatedTree)
     tree.components[1].craft = true
-    let prices = { 1: 10, 2: 42, 3: 10, 4: 10, 5: 1000, 6: 11 }
-    let updatedTree = updateTree(5, tree, prices, { 2: 1000 })
+    const prices = { 1: 10, 2: 42, 3: 10, 4: 10, 5: 1000, 6: 11 }
+    const updatedTree = updateTree(5, tree, prices, { 2: 1000 })
     expect(updatedTree).toEqual({
       craft: true,
       craftPrice: 1050,

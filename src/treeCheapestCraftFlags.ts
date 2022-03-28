@@ -1,20 +1,24 @@
-// Set the craft flags based on the cheapest price
-export default function treeCheapestCraftFlags(tree: any, forceBuyItems: any) {
-  tree = { ...tree }
+import { CheapestRecipeTree, ForceBuyItems, RecipeTreeWithPrices } from './types'
 
+// Set the craft flags based on the cheapest price
+export default function treeCheapestCraftFlags(
+  tree: RecipeTreeWithPrices,
+  forceBuyItems: ForceBuyItems
+): CheapestRecipeTree {
   // Craft the item if it can't be bought or it is cheaper to craft
-  tree.craft =
+  const craft =
     forceBuyItems.indexOf(tree.id) === -1 &&
     tree.usedQuantity !== 0 &&
-    (!tree.buyPrice || tree.craftPrice < tree.buyPrice)
+    (!tree.buyPrice || (typeof tree.craftPrice !== 'undefined' && tree.craftPrice < tree.buyPrice))
 
   if (!tree.components) {
-    return tree
+    return { ...tree, components: undefined, craft }
   }
 
   // Adjust the flags for all tree's subcomponents
-  tree.components = tree.components.map((component: any) =>
+  const components = tree.components.map((component) =>
     treeCheapestCraftFlags(component, forceBuyItems)
   )
-  return tree
+
+  return { ...tree, components, craft }
 }

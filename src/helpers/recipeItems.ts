@@ -1,12 +1,14 @@
+import { CheapestRecipeTree } from '../types'
+
 // Find all unique item ids used in a recipe tree
-export default function recipeItems(tree: any) {
+export default function recipeItems(tree: CheapestRecipeTree) {
   let ids = [tree.id]
 
   if (!tree.components) {
     return ids
   }
 
-  tree.components.map((component: any) => {
+  tree.components.map((component) => {
     ids = ids.concat(recipeItems(component))
   })
 

@@ -3,7 +3,7 @@ import useVendorPrices from '../../src/helpers/useVendorPrices'
 
 describe('helpers > useVendorPrices', () => {
   it('overwrites and adds vendor prices to the price object', () => {
-    let prices = { 1: 1233, 19750: 50000 }
+    const prices = { 1: 1233, 19750: 50000 }
 
     const pricesWithVendors = useVendorPrices(prices)
     expect(pricesWithVendors[1]).toEqual(1233)

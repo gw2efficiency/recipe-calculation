@@ -24,10 +24,15 @@ export interface RecipeTreeWithPrices extends RecipeTree {
 export interface CheapestRecipeTree extends RecipeTree {
   totalQuantity: number
   usedQuantity: number
+
+  buyPriceEach: number | false
+  buyPrice: number | false
+  decisionPrice: number | false
+  craftPrice?: number
+
   craft: boolean
-  buyPrice: number
-  buyPriceEach: number
-  craftPrice: number
+
+  components?: Array<CheapestRecipeTree>
 }
 
 export type ItemPrices = Record<number, number>

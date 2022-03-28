@@ -1,8 +1,13 @@
-import { ItemPrices, RecipeTreeWithPrices, RecipeTreeWithQuantity } from './types'
+import {
+  CheapestRecipeTree,
+  ItemPrices,
+  RecipeTreeWithPrices,
+  RecipeTreeWithQuantity,
+} from './types'
 
 // Update the tree prices
 export default function treePrices(
-  tree: RecipeTreeWithQuantity | (RecipeTreeWithQuantity & { craft: boolean }),
+  tree: RecipeTreeWithQuantity | CheapestRecipeTree,
   itemPrices: ItemPrices
 ): RecipeTreeWithPrices {
   // Calculate the buy prices

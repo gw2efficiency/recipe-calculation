@@ -3,7 +3,7 @@ import dailyCooldowns from '../../src/helpers/dailyCooldowns'
 
 describe('helpers > dailyCooldowns', () => {
   it('gets all daily cooldowns from a recipe tree', () => {
-    let tree = {
+    const tree = {
       id: 1,
       craft: true,
       totalQuantity: 2,

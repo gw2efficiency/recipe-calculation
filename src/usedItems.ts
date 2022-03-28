@@ -1,7 +1,17 @@
+import { CheapestRecipeTree } from './types'
+
+export interface UsedItemsBreakdown {
+  buy: Record<number, number>
+  available: Record<number, number>
+}
+
 // Generate a list of items to buy and used available items
-export default function usedItems(tree: any, breakdown: any = { buy: {}, available: {} }) {
+export default function usedItems(
+  tree: CheapestRecipeTree,
+  breakdown: UsedItemsBreakdown = { buy: {}, available: {} }
+) {
   // Add up the used available items
-  let available = tree.totalQuantity - tree.usedQuantity
+  const available = tree.totalQuantity - tree.usedQuantity
   if (available > 0) {
     breakdown.available[tree.id] = (breakdown.available[tree.id] || 0) + available
   }
@@ -16,6 +26,6 @@ export default function usedItems(tree: any, breakdown: any = { buy: {}, availab
   }
 
   // This tree part is getting crafted -> get used items from components
-  tree.components.map((component: any) => usedItems(component, breakdown))
+  tree.components.map((component) => usedItems(component, breakdown))
   return breakdown
 }

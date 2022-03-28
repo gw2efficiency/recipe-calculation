@@ -1,11 +1,11 @@
-import { AvailableItems, RecipeTree, RecipeTreeWithQuantity } from './types'
+import { AvailableItems, CheapestRecipeTree, RecipeTree, RecipeTreeWithQuantity } from './types'
 
 // Make sure that we don't modify the passed-in object
 // We still want to work with a reference in the actual calculation
 // since the availableItems are a shared state for all sub-recipes
 export function treeAdjustQuantity(
   amount: number,
-  tree: RecipeTree | (RecipeTree & { craft: boolean }),
+  tree: RecipeTree | CheapestRecipeTree,
   availableItems: AvailableItems = {}
 ) {
   return treeAdjustQuantityInner(amount, tree, { ...availableItems })
@@ -15,11 +15,12 @@ export function treeAdjustQuantity(
 // wanted amount and the output of recipes and sub-recipes
 function treeAdjustQuantityInner(
   amount: number,
-  tree: RecipeTree | (RecipeTree & { craft: boolean }),
+  tree: RecipeTree | CheapestRecipeTree,
   availableItems: AvailableItems,
   ignoreAvailable = false,
   nesting = 0
 ): RecipeTreeWithQuantity {
+  // TODO Fix type,it gives back TTree & { quantityStuff }
   const output = tree.output || 1
 
   // Calculate the total quantity needed
@@ -45,7 +46,7 @@ function treeAdjustQuantityInner(
 
   // Get the amount of components that need to be crafted
   // e.g. a recipe outputs 10 and we need 20 -> 2x components
-  let componentAmount = Math.ceil(usedQuantity / output)
+  const componentAmount = Math.ceil(usedQuantity / output)
 
   // Ignore available items in components if the tree
   // doesn't get crafted or is completely available anyway
@@ -56,7 +57,7 @@ function treeAdjustQuantityInner(
   const components = tree.components.map((component) => {
     return treeAdjustQuantityInner(
       componentAmount,
-      component as any, // TODO 
+      component as RecipeTree, // TODO Technically this is also components, fix types
       availableItems,
       ignoreAvailable,
       ++nesting

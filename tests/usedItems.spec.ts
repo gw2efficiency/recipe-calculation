@@ -3,7 +3,7 @@ import usedItems from '../src/usedItems'
 
 describe('usedItems', () => {
   it('gets the correct items to buy and used available items', () => {
-    let tree = {
+    const tree = {
       craft: true,
       craftPrice: 36,
       id: 1,
@@ -93,7 +93,7 @@ describe('usedItems', () => {
       ],
     }
 
-    let usedItemObject = usedItems(tree)
+    const usedItemObject = usedItems(tree)
     expect(usedItemObject).toEqual({
       buy: { 4: 3, 7: 6 },
       available: { 3: 7, 4: 3, 5: 4 },

@@ -3,7 +3,7 @@ import treePrices from '../src/treePrices'
 
 describe('treePrices', () => {
   it('updates the prices for a tree', () => {
-    let recipeTree = {
+    const recipeTree = {
       id: 1,
       usedQuantity: 1,
       components: [
@@ -11,9 +11,9 @@ describe('treePrices', () => {
         { id: 3, usedQuantity: 2 },
       ],
     }
-    let prices = { 1: 123, 2: 1, 3: 2 }
+    const prices = { 1: 123, 2: 1, 3: 2 }
 
-    let calculatedTree = treePrices(recipeTree, prices)
+    const calculatedTree = treePrices(recipeTree, prices)
     expect(calculatedTree).toEqual({
       craftPrice: 5,
       id: 1,
@@ -41,7 +41,7 @@ describe('treePrices', () => {
   })
 
   it('updates the prices for a tree with flags correctly', () => {
-    let recipeTree = {
+    const recipeTree = {
       id: 1,
       usedQuantity: 1,
       craft: false,
@@ -50,9 +50,9 @@ describe('treePrices', () => {
         { id: 3, usedQuantity: 2 },
       ],
     }
-    let prices = { 1: 123, 2: 1, 3: 2 }
+    const prices = { 1: 123, 2: 1, 3: 2 }
 
-    let calculatedTree = treePrices(recipeTree, prices)
+    const calculatedTree = treePrices(recipeTree, prices)
     expect(calculatedTree).toEqual({
       craftPrice: 5,
       id: 1,
@@ -81,7 +81,7 @@ describe('treePrices', () => {
   })
 
   it('updates the prices for a tree with missing buy prices', () => {
-    let recipeTree = {
+    const recipeTree = {
       id: 1,
       usedQuantity: 1,
       components: [
@@ -96,9 +96,9 @@ describe('treePrices', () => {
         },
       ],
     }
-    let prices = { 1: 123, 2: 1, 3: 2, 5: 10 }
+    const prices = { 1: 123, 2: 1, 3: 2, 5: 10 }
 
-    let calculatedTree = treePrices(recipeTree, prices)
+    const calculatedTree = treePrices(recipeTree, prices)
     expect(calculatedTree).toEqual({
       craftPrice: 5,
       id: 1,

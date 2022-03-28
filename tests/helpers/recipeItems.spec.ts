@@ -3,7 +3,7 @@ import recipeItems from '../../src/helpers/recipeItems'
 
 describe('helpers > recipeItems', () => {
   it('gets all unique item ids of a recipe tree', () => {
-    let recipeTree = {
+    const recipeTree = {
       id: 1,
       components: [
         { id: 2, components: [{ id: 3 }, { id: 4 }] },
