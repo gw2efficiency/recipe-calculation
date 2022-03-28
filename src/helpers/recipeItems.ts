@@ -1,7 +1,7 @@
-import { CheapestRecipeTree } from '../types'
+import { RecipeTreeWithCraftFlags } from '../types'
 
 // Find all unique item ids used in a recipe tree
-export function recipeItems(tree: CheapestRecipeTree) {
+export function recipeItems(tree: RecipeTreeWithCraftFlags) {
   let ids = [tree.id]
 
   if (!tree.components) {

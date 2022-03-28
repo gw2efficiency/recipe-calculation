@@ -1,4 +1,4 @@
-import { CheapestRecipeTree } from './types'
+import { RecipeTreeWithCraftFlags } from './types'
 
 export interface UsedItemsBreakdown {
   buy: Record<number, number>
@@ -7,7 +7,7 @@ export interface UsedItemsBreakdown {
 
 // Generate a list of items to buy and used available items
 export function usedItems(
-  tree: CheapestRecipeTree,
+  tree: RecipeTreeWithCraftFlags,
   breakdown: UsedItemsBreakdown = { buy: {}, available: {} }
 ) {
   // Add up the used available items

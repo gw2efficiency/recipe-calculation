@@ -1,42 +1,40 @@
 import { NestedRecipe } from '@gw2efficiency/recipe-nesting'
 
-export type RecipeTree = NestedRecipe
+export type ExtendRecipeTree<TBase, TExtend> = Omit<TBase, 'type' | 'components'> & {
+  type: 'Recipe' | 'Item' | 'Currency'
+  components?: Array<ExtendRecipeTree<TBase, TExtend>>
+} & TExtend
 
-export interface RecipeTreeWithQuantity extends Omit<RecipeTree, 'components'> {
-  totalQuantity: number
-  usedQuantity: number
+export type RecipeTree = ExtendRecipeTree<NestedRecipe, { __never: never }>
 
-  components?: Array<RecipeTreeWithQuantity>
-}
+export type RecipeTreeWithQuantity = ExtendRecipeTree<
+  RecipeTree,
+  {
+    output: number
+    totalQuantity: number
+    usedQuantity: number
+  }
+>
 
-export interface RecipeTreeWithPrices extends Omit<RecipeTree, 'components'> {
-  totalQuantity: number
-  usedQuantity: number
+export type RecipeTreeWithPrices = ExtendRecipeTree<
+  RecipeTreeWithQuantity,
+  {
+    buyPriceEach: number | false
+    buyPrice: number | false
+    decisionPrice: number | false
+    craftPrice?: number
+  }
+>
 
-  buyPriceEach: number | false
-  buyPrice: number | false
-  decisionPrice: number | false
-  craftPrice?: number
+export type RecipeTreeWithCraftFlags = ExtendRecipeTree<
+  RecipeTreeWithPrices,
+  {
+    craft: boolean
+  }
+>
 
-  components?: Array<RecipeTreeWithPrices>
-}
+export type ItemPrices = Record<string, number>
 
-export interface CheapestRecipeTree extends Omit<RecipeTree, 'components'> {
-  totalQuantity: number
-  usedQuantity: number
-
-  buyPriceEach: number | false
-  buyPrice: number | false
-  decisionPrice: number | false
-  craftPrice?: number
-
-  craft: boolean
-
-  components?: Array<CheapestRecipeTree>
-}
-
-export type ItemPrices = Record<number, number>
-
-export type AvailableItems = Record<number, number>
+export type AvailableItems = Record<string, number>
 
 export type ForceBuyItems = Array<number>

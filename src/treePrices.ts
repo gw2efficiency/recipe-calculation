@@ -1,5 +1,5 @@
 import {
-  CheapestRecipeTree,
+  RecipeTreeWithCraftFlags,
   ItemPrices,
   RecipeTreeWithPrices,
   RecipeTreeWithQuantity,
@@ -7,9 +7,17 @@ import {
 
 // Update the tree prices
 export function treePrices(
-  tree: RecipeTreeWithQuantity | CheapestRecipeTree,
+  tree: RecipeTreeWithCraftFlags,
   itemPrices: ItemPrices
-): RecipeTreeWithPrices {
+): RecipeTreeWithCraftFlags
+export function treePrices(
+  tree: RecipeTreeWithQuantity,
+  itemPrices: ItemPrices
+): RecipeTreeWithPrices
+export function treePrices(
+  tree: RecipeTreeWithQuantity | RecipeTreeWithCraftFlags,
+  itemPrices: ItemPrices
+): RecipeTreeWithPrices | RecipeTreeWithCraftFlags {
   // Calculate the buy prices
   const buyPriceEach = itemPrices[tree.id] || false
   const buyPrice = buyPriceEach ? tree.usedQuantity * buyPriceEach : false

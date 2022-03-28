@@ -1,11 +1,26 @@
-import { AvailableItems, CheapestRecipeTree, RecipeTree, RecipeTreeWithQuantity } from './types'
+import {
+  AvailableItems,
+  RecipeTreeWithCraftFlags,
+  RecipeTree,
+  RecipeTreeWithQuantity,
+} from './types'
 
 // Make sure that we don't modify the passed-in object
 // We still want to work with a reference in the actual calculation
 // since the availableItems are a shared state for all sub-recipes
 export function treeAdjustQuantity(
   amount: number,
-  tree: RecipeTree | CheapestRecipeTree,
+  tree: RecipeTreeWithCraftFlags,
+  availableItems?: AvailableItems
+): RecipeTreeWithCraftFlags
+export function treeAdjustQuantity(
+  amount: number,
+  tree: RecipeTree,
+  availableItems?: AvailableItems
+): RecipeTreeWithQuantity
+export function treeAdjustQuantity(
+  amount: number,
+  tree: RecipeTree | RecipeTreeWithCraftFlags,
   availableItems: AvailableItems = {}
 ) {
   return treeAdjustQuantityInner(amount, tree, { ...availableItems })
@@ -15,12 +30,11 @@ export function treeAdjustQuantity(
 // wanted amount and the output of recipes and sub-recipes
 function treeAdjustQuantityInner(
   amount: number,
-  tree: RecipeTree | CheapestRecipeTree,
+  tree: RecipeTree | RecipeTreeWithCraftFlags,
   availableItems: AvailableItems,
   ignoreAvailable = false,
   nesting = 0
-): RecipeTreeWithQuantity {
-  // TODO Fix type,it gives back TTree & { quantityStuff }
+): RecipeTreeWithCraftFlags | RecipeTreeWithQuantity {
   const output = tree.output || 1
 
   // Calculate the total quantity needed
@@ -57,7 +71,7 @@ function treeAdjustQuantityInner(
   const components = tree.components.map((component) => {
     return treeAdjustQuantityInner(
       componentAmount,
-      component as RecipeTree, // TODO Technically this is also components, fix types
+      component,
       availableItems,
       ignoreAvailable,
       ++nesting

@@ -1,6 +1,6 @@
-import { CheapestRecipeTree } from './types'
+import { RecipeTreeWithCraftFlags } from './types'
 
-export function craftingSteps(tree: CheapestRecipeTree) {
+export function craftingSteps(tree: RecipeTreeWithCraftFlags) {
   let steps = craftingStepsInner(tree).reverse()
 
   // We don't care about steps where we have to craft "0" of something
@@ -36,7 +36,11 @@ interface CraftingStep {
 }
 
 // Generate an ordered list of crafting steps
-function craftingStepsInner(tree: CheapestRecipeTree, steps: Array<CraftingStep> = [], index = 0) {
+function craftingStepsInner(
+  tree: RecipeTreeWithCraftFlags,
+  steps: Array<CraftingStep> = [],
+  index = 0
+) {
   const treeComponents = tree.components
 
   // Skip any tree parts where nothing needs to be crafted

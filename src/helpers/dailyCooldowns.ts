@@ -1,12 +1,15 @@
 import { DAILY_COOLDOWNS } from '../static/dailyCooldowns'
-import { CheapestRecipeTree } from '../types'
+import { RecipeTreeWithCraftFlags } from '../types'
 
 const dailyCooldownIds = DAILY_COOLDOWNS.filter((x) => x.craftInterval === 'daily').map((x) => x.id)
 
 export type DailyCooldownsBreakdown = Record<number, number>
 
 // Get a list of daily cooldowns used in the recipe
-export function dailyCooldowns(tree: CheapestRecipeTree, breakdown: DailyCooldownsBreakdown = {}) {
+export function dailyCooldowns(
+  tree: RecipeTreeWithCraftFlags,
+  breakdown: DailyCooldownsBreakdown = {}
+) {
   if (!tree.components || tree.craft === false) {
     return breakdown
   }
