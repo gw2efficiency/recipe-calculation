@@ -2,6 +2,10 @@ import { RecipeTreeWithCraftFlags } from '../types'
 
 // Find all unique item ids used in a recipe tree
 export function recipeItems(tree: RecipeTreeWithCraftFlags) {
+  if (tree.type === 'Currency') {
+    return []
+  }
+
   let ids = [tree.id]
 
   if (!tree.components) {

@@ -26,6 +26,22 @@ describe('calculateTreePrices', () => {
           type: 'Item',
           quantity: 2,
         },
+        {
+          ...TREE_PARTIAL,
+          id: 1,
+          type: 'Currency',
+          quantity: 10,
+          usedQuantity: 10,
+          totalQuantity: 10,
+        },
+        {
+          ...TREE_PARTIAL,
+          id: 2,
+          type: 'Currency',
+          quantity: 10,
+          usedQuantity: 10,
+          totalQuantity: 10,
+        },
       ],
     }
     const prices = { 1: 123, 2: 1, 3: 2 }

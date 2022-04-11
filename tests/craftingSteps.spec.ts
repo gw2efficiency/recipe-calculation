@@ -216,6 +216,20 @@ describe('craftingSteps', () => {
             },
           ],
         },
+        {
+          id: 1,
+          craft: true,
+          totalQuantity: 6,
+          usedQuantity: 6,
+          output: 1,
+          type: 'Currency',
+          quantity: 6,
+          min_rating: null,
+          buyPriceEach: 1,
+          buyPrice: 1,
+          decisionPrice: 1,
+          disciplines: [],
+        },
       ],
     }
 

@@ -6,12 +6,13 @@ export function calculateTreeCraftFlags(
   forceBuyItems: Array<number>
 ): RecipeTreeWithCraftFlags {
   // Craft the item if it can't be bought or it is cheaper to craft
-  const shouldForceBuy = forceBuyItems.indexOf(tree.id) !== -1
+  const hasComponents = !!tree.components
   const isUsed = tree.usedQuantity !== 0
-  const craftIsCheaper =
+  const isCheaperToCraft =
     typeof tree.craftPrice !== 'undefined' && (!tree.buyPrice || tree.craftPrice < tree.buyPrice)
+  const isForceBuy = forceBuyItems.indexOf(tree.id) !== -1
 
-  const craft = !!tree.components && !shouldForceBuy && isUsed && craftIsCheaper
+  const craft = hasComponents && isUsed && isCheaperToCraft && !isForceBuy
 
   if (!tree.components) {
     return { ...tree, components: undefined, craft }

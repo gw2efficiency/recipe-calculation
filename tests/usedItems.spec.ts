@@ -81,6 +81,34 @@ describe('usedItems', () => {
               disciplines: [],
               type: 'Item',
             },
+            {
+              decisionPrice: false,
+              buyPrice: false,
+              buyPriceEach: false,
+              craft: false,
+              id: 4,
+              output: 1,
+              quantity: 6,
+              totalQuantity: 6,
+              usedQuantity: 6,
+              min_rating: null,
+              disciplines: [],
+              type: 'Currency',
+            },
+            {
+              decisionPrice: 1,
+              buyPrice: 1,
+              buyPriceEach: 1,
+              craft: false,
+              id: 1,
+              output: 1,
+              quantity: 1000,
+              totalQuantity: 1000,
+              usedQuantity: 1000,
+              min_rating: null,
+              disciplines: [],
+              type: 'Currency',
+            },
           ],
         },
         {
@@ -122,6 +150,7 @@ describe('usedItems', () => {
     expect(usedItemObject).toEqual({
       buy: { 4: 3, 7: 6 },
       available: { 3: 7, 4: 3, 5: 4 },
+      currency: { 1: 1000, 4: 6 },
     })
   })
 })

@@ -10,7 +10,7 @@ export function dailyCooldowns(
   tree: RecipeTreeWithCraftFlags,
   breakdown: DailyCooldownsBreakdown = {}
 ) {
-  if (!tree.components || tree.craft === false) {
+  if (!tree.components || tree.craft === false || tree.type === 'Currency') {
     return breakdown
   }
 

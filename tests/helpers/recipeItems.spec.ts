@@ -33,7 +33,7 @@ describe('helpers > recipeItems', () => {
           components: [
             {
               id: 3,
-              craft: true,
+              craft: false,
               totalQuantity: 1,
               usedQuantity: 1,
               quantity: 1,
@@ -47,7 +47,7 @@ describe('helpers > recipeItems', () => {
             },
             {
               id: 4,
-              craft: true,
+              craft: false,
               totalQuantity: 1,
               usedQuantity: 1,
               quantity: 1,
@@ -59,11 +59,25 @@ describe('helpers > recipeItems', () => {
               buyPrice: 1,
               decisionPrice: 1,
             },
+            {
+              id: 12,
+              craft: false,
+              totalQuantity: 1,
+              usedQuantity: 1,
+              quantity: 1,
+              type: 'Currency',
+              output: 1,
+              min_rating: null,
+              disciplines: [],
+              buyPriceEach: false,
+              buyPrice: false,
+              decisionPrice: false,
+            },
           ],
         },
         {
           id: 5,
-          craft: true,
+          craft: false,
           totalQuantity: 1,
           usedQuantity: 1,
           quantity: 1,
@@ -91,7 +105,7 @@ describe('helpers > recipeItems', () => {
           components: [
             {
               id: 3,
-              craft: true,
+              craft: false,
               totalQuantity: 1,
               usedQuantity: 1,
               quantity: 1,

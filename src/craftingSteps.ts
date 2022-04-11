@@ -27,12 +27,13 @@ export function craftingSteps(tree: RecipeTreeWithCraftFlags) {
 
 interface CraftingStep {
   id: number
+  type: 'Item' | 'Recipe' | 'Currency'
   output: number
   quantity: number
   minRating: number | null
   disciplines: Array<string>
   recipeId?: number
-  components: Array<{ id: number; quantity: number }>
+  components: Array<{ id: number; type: 'Item' | 'Recipe' | 'Currency'; quantity: number }>
 }
 
 // Generate an ordered list of crafting steps
@@ -44,7 +45,7 @@ function craftingStepsInner(
   const treeComponents = tree.components
 
   // Skip any tree parts where nothing needs to be crafted
-  if (!treeComponents || tree.craft === false) {
+  if (!treeComponents || tree.craft === false || tree.type === 'Currency') {
     return steps
   }
 
@@ -67,14 +68,17 @@ function craftingStepsInner(
   if (stepIndex === -1) {
     steps.splice(index, 0, {
       id: tree.id,
+      type: tree.type,
       output: tree.output,
       quantity: tree.usedQuantity,
       minRating: tree.min_rating,
       disciplines: tree.disciplines,
       recipeId: tree.recipe_id,
-      components: treeComponents.map((component) => {
-        return { id: component.id, quantity: component.totalQuantity }
-      }),
+      components: treeComponents.map((component) => ({
+        id: component.id,
+        type: component.type,
+        quantity: component.totalQuantity,
+      })),
     })
   }
 

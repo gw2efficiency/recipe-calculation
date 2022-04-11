@@ -199,6 +199,20 @@ describe('helpers > dailyCooldowns', () => {
           buyPrice: 1,
           decisionPrice: 1,
         },
+        {
+          id: 1,
+          craft: false,
+          totalQuantity: 1,
+          usedQuantity: 1,
+          quantity: 1,
+          type: 'Currency',
+          output: 1,
+          min_rating: null,
+          disciplines: [],
+          buyPriceEach: false,
+          buyPrice: false,
+          decisionPrice: false,
+        },
       ],
     }
 
