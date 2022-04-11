@@ -31,7 +31,7 @@ interface CraftingStep {
   quantity: number
   minRating: number | null
   disciplines: Array<string>
-  recipeId: number
+  recipeId?: number
   components: Array<{ id: number; quantity: number }>
 }
 
@@ -55,7 +55,6 @@ function craftingStepsInner(
     steps[stepIndex].quantity += tree.usedQuantity
     steps[stepIndex].components = steps[stepIndex].components.map((component) => {
       const treeComponent = treeComponents.find((x) => x.id === component.id)
-
       if (!treeComponent) return component
 
       component.quantity += treeComponent.totalQuantity

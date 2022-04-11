@@ -11,7 +11,7 @@ export function treeCheapestCraftFlags(
   const craftIsCheaper =
     typeof tree.craftPrice !== 'undefined' && (!tree.buyPrice || tree.craftPrice < tree.buyPrice)
 
-  const craft = !shouldForceBuy && isUsed && craftIsCheaper
+  const craft = !!tree.components && !shouldForceBuy && isUsed && craftIsCheaper
 
   if (!tree.components) {
     return { ...tree, components: undefined, craft }

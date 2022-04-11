@@ -1,8 +1,5 @@
 import { RecipeTreeWithCraftFlags, RecipeTree, RecipeTreeWithQuantity } from './types'
 
-// Make sure that we don't modify the passed-in object
-// We still want to work with a reference in the actual calculation
-// since the availableItems are a shared state for all sub-recipes
 export function treeAdjustQuantity(
   amount: number,
   tree: RecipeTreeWithCraftFlags,
@@ -18,6 +15,9 @@ export function treeAdjustQuantity(
   tree: RecipeTree | RecipeTreeWithCraftFlags,
   availableItems: Record<string, number> = {}
 ) {
+  // Make sure that we don't modify the passed-in object
+  // We still want to work with a reference in the actual calculation
+  // since the availableItems are a shared state for all sub-recipes
   return treeAdjustQuantityInner(amount, tree, { ...availableItems })
 }
 

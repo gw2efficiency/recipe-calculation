@@ -1,8 +1,9 @@
+import { RecipeTreeWithCraftFlags } from '../src/types'
 import { usedItems } from '../src/usedItems'
 
 describe('usedItems', () => {
   it('gets the correct items to buy and used available items', () => {
-    const tree: any = {
+    const tree: RecipeTreeWithCraftFlags = {
       craft: true,
       craftPrice: 36,
       id: 1,
@@ -13,6 +14,10 @@ describe('usedItems', () => {
       decisionPrice: 36,
       buyPrice: 20,
       buyPriceEach: 10,
+      recipe_id: 123,
+      min_rating: null,
+      disciplines: [],
+      type: 'Recipe',
       components: [
         {
           craft: false,
@@ -25,6 +30,10 @@ describe('usedItems', () => {
           usedQuantity: 6,
           buyPrice: 6,
           buyPriceEach: 1,
+          recipe_id: 123,
+          min_rating: null,
+          disciplines: [],
+          type: 'Recipe',
           components: [
             {
               buyPrice: 60,
@@ -36,6 +45,9 @@ describe('usedItems', () => {
               quantity: 1,
               totalQuantity: 6,
               usedQuantity: 6,
+              min_rating: null,
+              disciplines: [],
+              type: 'Item',
             },
           ],
         },
@@ -50,6 +62,10 @@ describe('usedItems', () => {
           quantity: 5,
           totalQuantity: 10,
           usedQuantity: 3,
+          recipe_id: 123,
+          min_rating: null,
+          disciplines: [],
+          type: 'Recipe',
           components: [
             {
               decisionPrice: 30,
@@ -61,6 +77,9 @@ describe('usedItems', () => {
               quantity: 2,
               totalQuantity: 6,
               usedQuantity: 3,
+              min_rating: null,
+              disciplines: [],
+              type: 'Item',
             },
           ],
         },
@@ -75,6 +94,10 @@ describe('usedItems', () => {
           usedQuantity: 0,
           buyPrice: 0,
           buyPriceEach: 25,
+          recipe_id: 123,
+          min_rating: null,
+          disciplines: [],
+          type: 'Recipe',
           components: [
             {
               buyPrice: 0,
@@ -86,6 +109,9 @@ describe('usedItems', () => {
               quantity: 100,
               totalQuantity: 0,
               usedQuantity: 0,
+              min_rating: null,
+              disciplines: [],
+              type: 'Item',
             },
           ],
         },

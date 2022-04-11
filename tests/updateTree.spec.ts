@@ -1,8 +1,9 @@
 import { clone } from '@devoxa/flocky'
+import { RecipeTreeWithCraftFlags } from '../src/types'
 import { updateTree } from '../src/updateTree'
 
 describe('updateTree', () => {
-  const calculatedTree = {
+  const calculatedTree: RecipeTreeWithCraftFlags = {
     craft: true,
     craftPrice: 384,
     id: 1,
@@ -13,6 +14,9 @@ describe('updateTree', () => {
     decisionPrice: 384,
     buyPrice: 20,
     buyPriceEach: 10,
+    type: 'Recipe',
+    min_rating: 123,
+    disciplines: ['Chef'],
     components: [
       {
         decisionPrice: 84,
@@ -24,6 +28,9 @@ describe('updateTree', () => {
         quantity: 1,
         totalQuantity: 2,
         usedQuantity: 2,
+        type: 'Item',
+        min_rating: null,
+        disciplines: [],
       },
       {
         decisionPrice: 100,
@@ -36,6 +43,9 @@ describe('updateTree', () => {
         quantity: 5,
         totalQuantity: 10,
         usedQuantity: 10,
+        type: 'Recipe',
+        min_rating: null,
+        disciplines: [],
         components: [
           {
             decisionPrice: 200,
@@ -47,6 +57,9 @@ describe('updateTree', () => {
             quantity: 2,
             totalQuantity: 20,
             usedQuantity: 20,
+            type: 'Item',
+            min_rating: null,
+            disciplines: [],
           },
         ],
       },
@@ -61,6 +74,9 @@ describe('updateTree', () => {
         quantity: 5,
         totalQuantity: 10,
         usedQuantity: 10,
+        type: 'Recipe',
+        min_rating: null,
+        disciplines: [],
         components: [
           {
             decisionPrice: 200,
@@ -72,6 +88,9 @@ describe('updateTree', () => {
             quantity: 2,
             totalQuantity: 20,
             usedQuantity: 20,
+            type: 'Item',
+            min_rating: null,
+            disciplines: [],
           },
         ],
       },
@@ -79,23 +98,23 @@ describe('updateTree', () => {
   }
 
   it('keeps the tree the same if nothing changed', () => {
-    const tree: any = clone(calculatedTree)
+    const tree = clone(calculatedTree)
     const prices = { 1: 10, 2: 42, 3: 10, 4: 10, 5: 1000, 6: 10 }
     const updatedTree = updateTree(2, tree, prices)
     expect(updatedTree).toEqual(calculatedTree)
   })
 
   it('updates a tree correctly if the amount, prices or craft flags changed', () => {
-    const tree: any = clone(calculatedTree)
-    tree.components[1].craft = true
+    const tree = clone(calculatedTree)
+    tree.components![1].craft = true // eslint-disable-line @typescript-eslint/no-non-null-assertion
     const prices = { 1: 10, 2: 42, 3: 10, 4: 10, 5: 1000, 6: 11 }
     const updatedTree = updateTree(5, tree, prices)
     expect(updatedTree).toMatchSnapshot()
   })
 
   it('updates a tree correctly if the available items changed', () => {
-    const tree: any = clone(calculatedTree)
-    tree.components[1].craft = true
+    const tree = clone(calculatedTree)
+    tree.components![1].craft = true // eslint-disable-line @typescript-eslint/no-non-null-assertion
     const prices = { 1: 10, 2: 42, 3: 10, 4: 10, 5: 1000, 6: 11 }
     const updatedTree = updateTree(5, tree, prices, { 2: 1000 })
     expect(updatedTree).toMatchSnapshot()
