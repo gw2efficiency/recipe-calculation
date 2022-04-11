@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`treePrices updates the prices for a tree 1`] = `
+exports[`calculateTreePrices updates the prices for a tree 1`] = `
 Object {
   "buyPrice": 123,
   "buyPriceEach": 123,
@@ -47,7 +47,7 @@ Object {
 }
 `;
 
-exports[`treePrices updates the prices for a tree with flags correctly 1`] = `
+exports[`calculateTreePrices updates the prices for a tree with flags correctly 1`] = `
 Object {
   "buyPrice": 123,
   "buyPriceEach": 123,
@@ -97,7 +97,7 @@ Object {
 }
 `;
 
-exports[`treePrices updates the prices for a tree with missing buy prices 1`] = `
+exports[`calculateTreePrices updates the prices for a tree with missing buy prices 1`] = `
 Object {
   "buyPrice": 123,
   "buyPriceEach": 123,

@@ -1,7 +1,7 @@
 import { RecipeTreeWithCraftFlags, RecipeTreeWithPrices } from './types'
 
 // Set the craft flags based on the cheapest price
-export function treeCheapestCraftFlags(
+export function calculateTreeCraftFlags(
   tree: RecipeTreeWithPrices,
   forceBuyItems: Array<number>
 ): RecipeTreeWithCraftFlags {
@@ -19,7 +19,7 @@ export function treeCheapestCraftFlags(
 
   // Adjust the flags for all tree's sub-recipes
   const components = tree.components.map((component) =>
-    treeCheapestCraftFlags(component, forceBuyItems)
+    calculateTreeCraftFlags(component, forceBuyItems)
   )
 
   return { ...tree, components, craft }

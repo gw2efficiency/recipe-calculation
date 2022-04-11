@@ -1,7 +1,7 @@
-import { treeCheapestCraftFlags } from '../src/treeCheapestCraftFlags'
+import { calculateTreeCraftFlags } from '../src/calculateTreeCraftFlags'
 import { RecipeTreeWithPrices } from '../src/types'
 
-describe('treeCheapestCraftFlags', () => {
+describe('calculateTreeCraftFlags', () => {
   it('sets the cheapest craft flags', () => {
     const recipeTree: RecipeTreeWithPrices = {
       id: 1,
@@ -80,7 +80,7 @@ describe('treeCheapestCraftFlags', () => {
       ],
     }
 
-    const calculatedTree = treeCheapestCraftFlags(recipeTree, [5])
+    const calculatedTree = calculateTreeCraftFlags(recipeTree, [5])
     expect(calculatedTree).toMatchSnapshot()
   })
 })

@@ -1,4 +1,4 @@
-import { treePrices } from '../src/treePrices'
+import { calculateTreePrices } from '../src/calculateTreePrices'
 import { RecipeTreeWithCraftFlags, RecipeTreeWithQuantity } from '../src/types'
 
 const TREE_PARTIAL = {
@@ -7,7 +7,7 @@ const TREE_PARTIAL = {
   disciplines: [],
 }
 
-describe('treePrices', () => {
+describe('calculateTreePrices', () => {
   it('updates the prices for a tree', () => {
     const recipeTree: RecipeTreeWithQuantity = {
       ...TREE_PARTIAL,
@@ -30,7 +30,7 @@ describe('treePrices', () => {
     }
     const prices = { 1: 123, 2: 1, 3: 2 }
 
-    const calculatedTree = treePrices(recipeTree, prices)
+    const calculatedTree = calculateTreePrices(recipeTree, prices)
     expect(calculatedTree).toMatchSnapshot()
   })
 
@@ -75,7 +75,7 @@ describe('treePrices', () => {
     }
     const prices = { 1: 123, 2: 1, 3: 2 }
 
-    const calculatedTree = treePrices(recipeTree, prices)
+    const calculatedTree = calculateTreePrices(recipeTree, prices)
     expect(calculatedTree).toMatchSnapshot()
   })
 
@@ -126,7 +126,7 @@ describe('treePrices', () => {
     }
     const prices = { 1: 123, 2: 1, 3: 2, 5: 10 }
 
-    const calculatedTree = treePrices(recipeTree, prices)
+    const calculatedTree = calculateTreePrices(recipeTree, prices)
     expect(calculatedTree).toMatchSnapshot()
   })
 })

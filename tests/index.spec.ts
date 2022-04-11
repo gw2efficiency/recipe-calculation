@@ -4,12 +4,12 @@ describe('recipeCalculation', () => {
   it('exports the correct functions', () => {
     expect(Object.keys(recipeCalculation)).toEqual([
       'cheapestTree',
+      'craftingSteps',
+      'dailyCooldowns',
+      'recipeItems',
+      'useVendorPrices',
       'updateTree',
       'usedItems',
-      'craftingSteps',
-      'recipeItems',
-      'dailyCooldowns',
-      'useVendorPrices',
       'staticItems',
     ])
 

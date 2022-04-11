@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`treeAdjustQuantity (total quantity) calculates the correct quantity for recipes with components 1`] = `
+exports[`calculateTreeQuantity (total quantity) calculates the correct quantity for recipes with components 1`] = `
 Object {
   "components": Array [
     Object {
@@ -40,7 +40,7 @@ Object {
 }
 `;
 
-exports[`treeAdjustQuantity (total quantity) calculates the correct quantity for recipes without components 1`] = `
+exports[`calculateTreeQuantity (total quantity) calculates the correct quantity for recipes without components 1`] = `
 Object {
   "components": undefined,
   "disciplines": Array [
@@ -57,7 +57,7 @@ Object {
 }
 `;
 
-exports[`treeAdjustQuantity (total quantity) calculates the correct quantity if an amount is set 1`] = `
+exports[`calculateTreeQuantity (total quantity) calculates the correct quantity if an amount is set 1`] = `
 Object {
   "components": Array [
     Object {
@@ -97,7 +97,7 @@ Object {
 }
 `;
 
-exports[`treeAdjustQuantity (total quantity) calculates the correct quantity if an recipe has a output > 0 1`] = `
+exports[`calculateTreeQuantity (total quantity) calculates the correct quantity if an recipe has a output > 0 1`] = `
 Object {
   "components": Array [
     Object {
@@ -137,7 +137,7 @@ Object {
 }
 `;
 
-exports[`treeAdjustQuantity (total quantity) calculates the correct quantity if an recipe has a output > 0 2`] = `
+exports[`calculateTreeQuantity (total quantity) calculates the correct quantity if an recipe has a output > 0 2`] = `
 Object {
   "components": Array [
     Object {
@@ -177,7 +177,7 @@ Object {
 }
 `;
 
-exports[`treeAdjustQuantity (total quantity) calculates the correct quantity if an recipe has a output > 0 3`] = `
+exports[`calculateTreeQuantity (total quantity) calculates the correct quantity if an recipe has a output > 0 3`] = `
 Object {
   "components": Array [
     Object {
@@ -217,7 +217,7 @@ Object {
 }
 `;
 
-exports[`treeAdjustQuantity (total quantity) calculates the correct quantity if an sub-recipe has a output > 0 1`] = `
+exports[`calculateTreeQuantity (total quantity) calculates the correct quantity if an sub-recipe has a output > 0 1`] = `
 Object {
   "components": Array [
     Object {
@@ -257,7 +257,7 @@ Object {
 }
 `;
 
-exports[`treeAdjustQuantity (total quantity) calculates the correct quantity if an sub-recipe has a output > 0 2`] = `
+exports[`calculateTreeQuantity (total quantity) calculates the correct quantity if an sub-recipe has a output > 0 2`] = `
 Object {
   "components": Array [
     Object {
@@ -297,7 +297,7 @@ Object {
 }
 `;
 
-exports[`treeAdjustQuantity (total quantity) does not modify the initial recipe tree 1`] = `
+exports[`calculateTreeQuantity (total quantity) does not modify the initial recipe tree 1`] = `
 Object {
   "components": Array [
     Object {
@@ -329,7 +329,7 @@ Object {
 }
 `;
 
-exports[`treeAdjustQuantity (total quantity) does not modify the initial recipe tree 2`] = `
+exports[`calculateTreeQuantity (total quantity) does not modify the initial recipe tree 2`] = `
 Object {
   "components": Array [
     Object {
@@ -369,7 +369,7 @@ Object {
 }
 `;
 
-exports[`treeAdjustQuantity (total quantity) rounds correctly if the output is percentage based 1`] = `
+exports[`calculateTreeQuantity (total quantity) rounds correctly if the output is percentage based 1`] = `
 Object {
   "components": Array [
     Object {
@@ -398,7 +398,7 @@ Object {
 }
 `;
 
-exports[`treeAdjustQuantity (total quantity) works with a complex real recipe 1`] = `
+exports[`calculateTreeQuantity (total quantity) works with a complex real recipe 1`] = `
 Object {
   "components": Array [
     Object {
@@ -516,7 +516,7 @@ Object {
 }
 `;
 
-exports[`treeAdjustQuantity (total quantity) works with a simple real recipe 1`] = `
+exports[`calculateTreeQuantity (total quantity) works with a simple real recipe 1`] = `
 Object {
   "components": Array [
     Object {
@@ -597,7 +597,7 @@ Object {
 }
 `;
 
-exports[`treeAdjustQuantity (used quantity) always crafts the root node even if it is available 1`] = `
+exports[`calculateTreeQuantity (used quantity) always crafts the root node even if it is available 1`] = `
 Object {
   "components": undefined,
   "disciplines": Array [
@@ -614,7 +614,7 @@ Object {
 }
 `;
 
-exports[`treeAdjustQuantity (used quantity) does only craft part of the items if the tree result if partially available 1`] = `
+exports[`calculateTreeQuantity (used quantity) does only craft part of the items if the tree result if partially available 1`] = `
 Object {
   "components": Array [
     Object {
@@ -658,7 +658,7 @@ Object {
 }
 `;
 
-exports[`treeAdjustQuantity (used quantity) doesn't use tree components if the tree result is available or not crafted 1`] = `
+exports[`calculateTreeQuantity (used quantity) doesn't use tree components if the tree result is available or not crafted 1`] = `
 Object {
   "buyPrice": 1,
   "buyPriceEach": 1,
@@ -797,7 +797,7 @@ Object {
 }
 `;
 
-exports[`treeAdjustQuantity (used quantity) doesn't use tree sub-components if the tree result is not crafted or available 1`] = `
+exports[`calculateTreeQuantity (used quantity) doesn't use tree sub-components if the tree result is not crafted or available 1`] = `
 Object {
   "buyPrice": 1,
   "buyPriceEach": 1,
@@ -978,7 +978,7 @@ Object {
 }
 `;
 
-exports[`treeAdjustQuantity (used quantity) sets correct used quantity with available items 1`] = `
+exports[`calculateTreeQuantity (used quantity) sets correct used quantity with available items 1`] = `
 Object {
   "components": Array [
     Object {
@@ -1040,7 +1040,7 @@ Object {
 }
 `;
 
-exports[`treeAdjustQuantity (used quantity) sets correct used quantity without available items 1`] = `
+exports[`calculateTreeQuantity (used quantity) sets correct used quantity without available items 1`] = `
 Object {
   "components": Array [
     Object {

@@ -1,15 +1,15 @@
 import { RecipeTreeWithCraftFlags, RecipeTreeWithPrices, RecipeTreeWithQuantity } from './types'
 
 // Update the tree prices
-export function treePrices(
+export function calculateTreePrices(
   tree: RecipeTreeWithCraftFlags,
   itemPrices: Record<string, number>
 ): RecipeTreeWithCraftFlags
-export function treePrices(
+export function calculateTreePrices(
   tree: RecipeTreeWithQuantity,
   itemPrices: Record<string, number>
 ): RecipeTreeWithPrices
-export function treePrices(
+export function calculateTreePrices(
   tree: RecipeTreeWithQuantity | RecipeTreeWithCraftFlags,
   itemPrices: Record<string, number>
 ): RecipeTreeWithPrices | RecipeTreeWithCraftFlags {
@@ -23,7 +23,7 @@ export function treePrices(
   }
 
   // Calculate the tree prices traversal for the sub-components
-  const components = tree.components.map((component) => treePrices(component, itemPrices))
+  const components = tree.components.map((component) => calculateTreePrices(component, itemPrices))
 
   // Calculate the craft price out of the best prices
   const craftPrice = components.map((c) => c.decisionPrice || 0).reduce((a, b) => a + b, 0)

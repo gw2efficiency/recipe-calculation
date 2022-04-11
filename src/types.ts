@@ -1,6 +1,9 @@
 import type { NestedRecipe as NestedRecipeTree } from '@gw2efficiency/recipe-nesting'
 
-type ExtendRecipeTree<TBaseTree, TProperties> = Omit<TBaseTree, 'type' | 'components' | 'recipe_id'> & {
+type ExtendRecipeTree<TBaseTree, TProperties> = Omit<
+  TBaseTree,
+  'type' | 'components' | 'recipe_id'
+> & {
   type: 'Recipe' | 'Item' | 'Currency'
   components?: Array<ExtendRecipeTree<TBaseTree, TProperties>>
   recipe_id?: number

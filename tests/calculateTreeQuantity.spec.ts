@@ -1,4 +1,4 @@
-import { treeAdjustQuantity } from '../src/treeAdjustQuantity'
+import { calculateTreeQuantity } from '../src/calculateTreeQuantity'
 import { RecipeTree, RecipeTreeWithCraftFlags } from '../src/types'
 
 const RECIPE_PARTIAL = {
@@ -38,11 +38,11 @@ const ITEM_PARTIAL_WITH_CRAFT_FLAGS = {
   decisionPrice: 1,
 }
 
-describe('treeAdjustQuantity (total quantity)', () => {
+describe('calculateTreeQuantity (total quantity)', () => {
   it('calculates the correct quantity for recipes without components', () => {
     const recipeTree: RecipeTree = { ...RECIPE_PARTIAL, quantity: 1 }
 
-    const adjustedTree = treeAdjustQuantity(1, recipeTree)
+    const adjustedTree = calculateTreeQuantity(1, recipeTree)
     expect(adjustedTree).toMatchSnapshot()
   })
 
@@ -56,7 +56,7 @@ describe('treeAdjustQuantity (total quantity)', () => {
       ],
     }
 
-    const adjustedTree = treeAdjustQuantity(1, recipeTree)
+    const adjustedTree = calculateTreeQuantity(1, recipeTree)
     expect(adjustedTree).toMatchSnapshot()
   })
 
@@ -70,7 +70,7 @@ describe('treeAdjustQuantity (total quantity)', () => {
       ],
     }
 
-    const adjustedTree = treeAdjustQuantity(1, recipeTree)
+    const adjustedTree = calculateTreeQuantity(1, recipeTree)
     expect(recipeTree).toMatchSnapshot()
     expect(adjustedTree).toMatchSnapshot()
   })
@@ -85,7 +85,7 @@ describe('treeAdjustQuantity (total quantity)', () => {
       ],
     }
 
-    const adjustedTree = treeAdjustQuantity(2, recipeTree)
+    const adjustedTree = calculateTreeQuantity(2, recipeTree)
     expect(adjustedTree).toMatchSnapshot()
   })
 
@@ -99,13 +99,13 @@ describe('treeAdjustQuantity (total quantity)', () => {
         { ...ITEM_PARTIAL, quantity: 5 },
       ],
     }
-    const adjustedTreeOne = treeAdjustQuantity(1, recipeTree)
+    const adjustedTreeOne = calculateTreeQuantity(1, recipeTree)
     expect(adjustedTreeOne).toMatchSnapshot()
 
-    const adjustedTreeTwo = treeAdjustQuantity(4, recipeTree)
+    const adjustedTreeTwo = calculateTreeQuantity(4, recipeTree)
     expect(adjustedTreeTwo).toMatchSnapshot()
 
-    const adjustedTreeThree = treeAdjustQuantity(25, recipeTree)
+    const adjustedTreeThree = calculateTreeQuantity(25, recipeTree)
     expect(adjustedTreeThree).toMatchSnapshot()
   })
 
@@ -120,10 +120,10 @@ describe('treeAdjustQuantity (total quantity)', () => {
       ],
     }
 
-    const adjustedTreeOne = treeAdjustQuantity(1, recipeTree)
+    const adjustedTreeOne = calculateTreeQuantity(1, recipeTree)
     expect(adjustedTreeOne).toMatchSnapshot()
 
-    const adjustedTreeTwo = treeAdjustQuantity(3, recipeTree)
+    const adjustedTreeTwo = calculateTreeQuantity(3, recipeTree)
     expect(adjustedTreeTwo).toMatchSnapshot()
   })
 
@@ -149,7 +149,7 @@ describe('treeAdjustQuantity (total quantity)', () => {
       ],
     }
 
-    const adjustedTree = treeAdjustQuantity(7, recipeTree)
+    const adjustedTree = calculateTreeQuantity(7, recipeTree)
     expect(adjustedTree).toMatchSnapshot()
   })
 
@@ -184,7 +184,7 @@ describe('treeAdjustQuantity (total quantity)', () => {
       ],
     }
 
-    const adjustedTree = treeAdjustQuantity(2, recipeTree)
+    const adjustedTree = calculateTreeQuantity(2, recipeTree)
     expect(adjustedTree).toMatchSnapshot()
   })
 
@@ -195,12 +195,12 @@ describe('treeAdjustQuantity (total quantity)', () => {
       components: [{ ...ITEM_PARTIAL, quantity: 77, output: 0.31 }],
     }
 
-    const adjustedTree = treeAdjustQuantity(1, recipeTree)
+    const adjustedTree = calculateTreeQuantity(1, recipeTree)
     expect(adjustedTree).toMatchSnapshot()
   })
 })
 
-describe('treeAdjustQuantity (used quantity)', () => {
+describe('calculateTreeQuantity (used quantity)', () => {
   it('sets correct used quantity without available items', () => {
     const recipeTree: RecipeTree = {
       ...RECIPE_PARTIAL,
@@ -214,7 +214,7 @@ describe('treeAdjustQuantity (used quantity)', () => {
     }
     const availableItems = {}
 
-    expect(treeAdjustQuantity(1, recipeTree, availableItems)).toMatchSnapshot()
+    expect(calculateTreeQuantity(1, recipeTree, availableItems)).toMatchSnapshot()
   })
 
   it('sets correct used quantity with available items', () => {
@@ -232,7 +232,7 @@ describe('treeAdjustQuantity (used quantity)', () => {
     }
     const availableItems = { 2: 2, 3: 2 }
 
-    expect(treeAdjustQuantity(1, recipeTree, availableItems)).toMatchSnapshot()
+    expect(calculateTreeQuantity(1, recipeTree, availableItems)).toMatchSnapshot()
     expect(availableItems).toEqual({ 2: 2, 3: 2 })
   })
 
@@ -270,7 +270,7 @@ describe('treeAdjustQuantity (used quantity)', () => {
     }
     const availableItems = { 2: 3, 3: 1, 4: 5 }
 
-    expect(treeAdjustQuantity(1, recipeTree, availableItems)).toMatchSnapshot()
+    expect(calculateTreeQuantity(1, recipeTree, availableItems)).toMatchSnapshot()
   })
 
   it("doesn't use tree sub-components if the tree result is not crafted or available", () => {
@@ -333,7 +333,7 @@ describe('treeAdjustQuantity (used quantity)', () => {
     }
     const availableItems = { 99: 1000, 4: 20 }
 
-    expect(treeAdjustQuantity(1, recipeTree, availableItems)).toMatchSnapshot()
+    expect(calculateTreeQuantity(1, recipeTree, availableItems)).toMatchSnapshot()
   })
 
   it('does only craft part of the items if the tree result if partially available', () => {
@@ -354,7 +354,7 @@ describe('treeAdjustQuantity (used quantity)', () => {
     }
     const availableItems = { 1: 5, 2: 3 }
 
-    expect(treeAdjustQuantity(10, recipeTree, availableItems)).toMatchSnapshot()
+    expect(calculateTreeQuantity(10, recipeTree, availableItems)).toMatchSnapshot()
   })
 
   it('always crafts the root node even if it is available', () => {
@@ -366,6 +366,6 @@ describe('treeAdjustQuantity (used quantity)', () => {
     }
     const availableItems = { 1: 500 }
 
-    expect(treeAdjustQuantity(1, recipeTree, availableItems)).toMatchSnapshot()
+    expect(calculateTreeQuantity(1, recipeTree, availableItems)).toMatchSnapshot()
   })
 })

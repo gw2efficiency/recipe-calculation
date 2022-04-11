@@ -1,6 +1,6 @@
-import { treeAdjustQuantity } from './treeAdjustQuantity'
-import { treePrices } from './treePrices'
-import { treeCheapestCraftFlags } from './treeCheapestCraftFlags'
+import { calculateTreeQuantity } from './calculateTreeQuantity'
+import { calculateTreePrices } from './calculateTreePrices'
+import { calculateTreeCraftFlags } from './calculateTreeCraftFlags'
 import { RecipeTree, RecipeTreeWithCraftFlags } from './types'
 import { NestedRecipe } from '@gw2efficiency/recipe-nesting'
 
@@ -12,19 +12,23 @@ export function cheapestTree(
   forceBuyItems: Array<number> = []
 ): RecipeTreeWithCraftFlags {
   // Adjust the tree total and used quantities
-  const treeWithQuantity = treeAdjustQuantity(amount, tree as RecipeTree, availableItems)
+  const treeWithQuantity = calculateTreeQuantity(amount, tree as RecipeTree, availableItems)
 
   // Set the initial craft flags based on the subtree prices
-  const treeWithPrices = treePrices(treeWithQuantity, itemPrices)
-  const treeWithCraftFlags = treeCheapestCraftFlags(treeWithPrices, forceBuyItems)
+  const treeWithPrices = calculateTreePrices(treeWithQuantity, itemPrices)
+  const treeWithCraftFlags = calculateTreeCraftFlags(treeWithPrices, forceBuyItems)
 
   // Force the root to be crafted
   treeWithCraftFlags.craft = true
 
   // After the "craft" flags are set, update the used materials
   // to only be used for things that actually get crafted
-  const treeWithQuantityFinal = treeAdjustQuantity(amount, treeWithCraftFlags, availableItems)
+  const treeWithQuantityPostFlags = calculateTreeQuantity(
+    amount,
+    treeWithCraftFlags,
+    availableItems
+  )
 
   // Recalculate the correct tree price
-  return treePrices(treeWithQuantityFinal, itemPrices)
+  return calculateTreePrices(treeWithQuantityPostFlags, itemPrices)
 }

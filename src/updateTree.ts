@@ -1,5 +1,5 @@
-import { treeAdjustQuantity } from './treeAdjustQuantity'
-import { treePrices } from './treePrices'
+import { calculateTreeQuantity } from './calculateTreeQuantity'
+import { calculateTreePrices } from './calculateTreePrices'
 import { RecipeTreeWithCraftFlags } from './types'
 
 export function updateTree(
@@ -9,8 +9,8 @@ export function updateTree(
   availableItems: Record<string, number> = {}
 ) {
   // Update the tree total and used quantities
-  const treeWithQuantity = treeAdjustQuantity(amount, tree, availableItems)
+  const treeWithQuantity = calculateTreeQuantity(amount, tree, availableItems)
 
   // Recalculate the correct tree price
-  return treePrices(treeWithQuantity, itemPrices)
+  return calculateTreePrices(treeWithQuantity, itemPrices)
 }

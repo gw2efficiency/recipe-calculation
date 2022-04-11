@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`treeCheapestCraftFlags sets the cheapest craft flags 1`] = `
+exports[`calculateTreeCraftFlags sets the cheapest craft flags 1`] = `
 Object {
   "buyPrice": false,
   "buyPriceEach": false,

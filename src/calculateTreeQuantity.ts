@@ -1,16 +1,16 @@
 import { RecipeTreeWithCraftFlags, RecipeTree, RecipeTreeWithQuantity } from './types'
 
-export function treeAdjustQuantity(
+export function calculateTreeQuantity(
   amount: number,
   tree: RecipeTreeWithCraftFlags,
   availableItems?: Record<string, number>
 ): RecipeTreeWithCraftFlags
-export function treeAdjustQuantity(
+export function calculateTreeQuantity(
   amount: number,
   tree: RecipeTree,
   availableItems?: Record<string, number>
 ): RecipeTreeWithQuantity
-export function treeAdjustQuantity(
+export function calculateTreeQuantity(
   amount: number,
   tree: RecipeTree | RecipeTreeWithCraftFlags,
   availableItems: Record<string, number> = {}
@@ -18,12 +18,12 @@ export function treeAdjustQuantity(
   // Make sure that we don't modify the passed-in object
   // We still want to work with a reference in the actual calculation
   // since the availableItems are a shared state for all sub-recipes
-  return treeAdjustQuantityInner(amount, tree, { ...availableItems })
+  return calculateTreeQuantityInner(amount, tree, { ...availableItems })
 }
 
 // Go through a recipe tree and set 'totalQuantity' based on the
 // wanted amount and the output of recipes and sub-recipes
-function treeAdjustQuantityInner(
+function calculateTreeQuantityInner(
   amount: number,
   tree: RecipeTree | RecipeTreeWithCraftFlags,
   availableItems: Record<string, number>,
@@ -64,7 +64,7 @@ function treeAdjustQuantityInner(
 
   // Adjust the quantity for all tree's subcomponents
   const components = tree.components.map((component) => {
-    return treeAdjustQuantityInner(
+    return calculateTreeQuantityInner(
       componentAmount,
       component,
       availableItems,
