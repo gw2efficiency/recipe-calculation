@@ -54,8 +54,8 @@ function craftingStepsInner(
   if (stepIndex !== -1) {
     steps[stepIndex].quantity += tree.usedQuantity
     steps[stepIndex].components = steps[stepIndex].components.map((component) => {
-      const treeComponent = treeComponents.find((x) => x.id === component.id)
-      if (!treeComponent) return component
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      const treeComponent = treeComponents.find((x) => x.id === component.id)!
 
       component.quantity += treeComponent.totalQuantity
       return component

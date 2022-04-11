@@ -1,4 +1,4 @@
-import { craftingSteps } from '../src/craftingSteps'
+import { craftingSteps } from '../src'
 import { RecipeTreeWithCraftFlags } from '../src/types'
 
 describe('craftingSteps', () => {

@@ -1,4 +1,4 @@
-import { useVendorPrices } from '../../src/helpers/useVendorPrices'
+import { useVendorPrices } from '../../src'
 
 describe('helpers > useVendorPrices', () => {
   it('overwrites and adds vendor prices to the price object', () => {

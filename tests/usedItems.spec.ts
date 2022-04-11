@@ -1,5 +1,5 @@
 import { RecipeTreeWithCraftFlags } from '../src/types'
-import { usedItems } from '../src/usedItems'
+import { usedItems } from '../src'
 
 describe('usedItems', () => {
   it('gets the correct items to buy and used available items', () => {

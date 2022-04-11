@@ -1,5 +1,5 @@
 import { NestedRecipe } from '@gw2efficiency/recipe-nesting'
-import { cheapestTree } from '../src/cheapestTree'
+import { cheapestTree } from '../src'
 
 describe('cheapestTree', () => {
   it('can calculate the cheapest tree correctly', () => {

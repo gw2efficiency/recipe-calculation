@@ -1,4 +1,4 @@
-import { recipeItems } from '../../src/helpers/recipeItems'
+import { recipeItems } from '../../src'
 import { RecipeTreeWithCraftFlags } from '../../src/types'
 
 describe('helpers > recipeItems', () => {

@@ -1,6 +1,6 @@
 import { clone } from '@devoxa/flocky'
 import { RecipeTreeWithCraftFlags } from '../src/types'
-import { updateTree } from '../src/updateTree'
+import { updateTree } from '../src'
 
 describe('updateTree', () => {
   const calculatedTree: RecipeTreeWithCraftFlags = {

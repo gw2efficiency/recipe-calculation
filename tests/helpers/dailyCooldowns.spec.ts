@@ -1,4 +1,4 @@
-import { dailyCooldowns } from '../../src/helpers/dailyCooldowns'
+import { dailyCooldowns } from '../../src'
 import { RecipeTreeWithCraftFlags } from '../../src/types'
 
 describe('helpers > dailyCooldowns', () => {
