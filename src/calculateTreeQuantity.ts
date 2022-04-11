@@ -43,7 +43,7 @@ function calculateTreeQuantityInner(
   // bought or already available get as many items of it as possible
   // (This ignores the root node, because we *always* want to craft all of these)
   let availableQuantity = 0
-  if (nesting > 0 && !ignoreAvailable && availableItems[tree.id]) {
+  if (nesting > 0 && tree.type !== 'Currency' && !ignoreAvailable && availableItems[tree.id]) {
     availableQuantity = Math.min(availableItems[tree.id], totalQuantity)
     availableItems[tree.id] -= availableQuantity
   }

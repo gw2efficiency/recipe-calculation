@@ -14,7 +14,11 @@ export function calculateTreePrices(
   itemPrices: Record<string, number>
 ): RecipeTreeWithPrices | RecipeTreeWithCraftFlags {
   // Calculate the buy prices
-  const buyPriceEach = itemPrices[tree.id] || false
+  let buyPriceEach = itemPrices[tree.id] || false
+  if (tree.type === 'Currency') {
+    // Coin is 1c per used quantity, the other currencies are not considered
+    buyPriceEach = tree.id === 1 ? 1 : false
+  }
   const buyPrice = buyPriceEach ? tree.usedQuantity * buyPriceEach : false
   let decisionPrice = buyPrice
 

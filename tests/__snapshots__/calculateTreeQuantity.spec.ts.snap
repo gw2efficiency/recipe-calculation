@@ -82,6 +82,17 @@ Object {
       "type": "Item",
       "usedQuantity": 10,
     },
+    Object {
+      "components": undefined,
+      "disciplines": Array [],
+      "id": 1,
+      "min_rating": null,
+      "output": 1,
+      "quantity": 10,
+      "totalQuantity": 20,
+      "type": "Currency",
+      "usedQuantity": 20,
+    },
   ],
   "disciplines": Array [
     "Armorsmith",
@@ -981,6 +992,17 @@ Object {
 exports[`calculateTreeQuantity (used quantity) sets correct used quantity with available items 1`] = `
 Object {
   "components": Array [
+    Object {
+      "components": undefined,
+      "disciplines": Array [],
+      "id": 2,
+      "min_rating": null,
+      "output": 1,
+      "quantity": 100,
+      "totalQuantity": 100,
+      "type": "Currency",
+      "usedQuantity": 100,
+    },
     Object {
       "components": undefined,
       "disciplines": Array [],

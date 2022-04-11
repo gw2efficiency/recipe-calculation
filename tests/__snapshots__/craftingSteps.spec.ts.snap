@@ -7,6 +7,7 @@ Array [
       Object {
         "id": 4,
         "quantity": 30,
+        "type": "Item",
       },
     ],
     "crafts": 15,
@@ -18,12 +19,14 @@ Array [
     "output": undefined,
     "quantity": 15,
     "recipeId": 123,
+    "type": "Recipe",
   },
   Object {
     "components": Array [
       Object {
         "id": 7,
         "quantity": 3,
+        "type": "Recipe",
       },
     ],
     "crafts": 3,
@@ -33,12 +36,14 @@ Array [
     "output": undefined,
     "quantity": 3,
     "recipeId": undefined,
+    "type": "Recipe",
   },
   Object {
     "components": Array [
       Object {
         "id": 19,
         "quantity": 3,
+        "type": "Recipe",
       },
     ],
     "crafts": 3,
@@ -48,12 +53,14 @@ Array [
     "output": undefined,
     "quantity": 3,
     "recipeId": undefined,
+    "type": "Recipe",
   },
   Object {
     "components": Array [
       Object {
         "id": 7,
         "quantity": 6,
+        "type": "Recipe",
       },
     ],
     "crafts": 1,
@@ -63,28 +70,39 @@ Array [
     "output": undefined,
     "quantity": 1,
     "recipeId": undefined,
+    "type": "Recipe",
   },
   Object {
     "components": Array [
       Object {
         "id": 7,
         "quantity": 6,
+        "type": "Recipe",
       },
       Object {
         "id": 3,
         "quantity": 10,
+        "type": "Recipe",
       },
       Object {
         "id": 5,
         "quantity": 4,
+        "type": "Recipe",
       },
       Object {
         "id": 15,
         "quantity": 1,
+        "type": "Recipe",
       },
       Object {
         "id": 1337,
         "quantity": 1,
+        "type": "Recipe",
+      },
+      Object {
+        "id": 1,
+        "quantity": 6,
+        "type": "Currency",
       },
     ],
     "crafts": 1,
@@ -94,6 +112,7 @@ Array [
     "output": undefined,
     "quantity": 2,
     "recipeId": undefined,
+    "type": "Recipe",
   },
 ]
 `;
@@ -105,6 +124,7 @@ Array [
       Object {
         "id": 6,
         "quantity": 2,
+        "type": "Item",
       },
     ],
     "crafts": 2,
@@ -114,12 +134,14 @@ Array [
     "output": undefined,
     "quantity": 2,
     "recipeId": undefined,
+    "type": "Recipe",
   },
   Object {
     "components": Array [
       Object {
         "id": 4,
         "quantity": 1,
+        "type": "Item",
       },
     ],
     "crafts": 1,
@@ -129,16 +151,19 @@ Array [
     "output": undefined,
     "quantity": 1,
     "recipeId": undefined,
+    "type": "Recipe",
   },
   Object {
     "components": Array [
       Object {
         "id": 3,
         "quantity": 2,
+        "type": "Recipe",
       },
       Object {
         "id": 5,
         "quantity": 2,
+        "type": "Recipe",
       },
     ],
     "crafts": 2,
@@ -148,16 +173,19 @@ Array [
     "output": undefined,
     "quantity": 2,
     "recipeId": undefined,
+    "type": "Recipe",
   },
   Object {
     "components": Array [
       Object {
         "id": 2,
         "quantity": 1,
+        "type": "Recipe",
       },
       Object {
         "id": 2,
         "quantity": 1,
+        "type": "Recipe",
       },
     ],
     "crafts": 1,
@@ -167,6 +195,7 @@ Array [
     "output": undefined,
     "quantity": 1,
     "recipeId": undefined,
+    "type": "Recipe",
   },
 ]
 `;
@@ -178,6 +207,7 @@ Array [
       Object {
         "id": 99999,
         "quantity": 6,
+        "type": "Item",
       },
     ],
     "crafts": 3,
@@ -187,12 +217,14 @@ Array [
     "output": undefined,
     "quantity": 3,
     "recipeId": undefined,
+    "type": "Recipe",
   },
   Object {
     "components": Array [
       Object {
         "id": 4,
         "quantity": 24,
+        "type": "Item",
       },
     ],
     "crafts": 12,
@@ -204,12 +236,14 @@ Array [
     "output": undefined,
     "quantity": 12,
     "recipeId": 123,
+    "type": "Recipe",
   },
   Object {
     "components": Array [
       Object {
         "id": 19675,
         "quantity": 3,
+        "type": "Recipe",
       },
     ],
     "crafts": 3,
@@ -219,12 +253,14 @@ Array [
     "output": undefined,
     "quantity": 3,
     "recipeId": undefined,
+    "type": "Recipe",
   },
   Object {
     "components": Array [
       Object {
         "id": 19,
         "quantity": 3,
+        "type": "Recipe",
       },
     ],
     "crafts": 3,
@@ -234,12 +270,14 @@ Array [
     "output": undefined,
     "quantity": 3,
     "recipeId": undefined,
+    "type": "Recipe",
   },
   Object {
     "components": Array [
       Object {
         "id": 7,
         "quantity": 6,
+        "type": "Recipe",
       },
     ],
     "crafts": 1,
@@ -249,24 +287,29 @@ Array [
     "output": undefined,
     "quantity": 1,
     "recipeId": undefined,
+    "type": "Recipe",
   },
   Object {
     "components": Array [
       Object {
         "id": 7,
         "quantity": 6,
+        "type": "Recipe",
       },
       Object {
         "id": 3,
         "quantity": 10,
+        "type": "Recipe",
       },
       Object {
         "id": 5,
         "quantity": 4,
+        "type": "Recipe",
       },
       Object {
         "id": 15,
         "quantity": 1,
+        "type": "Recipe",
       },
     ],
     "crafts": 1,
@@ -276,6 +319,7 @@ Array [
     "output": undefined,
     "quantity": 2,
     "recipeId": undefined,
+    "type": "Recipe",
   },
 ]
 `;

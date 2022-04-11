@@ -82,6 +82,7 @@ describe('calculateTreeQuantity (total quantity)', () => {
       components: [
         { ...ITEM_PARTIAL, quantity: 1 },
         { ...ITEM_PARTIAL, quantity: 5 },
+        { ...ITEM_PARTIAL, type: 'Currency', quantity: 10 },
       ],
     }
 
@@ -224,6 +225,7 @@ describe('calculateTreeQuantity (used quantity)', () => {
       quantity: 1,
       output: 1,
       components: [
+        { ...ITEM_PARTIAL, id: 2, type: 'Currency', quantity: 100, output: 1 },
         { ...ITEM_PARTIAL, id: 2, quantity: 1, output: 1 },
         { ...ITEM_PARTIAL, id: 3, quantity: 5, output: 1 },
         { ...ITEM_PARTIAL, id: 3, quantity: 5, output: 1 },

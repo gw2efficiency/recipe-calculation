@@ -21,7 +21,11 @@ describe('cheapestTree', () => {
           min_rating: 200,
           disciplines: ['Amoursmith'],
           quantity: 5,
-          components: [{ id: 4, type: 'Item', quantity: 2 }],
+          components: [
+            { id: 4, type: 'Item', quantity: 2 },
+            { id: 4, type: 'Currency', quantity: 200 },
+            { id: 1, type: 'Currency', quantity: 100 },
+          ],
         },
         {
           id: 5,
