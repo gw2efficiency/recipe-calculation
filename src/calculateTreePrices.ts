@@ -31,7 +31,14 @@ export function calculateTreePrices(
   let decisionPrice = decisionPriceEach ? tree.usedQuantity * decisionPriceEach : false
 
   if (!tree.components) {
-    return { ...tree, components: undefined, buyPriceEach, buyPrice, decisionPrice, craftResultPrice }
+    return {
+      ...tree,
+      components: undefined,
+      buyPriceEach,
+      buyPrice,
+      decisionPrice,
+      craftResultPrice,
+    }
   }
 
   // Calculate the tree prices traversal for the sub-components
@@ -45,11 +52,21 @@ export function calculateTreePrices(
   // used to determine the craft price of the higher-up recipe
   if (
     !('craft' in tree && tree.craft === false) &&
-    (('craft' in tree && tree.craft === true) || !decisionPrice || craftDecisionPrice < decisionPrice)
+    (('craft' in tree && tree.craft === true) ||
+      !decisionPrice ||
+      craftDecisionPrice < decisionPrice)
   ) {
     decisionPrice = craftDecisionPrice
     craftResultPrice = craftPrice
   }
 
-  return { ...tree, components, buyPriceEach, buyPrice, craftPrice, decisionPrice, craftResultPrice }
+  return {
+    ...tree,
+    components,
+    buyPriceEach,
+    buyPrice,
+    craftPrice,
+    decisionPrice,
+    craftResultPrice,
+  }
 }
