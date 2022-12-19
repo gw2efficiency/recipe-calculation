@@ -205,9 +205,67 @@ Array [
   Object {
     "components": Array [
       Object {
-        "id": 99999,
+        "id": 19,
+        "quantity": 250,
+        "type": "Currency",
+      },
+      Object {
+        "id": 2,
+        "quantity": 10500,
+        "type": "Currency",
+      },
+    ],
+    "crafts": 10,
+    "disciplines": Array [
+      "Merchant",
+    ],
+    "id": 19925,
+    "minRating": null,
+    "output": undefined,
+    "quantity": 10,
+    "recipeId": undefined,
+    "type": "Recipe",
+  },
+  Object {
+    "components": Array [
+      Object {
+        "id": 23,
         "quantity": 6,
+        "type": "Currency",
+      },
+    ],
+    "crafts": 6,
+    "disciplines": Array [
+      "Merchant",
+    ],
+    "id": 20796,
+    "minRating": null,
+    "output": undefined,
+    "quantity": 60,
+    "recipeId": undefined,
+    "type": "Recipe",
+  },
+  Object {
+    "components": Array [
+      Object {
+        "id": 19925,
+        "quantity": 10,
+        "type": "Recipe",
+      },
+      Object {
+        "id": 19976,
+        "quantity": 10,
         "type": "Item",
+      },
+      Object {
+        "id": 19721,
+        "quantity": 10,
+        "type": "Item",
+      },
+      Object {
+        "id": 20796,
+        "quantity": 60,
+        "type": "Recipe",
       },
     ],
     "crafts": 3,

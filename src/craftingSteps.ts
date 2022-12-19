@@ -7,13 +7,23 @@ export function craftingSteps(tree: RecipeTreeWithCraftFlags) {
   // This can happen when a crafting tree is updated after the initial calculation
   steps = steps.filter((step) => step.quantity > 0)
 
-  // Make sure that "Mystic Clovers" get crafted as the first step,
+  // Make sure that "Mystic Clovers" (and it's components) get crafted as the first steps,
   // since they generate items that are always useful for crafting the other steps
-  const mysticCloverId = 19675
-  const clovers = steps.find((step) => step.id === mysticCloverId)
-  if (clovers) {
-    steps = steps.filter((step) => step.id !== mysticCloverId)
-    steps.unshift(clovers)
+  const mysticCloversId = 19675
+  const mysticClovers = steps.find((step) => step.id === mysticCloversId)
+  if (mysticClovers) {
+    steps = steps.filter((step) => step.id !== mysticCloversId)
+    steps.unshift(mysticClovers)
+
+    const philosopherStonesId = 20796
+    const philosopherStones = steps.find((step) => step.id === philosopherStonesId)
+    steps = steps.filter((step) => step.id !== philosopherStonesId)
+    philosopherStones && steps.unshift(philosopherStones)
+
+    const obsidianShardsId = 19925
+    const obsidianShards = steps.find((step) => step.id === obsidianShardsId)
+    steps = steps.filter((step) => step.id !== obsidianShardsId)
+    obsidianShards && steps.unshift(obsidianShards)
   }
 
   return steps.map((step) => ({
