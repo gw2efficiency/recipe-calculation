@@ -25,8 +25,14 @@ export type RecipeTreeWithPrices = ExtendRecipeTree<
   {
     buyPriceEach: number | false
     buyPrice: number | false
-    decisionPrice: number | false
+
     craftPrice?: number
+
+    /** This price is used for choosing if the recipe should be crafted */
+    decisionPrice: number | false
+
+    /** The sum of this price is used to calculate the craftPrice */
+    craftResultPrice: number | false
   }
 >
 

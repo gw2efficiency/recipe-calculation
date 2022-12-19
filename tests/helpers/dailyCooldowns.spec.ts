@@ -16,6 +16,7 @@ describe('helpers > dailyCooldowns', () => {
       buyPriceEach: 1,
       buyPrice: 1,
       decisionPrice: 1,
+      craftResultPrice: 1,
       components: [
         {
           id: 66913,
@@ -30,6 +31,7 @@ describe('helpers > dailyCooldowns', () => {
           buyPriceEach: 1,
           buyPrice: 1,
           decisionPrice: 1,
+          craftResultPrice: 1,
           components: [
             {
               id: 4,
@@ -44,6 +46,7 @@ describe('helpers > dailyCooldowns', () => {
               buyPriceEach: 1,
               buyPrice: 1,
               decisionPrice: 1,
+              craftResultPrice: 1,
             },
           ],
         },
@@ -60,6 +63,7 @@ describe('helpers > dailyCooldowns', () => {
           buyPriceEach: 1,
           buyPrice: 1,
           decisionPrice: 1,
+          craftResultPrice: 1,
           components: [
             {
               id: 19,
@@ -74,6 +78,7 @@ describe('helpers > dailyCooldowns', () => {
               buyPriceEach: 1,
               buyPrice: 1,
               decisionPrice: 1,
+              craftResultPrice: 1,
               components: [
                 {
                   id: 66913,
@@ -88,6 +93,7 @@ describe('helpers > dailyCooldowns', () => {
                   buyPriceEach: 1,
                   buyPrice: 1,
                   decisionPrice: 1,
+                  craftResultPrice: 1,
                   components: [
                     {
                       id: 4,
@@ -102,6 +108,7 @@ describe('helpers > dailyCooldowns', () => {
                       buyPriceEach: 1,
                       buyPrice: 1,
                       decisionPrice: 1,
+                      craftResultPrice: 1,
                     },
                   ],
                 },
@@ -122,6 +129,7 @@ describe('helpers > dailyCooldowns', () => {
           buyPriceEach: 1,
           buyPrice: 1,
           decisionPrice: 1,
+          craftResultPrice: 1,
           components: [
             {
               id: 6,
@@ -136,6 +144,7 @@ describe('helpers > dailyCooldowns', () => {
               buyPriceEach: 1,
               buyPrice: 1,
               decisionPrice: 1,
+              craftResultPrice: 1,
             },
           ],
         },
@@ -152,6 +161,7 @@ describe('helpers > dailyCooldowns', () => {
           buyPriceEach: 1,
           buyPrice: 1,
           decisionPrice: 1,
+          craftResultPrice: 1,
           components: [
             {
               id: 7,
@@ -166,6 +176,7 @@ describe('helpers > dailyCooldowns', () => {
               buyPriceEach: 1,
               buyPrice: 1,
               decisionPrice: 1,
+              craftResultPrice: 1,
               components: [
                 {
                   id: 4,
@@ -180,6 +191,7 @@ describe('helpers > dailyCooldowns', () => {
                   buyPriceEach: 1,
                   buyPrice: 1,
                   decisionPrice: 1,
+                  craftResultPrice: 1,
                 },
               ],
             },
@@ -198,6 +210,7 @@ describe('helpers > dailyCooldowns', () => {
           buyPriceEach: 1,
           buyPrice: 1,
           decisionPrice: 1,
+          craftResultPrice: 1,
         },
         {
           id: 1,
@@ -212,6 +225,7 @@ describe('helpers > dailyCooldowns', () => {
           buyPriceEach: false,
           buyPrice: false,
           decisionPrice: false,
+          craftResultPrice: false,
         },
       ],
     }

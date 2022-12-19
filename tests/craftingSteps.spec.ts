@@ -15,6 +15,7 @@ describe('craftingSteps', () => {
       buyPriceEach: 1,
       buyPrice: 1,
       decisionPrice: 1,
+      craftResultPrice: 1,
       disciplines: [],
       components: [
         {
@@ -27,6 +28,7 @@ describe('craftingSteps', () => {
           buyPriceEach: 1,
           buyPrice: 1,
           decisionPrice: 1,
+          craftResultPrice: 1,
           output: 1,
           min_rating: 400,
           disciplines: ['Armorsmith'],
@@ -44,6 +46,7 @@ describe('craftingSteps', () => {
               buyPriceEach: 1,
               buyPrice: 1,
               decisionPrice: 1,
+              craftResultPrice: 1,
               disciplines: [],
             },
           ],
@@ -61,6 +64,7 @@ describe('craftingSteps', () => {
           buyPrice: 1,
           buyPriceEach: 1,
           decisionPrice: 1,
+          craftResultPrice: 1,
           components: [
             {
               id: 19,
@@ -75,6 +79,7 @@ describe('craftingSteps', () => {
               buyPrice: 1,
               buyPriceEach: 1,
               decisionPrice: 1,
+              craftResultPrice: 1,
               components: [
                 {
                   id: 7,
@@ -89,6 +94,7 @@ describe('craftingSteps', () => {
                   buyPrice: 1,
                   buyPriceEach: 1,
                   decisionPrice: 1,
+                  craftResultPrice: 1,
                   components: [
                     {
                       id: 4,
@@ -102,6 +108,7 @@ describe('craftingSteps', () => {
                       buyPriceEach: 1,
                       buyPrice: 1,
                       decisionPrice: 1,
+                      craftResultPrice: 1,
                       disciplines: [],
                     },
                   ],
@@ -122,6 +129,7 @@ describe('craftingSteps', () => {
           buyPriceEach: 1,
           buyPrice: 1,
           decisionPrice: 1,
+          craftResultPrice: 1,
           disciplines: [],
           components: [
             {
@@ -136,6 +144,7 @@ describe('craftingSteps', () => {
               buyPriceEach: 1,
               buyPrice: 1,
               decisionPrice: 1,
+              craftResultPrice: 1,
               disciplines: [],
             },
           ],
@@ -152,6 +161,7 @@ describe('craftingSteps', () => {
           buyPriceEach: 1,
           buyPrice: 1,
           decisionPrice: 1,
+          craftResultPrice: 1,
           disciplines: [],
           components: [
             {
@@ -166,6 +176,7 @@ describe('craftingSteps', () => {
               buyPriceEach: 1,
               buyPrice: 1,
               decisionPrice: 1,
+              craftResultPrice: 1,
               disciplines: [],
               components: [
                 {
@@ -180,6 +191,7 @@ describe('craftingSteps', () => {
                   buyPriceEach: 1,
                   buyPrice: 1,
                   decisionPrice: 1,
+                  craftResultPrice: 1,
                   disciplines: [],
                 },
               ],
@@ -198,6 +210,7 @@ describe('craftingSteps', () => {
           buyPriceEach: 1,
           buyPrice: 1,
           decisionPrice: 1,
+          craftResultPrice: 1,
           disciplines: [],
           components: [
             {
@@ -212,6 +225,7 @@ describe('craftingSteps', () => {
               buyPriceEach: 1,
               buyPrice: 1,
               decisionPrice: 1,
+              craftResultPrice: 1,
               disciplines: [],
             },
           ],
@@ -228,6 +242,7 @@ describe('craftingSteps', () => {
           buyPriceEach: 1,
           buyPrice: 1,
           decisionPrice: 1,
+          craftResultPrice: 1,
           disciplines: [],
         },
       ],
@@ -250,6 +265,7 @@ describe('craftingSteps', () => {
       buyPriceEach: 1,
       buyPrice: 1,
       decisionPrice: 1,
+      craftResultPrice: 1,
       disciplines: [],
       components: [
         {
@@ -262,6 +278,7 @@ describe('craftingSteps', () => {
           buyPriceEach: 1,
           buyPrice: 1,
           decisionPrice: 1,
+          craftResultPrice: 1,
           output: 1,
           min_rating: 400,
           disciplines: ['Armorsmith'],
@@ -279,6 +296,7 @@ describe('craftingSteps', () => {
               buyPriceEach: 1,
               buyPrice: 1,
               decisionPrice: 1,
+              craftResultPrice: 1,
               disciplines: [],
             },
           ],
@@ -296,6 +314,7 @@ describe('craftingSteps', () => {
           buyPrice: 1,
           buyPriceEach: 1,
           decisionPrice: 1,
+          craftResultPrice: 1,
           components: [
             {
               id: 19,
@@ -310,6 +329,7 @@ describe('craftingSteps', () => {
               buyPrice: 1,
               buyPriceEach: 1,
               decisionPrice: 1,
+              craftResultPrice: 1,
               components: [
                 {
                   id: 19675,
@@ -324,6 +344,7 @@ describe('craftingSteps', () => {
                   buyPrice: 1,
                   buyPriceEach: 1,
                   decisionPrice: 1,
+                  craftResultPrice: 1,
                   components: [
                     {
                       id: 19925,
@@ -341,6 +362,7 @@ describe('craftingSteps', () => {
                           buyPriceEach: false,
                           buyPrice: false,
                           decisionPrice: false,
+                          craftResultPrice: false,
                           craft: false,
                           min_rating: null,
                           disciplines: [],
@@ -355,6 +377,7 @@ describe('craftingSteps', () => {
                           buyPriceEach: false,
                           buyPrice: false,
                           decisionPrice: false,
+                          craftResultPrice: false,
                           craft: false,
                           min_rating: null,
                           disciplines: [],
@@ -367,6 +390,7 @@ describe('craftingSteps', () => {
                       buyPriceEach: false,
                       buyPrice: false,
                       decisionPrice: 0,
+                      craftResultPrice: 0,
                       craftPrice: 0,
                       craft: true,
                     },
@@ -380,6 +404,7 @@ describe('craftingSteps', () => {
                       buyPriceEach: 8592,
                       buyPrice: 85920,
                       decisionPrice: 85920,
+                      craftResultPrice: 85920,
                       craft: false,
                       min_rating: null,
                       disciplines: [],
@@ -394,6 +419,7 @@ describe('craftingSteps', () => {
                       buyPriceEach: 1329,
                       buyPrice: 13290,
                       decisionPrice: 13290,
+                      craftResultPrice: 13290,
                       craft: false,
                       min_rating: null,
                       disciplines: [],
@@ -414,6 +440,7 @@ describe('craftingSteps', () => {
                           buyPriceEach: false,
                           buyPrice: false,
                           decisionPrice: false,
+                          craftResultPrice: false,
                           craft: false,
                           min_rating: null,
                           disciplines: [],
@@ -426,6 +453,7 @@ describe('craftingSteps', () => {
                       buyPriceEach: false,
                       buyPrice: false,
                       decisionPrice: 0,
+                      craftResultPrice: 0,
                       craftPrice: 0,
                       craft: true,
                     },
@@ -447,6 +475,7 @@ describe('craftingSteps', () => {
           buyPriceEach: 1,
           buyPrice: 1,
           decisionPrice: 1,
+          craftResultPrice: 1,
           disciplines: [],
           components: [
             {
@@ -461,6 +490,7 @@ describe('craftingSteps', () => {
               buyPriceEach: 1,
               buyPrice: 1,
               decisionPrice: 1,
+              craftResultPrice: 1,
               disciplines: [],
             },
           ],
@@ -477,6 +507,7 @@ describe('craftingSteps', () => {
           buyPriceEach: 1,
           buyPrice: 1,
           decisionPrice: 1,
+          craftResultPrice: 1,
           disciplines: [],
           components: [
             {
@@ -491,6 +522,7 @@ describe('craftingSteps', () => {
               buyPriceEach: 1,
               buyPrice: 1,
               decisionPrice: 1,
+              craftResultPrice: 1,
               disciplines: [],
               components: [
                 {
@@ -505,6 +537,7 @@ describe('craftingSteps', () => {
                   buyPriceEach: 1,
                   buyPrice: 1,
                   decisionPrice: 1,
+                  craftResultPrice: 1,
                   disciplines: [],
                 },
               ],
@@ -532,6 +565,7 @@ describe('craftingSteps', () => {
       buyPrice: 1,
       buyPriceEach: 1,
       decisionPrice: 1,
+      craftResultPrice: 1,
       components: [
         {
           id: 2,
@@ -546,6 +580,7 @@ describe('craftingSteps', () => {
           buyPrice: 1,
           buyPriceEach: 1,
           decisionPrice: 1,
+          craftResultPrice: 1,
           components: [
             {
               id: 3,
@@ -560,6 +595,7 @@ describe('craftingSteps', () => {
               buyPrice: 1,
               buyPriceEach: 1,
               decisionPrice: 1,
+              craftResultPrice: 1,
               components: [
                 {
                   id: 4,
@@ -573,6 +609,7 @@ describe('craftingSteps', () => {
                   buyPriceEach: 1,
                   buyPrice: 1,
                   decisionPrice: 1,
+                  craftResultPrice: 1,
                   disciplines: [],
                 },
               ],
@@ -590,6 +627,7 @@ describe('craftingSteps', () => {
               buyPrice: 1,
               buyPriceEach: 1,
               decisionPrice: 1,
+              craftResultPrice: 1,
               components: [
                 {
                   id: 6,
@@ -603,6 +641,7 @@ describe('craftingSteps', () => {
                   buyPriceEach: 1,
                   buyPrice: 1,
                   decisionPrice: 1,
+                  craftResultPrice: 1,
                   disciplines: [],
                 },
               ],
@@ -622,6 +661,7 @@ describe('craftingSteps', () => {
           buyPrice: 1,
           buyPriceEach: 1,
           decisionPrice: 1,
+          craftResultPrice: 1,
           components: [
             {
               id: 3,
@@ -636,6 +676,7 @@ describe('craftingSteps', () => {
               buyPrice: 1,
               buyPriceEach: 1,
               decisionPrice: 1,
+              craftResultPrice: 1,
               components: [
                 {
                   id: 4,
@@ -649,6 +690,7 @@ describe('craftingSteps', () => {
                   buyPriceEach: 1,
                   buyPrice: 1,
                   decisionPrice: 1,
+                  craftResultPrice: 1,
                   disciplines: [],
                 },
               ],
@@ -666,6 +708,7 @@ describe('craftingSteps', () => {
               buyPrice: 1,
               buyPriceEach: 1,
               decisionPrice: 1,
+              craftResultPrice: 1,
               components: [
                 {
                   id: 6,
@@ -679,6 +722,7 @@ describe('craftingSteps', () => {
                   buyPriceEach: 1,
                   buyPrice: 1,
                   decisionPrice: 1,
+                  craftResultPrice: 1,
                   disciplines: [],
                 },
               ],

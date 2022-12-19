@@ -26,6 +26,7 @@ const RECIPE_PARTIAL_WITH_CRAFT_FLAGS = {
   buyPriceEach: 1,
   buyPrice: 1,
   decisionPrice: 1,
+  craftResultPrice: 1,
 }
 
 const ITEM_PARTIAL_WITH_CRAFT_FLAGS = {
@@ -36,6 +37,7 @@ const ITEM_PARTIAL_WITH_CRAFT_FLAGS = {
   buyPriceEach: 1,
   buyPrice: 1,
   decisionPrice: 1,
+  craftResultPrice: 1,
 }
 
 describe('calculateTreeQuantity (total quantity)', () => {

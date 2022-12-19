@@ -62,6 +62,7 @@ describe('calculateTreePrices', () => {
       buyPriceEach: 123,
       buyPrice: 123,
       decisionPrice: 5,
+      craftResultPrice: 5,
       components: [
         {
           ...TREE_PARTIAL,
@@ -74,6 +75,7 @@ describe('calculateTreePrices', () => {
           buyPriceEach: 1,
           buyPrice: 1,
           decisionPrice: 1,
+          craftResultPrice: 1,
         },
         {
           ...TREE_PARTIAL,
@@ -86,6 +88,7 @@ describe('calculateTreePrices', () => {
           buyPriceEach: 2,
           buyPrice: 2,
           decisionPrice: 2,
+          craftResultPrice: 2,
         },
       ],
     }

@@ -12,6 +12,7 @@ describe('usedItems', () => {
       totalQuantity: 2,
       usedQuantity: 2,
       decisionPrice: 36,
+      craftResultPrice: 36,
       buyPrice: 20,
       buyPriceEach: 10,
       recipe_id: 123,
@@ -23,6 +24,7 @@ describe('usedItems', () => {
           craft: false,
           craftPrice: 60,
           decisionPrice: 6,
+          craftResultPrice: 6,
           id: 7,
           output: 1,
           quantity: 3,
@@ -40,6 +42,7 @@ describe('usedItems', () => {
               buyPriceEach: 10,
               craft: false,
               decisionPrice: 60,
+              craftResultPrice: 60,
               id: 4,
               output: 1,
               quantity: 1,
@@ -53,6 +56,7 @@ describe('usedItems', () => {
         },
         {
           decisionPrice: 30,
+          craftResultPrice: 30,
           buyPrice: 300,
           buyPriceEach: 100,
           craft: true,
@@ -69,6 +73,7 @@ describe('usedItems', () => {
           components: [
             {
               decisionPrice: 30,
+              craftResultPrice: 30,
               buyPrice: 30,
               buyPriceEach: 10,
               craft: false,
@@ -83,6 +88,7 @@ describe('usedItems', () => {
             },
             {
               decisionPrice: false,
+              craftResultPrice: false,
               buyPrice: false,
               buyPriceEach: false,
               craft: false,
@@ -97,6 +103,7 @@ describe('usedItems', () => {
             },
             {
               decisionPrice: 1,
+              craftResultPrice: 1,
               buyPrice: 1,
               buyPriceEach: 1,
               craft: false,
@@ -115,6 +122,7 @@ describe('usedItems', () => {
           craft: false,
           craftPrice: 0,
           decisionPrice: 0,
+          craftResultPrice: 0,
           id: 5,
           output: 1,
           quantity: 2,
@@ -132,6 +140,7 @@ describe('usedItems', () => {
               buyPriceEach: 1,
               craft: false,
               decisionPrice: 0,
+              craftResultPrice: 0,
               id: 6,
               output: 1,
               quantity: 100,

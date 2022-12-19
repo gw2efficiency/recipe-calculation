@@ -12,6 +12,7 @@ describe('updateTree', () => {
     totalQuantity: 2,
     usedQuantity: 2,
     decisionPrice: 384,
+    craftResultPrice: 384,
     buyPrice: 20,
     buyPriceEach: 10,
     type: 'Recipe',
@@ -20,6 +21,7 @@ describe('updateTree', () => {
     components: [
       {
         decisionPrice: 84,
+        craftResultPrice: 84,
         buyPrice: 84,
         buyPriceEach: 42,
         craft: false,
@@ -34,6 +36,7 @@ describe('updateTree', () => {
       },
       {
         decisionPrice: 100,
+        craftResultPrice: 100,
         buyPrice: 100,
         buyPriceEach: 10,
         craft: false,
@@ -49,6 +52,7 @@ describe('updateTree', () => {
         components: [
           {
             decisionPrice: 200,
+            craftResultPrice: 200,
             buyPrice: 200,
             buyPriceEach: 10,
             craft: false,
@@ -65,6 +69,7 @@ describe('updateTree', () => {
       },
       {
         decisionPrice: 200,
+        craftResultPrice: 200,
         buyPrice: 10000,
         buyPriceEach: 1000,
         craft: true,
@@ -80,6 +85,7 @@ describe('updateTree', () => {
         components: [
           {
             decisionPrice: 200,
+            craftResultPrice: 200,
             buyPrice: 200,
             buyPriceEach: 10,
             craft: false,

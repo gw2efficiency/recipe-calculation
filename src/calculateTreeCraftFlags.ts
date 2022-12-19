@@ -9,7 +9,7 @@ export function calculateTreeCraftFlags(
   const hasComponents = !!tree.components
   const isUsed = tree.usedQuantity !== 0
   const isCheaperToCraft =
-    typeof tree.craftPrice !== 'undefined' && (!tree.buyPrice || tree.craftPrice < tree.buyPrice)
+    typeof tree.craftPrice !== 'undefined' && (!tree.buyPrice || tree.decisionPrice < tree.buyPrice)
   const isForceBuy = forceBuyItems.indexOf(tree.id) !== -1
 
   const craft = hasComponents && isUsed && isCheaperToCraft && !isForceBuy

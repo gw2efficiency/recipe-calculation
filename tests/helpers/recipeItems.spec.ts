@@ -16,6 +16,7 @@ describe('helpers > recipeItems', () => {
       buyPriceEach: 1,
       buyPrice: 1,
       decisionPrice: 1,
+      craftResultPrice: 1,
       components: [
         {
           id: 2,
@@ -30,6 +31,7 @@ describe('helpers > recipeItems', () => {
           buyPriceEach: 1,
           buyPrice: 1,
           decisionPrice: 1,
+          craftResultPrice: 1,
           components: [
             {
               id: 3,
@@ -44,6 +46,7 @@ describe('helpers > recipeItems', () => {
               buyPriceEach: 1,
               buyPrice: 1,
               decisionPrice: 1,
+              craftResultPrice: 1,
             },
             {
               id: 4,
@@ -58,6 +61,7 @@ describe('helpers > recipeItems', () => {
               buyPriceEach: 1,
               buyPrice: 1,
               decisionPrice: 1,
+              craftResultPrice: 1,
             },
             {
               id: 12,
@@ -72,6 +76,7 @@ describe('helpers > recipeItems', () => {
               buyPriceEach: false,
               buyPrice: false,
               decisionPrice: false,
+              craftResultPrice: false,
             },
           ],
         },
@@ -88,6 +93,7 @@ describe('helpers > recipeItems', () => {
           buyPriceEach: 1,
           buyPrice: 1,
           decisionPrice: 1,
+          craftResultPrice: 1,
         },
         {
           id: 6,
@@ -102,6 +108,7 @@ describe('helpers > recipeItems', () => {
           buyPriceEach: 1,
           buyPrice: 1,
           decisionPrice: 1,
+          craftResultPrice: 1,
           components: [
             {
               id: 3,
@@ -116,6 +123,7 @@ describe('helpers > recipeItems', () => {
               buyPriceEach: 1,
               buyPrice: 1,
               decisionPrice: 1,
+              craftResultPrice: 1,
             },
           ],
         },
