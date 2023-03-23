@@ -335,10 +335,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@gw2efficiency/recipe-nesting@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/@gw2efficiency/recipe-nesting/-/recipe-nesting-3.0.3.tgz#675d27ae813baaa7d845ce1fc1b9fb0ac3ff357a"
-  integrity sha512-gN80qBFCCs1g20ejeofwAD2QjL8zrwwQTg2Y/r+ZRdEWhNnpyJkagmbtjAqAAUgYjhgfE1AZvw2z+egoOJVDNw==
+"@gw2efficiency/recipe-nesting@^3.0.4":
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/@gw2efficiency/recipe-nesting/-/recipe-nesting-3.0.4.tgz#1b00ed9e49c8f193b7cdf06146ce5be28fcd387c"
+  integrity sha512-lmwBo0XymlinUboXUEm0bOd7KkB6ciw/aObrvYYGPrP2PUdNsVf7qcyGzj7UPFk0KHTD0eP8cB+k91dPGk5Qdg==
   dependencies:
     "@devoxa/flocky" "^1.3.1"
 
