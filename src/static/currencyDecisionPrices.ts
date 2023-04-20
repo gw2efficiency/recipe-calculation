@@ -55,7 +55,7 @@ export const CURRENCY_DECISION_PRICES: Record<number, number | undefined> = {
   58: undefined, // War Supplies
   59: undefined, // Unstable Fractal Essence
   60: 310, // Tyrian Defense Seal
-  61: 420, // Research Note
+  61: 200, // Research Note
   62: 100, // Unusual Coin
   64: 35, // Jade Sliver
   65: 135, // Testimony of Jade Heroics
