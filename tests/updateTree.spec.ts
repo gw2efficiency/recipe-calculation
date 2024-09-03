@@ -5,6 +5,7 @@ import { updateTree } from '../src'
 describe('updateTree', () => {
   const calculatedTree: RecipeTreeWithCraftFlags = {
     craft: true,
+    craftDecisionPrice: 384,
     craftPrice: 384,
     id: 1,
     output: 1,
@@ -20,11 +21,12 @@ describe('updateTree', () => {
     disciplines: ['Chef'],
     components: [
       {
+        craft: false,
+        craftDecisionPrice: 84,
         decisionPrice: 84,
         craftResultPrice: 84,
         buyPrice: 84,
         buyPriceEach: 42,
-        craft: false,
         id: 2,
         output: 1,
         quantity: 1,
@@ -35,11 +37,12 @@ describe('updateTree', () => {
         disciplines: [],
       },
       {
+        craft: false,
+        craftDecisionPrice: 200,
         decisionPrice: 100,
         craftResultPrice: 100,
         buyPrice: 100,
         buyPriceEach: 10,
-        craft: false,
         craftPrice: 200,
         id: 3,
         output: 1,
@@ -51,11 +54,12 @@ describe('updateTree', () => {
         disciplines: [],
         components: [
           {
+            craft: false,
+            craftDecisionPrice: 200,
             decisionPrice: 200,
             craftResultPrice: 200,
             buyPrice: 200,
             buyPriceEach: 10,
-            craft: false,
             id: 4,
             output: 1,
             quantity: 2,
@@ -68,11 +72,12 @@ describe('updateTree', () => {
         ],
       },
       {
+        craft: true,
+        craftDecisionPrice: 200,
         decisionPrice: 200,
         craftResultPrice: 200,
         buyPrice: 10000,
         buyPriceEach: 1000,
-        craft: true,
         craftPrice: 200,
         id: 5,
         output: 1,
@@ -84,11 +89,12 @@ describe('updateTree', () => {
         disciplines: [],
         components: [
           {
+            craft: false,
+            craftDecisionPrice: 200,
             decisionPrice: 200,
             craftResultPrice: 200,
             buyPrice: 200,
             buyPriceEach: 10,
-            craft: false,
             id: 6,
             output: 1,
             quantity: 2,

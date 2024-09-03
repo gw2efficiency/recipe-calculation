@@ -43,7 +43,7 @@ interface CraftingStep {
   minRating: number | null
   disciplines: Array<string>
   merchant?: { name: string; locations: Array<string> }
-  recipeId?: number
+  recipeId?: Array<number>
   components: Array<{ id: number; type: 'Item' | 'Recipe' | 'Currency'; quantity: number }>
 }
 
@@ -85,7 +85,9 @@ function craftingStepsInner(
       minRating: tree.min_rating,
       disciplines: tree.disciplines,
       merchant: tree.merchant,
-      recipeId: tree.recipe_id,
+      recipeId: tree.prerequisites
+        ?.filter((prerequisite) => prerequisite.type === 'Recipe')
+        .map((prerequisite) => prerequisite.id),
       components: treeComponents.map((component) => ({
         id: component.id,
         type: component.type,

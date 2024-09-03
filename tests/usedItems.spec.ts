@@ -5,6 +5,7 @@ describe('usedItems', () => {
   it('gets the correct items to buy and used available items', () => {
     const tree: RecipeTreeWithCraftFlags = {
       craft: true,
+      craftDecisionPrice: 36,
       craftPrice: 36,
       id: 1,
       output: 1,
@@ -15,13 +16,19 @@ describe('usedItems', () => {
       craftResultPrice: 36,
       buyPrice: 20,
       buyPriceEach: 10,
-      recipe_id: 123,
+      prerequisites: [
+        {
+          type: 'Recipe',
+          id: 123,
+        },
+      ],
       min_rating: null,
       disciplines: [],
       type: 'Recipe',
       components: [
         {
           craft: false,
+          craftDecisionPrice: 60,
           craftPrice: 60,
           decisionPrice: 6,
           craftResultPrice: 6,
@@ -32,15 +39,21 @@ describe('usedItems', () => {
           usedQuantity: 6,
           buyPrice: 6,
           buyPriceEach: 1,
-          recipe_id: 123,
+          prerequisites: [
+            {
+              type: 'Recipe',
+              id: 123,
+            },
+          ],
           min_rating: null,
           disciplines: [],
           type: 'Recipe',
           components: [
             {
+              craft: false,
+              craftDecisionPrice: 60,
               buyPrice: 60,
               buyPriceEach: 10,
-              craft: false,
               decisionPrice: 60,
               craftResultPrice: 60,
               id: 4,
@@ -55,28 +68,35 @@ describe('usedItems', () => {
           ],
         },
         {
+          craft: true,
+          craftDecisionPrice: 31,
           decisionPrice: 30,
           craftResultPrice: 30,
           buyPrice: 300,
           buyPriceEach: 100,
-          craft: true,
           craftPrice: 30,
           id: 3,
           output: 1,
           quantity: 5,
           totalQuantity: 10,
           usedQuantity: 3,
-          recipe_id: 123,
+          prerequisites: [
+            {
+              type: 'Recipe',
+              id: 123,
+            },
+          ],
           min_rating: null,
           disciplines: [],
           type: 'Recipe',
           components: [
             {
+              craft: false,
+              craftDecisionPrice: 30,
               decisionPrice: 30,
               craftResultPrice: 30,
               buyPrice: 30,
               buyPriceEach: 10,
-              craft: false,
               id: 4,
               output: 1,
               quantity: 2,
@@ -87,11 +107,12 @@ describe('usedItems', () => {
               type: 'Item',
             },
             {
+              craft: false,
+              craftDecisionPrice: false,
               decisionPrice: false,
               craftResultPrice: false,
               buyPrice: false,
               buyPriceEach: false,
-              craft: false,
               id: 4,
               output: 1,
               quantity: 6,
@@ -102,11 +123,12 @@ describe('usedItems', () => {
               type: 'Currency',
             },
             {
+              craft: false,
+              craftDecisionPrice: 1,
               decisionPrice: 1,
               craftResultPrice: 1,
               buyPrice: 1,
               buyPriceEach: 1,
-              craft: false,
               id: 1,
               output: 1,
               quantity: 1000,
@@ -120,6 +142,7 @@ describe('usedItems', () => {
         },
         {
           craft: false,
+          craftDecisionPrice: 0,
           craftPrice: 0,
           decisionPrice: 0,
           craftResultPrice: 0,
@@ -130,15 +153,21 @@ describe('usedItems', () => {
           usedQuantity: 0,
           buyPrice: 0,
           buyPriceEach: 25,
-          recipe_id: 123,
+          prerequisites: [
+            {
+              type: 'Recipe',
+              id: 123,
+            },
+          ],
           min_rating: null,
           disciplines: [],
           type: 'Recipe',
           components: [
             {
+              craft: false,
+              craftDecisionPrice: 0,
               buyPrice: 0,
               buyPriceEach: 1,
-              craft: false,
               decisionPrice: 0,
               craftResultPrice: 0,
               id: 6,

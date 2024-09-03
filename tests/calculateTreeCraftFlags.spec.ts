@@ -7,6 +7,7 @@ describe('calculateTreeCraftFlags', () => {
       id: 1,
       type: 'Recipe',
       totalQuantity: 1,
+      craftDecisionPrice: 248,
       craftPrice: 123,
       quantity: 1,
       output: 1,
@@ -33,6 +34,7 @@ describe('calculateTreeCraftFlags', () => {
           disciplines: [],
           usedQuantity: 1,
           components: [],
+          craftDecisionPrice: 1,
         },
         {
           id: 3,
@@ -49,6 +51,7 @@ describe('calculateTreeCraftFlags', () => {
           disciplines: [],
           usedQuantity: 2,
           components: [],
+          craftDecisionPrice: 123,
         },
         {
           id: 4,
@@ -65,6 +68,7 @@ describe('calculateTreeCraftFlags', () => {
           min_rating: null,
           usedQuantity: 2,
           components: [],
+          craftDecisionPrice: 123,
         },
         {
           id: 5,
@@ -81,6 +85,7 @@ describe('calculateTreeCraftFlags', () => {
           disciplines: [],
           usedQuantity: 2,
           components: [],
+          craftDecisionPrice: 1,
         },
       ],
     }

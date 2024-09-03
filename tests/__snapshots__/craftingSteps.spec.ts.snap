@@ -19,7 +19,9 @@ Array [
     "minRating": 400,
     "output": undefined,
     "quantity": 15,
-    "recipeId": 123,
+    "recipeId": Array [
+      123,
+    ],
     "type": "Recipe",
   },
   Object {
@@ -316,7 +318,9 @@ Array [
     "minRating": 400,
     "output": undefined,
     "quantity": 12,
-    "recipeId": 123,
+    "recipeId": Array [
+      123,
+    ],
     "type": "Recipe",
   },
   Object {

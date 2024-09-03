@@ -2,11 +2,11 @@ import type { NestedRecipe as NestedRecipeTree } from '@gw2efficiency/recipe-nes
 
 type ExtendRecipeTree<TBaseTree, TProperties> = Omit<
   TBaseTree,
-  'type' | 'components' | 'recipe_id'
+  'type' | 'components' | 'prerequisites'
 > & {
   type: 'Recipe' | 'Item' | 'Currency'
   components?: Array<ExtendRecipeTree<TBaseTree, TProperties>>
-  recipe_id?: number
+  prerequisites?: Array<{ type: string; id: number }>
 } & TProperties
 
 export type RecipeTree = ExtendRecipeTree<NestedRecipeTree, { __never?: never }>

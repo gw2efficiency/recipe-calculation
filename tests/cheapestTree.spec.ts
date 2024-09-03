@@ -6,7 +6,7 @@ describe('cheapestTree', () => {
     const recipeTree: NestedRecipe = {
       id: 1,
       type: 'Recipe',
-      recipe_id: 124,
+      prerequisites: [{ type: 'Recipe', id: 124 }],
       min_rating: 300,
       disciplines: ['Amoursmith'],
       quantity: 1,
@@ -16,7 +16,7 @@ describe('cheapestTree', () => {
         {
           id: 3,
           type: 'Recipe',
-          recipe_id: 123,
+          prerequisites: [{ type: 'Recipe', id: 123 }],
           output: 1,
           min_rating: 200,
           disciplines: ['Amoursmith'],
@@ -30,7 +30,7 @@ describe('cheapestTree', () => {
         {
           id: 5,
           type: 'Recipe',
-          recipe_id: 123,
+          prerequisites: [{ type: 'Recipe', id: 123 }],
           output: 1,
           min_rating: 200,
           disciplines: ['Amoursmith'],
@@ -49,7 +49,7 @@ describe('cheapestTree', () => {
     const recipeTree: NestedRecipe = {
       id: 1,
       type: 'Recipe',
-      recipe_id: 124,
+      prerequisites: [{ type: 'Recipe', id: 124 }],
       min_rating: 300,
       disciplines: ['Amoursmith'],
       quantity: 1,
@@ -58,7 +58,7 @@ describe('cheapestTree', () => {
         {
           id: 7,
           type: 'Recipe',
-          recipe_id: 123,
+          prerequisites: [{ type: 'Recipe', id: 123 }],
           output: 1,
           min_rating: 200,
           disciplines: ['Amoursmith'],
@@ -68,7 +68,7 @@ describe('cheapestTree', () => {
         {
           id: 3,
           type: 'Recipe',
-          recipe_id: 123,
+          prerequisites: [{ type: 'Recipe', id: 123 }],
           output: 1,
           min_rating: 200,
           disciplines: ['Amoursmith'],
@@ -78,7 +78,7 @@ describe('cheapestTree', () => {
         {
           id: 5,
           type: 'Recipe',
-          recipe_id: 123,
+          prerequisites: [{ type: 'Recipe', id: 123 }],
           output: 1,
           min_rating: 200,
           disciplines: ['Amoursmith'],
@@ -98,7 +98,7 @@ describe('cheapestTree', () => {
     const recipeTree: NestedRecipe = {
       id: 1,
       type: 'Recipe',
-      recipe_id: 124,
+      prerequisites: [{ type: 'Recipe', id: 124 }],
       min_rating: 300,
       disciplines: ['Amoursmith'],
       quantity: 1,
@@ -107,7 +107,7 @@ describe('cheapestTree', () => {
         {
           id: 3,
           type: 'Recipe',
-          recipe_id: 123,
+          prerequisites: [{ type: 'Recipe', id: 123 }],
           output: 1,
           min_rating: 200,
           disciplines: ['Amoursmith'],
