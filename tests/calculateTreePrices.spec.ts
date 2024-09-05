@@ -55,6 +55,7 @@ describe('calculateTreePrices', () => {
     const recipeTree: RecipeTreeWithCraftFlags = {
       ...TREE_PARTIAL,
       craft: false,
+      craftDecisionPrice: 3,
       id: 1,
       usedQuantity: 1,
       totalQuantity: 1,
@@ -68,6 +69,7 @@ describe('calculateTreePrices', () => {
         {
           ...TREE_PARTIAL,
           craft: false,
+          craftDecisionPrice: 1,
           id: 2,
           usedQuantity: 1,
           totalQuantity: 1,
@@ -81,6 +83,7 @@ describe('calculateTreePrices', () => {
         {
           ...TREE_PARTIAL,
           craft: false,
+          craftDecisionPrice: 2,
           id: 3,
           usedQuantity: 2,
           totalQuantity: 2,

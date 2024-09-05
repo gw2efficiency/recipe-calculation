@@ -813,6 +813,7 @@ Object {
       "buyPriceEach": 1,
       "components": undefined,
       "craft": false,
+      "craftDecisionPrice": 1,
       "craftResultPrice": 1,
       "decisionPrice": 1,
       "disciplines": Array [],
@@ -834,6 +835,7 @@ Object {
           "buyPriceEach": 1,
           "components": undefined,
           "craft": false,
+          "craftDecisionPrice": 1,
           "craftResultPrice": 1,
           "decisionPrice": 1,
           "disciplines": Array [],
@@ -848,6 +850,7 @@ Object {
         },
       ],
       "craft": true,
+      "craftDecisionPrice": 1,
       "craftResultPrice": 1,
       "decisionPrice": 1,
       "disciplines": Array [
@@ -876,6 +879,7 @@ Object {
           "buyPriceEach": 1,
           "components": undefined,
           "craft": false,
+          "craftDecisionPrice": 1,
           "craftResultPrice": 1,
           "decisionPrice": 1,
           "disciplines": Array [],
@@ -890,6 +894,7 @@ Object {
         },
       ],
       "craft": false,
+      "craftDecisionPrice": 1,
       "craftResultPrice": 1,
       "decisionPrice": 1,
       "disciplines": Array [
@@ -918,6 +923,7 @@ Object {
           "buyPriceEach": 1,
           "components": undefined,
           "craft": false,
+          "craftDecisionPrice": 1,
           "craftResultPrice": 1,
           "decisionPrice": 1,
           "disciplines": Array [],
@@ -932,6 +938,7 @@ Object {
         },
       ],
       "craft": true,
+      "craftDecisionPrice": 1,
       "craftResultPrice": 1,
       "decisionPrice": 1,
       "disciplines": Array [
@@ -953,6 +960,7 @@ Object {
     },
   ],
   "craft": true,
+  "craftDecisionPrice": 1,
   "craftResultPrice": 1,
   "decisionPrice": 1,
   "disciplines": Array [
@@ -992,6 +1000,7 @@ Object {
               "buyPriceEach": 1,
               "components": undefined,
               "craft": false,
+              "craftDecisionPrice": 1,
               "craftResultPrice": 1,
               "decisionPrice": 1,
               "disciplines": Array [],
@@ -1006,6 +1015,7 @@ Object {
             },
           ],
           "craft": true,
+          "craftDecisionPrice": 1,
           "craftResultPrice": 1,
           "decisionPrice": 1,
           "disciplines": Array [
@@ -1027,6 +1037,7 @@ Object {
         },
       ],
       "craft": false,
+      "craftDecisionPrice": 1,
       "craftResultPrice": 1,
       "decisionPrice": 1,
       "disciplines": Array [
@@ -1059,6 +1070,7 @@ Object {
               "buyPriceEach": 1,
               "components": undefined,
               "craft": false,
+              "craftDecisionPrice": 1,
               "craftResultPrice": 1,
               "decisionPrice": 1,
               "disciplines": Array [],
@@ -1073,6 +1085,7 @@ Object {
             },
           ],
           "craft": true,
+          "craftDecisionPrice": 1,
           "craftResultPrice": 1,
           "decisionPrice": 1,
           "disciplines": Array [
@@ -1094,6 +1107,7 @@ Object {
         },
       ],
       "craft": true,
+      "craftDecisionPrice": 1,
       "craftResultPrice": 1,
       "decisionPrice": 1,
       "disciplines": Array [
@@ -1126,6 +1140,7 @@ Object {
               "buyPriceEach": 1,
               "components": undefined,
               "craft": false,
+              "craftDecisionPrice": 1,
               "craftResultPrice": 1,
               "decisionPrice": 1,
               "disciplines": Array [],
@@ -1140,6 +1155,7 @@ Object {
             },
           ],
           "craft": true,
+          "craftDecisionPrice": 1,
           "craftResultPrice": 1,
           "decisionPrice": 1,
           "disciplines": Array [
@@ -1161,6 +1177,7 @@ Object {
         },
       ],
       "craft": true,
+      "craftDecisionPrice": 1,
       "craftResultPrice": 1,
       "decisionPrice": 1,
       "disciplines": Array [
@@ -1182,6 +1199,7 @@ Object {
     },
   ],
   "craft": true,
+  "craftDecisionPrice": 1,
   "craftResultPrice": 1,
   "decisionPrice": 1,
   "disciplines": Array [
