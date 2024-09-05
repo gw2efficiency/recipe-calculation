@@ -33,6 +33,7 @@ describe('calculateTreeCraftFlags', () => {
           disciplines: [],
           usedQuantity: 1,
           components: [],
+          prerequisites: [],
         },
         {
           id: 3,
@@ -49,6 +50,7 @@ describe('calculateTreeCraftFlags', () => {
           disciplines: [],
           usedQuantity: 2,
           components: [],
+          prerequisites: [],
         },
         {
           id: 4,
@@ -65,6 +67,7 @@ describe('calculateTreeCraftFlags', () => {
           min_rating: null,
           usedQuantity: 2,
           components: [],
+          prerequisites: [],
         },
         {
           id: 5,
@@ -81,8 +84,10 @@ describe('calculateTreeCraftFlags', () => {
           disciplines: [],
           usedQuantity: 2,
           components: [],
+          prerequisites: [],
         },
       ],
+      prerequisites: [],
     }
 
     const calculatedTree = calculateTreeCraftFlags(recipeTree, [5])

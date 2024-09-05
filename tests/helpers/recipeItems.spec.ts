@@ -4,8 +4,8 @@ import { RecipeTreeWithCraftFlags } from '../../src/types'
 describe('helpers > recipeItems', () => {
   it('gets all unique item ids of a recipe tree', () => {
     const recipeTree: RecipeTreeWithCraftFlags = {
-      id: 1,
       craft: true,
+      id: 1,
       totalQuantity: 6,
       usedQuantity: 6,
       quantity: 6,
@@ -19,8 +19,8 @@ describe('helpers > recipeItems', () => {
       craftResultPrice: 1,
       components: [
         {
-          id: 2,
           craft: true,
+          id: 2,
           totalQuantity: 6,
           usedQuantity: 6,
           quantity: 6,
@@ -34,8 +34,8 @@ describe('helpers > recipeItems', () => {
           craftResultPrice: 1,
           components: [
             {
+              craft: false,
               id: 3,
-              craft: false,
               totalQuantity: 1,
               usedQuantity: 1,
               quantity: 1,
@@ -47,10 +47,11 @@ describe('helpers > recipeItems', () => {
               buyPrice: 1,
               decisionPrice: 1,
               craftResultPrice: 1,
+              prerequisites: [],
             },
             {
+              craft: false,
               id: 4,
-              craft: false,
               totalQuantity: 1,
               usedQuantity: 1,
               quantity: 1,
@@ -62,10 +63,11 @@ describe('helpers > recipeItems', () => {
               buyPrice: 1,
               decisionPrice: 1,
               craftResultPrice: 1,
+              prerequisites: [],
             },
             {
-              id: 12,
               craft: false,
+              id: 12,
               totalQuantity: 1,
               usedQuantity: 1,
               quantity: 1,
@@ -77,12 +79,14 @@ describe('helpers > recipeItems', () => {
               buyPrice: false,
               decisionPrice: false,
               craftResultPrice: false,
+              prerequisites: [],
             },
           ],
+          prerequisites: [],
         },
         {
-          id: 5,
           craft: false,
+          id: 5,
           totalQuantity: 1,
           usedQuantity: 1,
           quantity: 1,
@@ -94,10 +98,11 @@ describe('helpers > recipeItems', () => {
           buyPrice: 1,
           decisionPrice: 1,
           craftResultPrice: 1,
+          prerequisites: [],
         },
         {
-          id: 6,
           craft: true,
+          id: 6,
           totalQuantity: 6,
           usedQuantity: 6,
           quantity: 6,
@@ -111,8 +116,8 @@ describe('helpers > recipeItems', () => {
           craftResultPrice: 1,
           components: [
             {
-              id: 3,
               craft: false,
+              id: 3,
               totalQuantity: 1,
               usedQuantity: 1,
               quantity: 1,
@@ -124,10 +129,13 @@ describe('helpers > recipeItems', () => {
               buyPrice: 1,
               decisionPrice: 1,
               craftResultPrice: 1,
+              prerequisites: [],
             },
           ],
+          prerequisites: [],
         },
       ],
+      prerequisites: [],
     }
 
     expect(recipeItems(recipeTree)).toEqual([1, 2, 3, 4, 5, 6])

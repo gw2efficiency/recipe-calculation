@@ -5,6 +5,7 @@ const TREE_PARTIAL = {
   output: 1,
   min_rating: null,
   disciplines: [],
+  prerequisites: [],
 }
 
 describe('calculateTreePrices', () => {
@@ -53,10 +54,10 @@ describe('calculateTreePrices', () => {
   it('updates the prices for a tree with flags correctly', () => {
     const recipeTree: RecipeTreeWithCraftFlags = {
       ...TREE_PARTIAL,
+      craft: false,
       id: 1,
       usedQuantity: 1,
       totalQuantity: 1,
-      craft: false,
       type: 'Recipe',
       quantity: 1,
       buyPriceEach: 123,

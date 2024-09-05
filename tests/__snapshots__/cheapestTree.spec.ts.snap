@@ -76,8 +76,13 @@ Object {
       "id": 3,
       "min_rating": 200,
       "output": 1,
+      "prerequisites": Array [
+        Object {
+          "id": 123,
+          "type": "Recipe",
+        },
+      ],
       "quantity": 5,
-      "recipe_id": 123,
       "totalQuantity": 10,
       "type": "Recipe",
       "usedQuantity": 10,
@@ -111,8 +116,13 @@ Object {
       "id": 5,
       "min_rating": 200,
       "output": 1,
+      "prerequisites": Array [
+        Object {
+          "id": 123,
+          "type": "Recipe",
+        },
+      ],
       "quantity": 5,
-      "recipe_id": 123,
       "totalQuantity": 10,
       "type": "Recipe",
       "usedQuantity": 10,
@@ -128,8 +138,13 @@ Object {
   "id": 1,
   "min_rating": 300,
   "output": 1,
+  "prerequisites": Array [
+    Object {
+      "id": 124,
+      "type": "Recipe",
+    },
+  ],
   "quantity": 1,
-  "recipe_id": 124,
   "totalQuantity": 2,
   "type": "Recipe",
   "usedQuantity": 2,
@@ -170,8 +185,13 @@ Object {
       "id": 7,
       "min_rating": 200,
       "output": 1,
+      "prerequisites": Array [
+        Object {
+          "id": 123,
+          "type": "Recipe",
+        },
+      ],
       "quantity": 3,
-      "recipe_id": 123,
       "totalQuantity": 6,
       "type": "Recipe",
       "usedQuantity": 6,
@@ -205,8 +225,13 @@ Object {
       "id": 3,
       "min_rating": 200,
       "output": 1,
+      "prerequisites": Array [
+        Object {
+          "id": 123,
+          "type": "Recipe",
+        },
+      ],
       "quantity": 5,
-      "recipe_id": 123,
       "totalQuantity": 10,
       "type": "Recipe",
       "usedQuantity": 3,
@@ -240,8 +265,13 @@ Object {
       "id": 5,
       "min_rating": 200,
       "output": 1,
+      "prerequisites": Array [
+        Object {
+          "id": 123,
+          "type": "Recipe",
+        },
+      ],
       "quantity": 2,
-      "recipe_id": 123,
       "totalQuantity": 4,
       "type": "Recipe",
       "usedQuantity": 0,
@@ -257,8 +287,13 @@ Object {
   "id": 1,
   "min_rating": 300,
   "output": 1,
+  "prerequisites": Array [
+    Object {
+      "id": 124,
+      "type": "Recipe",
+    },
+  ],
   "quantity": 1,
-  "recipe_id": 124,
   "totalQuantity": 2,
   "type": "Recipe",
   "usedQuantity": 2,
@@ -299,8 +334,13 @@ Object {
       "id": 3,
       "min_rating": 200,
       "output": 1,
+      "prerequisites": Array [
+        Object {
+          "id": 123,
+          "type": "Recipe",
+        },
+      ],
       "quantity": 5,
-      "recipe_id": 123,
       "totalQuantity": 10,
       "type": "Recipe",
       "usedQuantity": 10,
@@ -316,8 +356,13 @@ Object {
   "id": 1,
   "min_rating": 300,
   "output": 1,
+  "prerequisites": Array [
+    Object {
+      "id": 124,
+      "type": "Recipe",
+    },
+  ],
   "quantity": 1,
-  "recipe_id": 124,
   "totalQuantity": 2,
   "type": "Recipe",
   "usedQuantity": 2,

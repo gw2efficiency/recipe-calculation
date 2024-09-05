@@ -18,8 +18,13 @@ Array [
     "merchant": undefined,
     "minRating": 400,
     "output": undefined,
+    "prerequisites": Array [
+      Object {
+        "id": 123,
+        "type": "Recipe",
+      },
+    ],
     "quantity": 15,
-    "recipeId": 123,
     "type": "Recipe",
   },
   Object {
@@ -36,8 +41,8 @@ Array [
     "merchant": undefined,
     "minRating": null,
     "output": undefined,
+    "prerequisites": Array [],
     "quantity": 3,
-    "recipeId": undefined,
     "type": "Recipe",
   },
   Object {
@@ -54,8 +59,8 @@ Array [
     "merchant": undefined,
     "minRating": null,
     "output": undefined,
+    "prerequisites": Array [],
     "quantity": 3,
-    "recipeId": undefined,
     "type": "Recipe",
   },
   Object {
@@ -72,8 +77,8 @@ Array [
     "merchant": undefined,
     "minRating": null,
     "output": undefined,
+    "prerequisites": Array [],
     "quantity": 1,
-    "recipeId": undefined,
     "type": "Recipe",
   },
   Object {
@@ -115,8 +120,8 @@ Array [
     "merchant": undefined,
     "minRating": null,
     "output": undefined,
+    "prerequisites": Array [],
     "quantity": 2,
-    "recipeId": undefined,
     "type": "Recipe",
   },
 ]
@@ -138,8 +143,8 @@ Array [
     "merchant": undefined,
     "minRating": null,
     "output": undefined,
+    "prerequisites": Array [],
     "quantity": 2,
-    "recipeId": undefined,
     "type": "Recipe",
   },
   Object {
@@ -156,8 +161,8 @@ Array [
     "merchant": undefined,
     "minRating": null,
     "output": undefined,
+    "prerequisites": Array [],
     "quantity": 1,
-    "recipeId": undefined,
     "type": "Recipe",
   },
   Object {
@@ -179,8 +184,8 @@ Array [
     "merchant": undefined,
     "minRating": null,
     "output": undefined,
+    "prerequisites": Array [],
     "quantity": 2,
-    "recipeId": undefined,
     "type": "Recipe",
   },
   Object {
@@ -202,8 +207,8 @@ Array [
     "merchant": undefined,
     "minRating": null,
     "output": undefined,
+    "prerequisites": Array [],
     "quantity": 1,
-    "recipeId": undefined,
     "type": "Recipe",
   },
 ]
@@ -237,8 +242,8 @@ Array [
     },
     "minRating": null,
     "output": undefined,
+    "prerequisites": Array [],
     "quantity": 10,
-    "recipeId": undefined,
     "type": "Recipe",
   },
   Object {
@@ -262,8 +267,8 @@ Array [
     },
     "minRating": null,
     "output": undefined,
+    "prerequisites": Array [],
     "quantity": 60,
-    "recipeId": undefined,
     "type": "Recipe",
   },
   Object {
@@ -295,8 +300,8 @@ Array [
     "merchant": undefined,
     "minRating": null,
     "output": undefined,
+    "prerequisites": Array [],
     "quantity": 3,
-    "recipeId": undefined,
     "type": "Recipe",
   },
   Object {
@@ -315,8 +320,13 @@ Array [
     "merchant": undefined,
     "minRating": 400,
     "output": undefined,
+    "prerequisites": Array [
+      Object {
+        "id": 123,
+        "type": "Recipe",
+      },
+    ],
     "quantity": 12,
-    "recipeId": 123,
     "type": "Recipe",
   },
   Object {
@@ -333,8 +343,8 @@ Array [
     "merchant": undefined,
     "minRating": null,
     "output": undefined,
+    "prerequisites": Array [],
     "quantity": 3,
-    "recipeId": undefined,
     "type": "Recipe",
   },
   Object {
@@ -351,8 +361,8 @@ Array [
     "merchant": undefined,
     "minRating": null,
     "output": undefined,
+    "prerequisites": Array [],
     "quantity": 3,
-    "recipeId": undefined,
     "type": "Recipe",
   },
   Object {
@@ -369,8 +379,8 @@ Array [
     "merchant": undefined,
     "minRating": null,
     "output": undefined,
+    "prerequisites": Array [],
     "quantity": 1,
-    "recipeId": undefined,
     "type": "Recipe",
   },
   Object {
@@ -402,8 +412,8 @@ Array [
     "merchant": undefined,
     "minRating": null,
     "output": undefined,
+    "prerequisites": Array [],
     "quantity": 2,
-    "recipeId": undefined,
     "type": "Recipe",
   },
 ]

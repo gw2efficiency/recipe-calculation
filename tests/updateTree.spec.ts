@@ -20,11 +20,11 @@ describe('updateTree', () => {
     disciplines: ['Chef'],
     components: [
       {
+        craft: false,
         decisionPrice: 84,
         craftResultPrice: 84,
         buyPrice: 84,
         buyPriceEach: 42,
-        craft: false,
         id: 2,
         output: 1,
         quantity: 1,
@@ -33,13 +33,14 @@ describe('updateTree', () => {
         type: 'Item',
         min_rating: null,
         disciplines: [],
+        prerequisites: [],
       },
       {
+        craft: false,
         decisionPrice: 100,
         craftResultPrice: 100,
         buyPrice: 100,
         buyPriceEach: 10,
-        craft: false,
         craftPrice: 200,
         id: 3,
         output: 1,
@@ -51,11 +52,11 @@ describe('updateTree', () => {
         disciplines: [],
         components: [
           {
+            craft: false,
             decisionPrice: 200,
             craftResultPrice: 200,
             buyPrice: 200,
             buyPriceEach: 10,
-            craft: false,
             id: 4,
             output: 1,
             quantity: 2,
@@ -64,15 +65,17 @@ describe('updateTree', () => {
             type: 'Item',
             min_rating: null,
             disciplines: [],
+            prerequisites: [],
           },
         ],
+        prerequisites: [],
       },
       {
+        craft: true,
         decisionPrice: 200,
         craftResultPrice: 200,
         buyPrice: 10000,
         buyPriceEach: 1000,
-        craft: true,
         craftPrice: 200,
         id: 5,
         output: 1,
@@ -84,11 +87,11 @@ describe('updateTree', () => {
         disciplines: [],
         components: [
           {
+            craft: false,
             decisionPrice: 200,
             craftResultPrice: 200,
             buyPrice: 200,
             buyPriceEach: 10,
-            craft: false,
             id: 6,
             output: 1,
             quantity: 2,
@@ -97,10 +100,13 @@ describe('updateTree', () => {
             type: 'Item',
             min_rating: null,
             disciplines: [],
+            prerequisites: [],
           },
         ],
+        prerequisites: [],
       },
     ],
+    prerequisites: [],
   }
 
   it('keeps the tree the same if nothing changed', () => {
