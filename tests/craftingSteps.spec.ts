@@ -5,6 +5,7 @@ describe('craftingSteps', () => {
   it('gets the correct crafting steps', () => {
     const tree: RecipeTreeWithCraftFlags = {
       craft: true,
+      craftDecisionPrice: 6,
       id: 1,
       totalQuantity: 2,
       usedQuantity: 2,
@@ -20,6 +21,7 @@ describe('craftingSteps', () => {
       components: [
         {
           craft: true,
+          craftDecisionPrice: 1,
           id: 7,
           totalQuantity: 6,
           usedQuantity: 6,
@@ -41,6 +43,7 @@ describe('craftingSteps', () => {
           components: [
             {
               craft: false,
+              craftDecisionPrice: 1,
               id: 4,
               totalQuantity: 12,
               usedQuantity: 12,
@@ -59,6 +62,7 @@ describe('craftingSteps', () => {
         },
         {
           craft: true,
+          craftDecisionPrice: 1,
           id: 3,
           totalQuantity: 10,
           usedQuantity: 3,
@@ -74,6 +78,7 @@ describe('craftingSteps', () => {
           components: [
             {
               craft: true,
+              craftDecisionPrice: 1,
               id: 19,
               totalQuantity: 3,
               usedQuantity: 3,
@@ -89,6 +94,7 @@ describe('craftingSteps', () => {
               components: [
                 {
                   craft: true,
+                  craftDecisionPrice: 1,
                   id: 7,
                   totalQuantity: 3,
                   usedQuantity: 3,
@@ -104,6 +110,7 @@ describe('craftingSteps', () => {
                   components: [
                     {
                       craft: false,
+                      craftDecisionPrice: 1,
                       id: 4,
                       totalQuantity: 6,
                       usedQuantity: 6,
@@ -129,6 +136,7 @@ describe('craftingSteps', () => {
         },
         {
           craft: false,
+          craftDecisionPrice: 1,
           id: 5,
           totalQuantity: 4,
           usedQuantity: 0,
@@ -144,6 +152,7 @@ describe('craftingSteps', () => {
           components: [
             {
               craft: false,
+              craftDecisionPrice: 1,
               id: 6,
               totalQuantity: 0,
               usedQuantity: 0,
@@ -163,6 +172,7 @@ describe('craftingSteps', () => {
         },
         {
           craft: true,
+          craftDecisionPrice: 1,
           id: 15,
           totalQuantity: 1,
           usedQuantity: 1,
@@ -178,6 +188,7 @@ describe('craftingSteps', () => {
           components: [
             {
               craft: true,
+              craftDecisionPrice: 1,
               id: 7,
               totalQuantity: 6,
               usedQuantity: 6,
@@ -193,6 +204,7 @@ describe('craftingSteps', () => {
               components: [
                 {
                   craft: false,
+                  craftDecisionPrice: 1,
                   id: 4,
                   totalQuantity: 12,
                   usedQuantity: 12,
@@ -215,6 +227,7 @@ describe('craftingSteps', () => {
         },
         {
           craft: true,
+          craftDecisionPrice: 1,
           id: 1337,
           totalQuantity: 1,
           usedQuantity: 0,
@@ -230,6 +243,7 @@ describe('craftingSteps', () => {
           components: [
             {
               craft: true,
+              craftDecisionPrice: 1,
               id: 42,
               totalQuantity: 6,
               usedQuantity: 6,
@@ -249,6 +263,7 @@ describe('craftingSteps', () => {
         },
         {
           craft: true,
+          craftDecisionPrice: 1,
           id: 1,
           totalQuantity: 6,
           usedQuantity: 6,
@@ -274,6 +289,7 @@ describe('craftingSteps', () => {
   it('gets the correct crafting steps with mystic clovers', () => {
     const tree: RecipeTreeWithCraftFlags = {
       craft: true,
+      craftDecisionPrice: 4,
       id: 1,
       totalQuantity: 2,
       usedQuantity: 2,
@@ -289,6 +305,7 @@ describe('craftingSteps', () => {
       components: [
         {
           craft: true,
+          craftDecisionPrice: 1,
           id: 7,
           totalQuantity: 6,
           usedQuantity: 6,
@@ -310,6 +327,7 @@ describe('craftingSteps', () => {
           components: [
             {
               craft: false,
+              craftDecisionPrice: 1,
               id: 4,
               totalQuantity: 12,
               usedQuantity: 12,
@@ -328,6 +346,7 @@ describe('craftingSteps', () => {
         },
         {
           craft: true,
+          craftDecisionPrice: 1,
           id: 3,
           totalQuantity: 10,
           usedQuantity: 3,
@@ -343,6 +362,7 @@ describe('craftingSteps', () => {
           components: [
             {
               craft: true,
+              craftDecisionPrice: 1,
               id: 19,
               totalQuantity: 3,
               usedQuantity: 3,
@@ -358,6 +378,7 @@ describe('craftingSteps', () => {
               components: [
                 {
                   craft: true,
+                  craftDecisionPrice: 99210,
                   id: 19675,
                   totalQuantity: 3,
                   usedQuantity: 3,
@@ -373,6 +394,7 @@ describe('craftingSteps', () => {
                   components: [
                     {
                       craft: true,
+                      craftDecisionPrice: 0,
                       id: 19925,
                       type: 'Recipe',
                       quantity: 1,
@@ -380,6 +402,7 @@ describe('craftingSteps', () => {
                       components: [
                         {
                           craft: false,
+                          craftDecisionPrice: false,
                           id: 19,
                           type: 'Currency',
                           quantity: 25,
@@ -396,6 +419,7 @@ describe('craftingSteps', () => {
                         },
                         {
                           craft: false,
+                          craftDecisionPrice: false,
                           id: 2,
                           type: 'Currency',
                           quantity: 1050,
@@ -428,6 +452,7 @@ describe('craftingSteps', () => {
                     },
                     {
                       craft: false,
+                      craftDecisionPrice: 85920,
                       id: 19976,
                       type: 'Item',
                       quantity: 1,
@@ -444,6 +469,7 @@ describe('craftingSteps', () => {
                     },
                     {
                       craft: false,
+                      craftDecisionPrice: 13290,
                       id: 19721,
                       type: 'Item',
                       quantity: 1,
@@ -460,6 +486,7 @@ describe('craftingSteps', () => {
                     },
                     {
                       craft: true,
+                      craftDecisionPrice: 0,
                       id: 20796,
                       type: 'Recipe',
                       quantity: 6,
@@ -467,6 +494,7 @@ describe('craftingSteps', () => {
                       components: [
                         {
                           craft: false,
+                          craftDecisionPrice: false,
                           id: 23,
                           type: 'Currency',
                           quantity: 1,
@@ -508,6 +536,7 @@ describe('craftingSteps', () => {
         },
         {
           craft: false,
+          craftDecisionPrice: 1,
           id: 5,
           totalQuantity: 4,
           usedQuantity: 0,
@@ -523,6 +552,7 @@ describe('craftingSteps', () => {
           components: [
             {
               craft: false,
+              craftDecisionPrice: 1,
               id: 6,
               totalQuantity: 0,
               usedQuantity: 0,
@@ -542,6 +572,7 @@ describe('craftingSteps', () => {
         },
         {
           craft: true,
+          craftDecisionPrice: 1,
           id: 15,
           totalQuantity: 1,
           usedQuantity: 1,
@@ -557,6 +588,7 @@ describe('craftingSteps', () => {
           components: [
             {
               craft: true,
+              craftDecisionPrice: 1,
               id: 7,
               totalQuantity: 6,
               usedQuantity: 6,
@@ -572,6 +604,7 @@ describe('craftingSteps', () => {
               components: [
                 {
                   craft: false,
+                  craftDecisionPrice: 1,
                   id: 4,
                   totalQuantity: 12,
                   usedQuantity: 12,
@@ -603,6 +636,7 @@ describe('craftingSteps', () => {
   it('gets the correct crafting steps when merging components', () => {
     const tree: RecipeTreeWithCraftFlags = {
       craft: true,
+      craftDecisionPrice: 2,
       id: 1,
       totalQuantity: 1,
       usedQuantity: 1,
@@ -618,6 +652,7 @@ describe('craftingSteps', () => {
       components: [
         {
           craft: true,
+          craftDecisionPrice: 2,
           id: 2,
           totalQuantity: 1,
           usedQuantity: 1,
@@ -633,6 +668,7 @@ describe('craftingSteps', () => {
           components: [
             {
               craft: false,
+              craftDecisionPrice: 1,
               id: 3,
               totalQuantity: 1,
               usedQuantity: 0,
@@ -648,6 +684,7 @@ describe('craftingSteps', () => {
               components: [
                 {
                   craft: false,
+                  craftDecisionPrice: 1,
                   id: 4,
                   totalQuantity: 1,
                   usedQuantity: 1,
@@ -667,6 +704,7 @@ describe('craftingSteps', () => {
             },
             {
               craft: true,
+              craftDecisionPrice: 1,
               id: 5,
               totalQuantity: 1,
               usedQuantity: 1,
@@ -682,6 +720,7 @@ describe('craftingSteps', () => {
               components: [
                 {
                   craft: false,
+                  craftDecisionPrice: 1,
                   id: 6,
                   totalQuantity: 1,
                   usedQuantity: 1,
@@ -704,6 +743,7 @@ describe('craftingSteps', () => {
         },
         {
           craft: true,
+          craftDecisionPrice: 2,
           id: 2,
           totalQuantity: 1,
           usedQuantity: 1,
@@ -719,6 +759,7 @@ describe('craftingSteps', () => {
           components: [
             {
               craft: true,
+              craftDecisionPrice: 1,
               id: 3,
               totalQuantity: 1,
               usedQuantity: 1,
@@ -734,6 +775,7 @@ describe('craftingSteps', () => {
               components: [
                 {
                   craft: false,
+                  craftDecisionPrice: 1,
                   id: 4,
                   totalQuantity: 1,
                   usedQuantity: 1,
@@ -753,6 +795,7 @@ describe('craftingSteps', () => {
             },
             {
               craft: true,
+              craftDecisionPrice: 1,
               id: 5,
               totalQuantity: 1,
               usedQuantity: 1,
@@ -768,6 +811,7 @@ describe('craftingSteps', () => {
               components: [
                 {
                   craft: false,
+                  craftDecisionPrice: 1,
                   id: 6,
                   totalQuantity: 1,
                   usedQuantity: 1,

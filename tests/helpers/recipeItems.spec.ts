@@ -5,6 +5,7 @@ describe('helpers > recipeItems', () => {
   it('gets all unique item ids of a recipe tree', () => {
     const recipeTree: RecipeTreeWithCraftFlags = {
       craft: true,
+      craftDecisionPrice: 3,
       id: 1,
       totalQuantity: 6,
       usedQuantity: 6,
@@ -20,6 +21,7 @@ describe('helpers > recipeItems', () => {
       components: [
         {
           craft: true,
+          craftDecisionPrice: 2,
           id: 2,
           totalQuantity: 6,
           usedQuantity: 6,
@@ -35,6 +37,7 @@ describe('helpers > recipeItems', () => {
           components: [
             {
               craft: false,
+              craftDecisionPrice: 1,
               id: 3,
               totalQuantity: 1,
               usedQuantity: 1,
@@ -51,6 +54,7 @@ describe('helpers > recipeItems', () => {
             },
             {
               craft: false,
+              craftDecisionPrice: 1,
               id: 4,
               totalQuantity: 1,
               usedQuantity: 1,
@@ -67,6 +71,7 @@ describe('helpers > recipeItems', () => {
             },
             {
               craft: false,
+              craftDecisionPrice: false,
               id: 12,
               totalQuantity: 1,
               usedQuantity: 1,
@@ -86,6 +91,7 @@ describe('helpers > recipeItems', () => {
         },
         {
           craft: false,
+          craftDecisionPrice: 1,
           id: 5,
           totalQuantity: 1,
           usedQuantity: 1,
@@ -102,6 +108,7 @@ describe('helpers > recipeItems', () => {
         },
         {
           craft: true,
+          craftDecisionPrice: 1,
           id: 6,
           totalQuantity: 6,
           usedQuantity: 6,
@@ -117,6 +124,7 @@ describe('helpers > recipeItems', () => {
           components: [
             {
               craft: false,
+              craftDecisionPrice: 1,
               id: 3,
               totalQuantity: 1,
               usedQuantity: 1,
