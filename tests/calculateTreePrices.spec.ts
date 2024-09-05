@@ -5,6 +5,7 @@ const TREE_PARTIAL = {
   output: 1,
   min_rating: null,
   disciplines: [],
+  prerequisites: [],
 }
 
 describe('calculateTreePrices', () => {

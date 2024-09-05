@@ -6,7 +6,7 @@ const RECIPE_PARTIAL = {
   type: 'Recipe' as const,
   output: 1,
   min_rating: 400,
-  prerequisites: [{ type: 'Recipe', id: 123 }],
+  prerequisites: [{ type: 'Recipe' as const, id: 123 }],
   disciplines: ['Armorsmith'],
 }
 
@@ -16,6 +16,7 @@ const ITEM_PARTIAL = {
   output: 1,
   min_rating: null,
   disciplines: [],
+  prerequisites: [],
 }
 
 const RECIPE_PARTIAL_WITH_CRAFT_FLAGS = {

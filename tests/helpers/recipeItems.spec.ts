@@ -50,6 +50,7 @@ describe('helpers > recipeItems', () => {
               buyPrice: 1,
               decisionPrice: 1,
               craftResultPrice: 1,
+              prerequisites: [],
             },
             {
               craft: false,
@@ -66,6 +67,7 @@ describe('helpers > recipeItems', () => {
               buyPrice: 1,
               decisionPrice: 1,
               craftResultPrice: 1,
+              prerequisites: [],
             },
             {
               craft: false,
@@ -82,8 +84,10 @@ describe('helpers > recipeItems', () => {
               buyPrice: false,
               decisionPrice: false,
               craftResultPrice: false,
+              prerequisites: [],
             },
           ],
+          prerequisites: [],
         },
         {
           craft: false,
@@ -100,6 +104,7 @@ describe('helpers > recipeItems', () => {
           buyPrice: 1,
           decisionPrice: 1,
           craftResultPrice: 1,
+          prerequisites: [],
         },
         {
           craft: true,
@@ -132,10 +137,13 @@ describe('helpers > recipeItems', () => {
               buyPrice: 1,
               decisionPrice: 1,
               craftResultPrice: 1,
+              prerequisites: [],
             },
           ],
+          prerequisites: [],
         },
       ],
+      prerequisites: [],
     }
 
     expect(recipeItems(recipeTree)).toEqual([1, 2, 3, 4, 5, 6])

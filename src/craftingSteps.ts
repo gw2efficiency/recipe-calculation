@@ -1,3 +1,4 @@
+import { Prerequisites } from '@gw2efficiency/recipe-nesting'
 import { RecipeTreeWithCraftFlags } from './types'
 
 export function craftingSteps(tree: RecipeTreeWithCraftFlags) {
@@ -43,7 +44,7 @@ interface CraftingStep {
   minRating: number | null
   disciplines: Array<string>
   merchant?: { name: string; locations: Array<string> }
-  recipeId?: Array<number>
+  prerequisites: Prerequisites
   components: Array<{ id: number; type: 'Item' | 'Recipe' | 'Currency'; quantity: number }>
 }
 
@@ -85,9 +86,7 @@ function craftingStepsInner(
       minRating: tree.min_rating,
       disciplines: tree.disciplines,
       merchant: tree.merchant,
-      recipeId: tree.prerequisites
-        ?.filter((prerequisite) => prerequisite.type === 'Recipe')
-        .map((prerequisite) => prerequisite.id),
+      prerequisites: tree.prerequisites,
       components: treeComponents.map((component) => ({
         id: component.id,
         type: component.type,

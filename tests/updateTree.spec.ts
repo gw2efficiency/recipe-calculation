@@ -35,6 +35,7 @@ describe('updateTree', () => {
         type: 'Item',
         min_rating: null,
         disciplines: [],
+        prerequisites: [],
       },
       {
         craft: false,
@@ -68,8 +69,10 @@ describe('updateTree', () => {
             type: 'Item',
             min_rating: null,
             disciplines: [],
+            prerequisites: [],
           },
         ],
+        prerequisites: [],
       },
       {
         craft: true,
@@ -103,10 +106,13 @@ describe('updateTree', () => {
             type: 'Item',
             min_rating: null,
             disciplines: [],
+            prerequisites: [],
           },
         ],
+        prerequisites: [],
       },
     ],
+    prerequisites: [],
   }
 
   it('keeps the tree the same if nothing changed', () => {

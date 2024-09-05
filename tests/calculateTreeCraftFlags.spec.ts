@@ -35,6 +35,7 @@ describe('calculateTreeCraftFlags', () => {
           usedQuantity: 1,
           components: [],
           craftDecisionPrice: 1,
+          prerequisites: [],
         },
         {
           id: 3,
@@ -52,6 +53,7 @@ describe('calculateTreeCraftFlags', () => {
           usedQuantity: 2,
           components: [],
           craftDecisionPrice: 123,
+          prerequisites: [],
         },
         {
           id: 4,
@@ -69,6 +71,7 @@ describe('calculateTreeCraftFlags', () => {
           usedQuantity: 2,
           components: [],
           craftDecisionPrice: 123,
+          prerequisites: [],
         },
         {
           id: 5,
@@ -86,8 +89,10 @@ describe('calculateTreeCraftFlags', () => {
           usedQuantity: 2,
           components: [],
           craftDecisionPrice: 1,
+          prerequisites: [],
         },
       ],
+      prerequisites: [],
     }
 
     const calculatedTree = calculateTreeCraftFlags(recipeTree, [5])

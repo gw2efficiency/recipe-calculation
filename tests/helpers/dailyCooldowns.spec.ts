@@ -50,8 +50,10 @@ describe('helpers > dailyCooldowns', () => {
               buyPrice: 1,
               decisionPrice: 1,
               craftResultPrice: 1,
+              prerequisites: [],
             },
           ],
+          prerequisites: [],
         },
         {
           craft: true,
@@ -116,12 +118,16 @@ describe('helpers > dailyCooldowns', () => {
                       buyPrice: 1,
                       decisionPrice: 1,
                       craftResultPrice: 1,
+                      prerequisites: [],
                     },
                   ],
+                  prerequisites: [],
                 },
               ],
+              prerequisites: [],
             },
           ],
+          prerequisites: [],
         },
         {
           craft: false,
@@ -154,8 +160,10 @@ describe('helpers > dailyCooldowns', () => {
               buyPrice: 1,
               decisionPrice: 1,
               craftResultPrice: 1,
+              prerequisites: [],
             },
           ],
+          prerequisites: [],
         },
         {
           craft: true,
@@ -204,10 +212,13 @@ describe('helpers > dailyCooldowns', () => {
                   buyPrice: 1,
                   decisionPrice: 1,
                   craftResultPrice: 1,
+                  prerequisites: [],
                 },
               ],
+              prerequisites: [],
             },
           ],
+          prerequisites: [],
         },
         {
           craft: true,
@@ -224,6 +235,7 @@ describe('helpers > dailyCooldowns', () => {
           buyPrice: 1,
           decisionPrice: 1,
           craftResultPrice: 1,
+          prerequisites: [],
         },
         {
           craft: false,
@@ -240,8 +252,10 @@ describe('helpers > dailyCooldowns', () => {
           buyPrice: false,
           decisionPrice: false,
           craftResultPrice: false,
+          prerequisites: [],
         },
       ],
+      prerequisites: [],
     }
 
     expect(dailyCooldowns(tree)).toEqual({
