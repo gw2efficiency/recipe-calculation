@@ -38,7 +38,6 @@ export function calculateTreePrices(
       buyPrice,
       decisionPrice,
       craftResultPrice,
-      craftDecisionPrice: decisionPrice,
     }
   }
 
@@ -69,6 +68,5 @@ export function calculateTreePrices(
     craftPrice,
     decisionPrice,
     craftResultPrice,
-    craftDecisionPrice,
   }
 }

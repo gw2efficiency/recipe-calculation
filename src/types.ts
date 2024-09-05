@@ -29,9 +29,6 @@ export type RecipeTreeWithPrices = ExtendRecipeTree<
 
     /** The sum of this price is used to calculate the craftPrice */
     craftResultPrice: number | false
-
-    /** The unaltered decision price for crafting */
-    craftDecisionPrice: number | false
   }
 >
 

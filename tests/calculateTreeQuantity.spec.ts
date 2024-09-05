@@ -22,7 +22,6 @@ const ITEM_PARTIAL = {
 const RECIPE_PARTIAL_WITH_CRAFT_FLAGS = {
   ...RECIPE_PARTIAL,
   craft: true,
-  craftDecisionPrice: 1,
   totalQuantity: 1,
   usedQuantity: 1,
   buyPriceEach: 1,
@@ -34,7 +33,6 @@ const RECIPE_PARTIAL_WITH_CRAFT_FLAGS = {
 const ITEM_PARTIAL_WITH_CRAFT_FLAGS = {
   ...ITEM_PARTIAL,
   craft: false,
-  craftDecisionPrice: 1,
   totalQuantity: 1,
   usedQuantity: 1,
   buyPriceEach: 1,

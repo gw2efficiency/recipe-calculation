@@ -5,7 +5,6 @@ describe('usedItems', () => {
   it('gets the correct items to buy and used available items', () => {
     const tree: RecipeTreeWithCraftFlags = {
       craft: true,
-      craftDecisionPrice: 36,
       craftPrice: 36,
       id: 1,
       output: 1,
@@ -28,7 +27,6 @@ describe('usedItems', () => {
       components: [
         {
           craft: false,
-          craftDecisionPrice: 60,
           craftPrice: 60,
           decisionPrice: 6,
           craftResultPrice: 6,
@@ -51,7 +49,6 @@ describe('usedItems', () => {
           components: [
             {
               craft: false,
-              craftDecisionPrice: 60,
               buyPrice: 60,
               buyPriceEach: 10,
               decisionPrice: 60,
@@ -70,7 +67,6 @@ describe('usedItems', () => {
         },
         {
           craft: true,
-          craftDecisionPrice: 31,
           decisionPrice: 30,
           craftResultPrice: 30,
           buyPrice: 300,
@@ -93,7 +89,6 @@ describe('usedItems', () => {
           components: [
             {
               craft: false,
-              craftDecisionPrice: 30,
               decisionPrice: 30,
               craftResultPrice: 30,
               buyPrice: 30,
@@ -110,7 +105,6 @@ describe('usedItems', () => {
             },
             {
               craft: false,
-              craftDecisionPrice: false,
               decisionPrice: false,
               craftResultPrice: false,
               buyPrice: false,
@@ -127,7 +121,6 @@ describe('usedItems', () => {
             },
             {
               craft: false,
-              craftDecisionPrice: 1,
               decisionPrice: 1,
               craftResultPrice: 1,
               buyPrice: 1,
@@ -146,7 +139,6 @@ describe('usedItems', () => {
         },
         {
           craft: false,
-          craftDecisionPrice: 0,
           craftPrice: 0,
           decisionPrice: 0,
           craftResultPrice: 0,
@@ -169,7 +161,6 @@ describe('usedItems', () => {
           components: [
             {
               craft: false,
-              craftDecisionPrice: 0,
               buyPrice: 0,
               buyPriceEach: 1,
               decisionPrice: 0,

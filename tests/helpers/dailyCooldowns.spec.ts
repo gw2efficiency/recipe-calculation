@@ -5,7 +5,6 @@ describe('helpers > dailyCooldowns', () => {
   it('gets all daily cooldowns from a recipe tree', () => {
     const tree: RecipeTreeWithCraftFlags = {
       craft: true,
-      craftDecisionPrice: 5,
       id: 1,
       totalQuantity: 2,
       usedQuantity: 2,
@@ -21,7 +20,6 @@ describe('helpers > dailyCooldowns', () => {
       components: [
         {
           craft: false,
-          craftDecisionPrice: 1,
           id: 66913,
           totalQuantity: 6,
           usedQuantity: 6,
@@ -37,7 +35,6 @@ describe('helpers > dailyCooldowns', () => {
           components: [
             {
               craft: false,
-              craftDecisionPrice: 1,
               id: 4,
               totalQuantity: 12,
               usedQuantity: 12,
@@ -57,7 +54,6 @@ describe('helpers > dailyCooldowns', () => {
         },
         {
           craft: true,
-          craftDecisionPrice: 1,
           id: 46740,
           totalQuantity: 10,
           usedQuantity: 3,
@@ -73,7 +69,6 @@ describe('helpers > dailyCooldowns', () => {
           components: [
             {
               craft: true,
-              craftDecisionPrice: 1,
               id: 19,
               totalQuantity: 3,
               usedQuantity: 3,
@@ -89,7 +84,6 @@ describe('helpers > dailyCooldowns', () => {
               components: [
                 {
                   craft: true,
-                  craftDecisionPrice: 1,
                   id: 66913,
                   totalQuantity: 3,
                   usedQuantity: 3,
@@ -105,7 +99,6 @@ describe('helpers > dailyCooldowns', () => {
                   components: [
                     {
                       craft: false,
-                      craftDecisionPrice: 1,
                       id: 4,
                       totalQuantity: 6,
                       usedQuantity: 6,
@@ -131,7 +124,6 @@ describe('helpers > dailyCooldowns', () => {
         },
         {
           craft: false,
-          craftDecisionPrice: 1,
           id: 5,
           totalQuantity: 4,
           usedQuantity: 0,
@@ -147,7 +139,6 @@ describe('helpers > dailyCooldowns', () => {
           components: [
             {
               craft: false,
-              craftDecisionPrice: 1,
               id: 6,
               totalQuantity: 0,
               usedQuantity: 0,
@@ -167,7 +158,6 @@ describe('helpers > dailyCooldowns', () => {
         },
         {
           craft: true,
-          craftDecisionPrice: 1,
           id: 66913,
           totalQuantity: 1,
           usedQuantity: 1,
@@ -183,7 +173,6 @@ describe('helpers > dailyCooldowns', () => {
           components: [
             {
               craft: true,
-              craftDecisionPrice: 1,
               id: 7,
               totalQuantity: 6,
               usedQuantity: 6,
@@ -199,7 +188,6 @@ describe('helpers > dailyCooldowns', () => {
               components: [
                 {
                   craft: false,
-                  craftDecisionPrice: 1,
                   id: 4,
                   totalQuantity: 12,
                   usedQuantity: 12,
@@ -222,7 +210,6 @@ describe('helpers > dailyCooldowns', () => {
         },
         {
           craft: true,
-          craftDecisionPrice: 1,
           id: 46736,
           totalQuantity: 1,
           usedQuantity: 1,
@@ -239,7 +226,6 @@ describe('helpers > dailyCooldowns', () => {
         },
         {
           craft: false,
-          craftDecisionPrice: false,
           id: 1,
           totalQuantity: 1,
           usedQuantity: 1,
