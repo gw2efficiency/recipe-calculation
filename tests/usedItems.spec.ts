@@ -25,6 +25,7 @@ describe('usedItems', () => {
       min_rating: null,
       disciplines: [],
       type: 'Recipe',
+      multipleRecipeCount: 1,
       components: [
         {
           craft: false,
@@ -48,6 +49,7 @@ describe('usedItems', () => {
           min_rating: null,
           disciplines: [],
           type: 'Recipe',
+          multipleRecipeCount: 1,
           components: [
             {
               craft: false,
@@ -65,6 +67,7 @@ describe('usedItems', () => {
               disciplines: [],
               type: 'Item',
               prerequisites: [],
+              multipleRecipeCount: 1,
             },
           ],
         },
@@ -90,6 +93,7 @@ describe('usedItems', () => {
           min_rating: null,
           disciplines: [],
           type: 'Recipe',
+          multipleRecipeCount: 1,
           components: [
             {
               craft: false,
@@ -107,6 +111,7 @@ describe('usedItems', () => {
               disciplines: [],
               type: 'Item',
               prerequisites: [],
+              multipleRecipeCount: 1,
             },
             {
               craft: false,
@@ -124,6 +129,7 @@ describe('usedItems', () => {
               disciplines: [],
               type: 'Currency',
               prerequisites: [],
+              multipleRecipeCount: 1,
             },
             {
               craft: false,
@@ -141,6 +147,7 @@ describe('usedItems', () => {
               disciplines: [],
               type: 'Currency',
               prerequisites: [],
+              multipleRecipeCount: 1,
             },
           ],
         },
@@ -166,6 +173,7 @@ describe('usedItems', () => {
           min_rating: null,
           disciplines: [],
           type: 'Recipe',
+          multipleRecipeCount: 1,
           components: [
             {
               craft: false,
@@ -183,6 +191,7 @@ describe('usedItems', () => {
               disciplines: [],
               type: 'Item',
               prerequisites: [],
+              multipleRecipeCount: 1,
             },
           ],
         },
