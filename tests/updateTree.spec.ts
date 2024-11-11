@@ -19,6 +19,7 @@ describe('updateTree', () => {
     type: 'Recipe',
     min_rating: 123,
     disciplines: ['Chef'],
+    multipleRecipeCount: 1,
     components: [
       {
         craft: false,
@@ -36,6 +37,7 @@ describe('updateTree', () => {
         min_rating: null,
         disciplines: [],
         prerequisites: [],
+        multipleRecipeCount: 1,
       },
       {
         craft: false,
@@ -53,6 +55,7 @@ describe('updateTree', () => {
         type: 'Recipe',
         min_rating: null,
         disciplines: [],
+        multipleRecipeCount: 1,
         components: [
           {
             craft: false,
@@ -70,6 +73,7 @@ describe('updateTree', () => {
             min_rating: null,
             disciplines: [],
             prerequisites: [],
+            multipleRecipeCount: 1,
           },
         ],
         prerequisites: [],
@@ -90,6 +94,7 @@ describe('updateTree', () => {
         type: 'Recipe',
         min_rating: null,
         disciplines: [],
+        multipleRecipeCount: 1,
         components: [
           {
             craft: false,
@@ -107,6 +112,7 @@ describe('updateTree', () => {
             min_rating: null,
             disciplines: [],
             prerequisites: [],
+            multipleRecipeCount: 1,
           },
         ],
         prerequisites: [],

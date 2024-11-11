@@ -17,8 +17,17 @@ describe('calculateTreePrices', () => {
       totalQuantity: 1,
       type: 'Recipe',
       quantity: 1,
+      multipleRecipeCount: 1,
       components: [
-        { ...TREE_PARTIAL, id: 2, usedQuantity: 1, totalQuantity: 1, type: 'Item', quantity: 1 },
+        {
+          ...TREE_PARTIAL,
+          id: 2,
+          usedQuantity: 1,
+          totalQuantity: 1,
+          type: 'Item',
+          quantity: 1,
+          multipleRecipeCount: 1,
+        },
         {
           ...TREE_PARTIAL,
           id: 3,
@@ -26,6 +35,7 @@ describe('calculateTreePrices', () => {
           totalQuantity: 2,
           type: 'Item',
           quantity: 2,
+          multipleRecipeCount: 1,
         },
         {
           ...TREE_PARTIAL,
@@ -34,6 +44,7 @@ describe('calculateTreePrices', () => {
           quantity: 10,
           usedQuantity: 10,
           totalQuantity: 10,
+          multipleRecipeCount: 1,
         },
         {
           ...TREE_PARTIAL,
@@ -42,6 +53,7 @@ describe('calculateTreePrices', () => {
           quantity: 10,
           usedQuantity: 10,
           totalQuantity: 10,
+          multipleRecipeCount: 1,
         },
       ],
     }
@@ -65,6 +77,7 @@ describe('calculateTreePrices', () => {
       buyPrice: 123,
       decisionPrice: 5,
       craftResultPrice: 5,
+      multipleRecipeCount: 1,
       components: [
         {
           ...TREE_PARTIAL,
@@ -79,6 +92,7 @@ describe('calculateTreePrices', () => {
           buyPrice: 1,
           decisionPrice: 1,
           craftResultPrice: 1,
+          multipleRecipeCount: 1,
         },
         {
           ...TREE_PARTIAL,
@@ -93,6 +107,7 @@ describe('calculateTreePrices', () => {
           buyPrice: 2,
           decisionPrice: 2,
           craftResultPrice: 2,
+          multipleRecipeCount: 1,
         },
       ],
     }
@@ -110,6 +125,7 @@ describe('calculateTreePrices', () => {
       totalQuantity: 1,
       type: 'Recipe',
       quantity: 1,
+      multipleRecipeCount: 1,
       components: [
         {
           ...TREE_PARTIAL,
@@ -118,6 +134,7 @@ describe('calculateTreePrices', () => {
           totalQuantity: 1,
           type: 'Item',
           quantity: 1,
+          multipleRecipeCount: 1,
         },
         {
           ...TREE_PARTIAL,
@@ -126,6 +143,7 @@ describe('calculateTreePrices', () => {
           totalQuantity: 2,
           type: 'Recipe',
           quantity: 2,
+          multipleRecipeCount: 1,
           components: [
             {
               ...TREE_PARTIAL,
@@ -134,6 +152,7 @@ describe('calculateTreePrices', () => {
               totalQuantity: 50,
               type: 'Item',
               quantity: 50,
+              multipleRecipeCount: 1,
             },
             {
               ...TREE_PARTIAL,
@@ -142,6 +161,7 @@ describe('calculateTreePrices', () => {
               totalQuantity: 2,
               type: 'Item',
               quantity: 2,
+              multipleRecipeCount: 1,
             },
           ],
         },

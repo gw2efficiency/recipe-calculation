@@ -80,6 +80,7 @@ Object {
       ],
       "id": 3,
       "min_rating": 200,
+      "multipleRecipeCount": 1,
       "output": 1,
       "prerequisites": Array [
         Object {
@@ -122,6 +123,7 @@ Object {
       ],
       "id": 5,
       "min_rating": 200,
+      "multipleRecipeCount": 1,
       "output": 1,
       "prerequisites": Array [
         Object {
@@ -145,6 +147,7 @@ Object {
   ],
   "id": 1,
   "min_rating": 300,
+  "multipleRecipeCount": 1,
   "output": 1,
   "prerequisites": Array [
     Object {
@@ -194,6 +197,7 @@ Object {
       ],
       "id": 7,
       "min_rating": 200,
+      "multipleRecipeCount": 1,
       "output": 1,
       "prerequisites": Array [
         Object {
@@ -236,6 +240,7 @@ Object {
       ],
       "id": 3,
       "min_rating": 200,
+      "multipleRecipeCount": 1,
       "output": 1,
       "prerequisites": Array [
         Object {
@@ -278,6 +283,7 @@ Object {
       ],
       "id": 5,
       "min_rating": 200,
+      "multipleRecipeCount": 1,
       "output": 1,
       "prerequisites": Array [
         Object {
@@ -301,6 +307,7 @@ Object {
   ],
   "id": 1,
   "min_rating": 300,
+  "multipleRecipeCount": 1,
   "output": 1,
   "prerequisites": Array [
     Object {
@@ -350,6 +357,7 @@ Object {
       ],
       "id": 3,
       "min_rating": 200,
+      "multipleRecipeCount": 1,
       "output": 1,
       "prerequisites": Array [
         Object {
@@ -373,6 +381,7 @@ Object {
   ],
   "id": 1,
   "min_rating": 300,
+  "multipleRecipeCount": 1,
   "output": 1,
   "prerequisites": Array [
     Object {

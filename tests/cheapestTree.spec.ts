@@ -11,6 +11,7 @@ describe('cheapestTree', () => {
       disciplines: ['Amoursmith'],
       quantity: 1,
       output: 1,
+      multipleRecipeCount: 1,
       components: [
         { id: 2, type: 'Item', quantity: 1 },
         {
@@ -21,6 +22,7 @@ describe('cheapestTree', () => {
           min_rating: 200,
           disciplines: ['Amoursmith'],
           quantity: 5,
+          multipleRecipeCount: 1,
           components: [
             { id: 4, type: 'Item', quantity: 2 },
             { id: 4, type: 'Currency', quantity: 200 },
@@ -36,6 +38,7 @@ describe('cheapestTree', () => {
           disciplines: ['Amoursmith'],
           quantity: 5,
           components: [{ id: 6, type: 'Item', quantity: 2 }],
+          multipleRecipeCount: 1,
         },
       ],
     }
@@ -54,6 +57,7 @@ describe('cheapestTree', () => {
       disciplines: ['Amoursmith'],
       quantity: 1,
       output: 1,
+      multipleRecipeCount: 1,
       components: [
         {
           id: 7,
@@ -64,6 +68,7 @@ describe('cheapestTree', () => {
           disciplines: ['Amoursmith'],
           quantity: 3,
           components: [{ id: 4, type: 'Item', quantity: 1 }],
+          multipleRecipeCount: 1,
         },
         {
           id: 3,
@@ -74,6 +79,7 @@ describe('cheapestTree', () => {
           disciplines: ['Amoursmith'],
           quantity: 5,
           components: [{ id: 4, type: 'Item', quantity: 2 }],
+          multipleRecipeCount: 1,
         },
         {
           id: 5,
@@ -84,6 +90,7 @@ describe('cheapestTree', () => {
           disciplines: ['Amoursmith'],
           quantity: 2,
           components: [{ id: 6, type: 'Item', quantity: 100 }],
+          multipleRecipeCount: 1,
         },
       ],
     }
@@ -103,6 +110,7 @@ describe('cheapestTree', () => {
       disciplines: ['Amoursmith'],
       quantity: 1,
       output: 1,
+      multipleRecipeCount: 1,
       components: [
         {
           id: 3,
@@ -113,6 +121,7 @@ describe('cheapestTree', () => {
           disciplines: ['Amoursmith'],
           quantity: 5,
           components: [{ id: 4, type: 'Item', quantity: 2 }],
+          multipleRecipeCount: 1,
         },
       ],
     }
