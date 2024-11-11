@@ -10,9 +10,10 @@ export function cheapestTree(
   itemPrices: Record<string, number>,
   availableItems: Record<string, number> = {},
   forceBuyItems: Array<number> = [],
-  valueOwnItems: string = 'false'
+  valueOwnItems: boolean = false
 ): RecipeTreeWithCraftFlags {
-  if (valueOwnItems === 'true') {
+  // Set 
+  if (valueOwnItems) {
     const treeWithQuantityWithoutAvailableItems = calculateTreeQuantity(
       amount,
       tree as RecipeTree,
@@ -51,10 +52,11 @@ function getCheaperToBuyItemIds(
   tree: RecipeTreeWithPrices,
   ids: Array<number> = []
 ): Array<number> {
+  // If buying the item costs less than the possible profit made by selling its craft components (with TP tax), we should buy instead of crafting
   if (
     typeof tree.craftDecisionPrice === 'number' &&
     typeof tree.buyPrice === 'number' &&
-    tree.craftDecisionPrice * 0.85 > tree.buyPrice
+    tree.buyPrice < tree.craftDecisionPrice * 0.85
   ) {
     if (!ids.includes(tree.id)) {
       ids.push(tree.id)
