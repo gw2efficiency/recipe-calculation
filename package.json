@@ -1,7 +1,7 @@
 {
   "name": "@gw2efficiency/recipe-calculation",
   "description": "Calculate the cheapest tree traversal, price and used items of crafting recipes",
-  "version": "3.2.1",
+  "version": "3.3.0",
   "main": "dist/src/index.js",
   "license": "MIT",
   "repository": {
@@ -23,7 +23,7 @@
     "@devoxa/eslint-config": "2.0.5",
     "@devoxa/flocky": "^1.3.1",
     "@devoxa/prettier-config": "1.0.0",
-    "@gw2efficiency/recipe-nesting": "^3.1.0",
+    "@gw2efficiency/recipe-nesting": "^3.2.0",
     "@types/jest": "27.0.1",
     "@types/node": "15.12.5",
     "eslint": "7.32.0",

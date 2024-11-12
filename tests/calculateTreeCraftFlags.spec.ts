@@ -18,6 +18,7 @@ describe('calculateTreeCraftFlags', () => {
       buyPriceEach: false,
       decisionPrice: 123,
       craftResultPrice: 123,
+      multipleRecipeCount: 1,
       components: [
         {
           id: 2,
@@ -36,6 +37,7 @@ describe('calculateTreeCraftFlags', () => {
           components: [],
           craftDecisionPrice: 1,
           prerequisites: [],
+          multipleRecipeCount: 1,
         },
         {
           id: 3,
@@ -54,6 +56,7 @@ describe('calculateTreeCraftFlags', () => {
           components: [],
           craftDecisionPrice: 123,
           prerequisites: [],
+          multipleRecipeCount: 1,
         },
         {
           id: 4,
@@ -72,6 +75,7 @@ describe('calculateTreeCraftFlags', () => {
           components: [],
           craftDecisionPrice: 123,
           prerequisites: [],
+          multipleRecipeCount: 1,
         },
         {
           id: 5,
@@ -90,6 +94,7 @@ describe('calculateTreeCraftFlags', () => {
           components: [],
           craftDecisionPrice: 1,
           prerequisites: [],
+          multipleRecipeCount: 1,
         },
       ],
       prerequisites: [],

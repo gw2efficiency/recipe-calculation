@@ -8,6 +8,7 @@ const RECIPE_PARTIAL = {
   min_rating: 400,
   prerequisites: [{ type: 'Recipe' as const, id: 123 }],
   disciplines: ['Armorsmith'],
+  multipleRecipeCount: 1,
 }
 
 const ITEM_PARTIAL = {
@@ -17,6 +18,7 @@ const ITEM_PARTIAL = {
   min_rating: null,
   disciplines: [],
   prerequisites: [],
+  multipleRecipeCount: 1,
 }
 
 const RECIPE_PARTIAL_WITH_CRAFT_FLAGS = {

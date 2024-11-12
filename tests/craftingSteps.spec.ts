@@ -18,6 +18,7 @@ describe('craftingSteps', () => {
       decisionPrice: 1,
       craftResultPrice: 1,
       disciplines: [],
+      multipleRecipeCount: 1,
       components: [
         {
           craft: true,
@@ -40,6 +41,7 @@ describe('craftingSteps', () => {
               id: 123,
             },
           ],
+          multipleRecipeCount: 1,
           components: [
             {
               craft: false,
@@ -57,6 +59,7 @@ describe('craftingSteps', () => {
               craftResultPrice: 1,
               disciplines: [],
               prerequisites: [],
+              multipleRecipeCount: 1,
             },
           ],
         },
@@ -75,6 +78,7 @@ describe('craftingSteps', () => {
           buyPriceEach: 1,
           decisionPrice: 1,
           craftResultPrice: 1,
+          multipleRecipeCount: 1,
           components: [
             {
               craft: true,
@@ -91,6 +95,7 @@ describe('craftingSteps', () => {
               buyPriceEach: 1,
               decisionPrice: 1,
               craftResultPrice: 1,
+              multipleRecipeCount: 1,
               components: [
                 {
                   craft: true,
@@ -107,6 +112,7 @@ describe('craftingSteps', () => {
                   buyPriceEach: 1,
                   decisionPrice: 1,
                   craftResultPrice: 1,
+                  multipleRecipeCount: 1,
                   components: [
                     {
                       craft: false,
@@ -124,6 +130,7 @@ describe('craftingSteps', () => {
                       craftResultPrice: 1,
                       disciplines: [],
                       prerequisites: [],
+                      multipleRecipeCount: 1,
                     },
                   ],
                   prerequisites: [],
@@ -149,6 +156,7 @@ describe('craftingSteps', () => {
           decisionPrice: 1,
           craftResultPrice: 1,
           disciplines: [],
+          multipleRecipeCount: 1,
           components: [
             {
               craft: false,
@@ -166,6 +174,7 @@ describe('craftingSteps', () => {
               craftResultPrice: 1,
               disciplines: [],
               prerequisites: [],
+              multipleRecipeCount: 1,
             },
           ],
           prerequisites: [],
@@ -185,6 +194,7 @@ describe('craftingSteps', () => {
           decisionPrice: 1,
           craftResultPrice: 1,
           disciplines: [],
+          multipleRecipeCount: 1,
           components: [
             {
               craft: true,
@@ -201,6 +211,7 @@ describe('craftingSteps', () => {
               decisionPrice: 1,
               craftResultPrice: 1,
               disciplines: [],
+              multipleRecipeCount: 1,
               components: [
                 {
                   craft: false,
@@ -218,6 +229,7 @@ describe('craftingSteps', () => {
                   craftResultPrice: 1,
                   disciplines: [],
                   prerequisites: [],
+                  multipleRecipeCount: 1,
                 },
               ],
               prerequisites: [],
@@ -240,6 +252,7 @@ describe('craftingSteps', () => {
           decisionPrice: 1,
           craftResultPrice: 1,
           disciplines: [],
+          multipleRecipeCount: 1,
           components: [
             {
               craft: true,
@@ -257,6 +270,7 @@ describe('craftingSteps', () => {
               craftResultPrice: 1,
               disciplines: [],
               prerequisites: [],
+              multipleRecipeCount: 1,
             },
           ],
           prerequisites: [],
@@ -277,6 +291,7 @@ describe('craftingSteps', () => {
           craftResultPrice: 1,
           disciplines: [],
           prerequisites: [],
+          multipleRecipeCount: 1,
         },
       ],
       prerequisites: [],
@@ -302,6 +317,7 @@ describe('craftingSteps', () => {
       decisionPrice: 1,
       craftResultPrice: 1,
       disciplines: [],
+      multipleRecipeCount: 1,
       components: [
         {
           craft: true,
@@ -324,6 +340,7 @@ describe('craftingSteps', () => {
               id: 123,
             },
           ],
+          multipleRecipeCount: 1,
           components: [
             {
               craft: false,
@@ -341,6 +358,7 @@ describe('craftingSteps', () => {
               craftResultPrice: 1,
               disciplines: [],
               prerequisites: [],
+              multipleRecipeCount: 1,
             },
           ],
         },
@@ -359,6 +377,7 @@ describe('craftingSteps', () => {
           buyPriceEach: 1,
           decisionPrice: 1,
           craftResultPrice: 1,
+          multipleRecipeCount: 1,
           components: [
             {
               craft: true,
@@ -375,6 +394,7 @@ describe('craftingSteps', () => {
               buyPriceEach: 1,
               decisionPrice: 1,
               craftResultPrice: 1,
+              multipleRecipeCount: 1,
               components: [
                 {
                   craft: true,
@@ -391,6 +411,7 @@ describe('craftingSteps', () => {
                   buyPriceEach: 1,
                   decisionPrice: 1,
                   craftResultPrice: 1,
+                  multipleRecipeCount: 1,
                   components: [
                     {
                       craft: true,
@@ -399,6 +420,7 @@ describe('craftingSteps', () => {
                       type: 'Recipe',
                       quantity: 1,
                       output: 1,
+                      multipleRecipeCount: 1,
                       components: [
                         {
                           craft: false,
@@ -416,6 +438,7 @@ describe('craftingSteps', () => {
                           min_rating: null,
                           disciplines: [],
                           prerequisites: [],
+                          multipleRecipeCount: 1,
                         },
                         {
                           craft: false,
@@ -433,6 +456,7 @@ describe('craftingSteps', () => {
                           min_rating: null,
                           disciplines: [],
                           prerequisites: [],
+                          multipleRecipeCount: 1,
                         },
                       ],
                       prerequisites: [],
@@ -466,6 +490,7 @@ describe('craftingSteps', () => {
                       min_rating: null,
                       disciplines: [],
                       prerequisites: [],
+                      multipleRecipeCount: 1,
                     },
                     {
                       craft: false,
@@ -483,6 +508,7 @@ describe('craftingSteps', () => {
                       min_rating: null,
                       disciplines: [],
                       prerequisites: [],
+                      multipleRecipeCount: 1,
                     },
                     {
                       craft: true,
@@ -491,6 +517,7 @@ describe('craftingSteps', () => {
                       type: 'Recipe',
                       quantity: 6,
                       output: 10,
+                      multipleRecipeCount: 1,
                       components: [
                         {
                           craft: false,
@@ -508,6 +535,7 @@ describe('craftingSteps', () => {
                           min_rating: null,
                           disciplines: [],
                           prerequisites: [],
+                          multipleRecipeCount: 1,
                         },
                       ],
                       prerequisites: [],
@@ -549,6 +577,7 @@ describe('craftingSteps', () => {
           decisionPrice: 1,
           craftResultPrice: 1,
           disciplines: [],
+          multipleRecipeCount: 1,
           components: [
             {
               craft: false,
@@ -566,6 +595,7 @@ describe('craftingSteps', () => {
               craftResultPrice: 1,
               disciplines: [],
               prerequisites: [],
+              multipleRecipeCount: 1,
             },
           ],
           prerequisites: [],
@@ -585,6 +615,7 @@ describe('craftingSteps', () => {
           decisionPrice: 1,
           craftResultPrice: 1,
           disciplines: [],
+          multipleRecipeCount: 1,
           components: [
             {
               craft: true,
@@ -601,6 +632,7 @@ describe('craftingSteps', () => {
               decisionPrice: 1,
               craftResultPrice: 1,
               disciplines: [],
+              multipleRecipeCount: 1,
               components: [
                 {
                   craft: false,
@@ -618,6 +650,7 @@ describe('craftingSteps', () => {
                   craftResultPrice: 1,
                   disciplines: [],
                   prerequisites: [],
+                  multipleRecipeCount: 1,
                 },
               ],
               prerequisites: [],
@@ -649,6 +682,7 @@ describe('craftingSteps', () => {
       buyPriceEach: 1,
       decisionPrice: 1,
       craftResultPrice: 1,
+      multipleRecipeCount: 1,
       components: [
         {
           craft: true,
@@ -665,6 +699,7 @@ describe('craftingSteps', () => {
           buyPriceEach: 1,
           decisionPrice: 1,
           craftResultPrice: 1,
+          multipleRecipeCount: 1,
           components: [
             {
               craft: false,
@@ -681,6 +716,7 @@ describe('craftingSteps', () => {
               buyPriceEach: 1,
               decisionPrice: 1,
               craftResultPrice: 1,
+              multipleRecipeCount: 1,
               components: [
                 {
                   craft: false,
@@ -698,6 +734,7 @@ describe('craftingSteps', () => {
                   craftResultPrice: 1,
                   disciplines: [],
                   prerequisites: [],
+                  multipleRecipeCount: 1,
                 },
               ],
               prerequisites: [],
@@ -717,6 +754,7 @@ describe('craftingSteps', () => {
               buyPriceEach: 1,
               decisionPrice: 1,
               craftResultPrice: 1,
+              multipleRecipeCount: 1,
               components: [
                 {
                   craft: false,
@@ -734,6 +772,7 @@ describe('craftingSteps', () => {
                   craftResultPrice: 1,
                   disciplines: [],
                   prerequisites: [],
+                  multipleRecipeCount: 1,
                 },
               ],
               prerequisites: [],
@@ -756,6 +795,7 @@ describe('craftingSteps', () => {
           buyPriceEach: 1,
           decisionPrice: 1,
           craftResultPrice: 1,
+          multipleRecipeCount: 1,
           components: [
             {
               craft: true,
@@ -772,6 +812,7 @@ describe('craftingSteps', () => {
               buyPriceEach: 1,
               decisionPrice: 1,
               craftResultPrice: 1,
+              multipleRecipeCount: 1,
               components: [
                 {
                   craft: false,
@@ -789,6 +830,7 @@ describe('craftingSteps', () => {
                   craftResultPrice: 1,
                   disciplines: [],
                   prerequisites: [],
+                  multipleRecipeCount: 1,
                 },
               ],
               prerequisites: [],
@@ -808,6 +850,7 @@ describe('craftingSteps', () => {
               buyPriceEach: 1,
               decisionPrice: 1,
               craftResultPrice: 1,
+              multipleRecipeCount: 1,
               components: [
                 {
                   craft: false,
@@ -825,6 +868,7 @@ describe('craftingSteps', () => {
                   craftResultPrice: 1,
                   disciplines: [],
                   prerequisites: [],
+                  multipleRecipeCount: 1,
                 },
               ],
               prerequisites: [],

@@ -18,6 +18,7 @@ describe('helpers > recipeItems', () => {
       buyPrice: 1,
       decisionPrice: 1,
       craftResultPrice: 1,
+      multipleRecipeCount: 1,
       components: [
         {
           craft: true,
@@ -34,6 +35,7 @@ describe('helpers > recipeItems', () => {
           buyPrice: 1,
           decisionPrice: 1,
           craftResultPrice: 1,
+          multipleRecipeCount: 1,
           components: [
             {
               craft: false,
@@ -50,6 +52,7 @@ describe('helpers > recipeItems', () => {
               buyPrice: 1,
               decisionPrice: 1,
               craftResultPrice: 1,
+              multipleRecipeCount: 1,
               prerequisites: [],
             },
             {
@@ -67,6 +70,7 @@ describe('helpers > recipeItems', () => {
               buyPrice: 1,
               decisionPrice: 1,
               craftResultPrice: 1,
+              multipleRecipeCount: 1,
               prerequisites: [],
             },
             {
@@ -84,6 +88,7 @@ describe('helpers > recipeItems', () => {
               buyPrice: false,
               decisionPrice: false,
               craftResultPrice: false,
+              multipleRecipeCount: 1,
               prerequisites: [],
             },
           ],
@@ -104,6 +109,7 @@ describe('helpers > recipeItems', () => {
           buyPrice: 1,
           decisionPrice: 1,
           craftResultPrice: 1,
+          multipleRecipeCount: 1,
           prerequisites: [],
         },
         {
@@ -121,6 +127,7 @@ describe('helpers > recipeItems', () => {
           buyPrice: 1,
           decisionPrice: 1,
           craftResultPrice: 1,
+          multipleRecipeCount: 1,
           components: [
             {
               craft: false,
@@ -137,6 +144,7 @@ describe('helpers > recipeItems', () => {
               buyPrice: 1,
               decisionPrice: 1,
               craftResultPrice: 1,
+              multipleRecipeCount: 1,
               prerequisites: [],
             },
           ],
