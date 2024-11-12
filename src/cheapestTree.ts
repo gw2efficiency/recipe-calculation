@@ -2,7 +2,11 @@ import { calculateTreeQuantity } from './calculateTreeQuantity'
 import { calculateTreePrices } from './calculateTreePrices'
 import { calculateTreeCraftFlags } from './calculateTreeCraftFlags'
 import { RecipeTree, RecipeTreeWithCraftFlags, RecipeTreeWithPrices } from './types'
-import { NestedRecipe } from '@gw2efficiency/recipe-nesting'
+import {
+  NestedRecipe,
+  BasicCurrencyComponent,
+  BasicItemComponent,
+} from '@gw2efficiency/recipe-nesting'
 
 export function cheapestTree(
   amount: number,
@@ -10,9 +14,10 @@ export function cheapestTree(
   itemPrices: Record<string, number>,
   availableItems: Record<string, number> = {},
   forceBuyItems: Array<number> = [],
-  valueOwnItems: boolean = false
+  valueOwnItems: boolean
 ): RecipeTreeWithCraftFlags {
-  // Set 
+  valueOwnItems = valueOwnItems || false
+  // calculateTreeQuantity already checks for craft flags, so we can set them here when valuing owned items
   if (valueOwnItems) {
     const treeWithQuantityWithoutAvailableItems = calculateTreeQuantity(
       amount,
@@ -70,12 +75,25 @@ function getCheaperToBuyItemIds(
   return ids
 }
 
-function disableCraftForItemIds(tree: any, ids: Array<number>) {
+type NestedRecipeAndBasicComponentWithCraftFlag = (
+  | NestedRecipe
+  | BasicItemComponent
+  | BasicCurrencyComponent
+) & {
+  craft?: boolean
+}
+
+function disableCraftForItemIds(
+  tree: NestedRecipeAndBasicComponentWithCraftFlag,
+  ids: Array<number>
+) {
   if (ids.includes(tree.id)) {
     tree.craft = false
   }
 
-  if (tree.components && Array.isArray(tree.components)) {
-    tree.components.forEach((component: any) => disableCraftForItemIds(component, ids))
+  if ('components' in tree && Array.isArray(tree.components)) {
+    tree.components.forEach((component) => {
+      disableCraftForItemIds(component as NestedRecipeAndBasicComponentWithCraftFlag, ids)
+    })
   }
 }
