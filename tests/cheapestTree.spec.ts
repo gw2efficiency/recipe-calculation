@@ -44,7 +44,7 @@ describe('cheapestTree', () => {
     }
     const prices = { 1: 10, 2: 42, 3: 10, 4: 10, 5: 1000, 6: 10 }
 
-    const calculatedTree = cheapestTree(2, recipeTree, prices)
+    const calculatedTree = cheapestTree(2, recipeTree, prices, {}, [], false)
     expect(calculatedTree).toMatchSnapshot()
   })
 
@@ -97,7 +97,7 @@ describe('cheapestTree', () => {
     const prices = { 1: 10, 3: 100, 4: 10, 5: 25, 6: 1, 7: 1 }
     const availableItems = { 1: 100, 3: 7, 4: 3, 5: 4 }
 
-    const calculatedTree = cheapestTree(2, recipeTree, prices, availableItems, [])
+    const calculatedTree = cheapestTree(2, recipeTree, prices, availableItems, [], false)
     expect(calculatedTree).toMatchSnapshot()
   })
 
@@ -127,7 +127,38 @@ describe('cheapestTree', () => {
     }
     const prices = { 1: 10, 3: 100, 4: 10 }
 
-    const calculatedTree = cheapestTree(2, recipeTree, prices, {}, [3])
+    const calculatedTree = cheapestTree(2, recipeTree, prices, {}, [3], false)
+    expect(calculatedTree).toMatchSnapshot()
+  })
+
+  it('can calculate the cheapest tree correctly with value own items', () => {
+    const recipeTree: NestedRecipe = {
+      id: 1,
+      type: 'Recipe',
+      prerequisites: [{ type: 'Recipe', id: 124 }],
+      min_rating: 300,
+      disciplines: ['Amoursmith'],
+      quantity: 1,
+      output: 1,
+      multipleRecipeCount: 1,
+      components: [
+        {
+          id: 3,
+          type: 'Recipe',
+          prerequisites: [{ type: 'Recipe', id: 123 }],
+          output: 1,
+          min_rating: 200,
+          disciplines: ['Amoursmith'],
+          quantity: 5,
+          components: [{ id: 4, type: 'Item', quantity: 2 }],
+          multipleRecipeCount: 1,
+        },
+      ],
+    }
+    const prices = { 1: 10, 3: 100, 4: 500 }
+    const availableItems = { 3: 4, 4: 100 }
+
+    const calculatedTree = cheapestTree(1, recipeTree, prices, availableItems, [], true)
     expect(calculatedTree).toMatchSnapshot()
   })
 })

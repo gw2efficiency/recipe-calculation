@@ -395,3 +395,77 @@ Object {
   "usedQuantity": 2,
 }
 `;
+
+exports[`cheapestTree can calculate the cheapest tree correctly with value own items 1`] = `
+Object {
+  "buyPrice": 10,
+  "buyPriceEach": 10,
+  "components": Array [
+    Object {
+      "buyPrice": 100,
+      "buyPriceEach": 100,
+      "components": Array [
+        Object {
+          "buyPrice": 1000,
+          "buyPriceEach": 500,
+          "components": undefined,
+          "craft": false,
+          "craftDecisionPrice": 1000,
+          "craftResultPrice": 1000,
+          "decisionPrice": 1000,
+          "id": 4,
+          "output": 1,
+          "quantity": 2,
+          "totalQuantity": 2,
+          "type": "Item",
+          "usedQuantity": 2,
+        },
+      ],
+      "craft": false,
+      "craftDecisionPrice": 1000,
+      "craftPrice": 1000,
+      "craftResultPrice": 100,
+      "decisionPrice": 100,
+      "disciplines": Array [
+        "Amoursmith",
+      ],
+      "id": 3,
+      "min_rating": 200,
+      "multipleRecipeCount": 1,
+      "output": 1,
+      "prerequisites": Array [
+        Object {
+          "id": 123,
+          "type": "Recipe",
+        },
+      ],
+      "quantity": 5,
+      "totalQuantity": 5,
+      "type": "Recipe",
+      "usedQuantity": 1,
+    },
+  ],
+  "craft": true,
+  "craftDecisionPrice": 100,
+  "craftPrice": 100,
+  "craftResultPrice": 100,
+  "decisionPrice": 100,
+  "disciplines": Array [
+    "Amoursmith",
+  ],
+  "id": 1,
+  "min_rating": 300,
+  "multipleRecipeCount": 1,
+  "output": 1,
+  "prerequisites": Array [
+    Object {
+      "id": 124,
+      "type": "Recipe",
+    },
+  ],
+  "quantity": 1,
+  "totalQuantity": 1,
+  "type": "Recipe",
+  "usedQuantity": 1,
+}
+`;
