@@ -14,9 +14,8 @@ export function cheapestTree(
   itemPrices: Record<string, number>,
   availableItems: Record<string, number> = {},
   forceBuyItems: Array<number> = [],
-  valueOwnItems: boolean
+  valueOwnItems: false
 ): RecipeTreeWithCraftFlags {
-  valueOwnItems = valueOwnItems || false
   // calculateTreeQuantity already checks for craft flags, so we can set them here when valuing owned items
   if (valueOwnItems) {
     const treeWithQuantityWithoutAvailableItems = calculateTreeQuantity(
