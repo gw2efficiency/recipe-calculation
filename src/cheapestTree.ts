@@ -16,7 +16,6 @@ export function cheapestTree(
   forceBuyItems: Array<number> = [],
   valueOwnItems = false
 ): RecipeTreeWithCraftFlags {
-  // calculateTreeQuantity already checks for craft flags, so we can set them here when valuing owned items
   if (valueOwnItems) {
     const treeWithQuantityWithoutAvailableItems = calculateTreeQuantity(
       amount,
@@ -27,18 +26,22 @@ export function cheapestTree(
       treeWithQuantityWithoutAvailableItems,
       itemPrices
     )
+
     const cheaperToBuyItemIds = getCheaperToBuyItemIds(treeWithPriceWithoutAvailableItems)
-    disableCraftForItemIds(tree, cheaperToBuyItemIds)
+
+    // calculateTreeQuantity already checks for craft flags, so we can set them here
+    tree = disableCraftForItemIds(tree, cheaperToBuyItemIds) as NestedRecipe
   }
+
   // Adjust the tree total and used quantities
   const treeWithQuantity = calculateTreeQuantity(amount, tree as RecipeTree, availableItems)
 
   // Set the initial craft flags based on the subtree prices
   const treeWithPrices = calculateTreePrices(treeWithQuantity, itemPrices)
-  const treeWithCraftFlags = calculateTreeCraftFlags(treeWithPrices, forceBuyItems)
+  let treeWithCraftFlags = calculateTreeCraftFlags(treeWithPrices, forceBuyItems)
 
   // Force the root to be crafted
-  treeWithCraftFlags.craft = true
+  treeWithCraftFlags = { ...treeWithCraftFlags, craft: true }
 
   // After the "craft" flags are set, update the used materials
   // to only be used for things that actually get crafted
@@ -87,12 +90,14 @@ function disableCraftForItemIds(
   ids: Array<number>
 ) {
   if (ids.includes(tree.id)) {
-    tree.craft = false
+    tree = { ...tree, craft: false }
   }
 
   if ('components' in tree && Array.isArray(tree.components)) {
-    tree.components.forEach((component) => {
+    tree.components = tree.components.map((component) =>
       disableCraftForItemIds(component as NestedRecipeAndBasicComponentWithCraftFlag, ids)
-    })
+    )
   }
+
+  return tree
 }
