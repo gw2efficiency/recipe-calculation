@@ -44,7 +44,7 @@ describe('cheapestTree', () => {
     }
     const prices = { 1: 10, 2: 42, 3: 10, 4: 10, 5: 1000, 6: 10 }
 
-    const calculatedTree = cheapestTree(2, recipeTree, prices, {}, [], false)
+    const calculatedTree = cheapestTree(2, recipeTree, prices)
     expect(calculatedTree).toMatchSnapshot()
   })
 
@@ -97,7 +97,7 @@ describe('cheapestTree', () => {
     const prices = { 1: 10, 3: 100, 4: 10, 5: 25, 6: 1, 7: 1 }
     const availableItems = { 1: 100, 3: 7, 4: 3, 5: 4 }
 
-    const calculatedTree = cheapestTree(2, recipeTree, prices, availableItems, [], false)
+    const calculatedTree = cheapestTree(2, recipeTree, prices, availableItems, [])
     expect(calculatedTree).toMatchSnapshot()
   })
 
@@ -127,7 +127,7 @@ describe('cheapestTree', () => {
     }
     const prices = { 1: 10, 3: 100, 4: 10 }
 
-    const calculatedTree = cheapestTree(2, recipeTree, prices, {}, [3], false)
+    const calculatedTree = cheapestTree(2, recipeTree, prices, {}, [3])
     expect(calculatedTree).toMatchSnapshot()
   })
 
