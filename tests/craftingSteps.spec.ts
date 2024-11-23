@@ -881,7 +881,107 @@ describe('craftingSteps', () => {
     }
 
     const usedItemObject = craftingSteps(tree)
+    expect(usedItemObject).toMatchSnapshot()
+  })
 
+  it('only sorts merchants to top if they only use currencies', () => {
+    const tree: RecipeTreeWithCraftFlags = {
+      id: 91571,
+      type: 'Recipe',
+      quantity: 1,
+      output: 1,
+      components: [
+        {
+          id: 89271,
+          type: 'Recipe',
+          quantity: 25,
+          output: 1,
+          components: [
+            {
+              id: 89140,
+              type: 'Item',
+              quantity: 10,
+              output: 1,
+              totalQuantity: 250,
+              usedQuantity: 250,
+              buyPriceEach: 77,
+              buyPrice: 19250,
+              decisionPrice: 19250,
+              craftResultPrice: 19250,
+              craftDecisionPrice: 19250,
+              craft: false,
+              min_rating: null,
+              disciplines: [],
+              prerequisites: [],
+              multipleRecipeCount: 1,
+            },
+          ],
+          prerequisites: [
+            {
+              type: 'Recipe',
+              id: 12915,
+            },
+          ],
+          min_rating: 0,
+          disciplines: [
+            'Leatherworker',
+            'Armorsmith',
+            'Tailor',
+            'Artificer',
+            'Weaponsmith',
+            'Scribe',
+            'Huntsman',
+          ],
+          totalQuantity: 25,
+          usedQuantity: 25,
+          buyPriceEach: 770,
+          buyPrice: 19250,
+          craftPrice: 19250,
+          decisionPrice: 19250,
+          craftResultPrice: 19250,
+          craftDecisionPrice: 19250,
+          craft: true,
+          multipleRecipeCount: 1,
+        },
+        {
+          id: 2,
+          type: 'Currency',
+          quantity: 35000,
+          output: 1,
+          totalQuantity: 35000,
+          usedQuantity: 35000,
+          buyPriceEach: false,
+          buyPrice: false,
+          decisionPrice: 35000,
+          craftResultPrice: false,
+          craftDecisionPrice: 35000,
+          craft: false,
+          min_rating: null,
+          disciplines: [],
+          prerequisites: [],
+          multipleRecipeCount: 1,
+        },
+      ],
+      prerequisites: [],
+      min_rating: null,
+      disciplines: ['Merchant'],
+      merchant: {
+        name: 'Master Artificers',
+        locations: ['Crafting Station'],
+      },
+      multipleRecipeCount: 3,
+      totalQuantity: 1,
+      usedQuantity: 1,
+      buyPriceEach: false,
+      buyPrice: false,
+      craftPrice: 19250,
+      decisionPrice: 54250,
+      craftResultPrice: 19250,
+      craftDecisionPrice: 54250,
+      craft: true,
+    }
+
+    const usedItemObject = craftingSteps(tree)
     expect(usedItemObject).toMatchSnapshot()
   })
 })

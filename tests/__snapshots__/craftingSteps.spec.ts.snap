@@ -418,3 +418,69 @@ Array [
   },
 ]
 `;
+
+exports[`craftingSteps only sorts merchants to top if they only use currencies 1`] = `
+Array [
+  Object {
+    "components": Array [
+      Object {
+        "id": 89140,
+        "quantity": 250,
+        "type": "Item",
+      },
+    ],
+    "crafts": 25,
+    "disciplines": Array [
+      "Leatherworker",
+      "Armorsmith",
+      "Tailor",
+      "Artificer",
+      "Weaponsmith",
+      "Scribe",
+      "Huntsman",
+    ],
+    "id": 89271,
+    "merchant": undefined,
+    "minRating": 0,
+    "output": undefined,
+    "prerequisites": Array [
+      Object {
+        "id": 12915,
+        "type": "Recipe",
+      },
+    ],
+    "quantity": 25,
+    "type": "Recipe",
+  },
+  Object {
+    "components": Array [
+      Object {
+        "id": 89271,
+        "quantity": 25,
+        "type": "Recipe",
+      },
+      Object {
+        "id": 2,
+        "quantity": 35000,
+        "type": "Currency",
+      },
+    ],
+    "crafts": 1,
+    "disciplines": Array [
+      "Merchant",
+    ],
+    "id": 91571,
+    "merchant": Object {
+      "locations": Array [
+        "Crafting Station",
+      ],
+      "name": "Master Artificers",
+    },
+    "minRating": null,
+    "output": undefined,
+    "prerequisites": Array [],
+    "quantity": 1,
+    "type": "Recipe",
+  },
+]
+`;
