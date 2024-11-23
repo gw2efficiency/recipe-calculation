@@ -10,22 +10,22 @@ export function craftingSteps(tree: RecipeTreeWithCraftFlags) {
 
   // Make sure that "Mystic Clovers" (and it's components) get crafted as the first steps,
   // since they generate items that are always useful for crafting the other steps
+  // Obsidian Shards and Philosopher Stones (required for Mystic Clovers) will be sorted
+  // above the Mystic Clovers in the next step when sorting merchants
   const mysticCloversId = 19675
   const mysticClovers = steps.find((step) => step.id === mysticCloversId)
   if (mysticClovers) {
     steps = steps.filter((step) => step.id !== mysticCloversId)
     steps.unshift(mysticClovers)
-
-    const philosopherStonesId = 20796
-    const philosopherStones = steps.find((step) => step.id === philosopherStonesId)
-    steps = steps.filter((step) => step.id !== philosopherStonesId)
-    philosopherStones && steps.unshift(philosopherStones)
-
-    const obsidianShardsId = 19925
-    const obsidianShards = steps.find((step) => step.id === obsidianShardsId)
-    steps = steps.filter((step) => step.id !== obsidianShardsId)
-    obsidianShards && steps.unshift(obsidianShards)
   }
+
+  // Sort merchants that only require currencies to the top
+  steps = steps.sort((a, b) => {
+    const aIsMerchant = isMerchantWithOnlyCurrencies(a)
+    const bIsMerchant = isMerchantWithOnlyCurrencies(b)
+
+    return aIsMerchant === bIsMerchant ? 0 : aIsMerchant ? -1 : 1
+  })
 
   return steps.map((step) => ({
     ...step,
@@ -98,4 +98,12 @@ function craftingStepsInner(
   // Go through the components and push them after the index of their parent
   treeComponents.map((component) => craftingStepsInner(component, steps, index + 1))
   return steps
+}
+
+function isMerchantWithOnlyCurrencies(step: CraftingStep): boolean {
+  return (
+    step.disciplines.length === 1 &&
+    step.disciplines[0] === 'Merchant' &&
+    step.components.every(({ type }) => type === 'Currency')
+  )
 }
