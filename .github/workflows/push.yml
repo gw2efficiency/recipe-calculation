@@ -14,18 +14,13 @@ jobs:
 
     steps:
       - name: 'Checkout the repository'
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: 'Setup Node.JS'
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: '14'
-
-      - name: 'Cache dependencies'
-        uses: actions/cache@v2
-        with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-node_modules-${{ hashFiles('**/yarn.lock') }}
+          cache: yarn
 
       - name: 'Install dependencies'
         run: yarn install --frozen-lockfile
@@ -34,7 +29,7 @@ jobs:
         run: yarn test --coverage
 
       - name: 'Save test coverage'
-        uses: codecov/codecov-action@v2
+        uses: codecov/codecov-action@v5
 
       - name: 'Check code formatting'
         run: yarn format:check
