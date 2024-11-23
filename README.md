@@ -14,22 +14,19 @@
     <img
       src="https://img.shields.io/npm/v/@gw2efficiency/recipe-calculation?style=flat-square"
       alt="Package Version"
-    />
-  </a>
+    /></a>
 
   <a href="https://github.com/gw2efficiency/recipe-calculation/actions?query=branch%3Amaster+workflow%3A%22Continuous+Integration%22">
     <img
       src="https://img.shields.io/github/actions/workflow/status/gw2efficiency/recipe-calculation/push.yml?style=flat-square"
       alt="Build Status"
-    />
-  </a>
+    /></a>
 
   <a href="https://codecov.io/github/gw2efficiency/recipe-calculation">
     <img
       src="https://img.shields.io/codecov/c/github/gw2efficiency/recipe-calculation/master?style=flat-square"
       alt="Code Coverage"
-    />
-  </a>
+    /></a>
 </p>
 
 <!-- Issues -->
