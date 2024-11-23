@@ -21,8 +21,8 @@ export function craftingSteps(tree: RecipeTreeWithCraftFlags) {
 
   // Sort merchants that only require currencies to the top
   steps = steps.sort((a, b) => {
-    const aIsMerchant = isMerchantWithOnlyCurrencies(a)
-    const bIsMerchant = isMerchantWithOnlyCurrencies(b)
+    const aIsMerchant = isMerchantWithNoDependencies(a)
+    const bIsMerchant = isMerchantWithNoDependencies(b)
 
     return aIsMerchant === bIsMerchant ? 0 : aIsMerchant ? -1 : 1
   })
@@ -46,6 +46,7 @@ interface CraftingStep {
   merchant?: { name: string; locations: Array<string> }
   prerequisites: Prerequisites
   components: Array<{ id: number; type: 'Item' | 'Recipe' | 'Currency'; quantity: number }>
+  hasCraftedComponents: boolean
 }
 
 // Generate an ordered list of crafting steps
@@ -61,6 +62,8 @@ function craftingStepsInner(
     return steps
   }
 
+  const hasCraftedComponents = treeComponents.some((component) => component.craft)
+
   // Go through the existing steps, and if we already have a step
   // with this id, just add up the quantities
   const stepIndex = steps.findIndex((step) => step.id === tree.id)
@@ -73,6 +76,12 @@ function craftingStepsInner(
       component.quantity += treeComponent.totalQuantity
       return component
     })
+
+    // If *any* of the steps have crafted components, this flag needs to be set
+    if (hasCraftedComponents) {
+      steps[stepIndex].hasCraftedComponents = hasCraftedComponents
+    }
+
     index = stepIndex
   }
 
@@ -92,6 +101,7 @@ function craftingStepsInner(
         type: component.type,
         quantity: component.totalQuantity,
       })),
+      hasCraftedComponents,
     })
   }
 
@@ -100,10 +110,10 @@ function craftingStepsInner(
   return steps
 }
 
-function isMerchantWithOnlyCurrencies(step: CraftingStep): boolean {
+function isMerchantWithNoDependencies(step: CraftingStep): boolean {
   return (
     step.disciplines.length === 1 &&
     step.disciplines[0] === 'Merchant' &&
-    step.components.every(({ type }) => type === 'Currency')
+    !step.hasCraftedComponents
   )
 }

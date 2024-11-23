@@ -14,6 +14,7 @@ Array [
     "disciplines": Array [
       "Armorsmith",
     ],
+    "hasCraftedComponents": false,
     "id": 7,
     "merchant": undefined,
     "minRating": 400,
@@ -37,6 +38,7 @@ Array [
     ],
     "crafts": 3,
     "disciplines": Array [],
+    "hasCraftedComponents": true,
     "id": 19,
     "merchant": undefined,
     "minRating": null,
@@ -55,6 +57,7 @@ Array [
     ],
     "crafts": 3,
     "disciplines": Array [],
+    "hasCraftedComponents": true,
     "id": 3,
     "merchant": undefined,
     "minRating": null,
@@ -73,6 +76,7 @@ Array [
     ],
     "crafts": 1,
     "disciplines": Array [],
+    "hasCraftedComponents": true,
     "id": 15,
     "merchant": undefined,
     "minRating": null,
@@ -116,6 +120,7 @@ Array [
     ],
     "crafts": 1,
     "disciplines": Array [],
+    "hasCraftedComponents": true,
     "id": 1,
     "merchant": undefined,
     "minRating": null,
@@ -139,6 +144,7 @@ Array [
     ],
     "crafts": 2,
     "disciplines": Array [],
+    "hasCraftedComponents": false,
     "id": 5,
     "merchant": undefined,
     "minRating": null,
@@ -157,6 +163,7 @@ Array [
     ],
     "crafts": 1,
     "disciplines": Array [],
+    "hasCraftedComponents": false,
     "id": 3,
     "merchant": undefined,
     "minRating": null,
@@ -180,6 +187,7 @@ Array [
     ],
     "crafts": 2,
     "disciplines": Array [],
+    "hasCraftedComponents": true,
     "id": 2,
     "merchant": undefined,
     "minRating": null,
@@ -203,6 +211,7 @@ Array [
     ],
     "crafts": 1,
     "disciplines": Array [],
+    "hasCraftedComponents": true,
     "id": 1,
     "merchant": undefined,
     "minRating": null,
@@ -233,6 +242,7 @@ Array [
     "disciplines": Array [
       "Merchant",
     ],
+    "hasCraftedComponents": false,
     "id": 19925,
     "merchant": Object {
       "locations": Array [
@@ -258,6 +268,7 @@ Array [
     "disciplines": Array [
       "Merchant",
     ],
+    "hasCraftedComponents": false,
     "id": 20796,
     "merchant": Object {
       "locations": Array [
@@ -296,6 +307,7 @@ Array [
     ],
     "crafts": 3,
     "disciplines": Array [],
+    "hasCraftedComponents": true,
     "id": 19675,
     "merchant": undefined,
     "minRating": null,
@@ -316,6 +328,7 @@ Array [
     "disciplines": Array [
       "Armorsmith",
     ],
+    "hasCraftedComponents": false,
     "id": 7,
     "merchant": undefined,
     "minRating": 400,
@@ -339,6 +352,7 @@ Array [
     ],
     "crafts": 3,
     "disciplines": Array [],
+    "hasCraftedComponents": true,
     "id": 19,
     "merchant": undefined,
     "minRating": null,
@@ -357,6 +371,7 @@ Array [
     ],
     "crafts": 3,
     "disciplines": Array [],
+    "hasCraftedComponents": true,
     "id": 3,
     "merchant": undefined,
     "minRating": null,
@@ -375,6 +390,7 @@ Array [
     ],
     "crafts": 1,
     "disciplines": Array [],
+    "hasCraftedComponents": true,
     "id": 15,
     "merchant": undefined,
     "minRating": null,
@@ -408,6 +424,7 @@ Array [
     ],
     "crafts": 1,
     "disciplines": Array [],
+    "hasCraftedComponents": true,
     "id": 1,
     "merchant": undefined,
     "minRating": null,
@@ -439,6 +456,7 @@ Array [
       "Scribe",
       "Huntsman",
     ],
+    "hasCraftedComponents": false,
     "id": 89271,
     "merchant": undefined,
     "minRating": 0,
@@ -469,6 +487,7 @@ Array [
     "disciplines": Array [
       "Merchant",
     ],
+    "hasCraftedComponents": true,
     "id": 91571,
     "merchant": Object {
       "locations": Array [
