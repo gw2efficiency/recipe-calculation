@@ -11,15 +11,39 @@
       "name": "David Reeß",
       "avatar_url": "https://avatars3.githubusercontent.com/u/4615516?v=4",
       "profile": "https://www.david-reess.de",
-      "contributions": [
-        "code",
-        "doc",
-        "test"
-      ]
+      "contributions": ["code", "doc", "test"]
+    },
+    {
+      "login": "BenLubar",
+      "name": "Ben Lubar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4257305?v=4",
+      "profile": "https://ben.lubar.me/",
+      "contributions": ["data"]
+    },
+    {
+      "login": "holoxx",
+      "name": "Holox",
+      "avatar_url": "https://avatars.githubusercontent.com/u/16797784?v=4",
+      "profile": "https://github.com/holoxx",
+      "contributions": ["data"]
+    },
+    {
+      "login": "Ecmelt",
+      "name": "Ecmelt",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7891512?v=4",
+      "profile": "https://github.com/Ecmelt",
+      "contributions": ["code", "test"]
+    },
+    {
+      "login": "darthmaim",
+      "name": "darthmaim",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2511547?v=4",
+      "profile": "https://gw2treasures.com/",
+      "contributions": ["code", "test"]
     }
   ],
-  "files": [
-    "README.md"
-  ],
-  "contributorsPerLine": 7
+  "files": ["README.md"],
+  "contributorsPerLine": 7,
+  "commitConvention": "angular"
 }
+
