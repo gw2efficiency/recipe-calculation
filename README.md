@@ -19,7 +19,7 @@
 
   <a href="https://github.com/gw2efficiency/recipe-calculation/actions?query=branch%3Amaster+workflow%3A%22Continuous+Integration%22">
     <img
-      src="https://img.shields.io/github/workflow/status/gw2efficiency/recipe-calculation/Continuous%20Integration?style=flat-square"
+      src="https://img.shields.io/github/actions/workflow/status/gw2efficiency/recipe-calculation/push.yml?style=flat-square"
       alt="Build Status"
     />
   </a>
