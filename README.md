@@ -14,22 +14,19 @@
     <img
       src="https://img.shields.io/npm/v/@gw2efficiency/recipe-calculation?style=flat-square"
       alt="Package Version"
-    />
-  </a>
+    /></a>
 
   <a href="https://github.com/gw2efficiency/recipe-calculation/actions?query=branch%3Amaster+workflow%3A%22Continuous+Integration%22">
     <img
-      src="https://img.shields.io/github/workflow/status/gw2efficiency/recipe-calculation/Continuous%20Integration?style=flat-square"
+      src="https://img.shields.io/github/actions/workflow/status/gw2efficiency/recipe-calculation/push.yml?style=flat-square"
       alt="Build Status"
-    />
-  </a>
+    /></a>
 
   <a href="https://codecov.io/github/gw2efficiency/recipe-calculation">
     <img
       src="https://img.shields.io/codecov/c/github/gw2efficiency/recipe-calculation/master?style=flat-square"
       alt="Code Coverage"
-    />
-  </a>
+    /></a>
 </p>
 
 <!-- Issues -->
@@ -256,12 +253,18 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 <table>
-  <tr>
-    <td align="center"><a href="https://www.david-reess.de"><img src="https://avatars3.githubusercontent.com/u/4615516?v=4" width="75px;" alt=""/><br /><sub><b>David Reeß</b></sub></a><br /><a href="https://github.com/gw2efficiency/recipe-calculation/commits?author=queicherius" title="Code">💻</a> <a href="https://github.com/gw2efficiency/recipe-calculation/commits?author=queicherius" title="Documentation">📖</a> <a href="https://github.com/gw2efficiency/recipe-calculation/commits?author=queicherius" title="Tests">⚠️</a></td>
-  </tr>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.david-reess.de"><img src="https://avatars3.githubusercontent.com/u/4615516?v=4?s=75" width="75px;" alt="David Reeß"/><br /><sub><b>David Reeß</b></sub></a><br /><a href="https://github.com/gw2efficiency/recipe-calculation/commits?author=queicherius" title="Code">💻</a> <a href="https://github.com/gw2efficiency/recipe-calculation/commits?author=queicherius" title="Documentation">📖</a> <a href="https://github.com/gw2efficiency/recipe-calculation/commits?author=queicherius" title="Tests">⚠️</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://ben.lubar.me/"><img src="https://avatars.githubusercontent.com/u/4257305?v=4?s=75" width="75px;" alt="Ben Lubar"/><br /><sub><b>Ben Lubar</b></sub></a><br /><a href="#data-BenLubar" title="Data">🔣</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/holoxx"><img src="https://avatars.githubusercontent.com/u/16797784?v=4?s=75" width="75px;" alt="Holox"/><br /><sub><b>Holox</b></sub></a><br /><a href="#data-holoxx" title="Data">🔣</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Ecmelt"><img src="https://avatars.githubusercontent.com/u/7891512?v=4?s=75" width="75px;" alt="Ecmelt"/><br /><sub><b>Ecmelt</b></sub></a><br /><a href="https://github.com/gw2efficiency/recipe-calculation/commits?author=Ecmelt" title="Code">💻</a> <a href="https://github.com/gw2efficiency/recipe-calculation/commits?author=Ecmelt" title="Tests">⚠️</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://gw2treasures.com/"><img src="https://avatars.githubusercontent.com/u/2511547?v=4?s=75" width="75px;" alt="darthmaim"/><br /><sub><b>darthmaim</b></sub></a><br /><a href="https://github.com/gw2efficiency/recipe-calculation/commits?author=darthmaim" title="Code">💻</a> <a href="https://github.com/gw2efficiency/recipe-calculation/commits?author=darthmaim" title="Tests">⚠️</a></td>
+    </tr>
+  </tbody>
 </table>
 
-<!-- markdownlint-enable -->
+<!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
