@@ -1,6 +1,8 @@
 import { Prerequisites } from '@gw2efficiency/recipe-nesting'
 import { RecipeTreeWithCraftFlags } from './types'
 
+const MYSTIC_CLOVER_ID = 19675
+
 export function craftingSteps(tree: RecipeTreeWithCraftFlags) {
   let steps = craftingStepsInner(tree).reverse()
 
@@ -12,20 +14,16 @@ export function craftingSteps(tree: RecipeTreeWithCraftFlags) {
   // since they generate items that are always useful for crafting the other steps
   // Obsidian Shards and Philosopher Stones (required for Mystic Clovers) will be sorted
   // above the Mystic Clovers in the next step when sorting merchants
-  const mysticCloversId = 19675
-  const mysticClovers = steps.find((step) => step.id === mysticCloversId)
-  if (mysticClovers) {
-    steps = steps.filter((step) => step.id !== mysticCloversId)
-    steps.unshift(mysticClovers)
-  }
+  const mysticCloverSteps = steps.filter((step) => step.id === MYSTIC_CLOVER_ID)
+  steps = steps.filter((step) => step.id !== MYSTIC_CLOVER_ID)
+  steps = [...mysticCloverSteps, ...steps]
 
-  // Sort merchants that only require currencies to the top
-  steps = steps.sort((a, b) => {
-    const aIsMerchant = isMerchantWithNoDependencies(a)
-    const bIsMerchant = isMerchantWithNoDependencies(b)
-
-    return aIsMerchant === bIsMerchant ? 0 : aIsMerchant ? -1 : 1
-  })
+  // Move merchants to the top of the steps
+  const merchantSteps = steps
+    .filter(isMerchantWithNoDependencies)
+    .sort((a, b) => a.merchant?.name.localeCompare(b.merchant?.name || '') || 0)
+  steps = steps.filter((step) => !isMerchantWithNoDependencies(step))
+  steps = [...merchantSteps, ...steps]
 
   return steps.map((step) => ({
     ...step,
