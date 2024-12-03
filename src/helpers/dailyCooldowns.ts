@@ -1,12 +1,12 @@
 import { DAILY_COOLDOWNS } from '../static/dailyCooldowns'
-import { DAILY_LIMITED_ITEMS, DailyLimitedItem } from '../static/dailyLimitedItems'
+import { LIMITED_RECIPES, LimitedRecipe } from '../static/limitedRecipes'
 import { RecipeTreeWithCraftFlags } from '../types'
 
 const dailyCooldownIds = DAILY_COOLDOWNS.filter((x) => x.craftInterval === 'daily').map((x) => x.id)
-const dailyLimitedItems = DAILY_LIMITED_ITEMS
+const limitedRecipes = LIMITED_RECIPES
 
 export type DailyCooldownsBreakdown = Record<string, number>
-export type MatchingItemWithoutLimit = Omit<DailyLimitedItem, 'dailyLimit'>
+export type MatchingRecipeWithoutLimit = Omit<LimitedRecipe, 'limit'>
 
 // Get a list of daily cooldowns used in the recipe
 export function dailyCooldowns(
@@ -21,12 +21,12 @@ export function dailyCooldowns(
     breakdown[tree.id] = (breakdown[tree.id] || 0) + tree.usedQuantity
   }
 
-  const matchingItem = dailyLimitedItems.find((item) => item.id === tree.id)
+  const matchingRecipe = limitedRecipes.find((recipe) => recipe.id === tree.id)
   if (
-    matchingItem &&
-    matchesItemProperties(
+    matchingRecipe &&
+    matchesRecipeProperties(
       tree,
-      (({ dailyLimit, ...matchingItemWithoutLimit }) => matchingItemWithoutLimit)(matchingItem)
+      (({ limit, ...matchingRecipeWithoutLimit }) => matchingRecipeWithoutLimit)(matchingRecipe)
     )
   ) {
     breakdown[tree.id] = (breakdown[tree.id] || 0) + tree.usedQuantity
@@ -36,11 +36,11 @@ export function dailyCooldowns(
   return breakdown
 }
 
-export function matchesItemProperties(
+export function matchesRecipeProperties(
   tree: RecipeTreeWithCraftFlags,
-  matchingItemWithoutLimit: MatchingItemWithoutLimit
+  matchingRecipeWithoutLimit: MatchingRecipeWithoutLimit
 ): boolean {
-  return Object.entries(matchingItemWithoutLimit).every(([key, value]) => {
+  return Object.entries(matchingRecipeWithoutLimit).every(([key, value]) => {
     if (!(key in tree)) {
       return false
     }
@@ -48,7 +48,7 @@ export function matchesItemProperties(
     const treeValue = tree[key as keyof RecipeTreeWithCraftFlags] as unknown
 
     if (typeof value === 'object' && !Array.isArray(value) && typeof treeValue === 'object') {
-      return matchesItemProperties(treeValue as RecipeTreeWithCraftFlags, value)
+      return matchesRecipeProperties(treeValue as RecipeTreeWithCraftFlags, value)
     }
 
     if (Array.isArray(value)) {
@@ -56,7 +56,7 @@ export function matchesItemProperties(
         return false
       }
       return value.every((nestedObject, index) =>
-        matchesItemProperties(treeValue[index], nestedObject as MatchingItemWithoutLimit)
+        matchesRecipeProperties(treeValue[index], nestedObject as MatchingRecipeWithoutLimit)
       )
     }
 
