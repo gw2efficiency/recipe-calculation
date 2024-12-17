@@ -1,7 +1,7 @@
 {
   "name": "@gw2efficiency/recipe-calculation",
   "description": "Calculate the cheapest tree traversal, price and used items of crafting recipes",
-  "version": "3.5.5",
+  "version": "3.5.6",
   "main": "dist/src/index.js",
   "license": "MIT",
   "repository": {
