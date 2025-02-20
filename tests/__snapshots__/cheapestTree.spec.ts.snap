@@ -396,6 +396,84 @@ Object {
 }
 `;
 
+exports[`cheapestTree can calculate the cheapest tree correctly with homestead efficiency tiers 1`] = `
+Object {
+  "buyPrice": 50,
+  "buyPriceEach": 10,
+  "components": Array [
+    Object {
+      "buyPrice": 12500,
+      "buyPriceEach": 100,
+      "components": Array [
+        Object {
+          "buyPrice": 1250,
+          "buyPriceEach": 10,
+          "components": undefined,
+          "craft": false,
+          "craftDecisionPrice": 1250,
+          "craftResultPrice": 1250,
+          "decisionPrice": 1250,
+          "id": 4,
+          "output": 1,
+          "quantity": 1,
+          "totalQuantity": 125,
+          "type": "Item",
+          "usedQuantity": 125,
+        },
+      ],
+      "craft": true,
+      "craftDecisionPrice": 1250,
+      "craftPrice": 1250,
+      "craftResultPrice": 1250,
+      "decisionPrice": 1250,
+      "disciplines": Array [
+        "Amoursmith",
+      ],
+      "id": 102205,
+      "merchant": Object {
+        "locations": Array [],
+        "name": "\\"Homestead Refinement—Metal Forge\\"",
+      },
+      "min_rating": 200,
+      "multipleRecipeCount": 1,
+      "output": 1,
+      "prerequisites": Array [
+        Object {
+          "id": 123,
+          "type": "Recipe",
+        },
+      ],
+      "quantity": 25,
+      "totalQuantity": 125,
+      "type": "Recipe",
+      "usedQuantity": 125,
+    },
+  ],
+  "craft": true,
+  "craftDecisionPrice": 1250,
+  "craftPrice": 1250,
+  "craftResultPrice": 1250,
+  "decisionPrice": 1250,
+  "disciplines": Array [
+    "Amoursmith",
+  ],
+  "id": 1,
+  "min_rating": 300,
+  "multipleRecipeCount": 1,
+  "output": 1,
+  "prerequisites": Array [
+    Object {
+      "id": 124,
+      "type": "Recipe",
+    },
+  ],
+  "quantity": 5,
+  "totalQuantity": 5,
+  "type": "Recipe",
+  "usedQuantity": 5,
+}
+`;
+
 exports[`cheapestTree can calculate the cheapest tree correctly with value own items 1`] = `
 Object {
   "buyPrice": 10,

@@ -188,4 +188,42 @@ describe('cheapestTree', () => {
     const simpleTreeNoValue = simplifyTree(calculatedTreeNoValue)
     expect(simpleTree).not.toEqual(simpleTreeNoValue)
   })
+
+  it('can calculate the cheapest tree correctly with homestead efficiency tiers', () => {
+    const recipeTree: NestedRecipe = {
+      id: 1,
+      type: 'Recipe',
+      prerequisites: [{ type: 'Recipe', id: 124 }],
+      min_rating: 300,
+      disciplines: ['Amoursmith'],
+      quantity: 5,
+      output: 1,
+      multipleRecipeCount: 1,
+      components: [
+        {
+          id: 102205,
+          type: 'Recipe',
+          prerequisites: [{ type: 'Recipe', id: 123 }],
+          output: 1,
+          min_rating: 200,
+          disciplines: ['Amoursmith'],
+          merchant: {
+            locations: [],
+            name: '"Homestead Refinement—Metal Forge"',
+          },
+          quantity: 25,
+          components: [{ id: 4, type: 'Item', quantity: 4 }],
+          multipleRecipeCount: 1,
+        },
+      ],
+    }
+    const prices = { 1: 10, 102205: 100, 4: 10 }
+
+    const calculatedTree = cheapestTree(1, recipeTree, prices, {}, [], false, {
+      '102306': '0',
+      '102205': '2',
+      '103049': '0',
+    })
+    expect(calculatedTree).toMatchSnapshot()
+  })
 })
