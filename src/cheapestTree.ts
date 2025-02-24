@@ -120,17 +120,23 @@ function applyEfficiencyTiersToTree(
     const efficiencyTier = Number(userEfficiencyTiers[tree.id.toString()])
     if (efficiencyTier > 0) {
       const component = { ...tree.components[0] }
+
+      // Each efficiency tier lowers input by 50%, if it drops below one then doubles output
       component.quantity = component.quantity / (efficiencyTier * 2)
 
+      // Bug: Onions are discounted by 75% with first tier
       if (component.id === 12142) {
         component.quantity = efficiencyTier === 1 ? 1 : 0.5
       }
+
+      // Bug: Potatoes are not discounted with first tier
       if (component.id === 12135) {
         component.quantity = efficiencyTier === 1 ? 8 : 4
       }
 
       let updatedTree = { ...tree, output: component.quantity < 1 ? tree.output * 2 : tree.output }
 
+      // Bug: Iron ore output also halves with second tier
       if (component.id === 19699 && efficiencyTier === 2) {
         updatedTree.output = updatedTree.output / 2
       }
