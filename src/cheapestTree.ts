@@ -14,8 +14,14 @@ export function cheapestTree(
   itemPrices: Record<string, number>,
   availableItems: Record<string, number> = {},
   forceBuyItems: Array<number> = [],
-  valueOwnItems = false
+  valueOwnItems = false,
+  userEfficiencyTiers: Record<string, string> = {
+    '102306': '0',
+    '102205': '0',
+    '103049': '0',
+  }
 ): RecipeTreeWithCraftFlags {
+  tree = applyEfficiencyTiersToTree(tree, userEfficiencyTiers)
   if (valueOwnItems) {
     const treeWithQuantityWithoutAvailableItems = calculateTreeQuantity(
       amount,
@@ -97,6 +103,58 @@ function disableCraftForItemIds(
     tree.components = tree.components.map((component) =>
       disableCraftForItemIds(component as NestedRecipeAndBasicComponentWithCraftFlag, ids)
     )
+  }
+
+  return tree
+}
+
+function applyEfficiencyTiersToTree(
+  tree: NestedRecipe,
+  userEfficiencyTiers: Record<string, string>
+): NestedRecipe {
+  if (
+    ['102306', '102205', '103049'].includes(tree.id.toString()) &&
+    tree.merchant &&
+    tree.merchant.name.includes('Homestead Refinement')
+  ) {
+    const efficiencyTier = Number(userEfficiencyTiers[tree.id.toString()])
+    if (efficiencyTier > 0) {
+      const component = { ...tree.components[0] }
+
+      // Each efficiency tier lowers input by 50%, if it drops below one then doubles output
+      component.quantity = component.quantity / (efficiencyTier * 2)
+
+      // Bug: Onions are discounted by 75% with first tier
+      if (component.id === 12142) {
+        component.quantity = efficiencyTier === 1 ? 1 : 0.5
+      }
+
+      // Bug: Potatoes are not discounted with first tier
+      if (component.id === 12135) {
+        component.quantity = efficiencyTier === 1 ? 8 : 4
+      }
+
+      let updatedTree = { ...tree, output: component.quantity < 1 ? tree.output * 2 : tree.output }
+
+      // Bug: Iron ore output also halves with second tier
+      if (component.id === 19699 && efficiencyTier === 2) {
+        updatedTree.output = updatedTree.output / 2
+      }
+
+      component.quantity = component.quantity < 1 ? 1 : component.quantity
+      updatedTree = { ...updatedTree, components: [component, ...tree.components.slice(1)] }
+
+      tree = updatedTree
+    }
+  }
+
+  if ('components' in tree && Array.isArray(tree.components)) {
+    tree = {
+      ...tree,
+      components: tree.components.map((component) =>
+        applyEfficiencyTiersToTree(component as NestedRecipe, userEfficiencyTiers)
+      ),
+    }
   }
 
   return tree
