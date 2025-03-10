@@ -5,7 +5,7 @@ export const CURRENCY_DECISION_PRICES: Record<number, number | undefined> = {
   4: 3000, // Gem
   5: 32, // Ascalonian Tear
   6: 32, // Shard of Zhaitan
-  7: 40, // Fractal Relic
+  7: 80, // Fractal Relic
   9: 32, // Seal of Beetletun
   10: 32, // Manifesto of the Moletariate
   11: 32, // Deadly Bloom
@@ -19,16 +19,16 @@ export const CURRENCY_DECISION_PRICES: Record<number, number | undefined> = {
   20: 70, // Ley Line Crystal
   22: 70, // Lump of Aurillium
   23: 3600, // Spirit Shard
-  24: 15 * 40, // Pristine Fractal Relic
+  24: 15 * 80, // Pristine Fractal Relic
   25: 100, // Geode
-  26: undefined, // WvW Skirmish Claim Ticket
-  27: 10, // Bandit Crest
+  26: 800, // WvW Skirmish Claim Ticket
+  27: 45, // Bandit Crest
   28: 3600, // Magnetite Shard
   29: 3600, // Provisioner Token
   30: undefined, // PvP League Ticket
   31: 50, // Proof of Heroics
-  32: 2, // Unbound Magic
-  33: undefined, // Ascended Shards of Glory
+  32: 25, // Unbound Magic
+  33: 1600, // Ascended Shards of Glory
   34: 9, // Trade Contract
   35: 720, // Elegy Mosaic
   36: 135, // Testimony of Desert Heroics
@@ -40,11 +40,11 @@ export const CURRENCY_DECISION_PRICES: Record<number, number | undefined> = {
   42: undefined, // Vial of Chak Acid
   43: undefined, // Zephyrite Lockpick
   44: undefined, // Trader's Key
-  45: 6, // Volatile Magic
+  45: 50, // Volatile Magic
   46: undefined, // PvP Tournament Voucher
   47: undefined, // Racing Medallion
   49: undefined, // Mistborn Key
-  50: undefined, // Festival Token
+  50: 25, // Festival Token
   51: undefined, // Cache Key
   52: undefined, // Red Prophet Shard
   53: 3500, // Green Prophet Shard
