@@ -109,15 +109,18 @@ function disableCraftForItemIds(
 }
 
 function applyEfficiencyTiersToTree(
-  tree: NestedRecipe,
+  tree: Omit<NestedRecipe, 'id'> & { id: number | null }, // FIXME Not sure why this can be null
   userEfficiencyTiers: Record<string, string>
 ): NestedRecipe {
+  const id = tree.id ? tree.id.toString() : ''
+
   if (
-    ['102306', '102205', '103049'].includes(tree.id.toString()) &&
+    ['102306', '102205', '103049'].includes(id) &&
     tree.merchant &&
     tree.merchant.name.includes('Homestead Refinement')
   ) {
-    const efficiencyTier = Number(userEfficiencyTiers[tree.id.toString()])
+    const efficiencyTier = Number(userEfficiencyTiers[id])
+
     if (efficiencyTier > 0) {
       const component = { ...tree.components[0] }
 
@@ -157,5 +160,5 @@ function applyEfficiencyTiersToTree(
     }
   }
 
-  return tree
+  return tree as NestedRecipe
 }
