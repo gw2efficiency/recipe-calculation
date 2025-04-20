@@ -61,6 +61,9 @@ export function calculateTreePrices(
     craftResultPrice = craftPrice
   }
 
+  craftResultPrice = craftResultPrice || craftPrice
+  decisionPrice = decisionPrice || craftDecisionPrice
+
   return {
     ...tree,
     components,
