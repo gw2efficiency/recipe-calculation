@@ -148,9 +148,9 @@ Object {
       "output": 1,
       "prerequisites": Array [],
       "quantity": 1,
-      "totalQuantity": 1,
+      "totalQuantity": 0.2,
       "type": "Item",
-      "usedQuantity": 1,
+      "usedQuantity": 0.2,
     },
     Object {
       "components": undefined,
@@ -161,9 +161,9 @@ Object {
       "output": 1,
       "prerequisites": Array [],
       "quantity": 5,
-      "totalQuantity": 5,
+      "totalQuantity": 1,
       "type": "Item",
-      "usedQuantity": 5,
+      "usedQuantity": 1,
     },
   ],
   "disciplines": Array [
@@ -180,9 +180,9 @@ Object {
     },
   ],
   "quantity": 1,
-  "totalQuantity": 5,
+  "totalQuantity": 1,
   "type": "Recipe",
-  "usedQuantity": 5,
+  "usedQuantity": 1,
 }
 `;
 
@@ -198,9 +198,9 @@ Object {
       "output": 1,
       "prerequisites": Array [],
       "quantity": 1,
-      "totalQuantity": 1,
+      "totalQuantity": 0.8,
       "type": "Item",
-      "usedQuantity": 1,
+      "usedQuantity": 0.8,
     },
     Object {
       "components": undefined,
@@ -211,9 +211,9 @@ Object {
       "output": 1,
       "prerequisites": Array [],
       "quantity": 5,
-      "totalQuantity": 5,
+      "totalQuantity": 4,
       "type": "Item",
-      "usedQuantity": 5,
+      "usedQuantity": 4,
     },
   ],
   "disciplines": Array [
@@ -230,9 +230,9 @@ Object {
     },
   ],
   "quantity": 1,
-  "totalQuantity": 5,
+  "totalQuantity": 4,
   "type": "Recipe",
-  "usedQuantity": 5,
+  "usedQuantity": 4,
 }
 `;
 
@@ -298,9 +298,9 @@ Object {
       "output": 10,
       "prerequisites": Array [],
       "quantity": 1,
-      "totalQuantity": 10,
+      "totalQuantity": 0.5,
       "type": "Item",
-      "usedQuantity": 10,
+      "usedQuantity": 0.5,
     },
     Object {
       "components": undefined,
@@ -311,9 +311,9 @@ Object {
       "output": 5,
       "prerequisites": Array [],
       "quantity": 7,
-      "totalQuantity": 10,
+      "totalQuantity": 3.5,
       "type": "Item",
-      "usedQuantity": 10,
+      "usedQuantity": 3.5,
     },
   ],
   "disciplines": Array [
@@ -330,9 +330,9 @@ Object {
     },
   ],
   "quantity": 1,
-  "totalQuantity": 2,
+  "totalQuantity": 1,
   "type": "Recipe",
-  "usedQuantity": 2,
+  "usedQuantity": 1,
 }
 `;
 
@@ -348,9 +348,9 @@ Object {
       "output": 10,
       "prerequisites": Array [],
       "quantity": 1,
-      "totalQuantity": 10,
+      "totalQuantity": 1.5,
       "type": "Item",
-      "usedQuantity": 10,
+      "usedQuantity": 1.5,
     },
     Object {
       "components": undefined,
@@ -361,9 +361,9 @@ Object {
       "output": 5,
       "prerequisites": Array [],
       "quantity": 7,
-      "totalQuantity": 15,
+      "totalQuantity": 10.5,
       "type": "Item",
-      "usedQuantity": 15,
+      "usedQuantity": 10.5,
     },
   ],
   "disciplines": Array [
@@ -380,9 +380,9 @@ Object {
     },
   ],
   "quantity": 1,
-  "totalQuantity": 4,
+  "totalQuantity": 3,
   "type": "Recipe",
-  "usedQuantity": 4,
+  "usedQuantity": 3,
 }
 `;
 
@@ -679,9 +679,9 @@ Object {
       "output": 1,
       "prerequisites": Array [],
       "quantity": 25,
-      "totalQuantity": 50,
+      "totalQuantity": 35,
       "type": "Item",
-      "usedQuantity": 50,
+      "usedQuantity": 35,
     },
     Object {
       "components": Array [
@@ -694,9 +694,9 @@ Object {
           "output": 1,
           "prerequisites": Array [],
           "quantity": 3,
-          "totalQuantity": 60,
+          "totalQuantity": 42,
           "type": "Item",
-          "usedQuantity": 60,
+          "usedQuantity": 42,
         },
       ],
       "disciplines": Array [
@@ -713,9 +713,9 @@ Object {
         },
       ],
       "quantity": 10,
-      "totalQuantity": 20,
+      "totalQuantity": 14,
       "type": "Recipe",
-      "usedQuantity": 20,
+      "usedQuantity": 14,
     },
     Object {
       "components": Array [
@@ -728,9 +728,9 @@ Object {
           "output": 1,
           "prerequisites": Array [],
           "quantity": 2,
-          "totalQuantity": 16,
+          "totalQuantity": 11.2,
           "type": "Item",
-          "usedQuantity": 16,
+          "usedQuantity": 11.2,
         },
       ],
       "disciplines": Array [
@@ -747,9 +747,9 @@ Object {
         },
       ],
       "quantity": 4,
-      "totalQuantity": 8,
+      "totalQuantity": 5.6,
       "type": "Recipe",
-      "usedQuantity": 8,
+      "usedQuantity": 5.6,
     },
   ],
   "disciplines": Array [
@@ -766,9 +766,9 @@ Object {
     },
   ],
   "quantity": 1,
-  "totalQuantity": 10,
+  "totalQuantity": 7,
   "type": "Recipe",
-  "usedQuantity": 10,
+  "usedQuantity": 7,
 }
 `;
 
