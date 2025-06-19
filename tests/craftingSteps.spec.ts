@@ -19,6 +19,8 @@ describe('craftingSteps', () => {
       craftResultPrice: 1,
       disciplines: [],
       multipleRecipeCount: 1,
+      daily_purchase_cap: 0,
+      weekly_purchase_cap: 0,
       components: [
         {
           craft: true,
@@ -42,6 +44,8 @@ describe('craftingSteps', () => {
             },
           ],
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
           components: [
             {
               craft: false,
@@ -60,6 +64,8 @@ describe('craftingSteps', () => {
               disciplines: [],
               prerequisites: [],
               multipleRecipeCount: 1,
+              daily_purchase_cap: 0,
+              weekly_purchase_cap: 0,
             },
           ],
         },
@@ -79,6 +85,8 @@ describe('craftingSteps', () => {
           decisionPrice: 1,
           craftResultPrice: 1,
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
           components: [
             {
               craft: true,
@@ -96,6 +104,8 @@ describe('craftingSteps', () => {
               decisionPrice: 1,
               craftResultPrice: 1,
               multipleRecipeCount: 1,
+              daily_purchase_cap: 0,
+              weekly_purchase_cap: 0,
               components: [
                 {
                   craft: true,
@@ -113,6 +123,8 @@ describe('craftingSteps', () => {
                   decisionPrice: 1,
                   craftResultPrice: 1,
                   multipleRecipeCount: 1,
+                  daily_purchase_cap: 0,
+                  weekly_purchase_cap: 0,
                   components: [
                     {
                       craft: false,
@@ -131,6 +143,8 @@ describe('craftingSteps', () => {
                       disciplines: [],
                       prerequisites: [],
                       multipleRecipeCount: 1,
+                      daily_purchase_cap: 0,
+                      weekly_purchase_cap: 0,
                     },
                   ],
                   prerequisites: [],
@@ -157,6 +171,8 @@ describe('craftingSteps', () => {
           craftResultPrice: 1,
           disciplines: [],
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
           components: [
             {
               craft: false,
@@ -175,6 +191,8 @@ describe('craftingSteps', () => {
               disciplines: [],
               prerequisites: [],
               multipleRecipeCount: 1,
+              daily_purchase_cap: 0,
+              weekly_purchase_cap: 0,
             },
           ],
           prerequisites: [],
@@ -195,6 +213,8 @@ describe('craftingSteps', () => {
           craftResultPrice: 1,
           disciplines: [],
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
           components: [
             {
               craft: true,
@@ -212,6 +232,8 @@ describe('craftingSteps', () => {
               craftResultPrice: 1,
               disciplines: [],
               multipleRecipeCount: 1,
+              daily_purchase_cap: 0,
+              weekly_purchase_cap: 0,
               components: [
                 {
                   craft: false,
@@ -230,6 +252,8 @@ describe('craftingSteps', () => {
                   disciplines: [],
                   prerequisites: [],
                   multipleRecipeCount: 1,
+                  daily_purchase_cap: 0,
+                  weekly_purchase_cap: 0,
                 },
               ],
               prerequisites: [],
@@ -253,6 +277,8 @@ describe('craftingSteps', () => {
           craftResultPrice: 1,
           disciplines: [],
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
           components: [
             {
               craft: true,
@@ -271,6 +297,8 @@ describe('craftingSteps', () => {
               disciplines: [],
               prerequisites: [],
               multipleRecipeCount: 1,
+              daily_purchase_cap: 0,
+              weekly_purchase_cap: 0,
             },
           ],
           prerequisites: [],
@@ -292,6 +320,8 @@ describe('craftingSteps', () => {
           disciplines: [],
           prerequisites: [],
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
         },
       ],
       prerequisites: [],
@@ -318,6 +348,8 @@ describe('craftingSteps', () => {
       craftResultPrice: 1,
       disciplines: [],
       multipleRecipeCount: 1,
+      daily_purchase_cap: 0,
+      weekly_purchase_cap: 0,
       components: [
         {
           craft: true,
@@ -341,6 +373,8 @@ describe('craftingSteps', () => {
             },
           ],
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
           components: [
             {
               craft: false,
@@ -359,6 +393,8 @@ describe('craftingSteps', () => {
               disciplines: [],
               prerequisites: [],
               multipleRecipeCount: 1,
+              daily_purchase_cap: 0,
+              weekly_purchase_cap: 0,
             },
           ],
         },
@@ -378,6 +414,8 @@ describe('craftingSteps', () => {
           decisionPrice: 1,
           craftResultPrice: 1,
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
           components: [
             {
               craft: true,
@@ -395,6 +433,8 @@ describe('craftingSteps', () => {
               decisionPrice: 1,
               craftResultPrice: 1,
               multipleRecipeCount: 1,
+              daily_purchase_cap: 0,
+              weekly_purchase_cap: 0,
               components: [
                 {
                   craft: true,
@@ -412,6 +452,8 @@ describe('craftingSteps', () => {
                   decisionPrice: 1,
                   craftResultPrice: 1,
                   multipleRecipeCount: 1,
+                  daily_purchase_cap: 0,
+                  weekly_purchase_cap: 0,
                   components: [
                     {
                       craft: true,
@@ -421,6 +463,8 @@ describe('craftingSteps', () => {
                       quantity: 1,
                       output: 1,
                       multipleRecipeCount: 1,
+                      daily_purchase_cap: 0,
+                      weekly_purchase_cap: 0,
                       components: [
                         {
                           craft: false,
@@ -439,6 +483,8 @@ describe('craftingSteps', () => {
                           disciplines: [],
                           prerequisites: [],
                           multipleRecipeCount: 1,
+                          daily_purchase_cap: 0,
+                          weekly_purchase_cap: 0,
                         },
                         {
                           craft: false,
@@ -457,6 +503,8 @@ describe('craftingSteps', () => {
                           disciplines: [],
                           prerequisites: [],
                           multipleRecipeCount: 1,
+                          daily_purchase_cap: 0,
+                          weekly_purchase_cap: 0,
                         },
                       ],
                       prerequisites: [],
@@ -491,6 +539,8 @@ describe('craftingSteps', () => {
                       disciplines: [],
                       prerequisites: [],
                       multipleRecipeCount: 1,
+                      daily_purchase_cap: 0,
+                      weekly_purchase_cap: 0,
                     },
                     {
                       craft: false,
@@ -509,6 +559,8 @@ describe('craftingSteps', () => {
                       disciplines: [],
                       prerequisites: [],
                       multipleRecipeCount: 1,
+                      daily_purchase_cap: 0,
+                      weekly_purchase_cap: 0,
                     },
                     {
                       craft: true,
@@ -518,6 +570,8 @@ describe('craftingSteps', () => {
                       quantity: 6,
                       output: 10,
                       multipleRecipeCount: 1,
+                      daily_purchase_cap: 0,
+                      weekly_purchase_cap: 0,
                       components: [
                         {
                           craft: false,
@@ -536,6 +590,8 @@ describe('craftingSteps', () => {
                           disciplines: [],
                           prerequisites: [],
                           multipleRecipeCount: 1,
+                          daily_purchase_cap: 0,
+                          weekly_purchase_cap: 0,
                         },
                       ],
                       prerequisites: [],
@@ -578,6 +634,8 @@ describe('craftingSteps', () => {
           craftResultPrice: 1,
           disciplines: [],
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
           components: [
             {
               craft: false,
@@ -596,6 +654,8 @@ describe('craftingSteps', () => {
               disciplines: [],
               prerequisites: [],
               multipleRecipeCount: 1,
+              daily_purchase_cap: 0,
+              weekly_purchase_cap: 0,
             },
           ],
           prerequisites: [],
@@ -616,6 +676,8 @@ describe('craftingSteps', () => {
           craftResultPrice: 1,
           disciplines: [],
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
           components: [
             {
               craft: true,
@@ -633,6 +695,8 @@ describe('craftingSteps', () => {
               craftResultPrice: 1,
               disciplines: [],
               multipleRecipeCount: 1,
+              daily_purchase_cap: 0,
+              weekly_purchase_cap: 0,
               components: [
                 {
                   craft: false,
@@ -651,6 +715,8 @@ describe('craftingSteps', () => {
                   disciplines: [],
                   prerequisites: [],
                   multipleRecipeCount: 1,
+                  daily_purchase_cap: 0,
+                  weekly_purchase_cap: 0,
                 },
               ],
               prerequisites: [],
@@ -683,6 +749,8 @@ describe('craftingSteps', () => {
       decisionPrice: 1,
       craftResultPrice: 1,
       multipleRecipeCount: 1,
+      daily_purchase_cap: 0,
+      weekly_purchase_cap: 0,
       components: [
         {
           craft: true,
@@ -700,6 +768,8 @@ describe('craftingSteps', () => {
           decisionPrice: 1,
           craftResultPrice: 1,
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
           components: [
             {
               craft: false,
@@ -717,6 +787,8 @@ describe('craftingSteps', () => {
               decisionPrice: 1,
               craftResultPrice: 1,
               multipleRecipeCount: 1,
+              daily_purchase_cap: 0,
+              weekly_purchase_cap: 0,
               components: [
                 {
                   craft: false,
@@ -735,6 +807,8 @@ describe('craftingSteps', () => {
                   disciplines: [],
                   prerequisites: [],
                   multipleRecipeCount: 1,
+                  daily_purchase_cap: 0,
+                  weekly_purchase_cap: 0,
                 },
               ],
               prerequisites: [],
@@ -755,6 +829,8 @@ describe('craftingSteps', () => {
               decisionPrice: 1,
               craftResultPrice: 1,
               multipleRecipeCount: 1,
+              daily_purchase_cap: 0,
+              weekly_purchase_cap: 0,
               components: [
                 {
                   craft: false,
@@ -773,6 +849,8 @@ describe('craftingSteps', () => {
                   disciplines: [],
                   prerequisites: [],
                   multipleRecipeCount: 1,
+                  daily_purchase_cap: 0,
+                  weekly_purchase_cap: 0,
                 },
               ],
               prerequisites: [],
@@ -796,6 +874,8 @@ describe('craftingSteps', () => {
           decisionPrice: 1,
           craftResultPrice: 1,
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
           components: [
             {
               craft: true,
@@ -813,6 +893,8 @@ describe('craftingSteps', () => {
               decisionPrice: 1,
               craftResultPrice: 1,
               multipleRecipeCount: 1,
+              daily_purchase_cap: 0,
+              weekly_purchase_cap: 0,
               components: [
                 {
                   craft: false,
@@ -831,6 +913,8 @@ describe('craftingSteps', () => {
                   disciplines: [],
                   prerequisites: [],
                   multipleRecipeCount: 1,
+                  daily_purchase_cap: 0,
+                  weekly_purchase_cap: 0,
                 },
               ],
               prerequisites: [],
@@ -851,6 +935,8 @@ describe('craftingSteps', () => {
               decisionPrice: 1,
               craftResultPrice: 1,
               multipleRecipeCount: 1,
+              daily_purchase_cap: 0,
+              weekly_purchase_cap: 0,
               components: [
                 {
                   craft: false,
@@ -869,6 +955,8 @@ describe('craftingSteps', () => {
                   disciplines: [],
                   prerequisites: [],
                   multipleRecipeCount: 1,
+                  daily_purchase_cap: 0,
+                  weekly_purchase_cap: 0,
                 },
               ],
               prerequisites: [],
@@ -914,6 +1002,8 @@ describe('craftingSteps', () => {
               disciplines: [],
               prerequisites: [],
               multipleRecipeCount: 1,
+              daily_purchase_cap: 0,
+              weekly_purchase_cap: 0,
             },
           ],
           prerequisites: [
@@ -942,6 +1032,8 @@ describe('craftingSteps', () => {
           craftDecisionPrice: 19250,
           craft: true,
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
         },
         {
           id: 2,
@@ -960,6 +1052,8 @@ describe('craftingSteps', () => {
           disciplines: [],
           prerequisites: [],
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
         },
       ],
       prerequisites: [],
@@ -970,6 +1064,8 @@ describe('craftingSteps', () => {
         locations: ['Crafting Station'],
       },
       multipleRecipeCount: 3,
+      daily_purchase_cap: 0,
+      weekly_purchase_cap: 0,
       totalQuantity: 1,
       usedQuantity: 1,
       buyPriceEach: false,

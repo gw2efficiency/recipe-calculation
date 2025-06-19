@@ -9,6 +9,8 @@ const RECIPE_PARTIAL = {
   prerequisites: [{ type: 'Recipe' as const, id: 123 }],
   disciplines: ['Armorsmith'],
   multipleRecipeCount: 1,
+  daily_purchase_cap: 0,
+  weekly_purchase_cap: 0,
 }
 
 const ITEM_PARTIAL = {
@@ -19,6 +21,8 @@ const ITEM_PARTIAL = {
   disciplines: [],
   prerequisites: [],
   multipleRecipeCount: 1,
+  daily_purchase_cap: 0,
+  weekly_purchase_cap: 0,
 }
 
 const RECIPE_PARTIAL_WITH_CRAFT_FLAGS = {

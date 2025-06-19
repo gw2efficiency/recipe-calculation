@@ -19,6 +19,8 @@ describe('helpers > recipeItems', () => {
       decisionPrice: 1,
       craftResultPrice: 1,
       multipleRecipeCount: 1,
+      daily_purchase_cap: 0,
+      weekly_purchase_cap: 0,
       components: [
         {
           craft: true,
@@ -36,6 +38,8 @@ describe('helpers > recipeItems', () => {
           decisionPrice: 1,
           craftResultPrice: 1,
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
           components: [
             {
               craft: false,
@@ -53,6 +57,8 @@ describe('helpers > recipeItems', () => {
               decisionPrice: 1,
               craftResultPrice: 1,
               multipleRecipeCount: 1,
+              daily_purchase_cap: 0,
+              weekly_purchase_cap: 0,
               prerequisites: [],
             },
             {
@@ -71,6 +77,8 @@ describe('helpers > recipeItems', () => {
               decisionPrice: 1,
               craftResultPrice: 1,
               multipleRecipeCount: 1,
+              daily_purchase_cap: 0,
+              weekly_purchase_cap: 0,
               prerequisites: [],
             },
             {
@@ -89,6 +97,8 @@ describe('helpers > recipeItems', () => {
               decisionPrice: false,
               craftResultPrice: false,
               multipleRecipeCount: 1,
+              daily_purchase_cap: 0,
+              weekly_purchase_cap: 0,
               prerequisites: [],
             },
           ],
@@ -110,6 +120,8 @@ describe('helpers > recipeItems', () => {
           decisionPrice: 1,
           craftResultPrice: 1,
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
           prerequisites: [],
         },
         {
@@ -128,6 +140,8 @@ describe('helpers > recipeItems', () => {
           decisionPrice: 1,
           craftResultPrice: 1,
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
           components: [
             {
               craft: false,
@@ -145,6 +159,8 @@ describe('helpers > recipeItems', () => {
               decisionPrice: 1,
               craftResultPrice: 1,
               multipleRecipeCount: 1,
+              daily_purchase_cap: 0,
+              weekly_purchase_cap: 0,
               prerequisites: [],
             },
           ],

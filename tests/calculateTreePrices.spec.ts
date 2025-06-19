@@ -18,6 +18,8 @@ describe('calculateTreePrices', () => {
       type: 'Recipe',
       quantity: 1,
       multipleRecipeCount: 1,
+      daily_purchase_cap: 0,
+      weekly_purchase_cap: 0,
       components: [
         {
           ...TREE_PARTIAL,
@@ -27,6 +29,8 @@ describe('calculateTreePrices', () => {
           type: 'Item',
           quantity: 1,
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
         },
         {
           ...TREE_PARTIAL,
@@ -36,6 +40,8 @@ describe('calculateTreePrices', () => {
           type: 'Item',
           quantity: 2,
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
         },
         {
           ...TREE_PARTIAL,
@@ -45,6 +51,8 @@ describe('calculateTreePrices', () => {
           usedQuantity: 10,
           totalQuantity: 10,
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
         },
         {
           ...TREE_PARTIAL,
@@ -54,6 +62,8 @@ describe('calculateTreePrices', () => {
           usedQuantity: 10,
           totalQuantity: 10,
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
         },
       ],
     }
@@ -78,6 +88,8 @@ describe('calculateTreePrices', () => {
       decisionPrice: 5,
       craftResultPrice: 5,
       multipleRecipeCount: 1,
+      daily_purchase_cap: 0,
+      weekly_purchase_cap: 0,
       components: [
         {
           ...TREE_PARTIAL,
@@ -93,6 +105,8 @@ describe('calculateTreePrices', () => {
           decisionPrice: 1,
           craftResultPrice: 1,
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
         },
         {
           ...TREE_PARTIAL,
@@ -108,6 +122,8 @@ describe('calculateTreePrices', () => {
           decisionPrice: 2,
           craftResultPrice: 2,
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
         },
       ],
     }
@@ -126,6 +142,8 @@ describe('calculateTreePrices', () => {
       type: 'Recipe',
       quantity: 1,
       multipleRecipeCount: 1,
+      daily_purchase_cap: 0,
+      weekly_purchase_cap: 0,
       components: [
         {
           ...TREE_PARTIAL,
@@ -135,6 +153,8 @@ describe('calculateTreePrices', () => {
           type: 'Item',
           quantity: 1,
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
         },
         {
           ...TREE_PARTIAL,
@@ -144,6 +164,8 @@ describe('calculateTreePrices', () => {
           type: 'Recipe',
           quantity: 2,
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
           components: [
             {
               ...TREE_PARTIAL,
@@ -153,6 +175,8 @@ describe('calculateTreePrices', () => {
               type: 'Item',
               quantity: 50,
               multipleRecipeCount: 1,
+              daily_purchase_cap: 0,
+              weekly_purchase_cap: 0,
             },
             {
               ...TREE_PARTIAL,
@@ -162,6 +186,8 @@ describe('calculateTreePrices', () => {
               type: 'Item',
               quantity: 2,
               multipleRecipeCount: 1,
+              daily_purchase_cap: 0,
+              weekly_purchase_cap: 0,
             },
           ],
         },
