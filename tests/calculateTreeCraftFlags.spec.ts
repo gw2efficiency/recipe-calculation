@@ -19,6 +19,8 @@ describe('calculateTreeCraftFlags', () => {
       decisionPrice: 123,
       craftResultPrice: 123,
       multipleRecipeCount: 1,
+      daily_purchase_cap: 0,
+      weekly_purchase_cap: 0,
       components: [
         {
           id: 2,
@@ -38,6 +40,8 @@ describe('calculateTreeCraftFlags', () => {
           craftDecisionPrice: 1,
           prerequisites: [],
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
         },
         {
           id: 3,
@@ -57,6 +61,8 @@ describe('calculateTreeCraftFlags', () => {
           craftDecisionPrice: 123,
           prerequisites: [],
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
         },
         {
           id: 4,
@@ -76,6 +82,8 @@ describe('calculateTreeCraftFlags', () => {
           craftDecisionPrice: 123,
           prerequisites: [],
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
         },
         {
           id: 5,
@@ -95,6 +103,8 @@ describe('calculateTreeCraftFlags', () => {
           craftDecisionPrice: 1,
           prerequisites: [],
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
         },
       ],
       prerequisites: [],
