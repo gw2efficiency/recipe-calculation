@@ -33,11 +33,8 @@ function calculateTreeQuantityInner(
   const output = tree.output || 1
 
   // Calculate the total quantity needed
-  let treeQuantity = amount * tree.quantity
-
-  // Round amount to nearest multiple of the tree output
-  treeQuantity = Math.ceil(treeQuantity / output) * output
-  const totalQuantity = Math.round(treeQuantity)
+  const treeQuantity = amount * tree.quantity
+  const totalQuantity = treeQuantity
 
   // If the item is available and the higher tree is not
   // bought or already available get as many items of it as possible
@@ -55,7 +52,7 @@ function calculateTreeQuantityInner(
 
   // Get the amount of components that need to be crafted
   // e.g. a recipe outputs 10 and we need 20 -> 2x components
-  const componentAmount = Math.ceil(usedQuantity / output)
+  const componentAmount = usedQuantity / output
 
   // Ignore available items in components if the tree
   // doesn't get crafted or is completely available anyway
