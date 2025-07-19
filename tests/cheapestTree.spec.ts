@@ -27,6 +27,8 @@ describe('cheapestTree', () => {
       quantity: 1,
       output: 1,
       multipleRecipeCount: 1,
+      daily_purchase_cap: 0,
+      weekly_purchase_cap: 0,
       components: [
         { id: 2, type: 'Item', quantity: 1 },
         {
@@ -38,6 +40,8 @@ describe('cheapestTree', () => {
           disciplines: ['Amoursmith'],
           quantity: 5,
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
           components: [
             { id: 4, type: 'Item', quantity: 2 },
             { id: 4, type: 'Currency', quantity: 200 },
@@ -54,6 +58,8 @@ describe('cheapestTree', () => {
           quantity: 5,
           components: [{ id: 6, type: 'Item', quantity: 2 }],
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
         },
       ],
     }
@@ -73,6 +79,8 @@ describe('cheapestTree', () => {
       quantity: 1,
       output: 1,
       multipleRecipeCount: 1,
+      daily_purchase_cap: 0,
+      weekly_purchase_cap: 0,
       components: [
         {
           id: 7,
@@ -84,6 +92,8 @@ describe('cheapestTree', () => {
           quantity: 3,
           components: [{ id: 4, type: 'Item', quantity: 1 }],
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
         },
         {
           id: 3,
@@ -95,6 +105,8 @@ describe('cheapestTree', () => {
           quantity: 5,
           components: [{ id: 4, type: 'Item', quantity: 2 }],
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
         },
         {
           id: 5,
@@ -106,6 +118,8 @@ describe('cheapestTree', () => {
           quantity: 2,
           components: [{ id: 6, type: 'Item', quantity: 100 }],
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
         },
       ],
     }
@@ -126,6 +140,8 @@ describe('cheapestTree', () => {
       quantity: 1,
       output: 1,
       multipleRecipeCount: 1,
+      daily_purchase_cap: 0,
+      weekly_purchase_cap: 0,
       components: [
         {
           id: 3,
@@ -137,6 +153,8 @@ describe('cheapestTree', () => {
           quantity: 5,
           components: [{ id: 4, type: 'Item', quantity: 2 }],
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
         },
       ],
     }
@@ -156,6 +174,8 @@ describe('cheapestTree', () => {
       quantity: 1,
       output: 1,
       multipleRecipeCount: 1,
+      daily_purchase_cap: 0,
+      weekly_purchase_cap: 0,
       components: [
         {
           id: 3,
@@ -167,6 +187,8 @@ describe('cheapestTree', () => {
           quantity: 5,
           components: [{ id: 4, type: 'Item', quantity: 2 }],
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
         },
       ],
     }
@@ -199,6 +221,8 @@ describe('cheapestTree', () => {
       quantity: 5,
       output: 1,
       multipleRecipeCount: 1,
+      daily_purchase_cap: 0,
+      weekly_purchase_cap: 0,
       components: [
         {
           id: 102205,
@@ -214,6 +238,8 @@ describe('cheapestTree', () => {
           quantity: 25,
           components: [{ id: 4, type: 'Item', quantity: 4 }],
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
         },
       ],
     }

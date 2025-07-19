@@ -19,6 +19,8 @@ describe('helpers > dailyCooldowns', () => {
       decisionPrice: 1,
       craftResultPrice: 1,
       multipleRecipeCount: 1,
+      daily_purchase_cap: 0,
+      weekly_purchase_cap: 0,
       components: [
         {
           craft: true,
@@ -37,6 +39,8 @@ describe('helpers > dailyCooldowns', () => {
           craftResultPrice: 0,
           prerequisites: [],
           multipleRecipeCount: 2,
+          daily_purchase_cap: 30,
+          weekly_purchase_cap: 0,
           components: [
             {
               craft: false,
@@ -55,6 +59,8 @@ describe('helpers > dailyCooldowns', () => {
               craftResultPrice: false,
               prerequisites: [],
               multipleRecipeCount: 1,
+              daily_purchase_cap: 0,
+              weekly_purchase_cap: 0,
             },
           ],
         },
@@ -74,6 +80,8 @@ describe('helpers > dailyCooldowns', () => {
           decisionPrice: 1,
           craftResultPrice: 1,
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
           components: [
             {
               craft: false,
@@ -92,6 +100,8 @@ describe('helpers > dailyCooldowns', () => {
               craftResultPrice: 1,
               prerequisites: [],
               multipleRecipeCount: 1,
+              daily_purchase_cap: 0,
+              weekly_purchase_cap: 0,
             },
           ],
           prerequisites: [],
@@ -112,6 +122,8 @@ describe('helpers > dailyCooldowns', () => {
           decisionPrice: 1,
           craftResultPrice: 1,
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
           components: [
             {
               craft: true,
@@ -129,6 +141,8 @@ describe('helpers > dailyCooldowns', () => {
               decisionPrice: 1,
               craftResultPrice: 1,
               multipleRecipeCount: 1,
+              daily_purchase_cap: 0,
+              weekly_purchase_cap: 0,
               components: [
                 {
                   craft: true,
@@ -146,6 +160,8 @@ describe('helpers > dailyCooldowns', () => {
                   decisionPrice: 1,
                   craftResultPrice: 1,
                   multipleRecipeCount: 1,
+                  daily_purchase_cap: 0,
+                  weekly_purchase_cap: 0,
                   components: [
                     {
                       craft: false,
@@ -164,6 +180,8 @@ describe('helpers > dailyCooldowns', () => {
                       craftResultPrice: 1,
                       prerequisites: [],
                       multipleRecipeCount: 1,
+                      daily_purchase_cap: 0,
+                      weekly_purchase_cap: 0,
                     },
                     {
                       craft: true,
@@ -182,6 +200,8 @@ describe('helpers > dailyCooldowns', () => {
                       craftResultPrice: 0,
                       prerequisites: [],
                       multipleRecipeCount: 2,
+                      daily_purchase_cap: 30,
+                      weekly_purchase_cap: 0,
                       components: [
                         {
                           craft: false,
@@ -200,6 +220,8 @@ describe('helpers > dailyCooldowns', () => {
                           craftResultPrice: false,
                           prerequisites: [],
                           multipleRecipeCount: 1,
+                          daily_purchase_cap: 0,
+                          weekly_purchase_cap: 0,
                         },
                       ],
                     },
@@ -245,6 +267,8 @@ describe('helpers > dailyCooldowns', () => {
               craftResultPrice: 1,
               prerequisites: [],
               multipleRecipeCount: 1,
+              daily_purchase_cap: 0,
+              weekly_purchase_cap: 0,
             },
             {
               craft: false,
@@ -263,6 +287,8 @@ describe('helpers > dailyCooldowns', () => {
               craftResultPrice: false,
               prerequisites: [],
               multipleRecipeCount: 2,
+              daily_purchase_cap: 30,
+              weekly_purchase_cap: 0,
               components: [
                 {
                   craft: false,
@@ -281,12 +307,16 @@ describe('helpers > dailyCooldowns', () => {
                   craftResultPrice: false,
                   prerequisites: [],
                   multipleRecipeCount: 1,
+                  daily_purchase_cap: 0,
+                  weekly_purchase_cap: 0,
                 },
               ],
             },
           ],
           prerequisites: [],
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
         },
         {
           craft: true,
@@ -304,6 +334,8 @@ describe('helpers > dailyCooldowns', () => {
           decisionPrice: 1,
           craftResultPrice: 1,
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
           components: [
             {
               craft: true,
@@ -321,6 +353,8 @@ describe('helpers > dailyCooldowns', () => {
               decisionPrice: 1,
               craftResultPrice: 1,
               multipleRecipeCount: 1,
+              daily_purchase_cap: 0,
+              weekly_purchase_cap: 0,
               components: [
                 {
                   craft: false,
@@ -339,6 +373,8 @@ describe('helpers > dailyCooldowns', () => {
                   craftResultPrice: 1,
                   prerequisites: [],
                   multipleRecipeCount: 1,
+                  daily_purchase_cap: 0,
+                  weekly_purchase_cap: 0,
                 },
                 {
                   craft: true,
@@ -357,6 +393,8 @@ describe('helpers > dailyCooldowns', () => {
                   craftResultPrice: 0,
                   prerequisites: [],
                   multipleRecipeCount: 2,
+                  daily_purchase_cap: 30,
+                  weekly_purchase_cap: 0,
                   components: [
                     {
                       craft: false,
@@ -375,6 +413,8 @@ describe('helpers > dailyCooldowns', () => {
                       craftResultPrice: false,
                       prerequisites: [],
                       multipleRecipeCount: 1,
+                      daily_purchase_cap: 0,
+                      weekly_purchase_cap: 0,
                     },
                   ],
                 },
@@ -401,6 +441,8 @@ describe('helpers > dailyCooldowns', () => {
           craftResultPrice: 1,
           prerequisites: [],
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
         },
         {
           craft: false,
@@ -419,6 +461,8 @@ describe('helpers > dailyCooldowns', () => {
           craftResultPrice: false,
           prerequisites: [],
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
         },
       ],
       prerequisites: [],
@@ -427,7 +471,7 @@ describe('helpers > dailyCooldowns', () => {
     expect(dailyCooldowns(tree)).toEqual({
       46740: 3,
       66913: 4,
-      92272: 50,
+      92272: 75,
     })
   })
 })

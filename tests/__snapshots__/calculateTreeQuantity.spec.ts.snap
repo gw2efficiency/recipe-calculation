@@ -5,6 +5,7 @@ Object {
   "components": Array [
     Object {
       "components": undefined,
+      "daily_purchase_cap": 0,
       "disciplines": Array [],
       "id": 1,
       "min_rating": null,
@@ -15,9 +16,11 @@ Object {
       "totalQuantity": 1,
       "type": "Item",
       "usedQuantity": 1,
+      "weekly_purchase_cap": 0,
     },
     Object {
       "components": undefined,
+      "daily_purchase_cap": 0,
       "disciplines": Array [],
       "id": 1,
       "min_rating": null,
@@ -28,8 +31,10 @@ Object {
       "totalQuantity": 5,
       "type": "Item",
       "usedQuantity": 5,
+      "weekly_purchase_cap": 0,
     },
   ],
+  "daily_purchase_cap": 0,
   "disciplines": Array [
     "Armorsmith",
   ],
@@ -47,12 +52,14 @@ Object {
   "totalQuantity": 1,
   "type": "Recipe",
   "usedQuantity": 1,
+  "weekly_purchase_cap": 0,
 }
 `;
 
 exports[`calculateTreeQuantity (total quantity) calculates the correct quantity for recipes without components 1`] = `
 Object {
   "components": undefined,
+  "daily_purchase_cap": 0,
   "disciplines": Array [
     "Armorsmith",
   ],
@@ -70,6 +77,7 @@ Object {
   "totalQuantity": 1,
   "type": "Recipe",
   "usedQuantity": 1,
+  "weekly_purchase_cap": 0,
 }
 `;
 
@@ -78,6 +86,7 @@ Object {
   "components": Array [
     Object {
       "components": undefined,
+      "daily_purchase_cap": 0,
       "disciplines": Array [],
       "id": 1,
       "min_rating": null,
@@ -88,9 +97,11 @@ Object {
       "totalQuantity": 2,
       "type": "Item",
       "usedQuantity": 2,
+      "weekly_purchase_cap": 0,
     },
     Object {
       "components": undefined,
+      "daily_purchase_cap": 0,
       "disciplines": Array [],
       "id": 1,
       "min_rating": null,
@@ -101,9 +112,11 @@ Object {
       "totalQuantity": 10,
       "type": "Item",
       "usedQuantity": 10,
+      "weekly_purchase_cap": 0,
     },
     Object {
       "components": undefined,
+      "daily_purchase_cap": 0,
       "disciplines": Array [],
       "id": 1,
       "min_rating": null,
@@ -114,8 +127,10 @@ Object {
       "totalQuantity": 20,
       "type": "Currency",
       "usedQuantity": 20,
+      "weekly_purchase_cap": 0,
     },
   ],
+  "daily_purchase_cap": 0,
   "disciplines": Array [
     "Armorsmith",
   ],
@@ -133,6 +148,7 @@ Object {
   "totalQuantity": 2,
   "type": "Recipe",
   "usedQuantity": 2,
+  "weekly_purchase_cap": 0,
 }
 `;
 
@@ -141,6 +157,7 @@ Object {
   "components": Array [
     Object {
       "components": undefined,
+      "daily_purchase_cap": 0,
       "disciplines": Array [],
       "id": 1,
       "min_rating": null,
@@ -151,9 +168,11 @@ Object {
       "totalQuantity": 0.2,
       "type": "Item",
       "usedQuantity": 0.2,
+      "weekly_purchase_cap": 0,
     },
     Object {
       "components": undefined,
+      "daily_purchase_cap": 0,
       "disciplines": Array [],
       "id": 1,
       "min_rating": null,
@@ -164,8 +183,10 @@ Object {
       "totalQuantity": 1,
       "type": "Item",
       "usedQuantity": 1,
+      "weekly_purchase_cap": 0,
     },
   ],
+  "daily_purchase_cap": 0,
   "disciplines": Array [
     "Armorsmith",
   ],
@@ -183,6 +204,7 @@ Object {
   "totalQuantity": 1,
   "type": "Recipe",
   "usedQuantity": 1,
+  "weekly_purchase_cap": 0,
 }
 `;
 
@@ -191,6 +213,7 @@ Object {
   "components": Array [
     Object {
       "components": undefined,
+      "daily_purchase_cap": 0,
       "disciplines": Array [],
       "id": 1,
       "min_rating": null,
@@ -201,9 +224,11 @@ Object {
       "totalQuantity": 0.8,
       "type": "Item",
       "usedQuantity": 0.8,
+      "weekly_purchase_cap": 0,
     },
     Object {
       "components": undefined,
+      "daily_purchase_cap": 0,
       "disciplines": Array [],
       "id": 1,
       "min_rating": null,
@@ -214,8 +239,10 @@ Object {
       "totalQuantity": 4,
       "type": "Item",
       "usedQuantity": 4,
+      "weekly_purchase_cap": 0,
     },
   ],
+  "daily_purchase_cap": 0,
   "disciplines": Array [
     "Armorsmith",
   ],
@@ -233,6 +260,7 @@ Object {
   "totalQuantity": 4,
   "type": "Recipe",
   "usedQuantity": 4,
+  "weekly_purchase_cap": 0,
 }
 `;
 
@@ -241,6 +269,7 @@ Object {
   "components": Array [
     Object {
       "components": undefined,
+      "daily_purchase_cap": 0,
       "disciplines": Array [],
       "id": 1,
       "min_rating": null,
@@ -251,9 +280,11 @@ Object {
       "totalQuantity": 5,
       "type": "Item",
       "usedQuantity": 5,
+      "weekly_purchase_cap": 0,
     },
     Object {
       "components": undefined,
+      "daily_purchase_cap": 0,
       "disciplines": Array [],
       "id": 1,
       "min_rating": null,
@@ -264,8 +295,10 @@ Object {
       "totalQuantity": 25,
       "type": "Item",
       "usedQuantity": 25,
+      "weekly_purchase_cap": 0,
     },
   ],
+  "daily_purchase_cap": 0,
   "disciplines": Array [
     "Armorsmith",
   ],
@@ -283,6 +316,7 @@ Object {
   "totalQuantity": 25,
   "type": "Recipe",
   "usedQuantity": 25,
+  "weekly_purchase_cap": 0,
 }
 `;
 
@@ -291,6 +325,7 @@ Object {
   "components": Array [
     Object {
       "components": undefined,
+      "daily_purchase_cap": 0,
       "disciplines": Array [],
       "id": 1,
       "min_rating": null,
@@ -301,9 +336,11 @@ Object {
       "totalQuantity": 0.5,
       "type": "Item",
       "usedQuantity": 0.5,
+      "weekly_purchase_cap": 0,
     },
     Object {
       "components": undefined,
+      "daily_purchase_cap": 0,
       "disciplines": Array [],
       "id": 1,
       "min_rating": null,
@@ -314,8 +351,10 @@ Object {
       "totalQuantity": 3.5,
       "type": "Item",
       "usedQuantity": 3.5,
+      "weekly_purchase_cap": 0,
     },
   ],
+  "daily_purchase_cap": 0,
   "disciplines": Array [
     "Armorsmith",
   ],
@@ -333,6 +372,7 @@ Object {
   "totalQuantity": 1,
   "type": "Recipe",
   "usedQuantity": 1,
+  "weekly_purchase_cap": 0,
 }
 `;
 
@@ -341,6 +381,7 @@ Object {
   "components": Array [
     Object {
       "components": undefined,
+      "daily_purchase_cap": 0,
       "disciplines": Array [],
       "id": 1,
       "min_rating": null,
@@ -351,9 +392,11 @@ Object {
       "totalQuantity": 1.5,
       "type": "Item",
       "usedQuantity": 1.5,
+      "weekly_purchase_cap": 0,
     },
     Object {
       "components": undefined,
+      "daily_purchase_cap": 0,
       "disciplines": Array [],
       "id": 1,
       "min_rating": null,
@@ -364,8 +407,10 @@ Object {
       "totalQuantity": 10.5,
       "type": "Item",
       "usedQuantity": 10.5,
+      "weekly_purchase_cap": 0,
     },
   ],
+  "daily_purchase_cap": 0,
   "disciplines": Array [
     "Armorsmith",
   ],
@@ -383,6 +428,7 @@ Object {
   "totalQuantity": 3,
   "type": "Recipe",
   "usedQuantity": 3,
+  "weekly_purchase_cap": 0,
 }
 `;
 
@@ -390,6 +436,7 @@ exports[`calculateTreeQuantity (total quantity) does not modify the initial reci
 Object {
   "components": Array [
     Object {
+      "daily_purchase_cap": 0,
       "disciplines": Array [],
       "id": 1,
       "min_rating": null,
@@ -398,8 +445,10 @@ Object {
       "prerequisites": Array [],
       "quantity": 1,
       "type": "Item",
+      "weekly_purchase_cap": 0,
     },
     Object {
+      "daily_purchase_cap": 0,
       "disciplines": Array [],
       "id": 1,
       "min_rating": null,
@@ -408,8 +457,10 @@ Object {
       "prerequisites": Array [],
       "quantity": 5,
       "type": "Item",
+      "weekly_purchase_cap": 0,
     },
   ],
+  "daily_purchase_cap": 0,
   "disciplines": Array [
     "Armorsmith",
   ],
@@ -425,6 +476,7 @@ Object {
   ],
   "quantity": 1,
   "type": "Recipe",
+  "weekly_purchase_cap": 0,
 }
 `;
 
@@ -433,6 +485,7 @@ Object {
   "components": Array [
     Object {
       "components": undefined,
+      "daily_purchase_cap": 0,
       "disciplines": Array [],
       "id": 1,
       "min_rating": null,
@@ -443,9 +496,11 @@ Object {
       "totalQuantity": 1,
       "type": "Item",
       "usedQuantity": 1,
+      "weekly_purchase_cap": 0,
     },
     Object {
       "components": undefined,
+      "daily_purchase_cap": 0,
       "disciplines": Array [],
       "id": 1,
       "min_rating": null,
@@ -456,8 +511,10 @@ Object {
       "totalQuantity": 5,
       "type": "Item",
       "usedQuantity": 5,
+      "weekly_purchase_cap": 0,
     },
   ],
+  "daily_purchase_cap": 0,
   "disciplines": Array [
     "Armorsmith",
   ],
@@ -475,6 +532,7 @@ Object {
   "totalQuantity": 1,
   "type": "Recipe",
   "usedQuantity": 1,
+  "weekly_purchase_cap": 0,
 }
 `;
 
@@ -483,6 +541,7 @@ Object {
   "components": Array [
     Object {
       "components": undefined,
+      "daily_purchase_cap": 0,
       "disciplines": Array [],
       "id": 1,
       "min_rating": null,
@@ -493,8 +552,10 @@ Object {
       "totalQuantity": 77,
       "type": "Item",
       "usedQuantity": 77,
+      "weekly_purchase_cap": 0,
     },
   ],
+  "daily_purchase_cap": 0,
   "disciplines": Array [
     "Armorsmith",
   ],
@@ -512,6 +573,7 @@ Object {
   "totalQuantity": 1,
   "type": "Recipe",
   "usedQuantity": 1,
+  "weekly_purchase_cap": 0,
 }
 `;
 
@@ -520,6 +582,7 @@ Object {
   "components": Array [
     Object {
       "components": undefined,
+      "daily_purchase_cap": 0,
       "disciplines": Array [],
       "id": 1,
       "min_rating": null,
@@ -530,9 +593,11 @@ Object {
       "totalQuantity": 10,
       "type": "Item",
       "usedQuantity": 10,
+      "weekly_purchase_cap": 0,
     },
     Object {
       "components": undefined,
+      "daily_purchase_cap": 0,
       "disciplines": Array [],
       "id": 1,
       "min_rating": null,
@@ -543,11 +608,13 @@ Object {
       "totalQuantity": 10,
       "type": "Item",
       "usedQuantity": 10,
+      "weekly_purchase_cap": 0,
     },
     Object {
       "components": Array [
         Object {
           "components": undefined,
+          "daily_purchase_cap": 0,
           "disciplines": Array [],
           "id": 1,
           "min_rating": null,
@@ -558,11 +625,13 @@ Object {
           "totalQuantity": 50,
           "type": "Item",
           "usedQuantity": 50,
+          "weekly_purchase_cap": 0,
         },
         Object {
           "components": Array [
             Object {
               "components": undefined,
+              "daily_purchase_cap": 0,
               "disciplines": Array [],
               "id": 1,
               "min_rating": null,
@@ -573,8 +642,10 @@ Object {
               "totalQuantity": 60,
               "type": "Item",
               "usedQuantity": 60,
+              "weekly_purchase_cap": 0,
             },
           ],
+          "daily_purchase_cap": 0,
           "disciplines": Array [
             "Armorsmith",
           ],
@@ -592,11 +663,13 @@ Object {
           "totalQuantity": 20,
           "type": "Recipe",
           "usedQuantity": 20,
+          "weekly_purchase_cap": 0,
         },
         Object {
           "components": Array [
             Object {
               "components": undefined,
+              "daily_purchase_cap": 0,
               "disciplines": Array [],
               "id": 1,
               "min_rating": null,
@@ -607,8 +680,10 @@ Object {
               "totalQuantity": 16,
               "type": "Item",
               "usedQuantity": 16,
+              "weekly_purchase_cap": 0,
             },
           ],
+          "daily_purchase_cap": 0,
           "disciplines": Array [
             "Armorsmith",
           ],
@@ -626,8 +701,10 @@ Object {
           "totalQuantity": 8,
           "type": "Recipe",
           "usedQuantity": 8,
+          "weekly_purchase_cap": 0,
         },
       ],
+      "daily_purchase_cap": 0,
       "disciplines": Array [
         "Armorsmith",
       ],
@@ -645,8 +722,10 @@ Object {
       "totalQuantity": 10,
       "type": "Recipe",
       "usedQuantity": 10,
+      "weekly_purchase_cap": 0,
     },
   ],
+  "daily_purchase_cap": 0,
   "disciplines": Array [
     "Armorsmith",
   ],
@@ -664,6 +743,7 @@ Object {
   "totalQuantity": 2,
   "type": "Recipe",
   "usedQuantity": 2,
+  "weekly_purchase_cap": 0,
 }
 `;
 
@@ -672,6 +752,7 @@ Object {
   "components": Array [
     Object {
       "components": undefined,
+      "daily_purchase_cap": 0,
       "disciplines": Array [],
       "id": 1,
       "min_rating": null,
@@ -682,11 +763,13 @@ Object {
       "totalQuantity": 35,
       "type": "Item",
       "usedQuantity": 35,
+      "weekly_purchase_cap": 0,
     },
     Object {
       "components": Array [
         Object {
           "components": undefined,
+          "daily_purchase_cap": 0,
           "disciplines": Array [],
           "id": 1,
           "min_rating": null,
@@ -697,8 +780,10 @@ Object {
           "totalQuantity": 42,
           "type": "Item",
           "usedQuantity": 42,
+          "weekly_purchase_cap": 0,
         },
       ],
+      "daily_purchase_cap": 0,
       "disciplines": Array [
         "Armorsmith",
       ],
@@ -716,11 +801,13 @@ Object {
       "totalQuantity": 14,
       "type": "Recipe",
       "usedQuantity": 14,
+      "weekly_purchase_cap": 0,
     },
     Object {
       "components": Array [
         Object {
           "components": undefined,
+          "daily_purchase_cap": 0,
           "disciplines": Array [],
           "id": 1,
           "min_rating": null,
@@ -731,8 +818,10 @@ Object {
           "totalQuantity": 11.2,
           "type": "Item",
           "usedQuantity": 11.2,
+          "weekly_purchase_cap": 0,
         },
       ],
+      "daily_purchase_cap": 0,
       "disciplines": Array [
         "Armorsmith",
       ],
@@ -750,8 +839,10 @@ Object {
       "totalQuantity": 5.6,
       "type": "Recipe",
       "usedQuantity": 5.6,
+      "weekly_purchase_cap": 0,
     },
   ],
+  "daily_purchase_cap": 0,
   "disciplines": Array [
     "Armorsmith",
   ],
@@ -769,12 +860,14 @@ Object {
   "totalQuantity": 7,
   "type": "Recipe",
   "usedQuantity": 7,
+  "weekly_purchase_cap": 0,
 }
 `;
 
 exports[`calculateTreeQuantity (used quantity) always crafts the root node even if it is available 1`] = `
 Object {
   "components": undefined,
+  "daily_purchase_cap": 0,
   "disciplines": Array [
     "Armorsmith",
   ],
@@ -792,6 +885,7 @@ Object {
   "totalQuantity": 1,
   "type": "Recipe",
   "usedQuantity": 1,
+  "weekly_purchase_cap": 0,
 }
 `;
 
@@ -802,6 +896,7 @@ Object {
       "components": Array [
         Object {
           "components": undefined,
+          "daily_purchase_cap": 0,
           "disciplines": Array [],
           "id": 2,
           "min_rating": null,
@@ -812,8 +907,10 @@ Object {
           "totalQuantity": 5,
           "type": "Item",
           "usedQuantity": 2,
+          "weekly_purchase_cap": 0,
         },
       ],
+      "daily_purchase_cap": 0,
       "disciplines": Array [
         "Armorsmith",
       ],
@@ -831,8 +928,10 @@ Object {
       "totalQuantity": 10,
       "type": "Recipe",
       "usedQuantity": 5,
+      "weekly_purchase_cap": 0,
     },
   ],
+  "daily_purchase_cap": 0,
   "disciplines": Array [
     "Armorsmith",
   ],
@@ -850,6 +949,7 @@ Object {
   "totalQuantity": 10,
   "type": "Recipe",
   "usedQuantity": 10,
+  "weekly_purchase_cap": 0,
 }
 `;
 
@@ -865,6 +965,7 @@ Object {
       "craft": false,
       "craftDecisionPrice": 1,
       "craftResultPrice": 1,
+      "daily_purchase_cap": 0,
       "decisionPrice": 1,
       "disciplines": Array [],
       "id": 2,
@@ -876,6 +977,7 @@ Object {
       "totalQuantity": 1,
       "type": "Item",
       "usedQuantity": 0,
+      "weekly_purchase_cap": 0,
     },
     Object {
       "buyPrice": 1,
@@ -888,6 +990,7 @@ Object {
           "craft": false,
           "craftDecisionPrice": 1,
           "craftResultPrice": 1,
+          "daily_purchase_cap": 0,
           "decisionPrice": 1,
           "disciplines": Array [],
           "id": 4,
@@ -899,11 +1002,13 @@ Object {
           "totalQuantity": 0,
           "type": "Item",
           "usedQuantity": 0,
+          "weekly_purchase_cap": 0,
         },
       ],
       "craft": true,
       "craftDecisionPrice": 1,
       "craftResultPrice": 1,
+      "daily_purchase_cap": 0,
       "decisionPrice": 1,
       "disciplines": Array [
         "Armorsmith",
@@ -922,6 +1027,7 @@ Object {
       "totalQuantity": 1,
       "type": "Recipe",
       "usedQuantity": 0,
+      "weekly_purchase_cap": 0,
     },
     Object {
       "buyPrice": 1,
@@ -934,6 +1040,7 @@ Object {
           "craft": false,
           "craftDecisionPrice": 1,
           "craftResultPrice": 1,
+          "daily_purchase_cap": 0,
           "decisionPrice": 1,
           "disciplines": Array [],
           "id": 4,
@@ -945,11 +1052,13 @@ Object {
           "totalQuantity": 5,
           "type": "Item",
           "usedQuantity": 5,
+          "weekly_purchase_cap": 0,
         },
       ],
       "craft": false,
       "craftDecisionPrice": 1,
       "craftResultPrice": 1,
+      "daily_purchase_cap": 0,
       "decisionPrice": 1,
       "disciplines": Array [
         "Armorsmith",
@@ -968,6 +1077,7 @@ Object {
       "totalQuantity": 1,
       "type": "Recipe",
       "usedQuantity": 1,
+      "weekly_purchase_cap": 0,
     },
     Object {
       "buyPrice": 1,
@@ -980,6 +1090,7 @@ Object {
           "craft": false,
           "craftDecisionPrice": 1,
           "craftResultPrice": 1,
+          "daily_purchase_cap": 0,
           "decisionPrice": 1,
           "disciplines": Array [],
           "id": 4,
@@ -991,11 +1102,13 @@ Object {
           "totalQuantity": 5,
           "type": "Item",
           "usedQuantity": 0,
+          "weekly_purchase_cap": 0,
         },
       ],
       "craft": true,
       "craftDecisionPrice": 1,
       "craftResultPrice": 1,
+      "daily_purchase_cap": 0,
       "decisionPrice": 1,
       "disciplines": Array [
         "Armorsmith",
@@ -1014,11 +1127,13 @@ Object {
       "totalQuantity": 1,
       "type": "Recipe",
       "usedQuantity": 1,
+      "weekly_purchase_cap": 0,
     },
   ],
   "craft": true,
   "craftDecisionPrice": 1,
   "craftResultPrice": 1,
+  "daily_purchase_cap": 0,
   "decisionPrice": 1,
   "disciplines": Array [
     "Armorsmith",
@@ -1037,6 +1152,7 @@ Object {
   "totalQuantity": 1,
   "type": "Recipe",
   "usedQuantity": 1,
+  "weekly_purchase_cap": 0,
 }
 `;
 
@@ -1060,6 +1176,7 @@ Object {
               "craft": false,
               "craftDecisionPrice": 1,
               "craftResultPrice": 1,
+              "daily_purchase_cap": 0,
               "decisionPrice": 1,
               "disciplines": Array [],
               "id": 4,
@@ -1071,11 +1188,13 @@ Object {
               "totalQuantity": 25,
               "type": "Item",
               "usedQuantity": 25,
+              "weekly_purchase_cap": 0,
             },
           ],
           "craft": true,
           "craftDecisionPrice": 1,
           "craftResultPrice": 1,
+          "daily_purchase_cap": 0,
           "decisionPrice": 1,
           "disciplines": Array [
             "Armorsmith",
@@ -1094,11 +1213,13 @@ Object {
           "totalQuantity": 5,
           "type": "Recipe",
           "usedQuantity": 5,
+          "weekly_purchase_cap": 0,
         },
       ],
       "craft": false,
       "craftDecisionPrice": 1,
       "craftResultPrice": 1,
+      "daily_purchase_cap": 0,
       "decisionPrice": 1,
       "disciplines": Array [
         "Armorsmith",
@@ -1117,6 +1238,7 @@ Object {
       "totalQuantity": 1,
       "type": "Recipe",
       "usedQuantity": 1,
+      "weekly_purchase_cap": 0,
     },
     Object {
       "buyPrice": 1,
@@ -1133,6 +1255,7 @@ Object {
               "craft": false,
               "craftDecisionPrice": 1,
               "craftResultPrice": 1,
+              "daily_purchase_cap": 0,
               "decisionPrice": 1,
               "disciplines": Array [],
               "id": 4,
@@ -1144,11 +1267,13 @@ Object {
               "totalQuantity": 0,
               "type": "Item",
               "usedQuantity": 0,
+              "weekly_purchase_cap": 0,
             },
           ],
           "craft": true,
           "craftDecisionPrice": 1,
           "craftResultPrice": 1,
+          "daily_purchase_cap": 0,
           "decisionPrice": 1,
           "disciplines": Array [
             "Armorsmith",
@@ -1167,11 +1292,13 @@ Object {
           "totalQuantity": 0,
           "type": "Recipe",
           "usedQuantity": 0,
+          "weekly_purchase_cap": 0,
         },
       ],
       "craft": true,
       "craftDecisionPrice": 1,
       "craftResultPrice": 1,
+      "daily_purchase_cap": 0,
       "decisionPrice": 1,
       "disciplines": Array [
         "Armorsmith",
@@ -1190,6 +1317,7 @@ Object {
       "totalQuantity": 1,
       "type": "Recipe",
       "usedQuantity": 0,
+      "weekly_purchase_cap": 0,
     },
     Object {
       "buyPrice": 1,
@@ -1206,6 +1334,7 @@ Object {
               "craft": false,
               "craftDecisionPrice": 1,
               "craftResultPrice": 1,
+              "daily_purchase_cap": 0,
               "decisionPrice": 1,
               "disciplines": Array [],
               "id": 4,
@@ -1217,11 +1346,13 @@ Object {
               "totalQuantity": 25,
               "type": "Item",
               "usedQuantity": 5,
+              "weekly_purchase_cap": 0,
             },
           ],
           "craft": true,
           "craftDecisionPrice": 1,
           "craftResultPrice": 1,
+          "daily_purchase_cap": 0,
           "decisionPrice": 1,
           "disciplines": Array [
             "Armorsmith",
@@ -1240,11 +1371,13 @@ Object {
           "totalQuantity": 5,
           "type": "Recipe",
           "usedQuantity": 5,
+          "weekly_purchase_cap": 0,
         },
       ],
       "craft": true,
       "craftDecisionPrice": 1,
       "craftResultPrice": 1,
+      "daily_purchase_cap": 0,
       "decisionPrice": 1,
       "disciplines": Array [
         "Armorsmith",
@@ -1263,11 +1396,13 @@ Object {
       "totalQuantity": 1,
       "type": "Recipe",
       "usedQuantity": 1,
+      "weekly_purchase_cap": 0,
     },
   ],
   "craft": true,
   "craftDecisionPrice": 1,
   "craftResultPrice": 1,
+  "daily_purchase_cap": 0,
   "decisionPrice": 1,
   "disciplines": Array [
     "Armorsmith",
@@ -1286,6 +1421,7 @@ Object {
   "totalQuantity": 1,
   "type": "Recipe",
   "usedQuantity": 1,
+  "weekly_purchase_cap": 0,
 }
 `;
 
@@ -1294,6 +1430,7 @@ Object {
   "components": Array [
     Object {
       "components": undefined,
+      "daily_purchase_cap": 0,
       "disciplines": Array [],
       "id": 2,
       "min_rating": null,
@@ -1304,9 +1441,11 @@ Object {
       "totalQuantity": 100,
       "type": "Currency",
       "usedQuantity": 100,
+      "weekly_purchase_cap": 0,
     },
     Object {
       "components": undefined,
+      "daily_purchase_cap": 0,
       "disciplines": Array [],
       "id": 2,
       "min_rating": null,
@@ -1317,9 +1456,11 @@ Object {
       "totalQuantity": 1,
       "type": "Item",
       "usedQuantity": 0,
+      "weekly_purchase_cap": 0,
     },
     Object {
       "components": undefined,
+      "daily_purchase_cap": 0,
       "disciplines": Array [],
       "id": 3,
       "min_rating": null,
@@ -1330,9 +1471,11 @@ Object {
       "totalQuantity": 5,
       "type": "Item",
       "usedQuantity": 3,
+      "weekly_purchase_cap": 0,
     },
     Object {
       "components": undefined,
+      "daily_purchase_cap": 0,
       "disciplines": Array [],
       "id": 3,
       "min_rating": null,
@@ -1343,9 +1486,11 @@ Object {
       "totalQuantity": 5,
       "type": "Item",
       "usedQuantity": 5,
+      "weekly_purchase_cap": 0,
     },
     Object {
       "components": undefined,
+      "daily_purchase_cap": 0,
       "disciplines": Array [],
       "id": 2,
       "min_rating": null,
@@ -1356,8 +1501,10 @@ Object {
       "totalQuantity": 1,
       "type": "Item",
       "usedQuantity": 0,
+      "weekly_purchase_cap": 0,
     },
   ],
+  "daily_purchase_cap": 0,
   "disciplines": Array [
     "Armorsmith",
   ],
@@ -1375,6 +1522,7 @@ Object {
   "totalQuantity": 1,
   "type": "Recipe",
   "usedQuantity": 1,
+  "weekly_purchase_cap": 0,
 }
 `;
 
@@ -1383,6 +1531,7 @@ Object {
   "components": Array [
     Object {
       "components": undefined,
+      "daily_purchase_cap": 0,
       "disciplines": Array [],
       "id": 2,
       "min_rating": null,
@@ -1393,9 +1542,11 @@ Object {
       "totalQuantity": 1,
       "type": "Item",
       "usedQuantity": 1,
+      "weekly_purchase_cap": 0,
     },
     Object {
       "components": undefined,
+      "daily_purchase_cap": 0,
       "disciplines": Array [],
       "id": 3,
       "min_rating": null,
@@ -1406,8 +1557,10 @@ Object {
       "totalQuantity": 5,
       "type": "Item",
       "usedQuantity": 5,
+      "weekly_purchase_cap": 0,
     },
   ],
+  "daily_purchase_cap": 0,
   "disciplines": Array [
     "Armorsmith",
   ],
@@ -1425,5 +1578,6 @@ Object {
   "totalQuantity": 1,
   "type": "Recipe",
   "usedQuantity": 1,
+  "weekly_purchase_cap": 0,
 }
 `;

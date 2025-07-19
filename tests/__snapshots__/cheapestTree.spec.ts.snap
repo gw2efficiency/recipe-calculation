@@ -74,6 +74,7 @@ Object {
       "craftDecisionPrice": 6001200,
       "craftPrice": 1200,
       "craftResultPrice": 100,
+      "daily_purchase_cap": 0,
       "decisionPrice": 100,
       "disciplines": Array [
         "Amoursmith",
@@ -92,6 +93,7 @@ Object {
       "totalQuantity": 10,
       "type": "Recipe",
       "usedQuantity": 10,
+      "weekly_purchase_cap": 0,
     },
     Object {
       "buyPrice": 10000,
@@ -117,6 +119,7 @@ Object {
       "craftDecisionPrice": 200,
       "craftPrice": 200,
       "craftResultPrice": 200,
+      "daily_purchase_cap": 0,
       "decisionPrice": 200,
       "disciplines": Array [
         "Amoursmith",
@@ -135,12 +138,14 @@ Object {
       "totalQuantity": 10,
       "type": "Recipe",
       "usedQuantity": 10,
+      "weekly_purchase_cap": 0,
     },
   ],
   "craft": true,
   "craftDecisionPrice": 384,
   "craftPrice": 384,
   "craftResultPrice": 384,
+  "daily_purchase_cap": 0,
   "decisionPrice": 384,
   "disciplines": Array [
     "Amoursmith",
@@ -159,6 +164,7 @@ Object {
   "totalQuantity": 2,
   "type": "Recipe",
   "usedQuantity": 2,
+  "weekly_purchase_cap": 0,
 }
 `;
 
@@ -191,6 +197,7 @@ Object {
       "craftDecisionPrice": 60,
       "craftPrice": 60,
       "craftResultPrice": 6,
+      "daily_purchase_cap": 0,
       "decisionPrice": 6,
       "disciplines": Array [
         "Amoursmith",
@@ -209,6 +216,7 @@ Object {
       "totalQuantity": 6,
       "type": "Recipe",
       "usedQuantity": 6,
+      "weekly_purchase_cap": 0,
     },
     Object {
       "buyPrice": 300,
@@ -234,6 +242,7 @@ Object {
       "craftDecisionPrice": 30,
       "craftPrice": 30,
       "craftResultPrice": 30,
+      "daily_purchase_cap": 0,
       "decisionPrice": 30,
       "disciplines": Array [
         "Amoursmith",
@@ -252,6 +261,7 @@ Object {
       "totalQuantity": 10,
       "type": "Recipe",
       "usedQuantity": 3,
+      "weekly_purchase_cap": 0,
     },
     Object {
       "buyPrice": 0,
@@ -277,6 +287,7 @@ Object {
       "craftDecisionPrice": 0,
       "craftPrice": 0,
       "craftResultPrice": 0,
+      "daily_purchase_cap": 0,
       "decisionPrice": 0,
       "disciplines": Array [
         "Amoursmith",
@@ -295,12 +306,14 @@ Object {
       "totalQuantity": 4,
       "type": "Recipe",
       "usedQuantity": 0,
+      "weekly_purchase_cap": 0,
     },
   ],
   "craft": true,
   "craftDecisionPrice": 36,
   "craftPrice": 36,
   "craftResultPrice": 36,
+  "daily_purchase_cap": 0,
   "decisionPrice": 36,
   "disciplines": Array [
     "Amoursmith",
@@ -319,6 +332,7 @@ Object {
   "totalQuantity": 2,
   "type": "Recipe",
   "usedQuantity": 2,
+  "weekly_purchase_cap": 0,
 }
 `;
 
@@ -351,6 +365,7 @@ Object {
       "craftDecisionPrice": 200,
       "craftPrice": 200,
       "craftResultPrice": 1000,
+      "daily_purchase_cap": 0,
       "decisionPrice": 1000,
       "disciplines": Array [
         "Amoursmith",
@@ -369,12 +384,14 @@ Object {
       "totalQuantity": 10,
       "type": "Recipe",
       "usedQuantity": 10,
+      "weekly_purchase_cap": 0,
     },
   ],
   "craft": true,
   "craftDecisionPrice": 1000,
   "craftPrice": 1000,
   "craftResultPrice": 1000,
+  "daily_purchase_cap": 0,
   "decisionPrice": 1000,
   "disciplines": Array [
     "Amoursmith",
@@ -393,6 +410,7 @@ Object {
   "totalQuantity": 2,
   "type": "Recipe",
   "usedQuantity": 2,
+  "weekly_purchase_cap": 0,
 }
 `;
 
@@ -425,6 +443,7 @@ Object {
       "craftDecisionPrice": 1250,
       "craftPrice": 1250,
       "craftResultPrice": 1250,
+      "daily_purchase_cap": 0,
       "decisionPrice": 1250,
       "disciplines": Array [
         "Amoursmith",
@@ -447,12 +466,14 @@ Object {
       "totalQuantity": 125,
       "type": "Recipe",
       "usedQuantity": 125,
+      "weekly_purchase_cap": 0,
     },
   ],
   "craft": true,
   "craftDecisionPrice": 1250,
   "craftPrice": 1250,
   "craftResultPrice": 1250,
+  "daily_purchase_cap": 0,
   "decisionPrice": 1250,
   "disciplines": Array [
     "Amoursmith",
@@ -471,6 +492,7 @@ Object {
   "totalQuantity": 5,
   "type": "Recipe",
   "usedQuantity": 5,
+  "weekly_purchase_cap": 0,
 }
 `;
 
@@ -503,6 +525,7 @@ Object {
       "craftDecisionPrice": 1000,
       "craftPrice": 1000,
       "craftResultPrice": 100,
+      "daily_purchase_cap": 0,
       "decisionPrice": 100,
       "disciplines": Array [
         "Amoursmith",
@@ -521,12 +544,14 @@ Object {
       "totalQuantity": 5,
       "type": "Recipe",
       "usedQuantity": 1,
+      "weekly_purchase_cap": 0,
     },
   ],
   "craft": true,
   "craftDecisionPrice": 100,
   "craftPrice": 100,
   "craftResultPrice": 100,
+  "daily_purchase_cap": 0,
   "decisionPrice": 100,
   "disciplines": Array [
     "Amoursmith",
@@ -545,5 +570,6 @@ Object {
   "totalQuantity": 1,
   "type": "Recipe",
   "usedQuantity": 1,
+  "weekly_purchase_cap": 0,
 }
 `;

@@ -20,6 +20,8 @@ describe('updateTree', () => {
     min_rating: 123,
     disciplines: ['Chef'],
     multipleRecipeCount: 1,
+    daily_purchase_cap: 0,
+    weekly_purchase_cap: 0,
     components: [
       {
         craft: false,
@@ -38,6 +40,8 @@ describe('updateTree', () => {
         disciplines: [],
         prerequisites: [],
         multipleRecipeCount: 1,
+        daily_purchase_cap: 0,
+        weekly_purchase_cap: 0,
       },
       {
         craft: false,
@@ -56,6 +60,8 @@ describe('updateTree', () => {
         min_rating: null,
         disciplines: [],
         multipleRecipeCount: 1,
+        daily_purchase_cap: 0,
+        weekly_purchase_cap: 0,
         components: [
           {
             craft: false,
@@ -74,6 +80,8 @@ describe('updateTree', () => {
             disciplines: [],
             prerequisites: [],
             multipleRecipeCount: 1,
+            daily_purchase_cap: 0,
+            weekly_purchase_cap: 0,
           },
         ],
         prerequisites: [],
@@ -95,6 +103,8 @@ describe('updateTree', () => {
         min_rating: null,
         disciplines: [],
         multipleRecipeCount: 1,
+        daily_purchase_cap: 0,
+        weekly_purchase_cap: 0,
         components: [
           {
             craft: false,
@@ -113,6 +123,8 @@ describe('updateTree', () => {
             disciplines: [],
             prerequisites: [],
             multipleRecipeCount: 1,
+            daily_purchase_cap: 0,
+            weekly_purchase_cap: 0,
           },
         ],
         prerequisites: [],

@@ -26,6 +26,8 @@ describe('usedItems', () => {
       disciplines: [],
       type: 'Recipe',
       multipleRecipeCount: 1,
+      daily_purchase_cap: 0,
+      weekly_purchase_cap: 0,
       components: [
         {
           craft: false,
@@ -50,6 +52,8 @@ describe('usedItems', () => {
           disciplines: [],
           type: 'Recipe',
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
           components: [
             {
               craft: false,
@@ -68,6 +72,8 @@ describe('usedItems', () => {
               type: 'Item',
               prerequisites: [],
               multipleRecipeCount: 1,
+              daily_purchase_cap: 0,
+              weekly_purchase_cap: 0,
             },
           ],
         },
@@ -94,6 +100,8 @@ describe('usedItems', () => {
           disciplines: [],
           type: 'Recipe',
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
           components: [
             {
               craft: false,
@@ -112,6 +120,8 @@ describe('usedItems', () => {
               type: 'Item',
               prerequisites: [],
               multipleRecipeCount: 1,
+              daily_purchase_cap: 0,
+              weekly_purchase_cap: 0,
             },
             {
               craft: false,
@@ -130,6 +140,8 @@ describe('usedItems', () => {
               type: 'Currency',
               prerequisites: [],
               multipleRecipeCount: 1,
+              daily_purchase_cap: 0,
+              weekly_purchase_cap: 0,
             },
             {
               craft: false,
@@ -148,6 +160,8 @@ describe('usedItems', () => {
               type: 'Currency',
               prerequisites: [],
               multipleRecipeCount: 1,
+              daily_purchase_cap: 0,
+              weekly_purchase_cap: 0,
             },
           ],
         },
@@ -174,6 +188,8 @@ describe('usedItems', () => {
           disciplines: [],
           type: 'Recipe',
           multipleRecipeCount: 1,
+          daily_purchase_cap: 0,
+          weekly_purchase_cap: 0,
           components: [
             {
               craft: false,
@@ -192,6 +208,8 @@ describe('usedItems', () => {
               type: 'Item',
               prerequisites: [],
               multipleRecipeCount: 1,
+              daily_purchase_cap: 0,
+              weekly_purchase_cap: 0,
             },
           ],
         },
