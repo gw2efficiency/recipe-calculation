@@ -33,7 +33,7 @@ function calculateTreeQuantityInner(
   const output = tree.output || 1
 
   // Calculate the total quantity needed
-  let treeQuantity = amount * tree.quantity
+  const treeQuantity = amount * tree.quantity
   const totalQuantity = treeQuantity
 
   // If the item is available and the higher tree is not
