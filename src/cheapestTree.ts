@@ -20,7 +20,7 @@ export function cheapestTree(
     '102205': '0',
     '103049': '0',
   },
-  customCurrencyPrices: Record<string, number>
+  customCurrencyPrices: Record<string, number> = {}
 ): RecipeTreeWithCraftFlags {
   tree = applyEfficiencyTiersToTree(tree, userEfficiencyTiers)
   if (valueOwnItems) {

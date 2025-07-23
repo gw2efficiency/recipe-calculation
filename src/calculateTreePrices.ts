@@ -5,17 +5,17 @@ import { CURRENCY_DECISION_PRICES } from './static/currencyDecisionPrices'
 export function calculateTreePrices(
   tree: RecipeTreeWithCraftFlags,
   itemPrices: Record<string, number>,
-  customCurrencyPrices: Record<string, number>
+  customCurrencyPrices?: Record<string, number>
 ): RecipeTreeWithCraftFlags
 export function calculateTreePrices(
   tree: RecipeTreeWithQuantity,
   itemPrices: Record<string, number>,
-  customCurrencyPrices: Record<string, number>
+  customCurrencyPrices?: Record<string, number>
 ): RecipeTreeWithPrices
 export function calculateTreePrices(
   tree: RecipeTreeWithQuantity | RecipeTreeWithCraftFlags,
   itemPrices: Record<string, number>,
-  customCurrencyPrices: Record<string, number>
+  customCurrencyPrices: Record<string, number> = {}
 ): RecipeTreeWithPrices | RecipeTreeWithCraftFlags {
   // Calculate the buy prices
   let buyPriceEach = itemPrices[tree.id] || false

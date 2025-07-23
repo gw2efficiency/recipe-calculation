@@ -7,7 +7,7 @@ export function updateTree(
   tree: RecipeTreeWithCraftFlags,
   itemPrices: Record<string, number>,
   availableItems: Record<string, number> = {},
-  customCurrencyPrices: Record<string, number>
+  customCurrencyPrices: Record<string, number> = {}
 ) {
   // Update the tree total and used quantities
   const treeWithQuantity = calculateTreeQuantity(amount, tree, availableItems)
