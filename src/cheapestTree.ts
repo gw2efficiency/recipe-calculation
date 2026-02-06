@@ -21,12 +21,14 @@ export function cheapestTree(
     '103049': '0',
   }
 ): RecipeTreeWithCraftFlags {
-  tree = applyEfficiencyTiersToTree(tree, userEfficiencyTiers)
+  const ignoredBitIds: Array<number> = []
+  tree = applyEfficiencyTiersToTree(tree, userEfficiencyTiers, ignoredBitIds)
   if (valueOwnItems) {
     const treeWithQuantityWithoutAvailableItems = calculateTreeQuantity(
       amount,
       tree as RecipeTree,
-      {}
+      {},
+      ignoredBitIds
     )
     const treeWithPriceWithoutAvailableItems = calculateTreePrices(
       treeWithQuantityWithoutAvailableItems,
@@ -40,7 +42,12 @@ export function cheapestTree(
   }
 
   // Adjust the tree total and used quantities
-  const treeWithQuantity = calculateTreeQuantity(amount, tree as RecipeTree, availableItems)
+  const treeWithQuantity = calculateTreeQuantity(
+    amount,
+    tree as RecipeTree,
+    availableItems,
+    ignoredBitIds
+  )
 
   // Set the initial craft flags based on the subtree prices
   const treeWithPrices = calculateTreePrices(treeWithQuantity, itemPrices)
@@ -54,7 +61,8 @@ export function cheapestTree(
   const treeWithQuantityPostFlags = calculateTreeQuantity(
     amount,
     treeWithCraftFlags,
-    availableItems
+    availableItems,
+    ignoredBitIds
   )
 
   // Recalculate the correct tree price
@@ -110,10 +118,18 @@ function disableCraftForItemIds(
 
 function applyEfficiencyTiersToTree(
   tree: Omit<NestedRecipe, 'id'> & { id: number | null }, // FIXME Not sure why this can be null
-  userEfficiencyTiers: Record<string, string>
+  userEfficiencyTiers: Record<string, string>,
+  ignoredBitIds: Array<number>,
+  bitItemIds = new Set<number>(),
+  normalItemIds = new Set<number>(),
+  isRootNode = true
 ): NestedRecipe {
-  const id = tree.id ? tree.id.toString() : ''
+  let id = ''
 
+  if (tree.id && (tree.type as 'Recipe' | 'Currency' | 'Item') !== 'Currency') {
+    id = tree.id.toString()
+    typeof tree.achievement_bit === 'number' ? bitItemIds.add(tree.id) : normalItemIds.add(tree.id)
+  }
   if (
     ['102306', '102205', '103049'].includes(id) &&
     tree.merchant &&
@@ -155,9 +171,24 @@ function applyEfficiencyTiersToTree(
     tree = {
       ...tree,
       components: tree.components.map((component) =>
-        applyEfficiencyTiersToTree(component as NestedRecipe, userEfficiencyTiers)
+        applyEfficiencyTiersToTree(
+          component as NestedRecipe,
+          userEfficiencyTiers,
+          ignoredBitIds,
+          bitItemIds,
+          normalItemIds,
+          false
+        )
       ),
     }
+  }
+
+  if (isRootNode) {
+    bitItemIds.forEach((id) => {
+      if (normalItemIds.has(id)) {
+        ignoredBitIds.push(id)
+      }
+    })
   }
 
   return tree as NestedRecipe
