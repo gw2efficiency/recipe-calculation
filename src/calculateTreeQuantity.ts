@@ -4,25 +4,25 @@ export function calculateTreeQuantity(
   amount: number,
   tree: RecipeTreeWithCraftFlags,
   availableItems?: Record<string, number>,
-  ignoredBitIds?: Array<number>
+  ignoredBitItemIds?: Array<number>
 ): RecipeTreeWithCraftFlags
 export function calculateTreeQuantity(
   amount: number,
   tree: RecipeTree,
   availableItems?: Record<string, number>,
-  ignoredBitIds?: Array<number>
+  ignoredBitItemIds?: Array<number>
 ): RecipeTreeWithQuantity
 export function calculateTreeQuantity(
   amount: number,
   tree: RecipeTree | RecipeTreeWithCraftFlags,
   availableItems: Record<string, number> = {},
-  ignoredBitIds: Array<number> = []
+  ignoredBitItemIds: Array<number> = []
 ) {
   // Make sure that we don't modify the passed-in object
   // We still want to work with a reference in the actual calculation
   // since the availableItems are a shared state for all sub-recipes
   return calculateTreeQuantityInner(amount, tree, { ...availableItems }, false, 0, [
-    ...ignoredBitIds,
+    ...ignoredBitItemIds,
   ])
 }
 
@@ -34,7 +34,7 @@ function calculateTreeQuantityInner(
   availableItems: Record<string, number>,
   ignoreAvailable = false,
   nesting = 0,
-  ignoredBitIds: Array<number>
+  ignoredBitItemIds: Array<number>
 ): RecipeTreeWithCraftFlags | RecipeTreeWithQuantity {
   const output = tree.output || 1
 
@@ -42,7 +42,7 @@ function calculateTreeQuantityInner(
   let treeQuantity = amount * tree.quantity
 
   if (typeof tree.achievement_bit === 'number') {
-    ignoredBitIds.includes(tree.id) ? (treeQuantity = 0) : ignoredBitIds.push(tree.id)
+    ignoredBitItemIds.includes(tree.id) ? (treeQuantity = 0) : ignoredBitItemIds.push(tree.id)
   }
 
   // Round amount to nearest multiple of the tree output
@@ -80,7 +80,7 @@ function calculateTreeQuantityInner(
       availableItems,
       ignoreAvailable,
       ++nesting,
-      ignoredBitIds
+      ignoredBitItemIds
     )
   })
 

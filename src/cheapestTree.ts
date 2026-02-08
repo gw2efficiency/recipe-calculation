@@ -21,14 +21,14 @@ export function cheapestTree(
     '103049': '0',
   }
 ): RecipeTreeWithCraftFlags {
-  const ignoredBitIds: Array<number> = []
-  tree = applyEfficiencyTiersToTree(tree, userEfficiencyTiers, ignoredBitIds)
+  const ignoredBitItemIds: Array<number> = []
+  tree = initialTreeChecks(tree, userEfficiencyTiers, ignoredBitItemIds)
   if (valueOwnItems) {
     const treeWithQuantityWithoutAvailableItems = calculateTreeQuantity(
       amount,
       tree as RecipeTree,
       {},
-      ignoredBitIds
+      ignoredBitItemIds
     )
     const treeWithPriceWithoutAvailableItems = calculateTreePrices(
       treeWithQuantityWithoutAvailableItems,
@@ -46,7 +46,7 @@ export function cheapestTree(
     amount,
     tree as RecipeTree,
     availableItems,
-    ignoredBitIds
+    ignoredBitItemIds
   )
 
   // Set the initial craft flags based on the subtree prices
@@ -62,7 +62,7 @@ export function cheapestTree(
     amount,
     treeWithCraftFlags,
     availableItems,
-    ignoredBitIds
+    ignoredBitItemIds
   )
 
   // Recalculate the correct tree price
@@ -116,65 +116,25 @@ function disableCraftForItemIds(
   return tree
 }
 
-function applyEfficiencyTiersToTree(
-  tree: Omit<NestedRecipe, 'id'> & { id: number | null }, // FIXME Not sure why this can be null
+export function initialTreeChecks(
+  tree: NestedRecipe,
   userEfficiencyTiers: Record<string, string>,
-  ignoredBitIds: Array<number>,
+  ignoredBitItemIds: Array<number>,
   bitItemIds = new Set<number>(),
   normalItemIds = new Set<number>(),
   isRootNode = true
 ): NestedRecipe {
-  let id = ''
-
-  if (tree.id && (tree.type as 'Recipe' | 'Currency' | 'Item') !== 'Currency') {
-    id = tree.id.toString()
-    typeof tree.achievement_bit === 'number' ? bitItemIds.add(tree.id) : normalItemIds.add(tree.id)
-  }
-  if (
-    ['102306', '102205', '103049'].includes(id) &&
-    tree.merchant &&
-    tree.merchant.name.includes('Homestead Refinement')
-  ) {
-    const efficiencyTier = Number(userEfficiencyTiers[id])
-
-    if (efficiencyTier > 0) {
-      const component = { ...tree.components[0] }
-
-      // Each efficiency tier lowers input by 50%, if it drops below one then doubles output
-      component.quantity = component.quantity / (efficiencyTier * 2)
-
-      // Bug: Onions are discounted by 75% with first tier
-      if (component.id === 12142) {
-        component.quantity = efficiencyTier === 1 ? 1 : 0.5
-      }
-
-      // Bug: Potatoes are not discounted with first tier
-      if (component.id === 12135) {
-        component.quantity = efficiencyTier === 1 ? 8 : 4
-      }
-
-      let updatedTree = { ...tree, output: component.quantity < 1 ? tree.output * 2 : tree.output }
-
-      // Bug: Iron ore output also halves with second tier
-      if (component.id === 19699 && efficiencyTier === 2) {
-        updatedTree.output = updatedTree.output / 2
-      }
-
-      component.quantity = component.quantity < 1 ? 1 : component.quantity
-      updatedTree = { ...updatedTree, components: [component, ...tree.components.slice(1)] }
-
-      tree = updatedTree
-    }
-  }
+  collectItemDataForIgnoringBits(tree, bitItemIds, normalItemIds)
+  tree = applyEfficiencyTiersToTree(tree, userEfficiencyTiers)
 
   if ('components' in tree && Array.isArray(tree.components)) {
     tree = {
       ...tree,
       components: tree.components.map((component) =>
-        applyEfficiencyTiersToTree(
+        initialTreeChecks(
           component as NestedRecipe,
           userEfficiencyTiers,
-          ignoredBitIds,
+          ignoredBitItemIds,
           bitItemIds,
           normalItemIds,
           false
@@ -186,10 +146,75 @@ function applyEfficiencyTiersToTree(
   if (isRootNode) {
     bitItemIds.forEach((id) => {
       if (normalItemIds.has(id)) {
-        ignoredBitIds.push(id)
+        ignoredBitItemIds.push(id)
       }
     })
   }
 
-  return tree as NestedRecipe
+  return tree
+}
+
+function collectItemDataForIgnoringBits(
+  tree: NestedRecipe,
+  bitItemIds: Set<number>,
+  normalItemIds: Set<number>
+) {
+  if (!tree.id) return
+  if ((tree.type as 'Recipe' | 'Currency' | 'Item') === 'Currency') return
+
+  if (typeof tree.achievement_bit === 'number') {
+    bitItemIds.add(tree.id)
+  } else {
+    normalItemIds.add(tree.id)
+  }
+}
+
+function applyEfficiencyTiersToTree(
+  tree: NestedRecipe,
+  userEfficiencyTiers: Record<string, string>
+): NestedRecipe {
+  if (!tree.id) return tree
+  const id = tree.id ? tree.id.toString() : ''
+
+  if (
+    !['102306', '102205', '103049'].includes(id) ||
+    !tree.merchant ||
+    !tree.merchant.name.includes('Homestead Refinement')
+  ) {
+    return tree
+  }
+
+  const efficiencyTier = Number(userEfficiencyTiers[id])
+  if (!(efficiencyTier > 0)) return tree
+
+  const component = { ...tree.components[0] }
+
+  // Each efficiency tier lowers input by 50%, if it drops below one then doubles output
+  component.quantity = component.quantity / (efficiencyTier * 2)
+
+  // Bug: Onions are discounted by 75% with first tier
+  if (component.id === 12142) {
+    component.quantity = efficiencyTier === 1 ? 1 : 0.5
+  }
+
+  // Bug: Potatoes are not discounted with first tier
+  if (component.id === 12135) {
+    component.quantity = efficiencyTier === 1 ? 8 : 4
+  }
+
+  let updatedTree = {
+    ...tree,
+    output: component.quantity < 1 ? tree.output * 2 : tree.output,
+  }
+
+  // Bug: Iron ore output also halves with second tier
+  if (component.id === 19699 && efficiencyTier === 2) {
+    updatedTree.output = updatedTree.output / 2
+  }
+
+  component.quantity = component.quantity < 1 ? 1 : component.quantity
+  updatedTree = { ...updatedTree, components: [component, ...tree.components.slice(1)] }
+  tree = updatedTree
+
+  return tree
 }
