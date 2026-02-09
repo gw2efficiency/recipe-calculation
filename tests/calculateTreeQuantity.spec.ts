@@ -1,6 +1,7 @@
 import { initialTreeChecks } from '../src/cheapestTree'
 import { calculateTreeQuantity } from '../src/calculateTreeQuantity'
 import { RecipeTree, RecipeTreeWithCraftFlags } from '../src/types'
+import { NestedRecipe } from '@gw2efficiency/recipe-nesting'
 
 const RECIPE_PARTIAL = {
   id: 1,
@@ -449,24 +450,25 @@ describe('calculateTreeQuantity (used quantity)', () => {
 
     const ignoredBitItemIds: Array<number> = []
     initialTreeChecks(
-      recipeTree as any,
+      recipeTree as unknown as NestedRecipe,
       { '102306': '0', '102205': '0', '103049': '0' },
       ignoredBitItemIds
     )
 
     const adjusted = calculateTreeQuantity(1, recipeTree, {}, ignoredBitItemIds)
 
+    type Component = { totalQuantity: number; usedQuantity: 0 }
     const [
       firstBitTopComponent,
-      firstBitComponentwithNestedBit,
+      firstBitComponentWithNestedBit,
       normalItemWithFirstBitItemId,
       secondBitTopComponent,
       secondBitTopComponentDuplicate,
       normalItemWithNoBitVersion,
       normalItemWithNoBitVersionDuplicate,
-    ] = adjusted.components as Array<any>
+    ] = adjusted.components as Array<Component & { components: Array<Component> }>
 
-    const firstBitInsideComponent = firstBitComponentwithNestedBit.components[0]
+    const firstBitInsideComponent = firstBitComponentWithNestedBit.components[0]
 
     // Bit exists as real item elsewhere, zeroed
     expect(firstBitTopComponent.totalQuantity).toBe(0)
