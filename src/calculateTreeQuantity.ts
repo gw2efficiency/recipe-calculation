@@ -3,22 +3,27 @@ import { RecipeTreeWithCraftFlags, RecipeTree, RecipeTreeWithQuantity } from './
 export function calculateTreeQuantity(
   amount: number,
   tree: RecipeTreeWithCraftFlags,
-  availableItems?: Record<string, number>
+  availableItems?: Record<string, number>,
+  ignoredBitItemIds?: Array<number>
 ): RecipeTreeWithCraftFlags
 export function calculateTreeQuantity(
   amount: number,
   tree: RecipeTree,
-  availableItems?: Record<string, number>
+  availableItems?: Record<string, number>,
+  ignoredBitItemIds?: Array<number>
 ): RecipeTreeWithQuantity
 export function calculateTreeQuantity(
   amount: number,
   tree: RecipeTree | RecipeTreeWithCraftFlags,
-  availableItems: Record<string, number> = {}
+  availableItems: Record<string, number> = {},
+  ignoredBitItemIds: Array<number> = []
 ) {
   // Make sure that we don't modify the passed-in object
   // We still want to work with a reference in the actual calculation
   // since the availableItems are a shared state for all sub-recipes
-  return calculateTreeQuantityInner(amount, tree, { ...availableItems })
+  return calculateTreeQuantityInner(amount, tree, { ...availableItems }, false, 0, [
+    ...ignoredBitItemIds,
+  ])
 }
 
 // Go through a recipe tree and set 'totalQuantity' based on the
@@ -28,12 +33,17 @@ function calculateTreeQuantityInner(
   tree: RecipeTree | RecipeTreeWithCraftFlags,
   availableItems: Record<string, number>,
   ignoreAvailable = false,
-  nesting = 0
+  nesting = 0,
+  ignoredBitItemIds: Array<number>
 ): RecipeTreeWithCraftFlags | RecipeTreeWithQuantity {
   const output = tree.output || 1
 
   // Calculate the total quantity needed
   let treeQuantity = amount * tree.quantity
+
+  if (typeof tree.achievement_bit === 'number') {
+    ignoredBitItemIds.includes(tree.id) ? (treeQuantity = 0) : ignoredBitItemIds.push(tree.id)
+  }
 
   // Round amount to nearest multiple of the tree output
   treeQuantity = Math.ceil(treeQuantity / output) * output
@@ -69,7 +79,8 @@ function calculateTreeQuantityInner(
       component,
       availableItems,
       ignoreAvailable,
-      ++nesting
+      ++nesting,
+      ignoredBitItemIds
     )
   })
 

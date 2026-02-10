@@ -1,5 +1,7 @@
+import { initialTreeChecks } from '../src/cheapestTree'
 import { calculateTreeQuantity } from '../src/calculateTreeQuantity'
 import { RecipeTree, RecipeTreeWithCraftFlags } from '../src/types'
+import { NestedRecipe } from '@gw2efficiency/recipe-nesting'
 
 const RECIPE_PARTIAL = {
   id: 1,
@@ -380,5 +382,114 @@ describe('calculateTreeQuantity (used quantity)', () => {
     const availableItems = { 1: 500 }
 
     expect(calculateTreeQuantity(1, recipeTree, availableItems)).toMatchSnapshot()
+  })
+
+  it('handles achievement bit items correctly', () => {
+    const recipeTree: RecipeTree = {
+      ...RECIPE_PARTIAL,
+      id: 100,
+      quantity: 1,
+      output: 1,
+      components: [
+        {
+          ...ITEM_PARTIAL,
+          id: 55,
+          quantity: 1,
+          output: 1,
+          achievement_bit: 0,
+        },
+        {
+          ...RECIPE_PARTIAL,
+          id: 200,
+          quantity: 1,
+          output: 1,
+          components: [
+            {
+              ...ITEM_PARTIAL,
+              id: 55,
+              quantity: 1,
+              output: 1,
+              achievement_bit: 0,
+            },
+          ],
+        },
+        {
+          ...ITEM_PARTIAL,
+          id: 55,
+          quantity: 2,
+          output: 1,
+        },
+        {
+          ...ITEM_PARTIAL,
+          id: 56,
+          quantity: 1,
+          output: 1,
+          achievement_bit: 1,
+        },
+        {
+          ...ITEM_PARTIAL,
+          id: 56,
+          quantity: 1,
+          output: 1,
+          achievement_bit: 1,
+        },
+        {
+          ...ITEM_PARTIAL,
+          id: 999,
+          quantity: 1,
+          output: 1,
+        },
+        {
+          ...ITEM_PARTIAL,
+          id: 999,
+          quantity: 3,
+          output: 1,
+        },
+      ],
+    }
+
+    const ignoredBitItemIds: Array<number> = []
+    initialTreeChecks(
+      recipeTree as unknown as NestedRecipe,
+      { '102306': '0', '102205': '0', '103049': '0' },
+      ignoredBitItemIds
+    )
+
+    const adjusted = calculateTreeQuantity(1, recipeTree, {}, ignoredBitItemIds)
+
+    type Component = { totalQuantity: number; usedQuantity: 0 }
+    const [
+      firstBitTopComponent,
+      firstBitComponentWithNestedBit,
+      normalItemWithFirstBitItemId,
+      secondBitTopComponent,
+      secondBitTopComponentDuplicate,
+      normalItemWithNoBitVersion,
+      normalItemWithNoBitVersionDuplicate,
+    ] = adjusted.components as Array<Component & { components: Array<Component> }>
+
+    const firstBitInsideComponent = firstBitComponentWithNestedBit.components[0]
+
+    // Bit exists as real item elsewhere, zeroed
+    expect(firstBitTopComponent.totalQuantity).toBe(0)
+    expect(firstBitTopComponent.usedQuantity).toBe(0)
+
+    // Bit exists as real item elsewhere, zeroed in deeper nesting
+    expect(firstBitInsideComponent.totalQuantity).toBe(0)
+    expect(firstBitInsideComponent.usedQuantity).toBe(0)
+
+    // Real item is not zeroed when bit version exists
+    expect(normalItemWithFirstBitItemId.totalQuantity).toBe(2)
+    expect(normalItemWithFirstBitItemId.usedQuantity).toBe(2)
+
+    // Duplicate bit items, first one is kept
+    expect(secondBitTopComponent.totalQuantity).toBe(1)
+
+    // Duplicate bit items, second one is zeroed
+    expect(secondBitTopComponentDuplicate.totalQuantity).toBe(0)
+
+    // Real duplicate items are unaffected
+    expect(normalItemWithNoBitVersion.totalQuantity).toBe(1)
+    expect(normalItemWithNoBitVersionDuplicate.totalQuantity).toBe(3)
   })
 })
