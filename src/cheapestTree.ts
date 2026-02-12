@@ -19,7 +19,8 @@ export function cheapestTree(
     '102306': '0',
     '102205': '0',
     '103049': '0',
-  }
+  },
+  customCurrencyPrices: Record<string, number> = {}
 ): RecipeTreeWithCraftFlags {
   const ignoredBitItemIds: Array<number> = []
   tree = initialTreeChecks(tree, userEfficiencyTiers, ignoredBitItemIds)
@@ -32,7 +33,8 @@ export function cheapestTree(
     )
     const treeWithPriceWithoutAvailableItems = calculateTreePrices(
       treeWithQuantityWithoutAvailableItems,
-      itemPrices
+      itemPrices,
+      customCurrencyPrices
     )
 
     const cheaperToBuyItemIds = getCheaperToBuyItemIds(treeWithPriceWithoutAvailableItems)
@@ -50,7 +52,7 @@ export function cheapestTree(
   )
 
   // Set the initial craft flags based on the subtree prices
-  const treeWithPrices = calculateTreePrices(treeWithQuantity, itemPrices)
+  const treeWithPrices = calculateTreePrices(treeWithQuantity, itemPrices, customCurrencyPrices)
   let treeWithCraftFlags = calculateTreeCraftFlags(treeWithPrices, forceBuyItems)
 
   // Force the root to be crafted
@@ -66,7 +68,7 @@ export function cheapestTree(
   )
 
   // Recalculate the correct tree price
-  return calculateTreePrices(treeWithQuantityPostFlags, itemPrices)
+  return calculateTreePrices(treeWithQuantityPostFlags, itemPrices, customCurrencyPrices)
 }
 
 function getCheaperToBuyItemIds(

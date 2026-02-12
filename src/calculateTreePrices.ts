@@ -4,15 +4,18 @@ import { CURRENCY_DECISION_PRICES } from './static/currencyDecisionPrices'
 // Update the tree prices
 export function calculateTreePrices(
   tree: RecipeTreeWithCraftFlags,
-  itemPrices: Record<string, number>
+  itemPrices: Record<string, number>,
+  customCurrencyPrices?: Record<string, number>
 ): RecipeTreeWithCraftFlags
 export function calculateTreePrices(
   tree: RecipeTreeWithQuantity,
-  itemPrices: Record<string, number>
+  itemPrices: Record<string, number>,
+  customCurrencyPrices?: Record<string, number>
 ): RecipeTreeWithPrices
 export function calculateTreePrices(
   tree: RecipeTreeWithQuantity | RecipeTreeWithCraftFlags,
-  itemPrices: Record<string, number>
+  itemPrices: Record<string, number>,
+  customCurrencyPrices: Record<string, number> = {}
 ): RecipeTreeWithPrices | RecipeTreeWithCraftFlags {
   // Calculate the buy prices
   let buyPriceEach = itemPrices[tree.id] || false
@@ -26,7 +29,11 @@ export function calculateTreePrices(
   // Calculate the base decision price (may be overwritten later with the craft price)
   let decisionPriceEach = buyPriceEach || undefined
   if (tree.type === 'Currency') {
-    decisionPriceEach = CURRENCY_DECISION_PRICES[tree.id]
+    if (customCurrencyPrices && typeof customCurrencyPrices[tree.id] === 'number') {
+      decisionPriceEach = customCurrencyPrices[tree.id]
+    } else {
+      decisionPriceEach = CURRENCY_DECISION_PRICES[tree.id]
+    }
   }
   let decisionPrice = decisionPriceEach ? tree.usedQuantity * decisionPriceEach : false
 
@@ -43,7 +50,9 @@ export function calculateTreePrices(
   }
 
   // Calculate the tree prices traversal for the sub-components
-  const components = tree.components.map((component) => calculateTreePrices(component, itemPrices))
+  const components = tree.components.map((component) =>
+    calculateTreePrices(component, itemPrices, customCurrencyPrices)
+  )
 
   // Calculate the craft price out of the best prices
   const craftDecisionPrice = components.map((c) => c.decisionPrice || 0).reduce((a, b) => a + b, 0)
